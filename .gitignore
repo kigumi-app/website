@@ -15,3 +15,8 @@ npm-debug.log*
 .wolf/designqc-captures/
 .wolf/token-ledger.json
 .wolf/designqc-report.json
+
+# Configurations d'outils d'assistance, propres à un poste
+.agents/
+.junie/
+.pi/
