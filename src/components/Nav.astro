@@ -9,22 +9,22 @@ const { active } = Astro.props;
 
 <nav>
   <div class="container">
-    <a href="/" class="logo" aria-label="Kigumi home">
+    <a href="/lab/harness/" class="logo" aria-label="Kigumi home">
       <LogoMark width={13} height={14.4} fill="#d4a054" class="logo-mark" />igumi
     </a>
     <div class="nav-links">
       <a
-        href="/how-it-works"
+        href="/lab/harness/how-it-works"
         class="nav-link nav-link--text"
         aria-current={active === "how-it-works" ? "page" : undefined}
         >How it works</a
       >
       <a
-        href="/writing"
+        href="/lab/harness/writing"
         class="nav-link nav-link--text"
         aria-current={active === "writing" ? "page" : undefined}>Writing</a
       >
-      <a href="/#cta" class="btn btn--primary nav-btn">Request Access</a>
+      <a href="/lab/harness/#cta" class="btn btn--primary nav-btn">Request Access</a>
     </div>
   </div>
 </nav>

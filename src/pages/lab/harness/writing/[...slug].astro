@@ -1,7 +1,7 @@
 ---
 import { render } from "astro:content";
-import EssayLayout from "../../layouts/EssayLayout.astro";
-import { getPublishedEssays, essaySlug } from "../../lib/essays";
+import EssayLayout from "../../../../layouts/EssayLayout.astro";
+import { getPublishedEssays, essaySlug } from "../../../../lib/essays";
 
 export async function getStaticPaths() {
   const essays = await getPublishedEssays();

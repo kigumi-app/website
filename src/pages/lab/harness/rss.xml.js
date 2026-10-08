@@ -1,5 +1,5 @@
 import rss from "@astrojs/rss";
-import { getPublishedEssays, essaySlug } from "../lib/essays";
+import { getPublishedEssays, essaySlug } from "../../../lib/essays";
 
 export async function GET(context) {
   const essays = await getPublishedEssays();
@@ -12,7 +12,7 @@ export async function GET(context) {
       title: essay.data.title,
       description: essay.data.description,
       pubDate: essay.data.pubDate,
-      link: `/writing/${essaySlug(essay)}/`,
+      link: `/lab/harness/writing/${essaySlug(essay)}/`,
     })),
     customData: `<language>en-us</language>`,
   });

@@ -1,0 +1,56 @@
+---
+import StudioLayout from "../layouts/StudioLayout.astro";
+import CartesCas from "../components/studio/CartesCas.astro";
+import IndexRoles from "../components/studio/IndexRoles.astro";
+---
+<StudioLayout
+  titre="Cas d'usages"
+  description="Les processus où l'automatisation par agents a un sens : appels d'offres, commandes entrantes, service client, facturation, achats, conformité, pilotage."
+  actif="cas-usages">
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow">Cas d&rsquo;usages</p>
+    <h1>Là où l&rsquo;automatisation tient ses promesses.</h1>
+    <p class="lead">Ces processus ont un point commun : un travail répétitif, écrit nulle part, qui vit dans la tête de deux ou trois personnes. C&rsquo;est là que l&rsquo;automatisation rapporte — et c&rsquo;est aussi là qu&rsquo;elle se mesure. Deux entrées ci-dessous : par le processus, ou par le poste qui le porte.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Par processus</p>
+    <h2>Ce qui vous coûte du temps</h2>
+    <CartesCas />
+    <div class="prose" style="margin-top:48px">
+      <p class="muted" style="font-size:14px">Ces cas sont construits à partir de situations observées dans ces secteurs. Les ordres de grandeur sont des hypothèses jusqu&rsquo;à ce qu&rsquo;on les mesure chez vous.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Par rôle</p>
+    <h2>Ce qui pèse sur votre poste</h2>
+    <p class="lead">Les mêmes cas, rangés par la personne qui en porte la charge. Un directeur des opérations ne se cherche pas dans un secteur&nbsp;: il se cherche dans son métier.</p>
+    <IndexRoles />
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap prose">
+    <h2>Votre cas n&rsquo;est pas dans la liste</h2>
+    <p>Ceux-là reviennent le plus souvent, mais ce ne sont pas des produits : ce sont des processus que nous avons déjà étudiés. Le critère n&rsquo;est pas le secteur, c&rsquo;est la forme du travail — répétitif, volumineux, et dépendant d&rsquo;un savoir que personne n&rsquo;a écrit.</p>
+    <p>Si c&rsquo;est votre situation, le pré-diagnostic la chiffrera comme les autres. <strong>Et s&rsquo;il conclut que l&rsquo;automatisation n&rsquo;a pas de sens chez vous, il vous le dira.</strong></p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Savoir ce que ça vaut chez vous</h2>
+    <p>45 minutes. On repart avec la liste de vos processus classés par ce qu&rsquo;ils vous coûtent — et avec lequel attaquer en premier.</p>
+    <div class="btn-row">
+      <a class="btn" href="/contact">Prendre rendez-vous</a>
+      <a class="btn btn-ghost" href="/methode">Voir la méthode</a>
+    </div>
+  </div>
+</section>
+</StudioLayout>

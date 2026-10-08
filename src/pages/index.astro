@@ -1,34 +1,66 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Nav from "../components/Nav.astro";
-import Footer from "../components/Footer.astro";
-import CutLine from "../components/CutLine.astro";
-import Hero from "../components/home/Hero.astro";
-import ProblemLines from "../components/home/ProblemLines.astro";
-import Payoff from "../components/home/Payoff.astro";
-import Proof from "../components/home/Proof.astro";
-import Positioning from "../components/home/Positioning.astro";
-import CtaSection from "../components/home/CtaSection.astro";
+import StudioLayout from "../layouts/StudioLayout.astro";
+import CartesCas from "../components/studio/CartesCas.astro";
 ---
+<StudioLayout
+  titre='Automatiser ce qui vous coûte vraiment'
+  description='Kigumi identifie les processus qui pèsent le plus dans votre entreprise, déploie les agents qui les prennent en charge, et mesure le gain réel.'
+  actif="">
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Automatisation de processus &middot; PME &amp; ETI</span>
+    <h1>Automatiser ce qui<br>vous coûte vraiment.<br><span class="accent">Et le prouver.</span></h1>
+    <div class="rule"></div>
+    <p class="lead">La plupart des projets IA ne sortent jamais du pilote. Kigumi identifie les processus qui pèsent le plus dans votre entreprise, déploie les agents qui les prennent en charge, et mesure le gain réel. Pour les PME et ETI de 50 à 300 personnes.</p>
+    <div class="btn-row">
+      <a class="btn" href="/contact">Réserver 45 minutes de pré-diagnostic</a>
+      <a class="btn btn-ghost" href="/methode">Voir la méthode</a>
+    </div>
+  </div>
+</section>
 
-<Layout
-  title="Kigumi - AI made code cheap. Kigumi makes change safe."
-  description="AI made code cheap. Kigumi makes change safe. See what your codebase actually does."
-  ogType="website"
-  twitterTitle="Kigumi - Your codebase grows. Your understanding shrinks."
-  twitterDescription="Kigumi gives you a live map of what your software actually does - every state, action, and decision. Visible."
->
-  <Nav active="home" />
-  <Hero />
-  <CutLine />
-  <ProblemLines />
-  <CutLine />
-  <Payoff />
-  <CutLine />
-  <Proof />
-  <CutLine />
-  <Positioning />
-  <CutLine />
-  <CtaSection />
-  <Footer />
-</Layout>
+<section class="tint">
+  <div class="wrap">
+    <p class="eyebrow">Ce qu&rsquo;on prend en charge</p>
+    <h2>Trois exemples, parmi beaucoup d&rsquo;autres</h2>
+    <p class="lead">Des processus qu&rsquo;on a déjà étudiés en détail. Le critère n&rsquo;est pas votre secteur, c&rsquo;est la forme du travail&nbsp;: répétitif, volumineux, et dépendant d&rsquo;un savoir que personne n&rsquo;a écrit.</p>
+    <div style="margin-top:34px"><CartesCas /></div>
+    <p class="muted" style="margin-top:24px;font-size:14px">Exemples illustratifs, construits à partir de situations observées dans ces secteurs. Pas de missions réalisées à ce jour.</p>
+    <p style="margin-top:14px"><a href="/cas-usages">Voir tous les cas, par processus et par poste &rarr;</a></p>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap">
+   <div class="prose">
+    <p class="eyebrow">Qui fait le travail</p>
+    <h2>Trente ans de métier, à deux</h2>
+    <p>Julien a dirigé la relation client d&rsquo;un éditeur de logiciels — support, projets complexes, onze personnes. Stéphane y dirigeait l&rsquo;ensemble des équipes de développement, R&amp;D et machine learning compris, sur des produits utilisés par des millions de personnes.</p>
+    <p>Nous y avons passé trois ans ensemble, aux deux bouts du même produit&nbsp;: l&rsquo;un recevait les appels quand il ne faisait pas ce qu&rsquo;on en avait dit, l&rsquo;autre avait les équipes qui l&rsquo;avaient écrit.</p>
+    <p><strong>Les deux personnes qui vous vendent la mission sont les deux qui la font.</strong> Pas de consultant junior affecté en début de mission, pas de sous-traitance.</p>
+    <p style="margin-top:1.4em"><a href="/a-propos">Qui nous sommes &rarr;</a></p>
+   </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Comment on travaille</p>
+    <h2>Trois principes, tenus à chaque mission</h2>
+    <div class="grid" style="margin-top:34px">
+      <div><h3>Un diagnostic chiffré, jamais un prototype</h3><p class="muted">On commence par estimer ce que chaque processus vous coûte, et on les classe. Vous pouvez vous arrêter là et utiliser le rapport sans nous.</p></div>
+      <div><h3>On ne construit que ce que le processus exige</h3><p class="muted">Rien de générique, rien construit au cas où. La base de connaissance suit le besoin réel, pas l'inverse.</p></div>
+      <div><h3>On mesure le gain réel, et on vous le montre</h3><p class="muted">Chaque trimestre, un rapport compare ce qui a été gagné à ce qui avait été projeté. Y compris quand l'écart n'est pas en notre faveur.</p></div>
+    </div>
+    <div class="btn-row"><a class="btn btn-ghost" href="/methode">La méthode en détail</a></div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>45 minutes pour savoir si ça vaut le coup</h2>
+    <p>On regarde vos processus et on vous dit lequel vous coûte le plus. Vous repartez avec ce classement, qu'on travaille ensemble ou non — et si rien ne mérite d'être automatisé chez vous, on vous le dira.</p>
+    <div class="btn-row"><a class="btn" href="/contact">Prendre rendez-vous</a></div>
+  </div>
+</section>
+</StudioLayout>

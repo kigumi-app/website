@@ -1,0 +1,34 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Nav from "../../../components/Nav.astro";
+import Footer from "../../../components/Footer.astro";
+import CutLine from "../../../components/CutLine.astro";
+import Hero from "../../../components/home/Hero.astro";
+import ProblemLines from "../../../components/home/ProblemLines.astro";
+import Payoff from "../../../components/home/Payoff.astro";
+import Proof from "../../../components/home/Proof.astro";
+import Positioning from "../../../components/home/Positioning.astro";
+import CtaSection from "../../../components/home/CtaSection.astro";
+---
+
+<Layout
+  title="Kigumi - AI made code cheap. Kigumi makes change safe."
+  description="AI made code cheap. Kigumi makes change safe. See what your codebase actually does."
+  ogType="website"
+  twitterTitle="Kigumi - Your codebase grows. Your understanding shrinks."
+  twitterDescription="Kigumi gives you a live map of what your software actually does - every state, action, and decision. Visible."
+>
+  <Nav active="home" />
+  <Hero />
+  <CutLine />
+  <ProblemLines />
+  <CutLine />
+  <Payoff />
+  <CutLine />
+  <Proof />
+  <CutLine />
+  <Positioning />
+  <CutLine />
+  <CtaSection />
+  <Footer />
+</Layout>

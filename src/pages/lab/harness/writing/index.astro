@@ -1,13 +1,13 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Nav from "../../components/Nav.astro";
-import Footer from "../../components/Footer.astro";
+import Layout from "../../../../layouts/Layout.astro";
+import Nav from "../../../../components/Nav.astro";
+import Footer from "../../../../components/Footer.astro";
 import {
   getPublishedEssays,
   PILLAR_LABELS,
   essaySlug,
   formatDate,
-} from "../../lib/essays";
+} from "../../../../lib/essays";
 
 const essays = await getPublishedEssays();
 ---
@@ -35,7 +35,7 @@ const essays = await getPublishedEssays();
           <ul class="writing__list">
             {essays.map((essay) => (
               <li>
-                <a class="essay-row" href={`/writing/${essaySlug(essay)}`}>
+                <a class="essay-row" href={`/lab/harness/writing/${essaySlug(essay)}`}>
                   <div class="essay-row__meta">
                     <span class="essay-row__pillar">
                       {PILLAR_LABELS[essay.data.pillar]}

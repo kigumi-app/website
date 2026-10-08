@@ -1,0 +1,16 @@
+---
+// Le hub ne liste pas les cas, il liste les postes. Chacun dit combien de
+// processus il porte, pour qu'on sache ce qu'il y a derrière avant de cliquer.
+import { catalogue } from "../../lib/cas";
+---
+<ul class="roles">
+  {catalogue.roles.map((r) => (
+    <li>
+      <h3>{r.nom}</h3>
+      <p>{r.texte}</p>
+      <p class="liens">
+        <a href={`/${r.slug}`}>{r.cas.length} processus pour ce poste &rarr;</a>
+      </p>
+    </li>
+  ))}
+</ul>
