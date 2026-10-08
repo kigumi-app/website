@@ -1,0 +1,52 @@
+---
+// Mise en page du site du studio. Distincte de Layout.astro, qui sert le
+// produit sous /lab/harness : les deux systèmes partagent la palette noyer
+// mais pas les noms de variables (--text ici, --text-primary là). Astro ne
+// livre à une page que le CSS importé par sa mise en page, donc les deux
+// cohabitent sans se marcher dessus tant qu'une page n'en utilise qu'une.
+import "../styles/studio/tokens.css";
+import "../styles/studio/atmosphere.css";
+import "../styles/studio/explainers.css";
+import "../styles/studio/site.css";
+import Nav from "../components/studio/Nav.astro";
+import Footer from "../components/studio/Footer.astro";
+
+interface Props {
+  titre: string;
+  description: string;
+  /** Pour allumer la bonne entrée du menu. Les pages de cas et de rôle
+   *  passent leur propre identifiant : le menu les rattache au groupe. */
+  actif?: string;
+}
+const { titre, description, actif = "" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr" data-palette="walnut" data-mode="dark" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>{titre} &mdash; Kigumi</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={`${titre} — Kigumi`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="icon" href="/studio/favicon/favicon.svg" />
+    <link rel="apple-touch-icon" href="/studio/favicon/favicon-180.png" />
+    {/* Retiré avant le premier rendu : sans ça, les sections qui s'animent à
+        l'arrivée apparaîtraient puis disparaîtraient le temps du chargement. */}
+    <script is:inline>document.documentElement.classList.remove("no-js")</script>
+    <script is:inline src="/studio/site.js" defer></script>
+  </head>
+  <body>
+    <div class="atmo atmo--fixe" aria-hidden="true"></div>
+    <Nav actif={actif} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

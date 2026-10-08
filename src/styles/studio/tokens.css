@@ -1,0 +1,203 @@
+/* =============================================================
+   Kigumi Design Tokens — Studio edition — v0.1 — 2026-09-25
+   Derived from Kigumi/company/brand/tokens.css v1.0 (walnut).
+   Adds: zinc palette variant + light (paper) mode for A4 surfaces.
+
+   Mechanism — set both attributes on <html> or any container:
+     data-palette="walnut" | "zinc"     (default: walnut)
+     data-mode="dark" | "light"         (default: dark)
+   Attribute selectors sit on containers, not only :root, so several
+   variants can be rendered side by side on one page.
+   ============================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital@1&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900&display=swap');
+
+/* ── Palette: walnut · dark (canonical Kigumi brand) ─────────── */
+:root,
+[data-palette="walnut"][data-mode="dark"],
+[data-palette="walnut"]:not([data-mode]) {
+  --bg:            #1a1410;
+  --surface:       #241e18;
+  --surface-hover: #2e2620;
+  --border:        #3a3028;
+  --border-subtle: #2a2218;
+  --text-primary:  #f5f0e8;
+  --text-secondary:#9a8a74;
+  /* --text-dim ÉCHOUE AA : 2,89:1 sur noyer, 3,38:1 sur crème. Réservé au
+     mobilier d'outillage (compteur de navigation, marqueur « // REV. 04 »,
+     planches de relecture). JAMAIS sur un livrable : un libellé de colonne, une
+     unité d'axe, un numéro de page ou la mention « exemple illustratif » sont de
+     l'information et prennent --text-secondary. */
+  --text-dim:      #6a5e50;
+  --accent:        #d4a054;   /* text-safe on this bg */
+  --accent-bright: #e0b060;
+  --accent-hover:  #e0b060;
+  --accent-glow:   rgba(212, 160, 84, 0.15);
+  --accent-wash:   rgba(212, 160, 84, 0.06);
+  --header-bg:     rgba(26, 20, 16, 0.86);   /* en-tête collant, translucide */
+  --atmo:          1;          /* grain + vignette : allumés sur fond sombre */
+  --paper-shadow:  0 24px 60px rgba(0, 0, 0, 0.55);
+}
+
+/* ── Palette: walnut · light (paper, for print) ──────────────── */
+[data-palette="walnut"][data-mode="light"] {
+  --bg:            #f7f3ec;
+  --surface:       #fdfaf4;
+  --surface-hover: #f0e9dd;
+  --border:        #d5cab7;
+  --border-subtle: #e7dfd1;
+  --text-primary:  #1a1410;
+  --text-secondary:#5f5347;
+  --text-dim:      #93826c;   /* même règle qu'en mode sombre */
+  --accent:        #8a5f18;   /* darkened for AA on paper */
+  --accent-bright: #c08a34;
+  --accent-hover:  #6f4c13;
+  --accent-glow:   rgba(212, 160, 84, 0.18);
+  --accent-wash:   rgba(184, 136, 62, 0.08);
+  --header-bg:     rgba(247, 243, 236, 0.88);
+  --atmo:          0;          /* éteints : un grain sur du papier crème, c'est de la saleté */
+  --paper-shadow:  0 24px 60px rgba(60, 44, 24, 0.18);
+}
+
+/* ── Palette: zinc · product UI only ─────────────────────────────
+   NOT a commercial palette. Noyer (walnut) is canonical for every
+   sales surface: rapport, proposition, one-pager, deck, site.
+   Zinc exists because cockpit/ui ships #09090b; keep it for the app
+   and for UI screenshots, so the two stop drifting into each other.
+   Decided 2026-09-25.
+   ───────────────────────────────────────────────────────────────── */
+/* zinc · dark */
+[data-palette="zinc"][data-mode="dark"],
+[data-palette="zinc"]:not([data-mode]) {
+  --bg:            #09090b;
+  --surface:       #131316;
+  --surface-hover: #1c1c21;
+  --border:        #2a2a31;
+  --border-subtle: #1d1d22;
+  --text-primary:  #fafafa;
+  --text-secondary:#a1a1aa;
+  --text-dim:      #71717a;
+  --accent:        #d4a054;
+  --accent-bright: #e0b060;
+  --accent-hover:  #e0b060;
+  --accent-glow:   rgba(212, 160, 84, 0.15);
+  --accent-wash:   rgba(212, 160, 84, 0.06);
+  --header-bg:     rgba(9, 9, 11, 0.86);
+  --atmo:          1;
+  --paper-shadow:  0 24px 60px rgba(0, 0, 0, 0.7);
+}
+
+/* ── Palette: zinc · light (paper, for print) ────────────────── */
+[data-palette="zinc"][data-mode="light"] {
+  --bg:            #fafafa;
+  --surface:       #ffffff;
+  --surface-hover: #f4f4f5;
+  --border:        #d4d4d8;
+  --border-subtle: #e7e7ea;
+  --text-primary:  #09090b;
+  --text-secondary:#52525b;
+  --text-dim:      #8a8a93;
+  --accent:        #8a5f18;
+  --accent-bright: #c08a34;
+  --accent-hover:  #6f4c13;
+  --accent-glow:   rgba(212, 160, 84, 0.18);
+  --accent-wash:   rgba(184, 136, 62, 0.07);
+  --header-bg:     rgba(250, 250, 250, 0.88);
+  --atmo:          0;
+  --paper-shadow:  0 24px 60px rgba(9, 9, 11, 0.16);
+}
+
+/* ── Chart palette ───────────────────────────────────────────────
+   Marketing/report surfaces. The product node palette (patina,
+   terracotta, heartwood…) stays out of these documents by brand rule.
+   Both pairs pass all six dataviz checks — lightness band, chroma
+   floor, CVD separation, normal-vision floor, contrast vs surface:
+     dark  on #241e18 : amber #b8883e · blue #4f93c8
+     light on #fdfaf4 : amber #a9761f · blue #2f7ba8
+   Re-run the validator before adding a third series; past two, facet
+   instead of inventing a hue.
+   ──────────────────────────────────────────────────────────────── */
+[data-palette="walnut"][data-mode="dark"],
+[data-palette="walnut"]:not([data-mode]),
+:root {
+  --chart-1:    #b8883e;   /* amber — part automatisable */
+  --chart-2:    #4f93c8;   /* blue  — part résiduelle */
+  --chart-grid: #3a3028;
+  --chart-axis: #6a5e50;
+}
+[data-palette="walnut"][data-mode="light"] {
+  --chart-1:    #a9761f;
+  --chart-2:    #2f7ba8;
+  --chart-grid: #ded4c2;
+  --chart-axis: #93826c;
+}
+
+/* ── Shared: type, spacing, radius, motion (palette-agnostic) ── */
+:root {
+  /* Semantic / diff */
+  --diff-added:    #10b981;
+  --diff-removed:  #ef4444;
+  --diff-modified: #f59e0b;
+
+  /* Typography */
+  --font-heading:    'Satoshi', system-ui, -apple-system, sans-serif;
+  --font-body:       'Inter', system-ui, -apple-system, sans-serif;
+  --font-annotation: 'Lora', Georgia, serif;
+  --font-code:       'JetBrains Mono', 'Courier New', monospace;
+
+  --heading-hero:  700;
+  --heading-calm:  500;
+  --heading-tight: 700;
+
+  --text-hero:     32px;
+  --text-h1:       28px;
+  --text-h2:       20px;
+  --text-h3:       16px;
+  --text-body:     14px;
+  --text-body-sm:  13px;
+  --text-caption:  12px;
+  --text-micro:    11px;
+  --text-nano:     10px;
+
+  --leading-tight:   1.25;
+  --leading-snug:    1.375;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.625;
+
+  --space-1:  4px;   --space-2:  8px;   --space-3:  12px;
+  --space-4:  16px;  --space-5:  20px;  --space-6:  24px;
+  --space-8:  32px;  --space-10: 40px;  --space-12: 48px;
+  --space-16: 64px;  --space-20: 80px;  --space-24: 96px;
+
+  --radius-sm:  6px;  --radius-md: 8px;  --radius-lg: 10px;
+  --radius-xl: 14px;  --radius-2xl: 18px; --radius-full: 999px;
+
+  /* ── Mouvement ───────────────────────────────────────────────
+     Palette FINIE : quatre durées, trois courbes. Une animation qui
+     réclame une valeur hors de cette liste est une animation qui n'a
+     pas été pensée. Voir brief-motion.md §4.
+     La durée suit la distance, pas l'importance. Au-delà de 500 ms le
+     mouvement cesse de se lire comme une réponse et se lit comme une
+     attente. ───────────────────────────────────────────────────── */
+  --duration-micro:  150ms;   /* couleur, opacité — ce qui ne se déplace pas */
+  --duration-short:  200ms;   /* déplacement sous ~100 px */
+  --duration-medium: 300ms;   /* panneau, arrivée de section, slide */
+  --duration-long:   500ms;   /* changement pleine surface : écran ⇄ papier */
+
+  --ease-out:    cubic-bezier(0, 0, 0.2, 1);      /* ce qui entre — défaut */
+  --ease-in:     cubic-bezier(0.4, 0, 1, 1);      /* ce qui sort */
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);    /* d'un état à l'autre */
+}
+
+/* Rien ne contourne ce bloc. C'est la technique documentée pour WCAG 2.3.3,
+   et « mouvement réduit » veut dire réduit, pas cassé : l'état final doit
+   rester atteignable et correct sans aucune transition. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

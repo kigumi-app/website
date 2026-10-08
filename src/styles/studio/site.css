@@ -1,0 +1,359 @@
+/* =============================================================
+   Kigumi — site studio. Habillage des pages sur tokens.css.
+   Palette noyer, dark. Aucune couleur en dur : tout vient des tokens.
+   ============================================================= */
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--text-primary);
+  font-family:var(--font-body);font-size:16px;line-height:var(--leading-relaxed);
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+img{max-width:100%}
+a{color:var(--accent)}
+a:hover{color:var(--accent-hover)}
+
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding-inline:24px}
+section{padding-block:96px}
+section+section{border-top:1px solid var(--border-subtle)}
+
+/* ── type ── */
+h1{font-family:var(--font-heading);font-weight:700;font-size:clamp(34px,5.4vw,60px);line-height:1.08;letter-spacing:-.03em}
+h2{font-family:var(--font-heading);font-weight:500;font-size:clamp(24px,3.2vw,34px);line-height:1.2;letter-spacing:-.02em}
+h3{font-family:var(--font-heading);font-weight:700;font-size:20px;letter-spacing:-.02em}
+p{color:var(--text-secondary);margin-bottom:1.05em}
+p:last-child{margin-bottom:0}
+strong{color:var(--text-primary);font-weight:600}
+.lead{font-size:clamp(17px,2vw,20px);line-height:1.6;max-width:62ch;color:var(--text-secondary)}
+.prose{max-width:66ch}
+/* Les titres ne portent aucune marge basse : le héros d'accueil pose un filet
+   (.rule) à la place. Partout ailleurs le chapô ou le paragraphe arrivait donc
+   collé au titre — mesuré à 0 px sur chaque héros et chaque section. Marge
+   rétablie par sélecteur adjacent plutôt que sur h1/h2 eux-mêmes : les cartes
+   espacent au gap et une marge globale les déréglerait. */
+h1 + .lead, h1 + p{margin-top:clamp(18px,2.2vw,26px)}
+h2 + p, h2 + .lead, h2 + ul{margin-top:18px}
+
+.prose h2{margin-top:2em}
+.prose h2:first-child{margin-top:0}
+.accent{color:var(--accent)}
+/* --text-dim échoue AA (2,89:1 sur noyer) et tokens.css le réserve au mobilier
+   d'outillage. Or .muted portait sept blocs de vraie copie : les trois principes
+   de l'accueil, l'explication du nom, et le rôle des deux associés. Un rôle et un
+   argument sont de l'information, pas de la décoration. Repassés en secondaire,
+   donc identiques au corps de texte — la hiérarchie visuelle qu'on croyait avoir
+   n'était de toute façon pas lisible à 2,89:1. */
+.muted{color:var(--text-secondary)}
+.rule{width:44px;height:2px;background:var(--accent);margin-block:28px}
+
+/* libellé technique : le « // » vient du style, pas du contenu */
+.eyebrow{
+  font-family:var(--font-code);font-size:12px;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--accent);
+  margin-bottom:16px;display:block;
+}
+.eyebrow::before{content:"// "}
+
+/* ── bandeau version de travail ── */
+/* ── header ── */
+header.site{
+  position:sticky;top:env(safe-area-inset-top,0px);z-index:20;
+  background:var(--header-bg);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border-subtle);
+}
+header.site .wrap{display:flex;align-items:center;gap:12px;min-height:64px;flex-wrap:wrap;padding-block:10px}
+/* Mot-symbole complet : le K dessiné EST la première lettre du mot (règle §7).
+   Deux calques superposés et non un background-image échangé : l'échange faisait
+   disparaître la marque pendant la bascule — la variante papier n'était pas encore
+   chargée, puis se retrouvait en encre noyer sur un fond encore sombre. */
+.lockup{position:relative;display:block;flex:0 0 auto;width:97px;height:38px}
+.lockup::before,.lockup::after{
+  content:'';position:absolute;inset:0;
+  background-position:left center;background-size:contain;background-repeat:no-repeat;
+}
+.lockup::before{background-image:url(/studio/logo/lockup-horizontal.svg)}
+.lockup::after{background-image:url(/studio/logo/lockup-horizontal-paper.svg);opacity:0}
+[data-mode="light"] .lockup::before{opacity:0}
+[data-mode="light"] .lockup::after{opacity:1}
+[data-switching] .lockup::before,
+[data-switching] .lockup::after{
+  transition:opacity var(--duration-long) var(--ease-in-out);
+}
+
+/* ── Bascule écran ⇄ papier ───────────────────────────────────────────
+   Exception assumée à « transform et opacity seulement » (brief-motion.md §6) :
+   ce changement d'état EST un changement de couleur. Bornée aux propriétés de
+   couleur, et à la durée du basculement via [data-switching] — sans quoi chaque
+   survol hériterait des 500 ms. */
+[data-switching] *{
+  transition:
+    background-color var(--duration-long) var(--ease-in-out),
+    color            var(--duration-long) var(--ease-in-out),
+    border-color     var(--duration-long) var(--ease-in-out),
+    fill             var(--duration-long) var(--ease-in-out),
+    stroke           var(--duration-long) var(--ease-in-out);
+}
+.modetoggle{
+  display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;
+  width:44px;height:44px;padding:0;cursor:pointer;
+  border:1px solid var(--border);border-radius:var(--radius-full);
+  background:transparent;color:var(--text-secondary);
+  transition:color var(--duration-micro) var(--ease-out),
+             background var(--duration-micro) var(--ease-out);
+}
+.modetoggle:hover{background:var(--surface-hover);color:var(--text-primary)}
+.modetoggle svg{width:18px;height:18px;display:block}
+.modetoggle .i-sun{display:none}
+[data-mode="light"] .modetoggle .i-sun{display:block}
+[data-mode="light"] .modetoggle .i-moon{display:none}
+
+/* ── Arrivée de section (brief-motion.md §7 item 6) ───────────────────
+   Cible « toutes sauf la première » : le hero ne bouge jamais (§2.2). Aucune
+   classe à poser page par page, donc rien à oublier en ajoutant une page.
+   Se joue une fois par visite — le script cesse d'observer dès qu'une section
+   est vue, donc remonter puis redescendre ne la rejoue pas.
+   Le sélecteur est conditionné à :not(.no-js) et le retrait de no-js se fait
+   par un script en ligne : sans ça, sans JavaScript, la page resterait vide. */
+html:not(.no-js) main > section:nth-of-type(n+2){
+  opacity:0;transform:translateY(8px);
+}
+html:not(.no-js) main > section.vu{
+  opacity:1;transform:none;
+  transition:opacity var(--duration-medium) var(--ease-out),
+             transform var(--duration-medium) var(--ease-out);
+}
+@media (prefers-reduced-motion:reduce){
+  html:not(.no-js) main > section{opacity:1!important;transform:none!important}
+}
+header.site nav{margin-left:auto;display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+header.site nav a{font-size:14px;color:var(--text-secondary);text-decoration:none}
+header.site nav a:hover{color:var(--text-primary)}
+header.site nav a.on{color:var(--accent)}
+
+/* ── boutons ── */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:48px;padding:0 24px;border-radius:var(--radius-md);
+  background:var(--accent);color:var(--bg);
+  font-weight:600;font-size:15px;text-decoration:none;
+  transition:background var(--duration-micro) var(--ease-out);
+}
+.btn:hover{background:var(--accent-hover);color:var(--bg)}
+.btn-ghost{background:transparent;color:var(--text-primary);border:1px solid var(--border)}
+.btn-ghost:hover{background:var(--surface-hover);color:var(--text-primary)}
+.btn-sm{min-height:40px;padding:0 16px;font-size:14px}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+
+/* ── hero ── */
+.hero{padding-block:clamp(56px,10vw,120px) 88px;position:relative;overflow:hidden}
+.hero::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent 20%,var(--accent) 50%,transparent 80%);
+}
+
+/* ── grilles et cartes ── */
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(262px,1fr));margin-top:40px}
+.card{
+  display:flex;flex-direction:column;gap:12px;padding:28px;
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);
+  text-decoration:none;color:inherit;
+  transition:border-color var(--duration-micro) var(--ease-out);
+}
+a.card:hover{border-color:var(--accent)}
+.card .who{
+  font-family:var(--font-code);font-size:12px;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0;
+}
+.card h3{margin:0}
+.card p{font-size:15px;margin:0}
+.card .go{font-size:14px;color:var(--accent);margin-top:auto;padding-top:8px}
+
+/* ── étapes ── */
+.steps{display:flex;flex-direction:column;margin-top:40px}
+.step{
+  display:grid;grid-template-columns:56px 1fr;gap:28px;
+  padding-block:28px;border-bottom:1px solid var(--border-subtle);
+}
+.step:first-child{border-top:1px solid var(--border-subtle)}
+.step .n{
+  font-family:var(--font-code);font-size:13px;font-weight:500;
+  letter-spacing:.14em;color:var(--accent);padding-top:5px;
+}
+.step h3{margin-bottom:8px}
+.step p{max-width:62ch;margin:0}
+
+/* ── listes de mesures ── */
+.measures{list-style:none;display:grid;gap:11px;margin:24px 0 0}
+.measures li{padding-left:22px;position:relative;color:var(--text-secondary)}
+.measures li::before{
+  content:"";position:absolute;left:0;top:.66em;width:7px;height:7px;
+  border:1.5px solid var(--accent);transform:rotate(45deg);
+}
+
+/* ── encadré ── */
+.note{
+  padding:24px 26px;background:var(--accent-wash);
+  border:1px solid var(--border-subtle);border-radius:var(--radius-xl);
+  margin-top:36px;font-size:15px;
+}
+.note strong{
+  display:block;font-family:var(--font-code);font-size:12px;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;
+}
+.note p{margin:0}
+
+/* ── bandeau d'appel ── */
+.tint{background:var(--surface)}
+.cta{background:var(--accent-wash);border-top:1px solid var(--border-subtle)}
+.cta p{max-width:56ch}
+
+/* ── pied de page ── */
+footer.site{padding-block:56px;border-top:1px solid var(--border-subtle)}
+footer.site .cols{display:flex;flex-wrap:wrap;gap:36px 48px;justify-content:space-between}
+footer.site h4{
+  font-family:var(--font-code);font-size:11px;font-weight:500;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--text-dim);margin-bottom:12px;
+}
+footer.site a{display:block;font-size:14px;color:var(--text-secondary);text-decoration:none;padding-block:4px}
+footer.site a:hover{color:var(--text-primary)}
+footer.site .legal{
+  margin-top:40px;padding-top:24px;border-top:1px solid var(--border-subtle);
+  font-size:13px;color:var(--text-dim);
+}
+footer.site .legal p{color:var(--text-dim)}
+
+@media (max-width:1100px){
+  /* Sept éléments de navigation plus la bascule ne tiennent plus sur une ligne :
+     on resserre avant de laisser le bandeau se replier n'importe comment. */
+  header.site nav{gap:14px}
+  header.site nav a{font-size:13px}
+}
+@media (max-width:800px){
+  section{padding-block:64px}
+  /* Un bandeau collant de ~190 px mange un quart d'un écran de téléphone.
+     Sous 720 px il redevient statique : la navigation reste accessible en
+     remontant, et l'écran est rendu au contenu. */
+  header.site{position:static}
+  header.site nav{margin-left:0;gap:12px}
+  header.site nav a{font-size:13px}
+  .step{grid-template-columns:1fr;gap:8px}
+  .step .n{padding-top:0}
+}
+
+
+/* ── Diagrammes ──────────────────────────────────────────────────────
+   Le paysage tombe sous 6 px de titre en dessous de ~760 px : on bascule
+   sur la version empilée, dimensionnée pour le mobile. */
+.diagramme{margin:0 0 44px}
+.diagramme svg{display:block;width:100%;height:auto}
+.diagramme figcaption{
+  margin-top:16px;font-size:14px;line-height:1.6;
+  color:var(--text-secondary);max-width:62ch;
+}
+.d-etroit{display:none}
+@media (max-width:760px){.d-large{display:none}.d-etroit{display:block}}
+
+/* Second index vers les mêmes fiches, rangé par poste. Volontairement sans
+   l'habillage des .card : six cartes identiques sur une page feraient lire
+   deux offres là où il n'y en a qu'une, vue sous deux angles. */
+.roles{list-style:none;margin:34px 0 0;padding:0;display:grid;gap:0}
+.roles li{padding:26px 0;border-top:1px solid var(--border-subtle)}
+.roles li:last-child{border-bottom:1px solid var(--border-subtle)}
+.roles h3{margin-bottom:8px}
+.roles p{max-width:68ch}
+.roles a{font-size:14px;text-decoration:none}
+.roles a:hover{text-decoration:underline}
+
+/* Portraits des fondateurs, en tête de colonne. Le cadrage 4:5 est celui que
+   brief-photo.md commande (1600 × 2000) : la réserve a donc exactement la
+   forme de la photo à venir, et son arrivée ne décalera rien.
+   L'emplacement vide reste discret — sur une page qui vend deux personnes,
+   un grand rectangle barré ferait plus de mal que le manque lui-même. */
+.portrait{aspect-ratio:4/5;max-width:240px;margin-bottom:20px;overflow:hidden;
+          border-radius:var(--radius-xl);background:var(--surface);
+          border:1px solid var(--border-subtle);display:grid;place-items:center}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.portrait span{font-family:var(--font-code);font-size:10px;letter-spacing:.14em;
+               text-transform:uppercase;color:var(--text-secondary)}
+
+/* Variante A — la mesure en exergue.
+   Elle est l'argument de la marque et c'était l'élément le plus petit et le
+   plus gris de la carte. Détachée par un filet, listée plutôt qu'en phrase,
+   et collée au bas de la carte pour que les mesures s'alignent entre elles
+   quelle que soit la longueur du texte au-dessus. */
+.fiches{list-style:none;margin:34px 0 0;padding:0;display:grid;gap:20px;
+        grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.fiches>li{display:flex;flex-direction:column;padding:26px;background:var(--surface);
+           border:1px solid var(--border);border-radius:var(--radius-xl);scroll-margin-top:96px}
+.fiches .who{font-family:var(--font-code);font-size:10px;letter-spacing:.14em;
+             text-transform:uppercase;color:var(--accent);margin:0}
+.fiches h3{margin:6px 0 10px}
+/* Le constat se lit en premier plan, le mécanisme en retrait : trois
+   paragraphes de même poids ne donnaient aucune hiérarchie de lecture. */
+.fiches>li>p:nth-of-type(2){color:var(--text-primary);font-size:15px;margin-bottom:14px}
+.fiches>li>p{color:var(--text-secondary);font-size:14px;line-height:1.55}
+.fiches .mesure{margin-top:auto;padding-top:16px;border-top:1px solid var(--border)}
+.fiches .mesure span{display:block;font-family:var(--font-code);font-size:10px;
+                     letter-spacing:.14em;text-transform:uppercase;
+                     color:var(--text-secondary);margin-bottom:8px}
+.fiches .mesure ul{list-style:none;margin:0;padding:0;display:flex;
+                   flex-direction:column;gap:5px}
+.fiches .mesure li{position:relative;padding-left:16px;font-size:14px;
+                   color:var(--text-primary);line-height:1.45}
+.fiches .mesure li::before{content:"";position:absolute;left:0;top:7px;width:6px;height:6px;
+                           background:var(--accent);transform:rotate(45deg)}
+.roles .liens{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:10px}
+
+/* Les explicatifs sont plus larges que la colonne de texte, et c'est voulu :
+   dans .prose (68ch) leurs libellés tombaient à 7,6 px. Ils vivent donc dans
+   une section à eux, en pleine largeur de .wrap. */
+.explicatif{max-width:900px;margin-inline:auto}
+.explicatif figcaption{max-width:72ch}
+
+/* Item 4 — la boucle se trace une fois, de droite à gauche : le sens dans
+   lequel on la parcourt. Le tracé est en pointillés, donc un stroke-dashoffset
+   ferait DÉFILER les tirets au lieu de dessiner ; c'est un rectangle de découpe
+   qui balaie. Son scaleX est du transform, conforme au §6.
+   Aucun JavaScript propre : on réutilise le .vu posé par l'observateur des
+   sections (item 6). */
+html:not(.no-js) .kg-revele{
+  transform-box:fill-box;transform-origin:right center;transform:scaleX(0);
+}
+html:not(.no-js) section.vu .kg-revele{
+  transform:scaleX(1);
+  transition:transform var(--duration-medium) var(--ease-out);
+}
+/* Le libellé est hors découpe — révélé par tranches, un texte est illisible.
+   Il arrive donc en fondu, une fois le tracé terminé. */
+html:not(.no-js) .kg-boucle-libelle{opacity:0}
+html:not(.no-js) section.vu .kg-boucle-libelle{
+  opacity:1;
+  transition:opacity var(--duration-short) var(--ease-out) var(--duration-medium);
+}
+
+/* Item 5 — les points de validation humaine apparaissent en séquence.
+   --i porte le rang du point, émis par le générateur. */
+html:not(.no-js) .kg-point{opacity:0}
+html:not(.no-js) section.vu .kg-point{
+  opacity:1;
+  transition:opacity var(--duration-short) var(--ease-out) calc(var(--i) * 90ms);
+}
+
+/* Sections déjà visibles au chargement : état final, aucune transition. */
+.sans-anim,
+.sans-anim .kg-revele,
+.sans-anim .kg-point,
+.sans-anim .kg-boucle-libelle{transition:none!important}
+
+/* Rien ne doit rester caché : en mouvement réduit, tout est là d'emblée. */
+@media (prefers-reduced-motion:reduce){
+  html:not(.no-js) .kg-revele{transform:none!important}
+  html:not(.no-js) .kg-boucle-libelle,
+  html:not(.no-js) .kg-point{opacity:1!important}
+}
+
+/* Icône de situation dans le sur-titre des pages profil : les trois pages
+   étaient typographiquement identiques, le numéro ou rien pour les distinguer. */
+.eyebrow .ico{display:inline-block;vertical-align:-5px;margin-right:9px;line-height:0}
+.eyebrow .ico svg{width:20px;height:20px;display:block;color:var(--accent)}

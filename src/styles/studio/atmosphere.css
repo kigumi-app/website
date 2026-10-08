@@ -1,0 +1,44 @@
+/* =============================================================
+   Atmosphère — grain de film et vignette.
+   Ce qui sépare « fond noir » de « pièce éclairée par une lampe ».
+
+   Requiert tokens.css. Un seul interrupteur, --atmo : à 0 (mode papier)
+   toute la couche disparaît, sans règle supplémentaire à écrire.
+
+     <div class="atmo" aria-hidden="true"></div>          dans un conteneur positionné
+     <div class="atmo atmo--fixe" aria-hidden="true"></div>  sur toute la fenêtre
+   ============================================================= */
+
+.atmo {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;            /* purement décoratif : ne doit rien intercepter */
+  opacity: var(--atmo, 1);
+  z-index: 40;
+}
+
+.atmo--fixe { position: fixed; }
+
+/* Grain : la tuile se répète, fixée à la fenêtre — c'est un artefact de pellicule,
+   pas un élément du contenu, donc il ne défile pas. */
+.atmo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(/studio/texture/grain.png);
+  background-repeat: repeat;
+  opacity: 0.025;
+}
+
+/* Vignette : centre transparent, bords assombris. */
+.atmo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--vignette);
+}
+
+/* Ceinture et bretelles : même si quelqu'un imprime en mode écran. */
+@media print { .atmo { display: none !important; } }
+
+@media (prefers-reduced-transparency: reduce) { .atmo { display: none; } }
