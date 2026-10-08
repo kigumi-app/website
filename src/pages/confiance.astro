@@ -1,0 +1,74 @@
+---
+import StudioLayout from "../layouts/StudioLayout.astro";
+---
+<StudioLayout
+  titre={'Données, sécurité et conformité'}
+  description={'Où vont vos données, ce qui sort de vos systèmes, et ce que vous gardez si vous arrêtez.'}
+  actif="confiance">
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow">Confiance</p>
+    <h1>Vos données, où elles vont, et ce que vous gardez.</h1>
+    <p class="lead">Les questions que votre DSI posera de toute façon. Autant y répondre avant l'appel.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <h2>Hébergement</h2>
+    <p>En France, chez <strong>Scaleway</strong> et <strong>OVHcloud</strong>, deux hébergeurs de droit français. Une base de données isolée par client, aucune mutualisation des données entre nos clients.</p>
+
+    <h2 style="margin-top:2em">Ce qui sort, ce qui ne sort pas</h2>
+    <p>Le strict nécessaire au traitement demandé, et rien d'autre. <strong>Aucun entraînement de modèle sur vos données.</strong></p>
+    <p style="margin-top:1.4em">Les fournisseurs de modèles auxquels nous faisons appel, et le pays où le traitement a lieu&nbsp;:</p>
+    <ul class="measures">
+      <li><strong>Mistral AI</strong> &mdash; France</li>
+      <li><strong>Anthropic</strong> &mdash; États-Unis</li>
+      <li><strong>OpenAI</strong> &mdash; États-Unis</li>
+      <li><strong>Google</strong> &mdash; États-Unis</li>
+      <li><strong>TypeSafe AI</strong> &mdash; États-Unis</li>
+    </ul>
+    <p style="margin-top:1.4em">Le choix se décide processus par processus, avec vous. Lorsqu&rsquo;un traitement doit rester en Europe, il reste en Europe.</p>
+
+    <h2 style="margin-top:2em">Combien de temps vos données sont conservées</h2>
+    <ul class="measures">
+      <li><strong>Documents traités par les agents</strong> &mdash; 30 jours après traitement. De quoi reprendre une erreur, pas davantage.</li>
+      <li><strong>Base de connaissance</strong> &mdash; la durée du contrat. Restituée puis supprimée sous 30 jours si vous arrêtez.</li>
+      <li><strong>Journaux techniques</strong> &mdash; 6 mois, la durée que retient la CNIL pour les journaux de connexion.</li>
+      <li><strong>Données envoyées aux fournisseurs de modèles</strong> &mdash; zéro conservation lorsque l&rsquo;offre du fournisseur le permet. À défaut, 30 jours pour la seule détection d&rsquo;abus. Dans tous les cas, aucune utilisation pour l&rsquo;entraînement.</li>
+      <li><strong>Vos coordonnées, si vous nous avez contactés</strong> &mdash; 3 ans après le dernier échange.</li>
+    </ul>
+
+    <h2 style="margin-top:2em">Qui a accès, et à quoi</h2>
+    <ul class="measures">
+      <li>Comptes nominatifs, jamais partagés, avec double authentification sur tout ce qui touche à vos données.</li>
+      <li>Moindre privilège&nbsp;: chacun n&rsquo;accède qu&rsquo;aux clients dont il s&rsquo;occupe.</li>
+      <li><strong>Aucun accès permanent en production.</strong> L&rsquo;accès s&rsquo;ouvre à la demande, pour une durée bornée, et il est tracé.</li>
+      <li>Revue des accès chaque trimestre. Révocation sous 24 heures au départ d&rsquo;une personne ou à la fin d&rsquo;une mission.</li>
+    </ul>
+
+    <h2 style="margin-top:2em">Ce qui est tracé</h2>
+    <ul class="measures">
+      <li>Qui a accédé à quoi, quand, et ce qui a été fait. Horodaté, non modifiable.</li>
+      <li><strong>Chaque action d&rsquo;un agent est tracée</strong> &mdash; la donnée lue, la décision, la sortie produite, et le point de validation humaine lorsqu&rsquo;il y en a un.</li>
+      <li>Journaux conservés 6 mois.</li>
+      <li><strong>Consultables par vous, sur demande.</strong> Un journal que le client ne peut pas lire ne prouve rien.</li>
+    </ul>
+    <p style="margin-top:1.4em">L&rsquo;AI Act impose cette traçabilité aux systèmes à haut risque. Nous l&rsquo;appliquons à tous les agents que nous déployons, y compris quand rien ne l&rsquo;exige&nbsp;: c&rsquo;est ce qui rend un cas comme le tri de candidatures déployable au lieu de risqué.</p>
+
+    <h2 id="reversibilite" style="margin-top:2em">Réversibilité</h2>
+    <p>Les données extraites et les définitions de processus vous appartiennent, et s'exportent à tout moment. Si vous arrêtez, vous gardez ce qui a été construit.</p>
+
+    <h2 style="margin-top:2em">L'humain garde la main</h2>
+    <p>Toute étape irréversible, ou qui porte un engagement commercial, reste validée par une personne de votre équipe. Un agent propose, signale ce dont il n'est pas sûr, et n'engage jamais l'entreprise à votre place.</p>
+    <figure class="diagramme">
+      <svg viewBox="0 0 660 546" width="100%" role="img" aria-label="Déroulé du processus en colonne agent, avec les points où la main revient à un humain : validation requise, ou remontée sur exception." style="display:block;height:auto"><title>Déroulé du processus en colonne agent, avec les points où la main revient à un humain : validation requise, ou remontée sur exception.</title><text x="24" y="26" font-family="var(--font-code)" font-size="9" font-weight="500" fill="var(--text-secondary)" text-anchor="start" letter-spacing="0.18em">AGENT</text><text x="562" y="26" font-family="var(--font-code)" font-size="9" font-weight="500" fill="var(--accent)" text-anchor="middle" letter-spacing="0.18em">HUMAIN</text><line x1="24" y1="36" x2="636" y2="36" stroke="var(--border)" stroke-width="1"/><line x1="488" y1="36" x2="488" y2="494" stroke="var(--border)" stroke-width="1" stroke-dasharray="3 4"/><rect x="24" y="58" width="438" height="40" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/><text x="40" y="77" font-family="var(--font-code)" font-size="9" font-weight="500" fill="var(--accent)" text-anchor="start" letter-spacing="0.14em">01</text><text x="70" y="82" font-family="var(--font-body)" font-size="13" font-weight="500" fill="var(--text-primary)" text-anchor="start">Réception et classement du dossier</text><rect x="24" y="112" width="438" height="40" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/><text x="40" y="131" font-family="var(--font-code)" font-size="9" font-weight="500" fill="var(--accent)" text-anchor="start" letter-spacing="0.14em">02</text><text x="70" y="136" font-family="var(--font-body)" font-size="13" font-weight="500" fill="var(--text-primary)" text-anchor="start">Extraction des questions</text><rect x="24" y="166" width="438" height="40" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/><text x="40" y="185" font-family="var(--font-code)" font-size="9" font-weight="500" fill="var(--accent)" text-anchor="start" letter-spacing="0.14em">03</text><text x="70" y="190" font-family="var(--font-body)" font-size="13" font-weight="500" fill="var(--text-primary)" text-anchor="start">Recherche des réponses antérieures</text><rect x="24" y="220" width="438" height="40" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/><text x="40" y="239" font-family="var(--font-code)" font-size="9" font-weight="500" fill="var(--accent)" text-anchor="start" letter-spacing="0.14em">04</text><text x="70" y="244" font-family="var(--font-body)" font-size="13" font-weight="500" fill="var(--text-primary)" text-anchor="start">Rédaction du brouillon</text><g class="kg-point" style="--i:0"><path d="M466,240 H551" stroke="var(--accent)" stroke-width="2" fill="none" stroke-dasharray="4 3"/><rect x="553" y="231" width="18" height="18" rx="3" fill="none" stroke="var(--accent)" stroke-width="2"/></g><rect x="24" y="274" width="438" height="40" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/><text x="40" y="293" font-family="var(--font-code)" font-size="9" font-weight="500" fill="var(--accent)" text-anchor="start" letter-spacing="0.14em">05</text><text x="70" y="298" font-family="var(--font-body)" font-size="13" font-weight="500" fill="var(--text-primary)" text-anchor="start">Questions inédites</text><g class="kg-point" style="--i:1"><path d="M466,294 H551" stroke="var(--accent)" stroke-width="2" fill="none"/><rect x="553" y="285" width="18" height="18" rx="3" fill="var(--accent)"/><path d="M558,294 l3,3 5.5,-6" stroke="var(--bg)" stroke-width="2" fill="none" stroke-linecap="square"/></g><rect x="24" y="328" width="438" height="40" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/><text x="40" y="347" font-family="var(--font-code)" font-size="9" font-weight="500" fill="var(--accent)" text-anchor="start" letter-spacing="0.14em">06</text><text x="70" y="352" font-family="var(--font-body)" font-size="13" font-weight="500" fill="var(--text-primary)" text-anchor="start">Chiffrage et conditions de prix</text><g class="kg-point" style="--i:2"><path d="M466,348 H551" stroke="var(--accent)" stroke-width="2" fill="none"/><rect x="553" y="339" width="18" height="18" rx="3" fill="var(--accent)"/><path d="M558,348 l3,3 5.5,-6" stroke="var(--bg)" stroke-width="2" fill="none" stroke-linecap="square"/></g><rect x="24" y="382" width="438" height="40" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/><text x="40" y="401" font-family="var(--font-code)" font-size="9" font-weight="500" fill="var(--accent)" text-anchor="start" letter-spacing="0.14em">07</text><text x="70" y="406" font-family="var(--font-body)" font-size="13" font-weight="500" fill="var(--text-primary)" text-anchor="start">Assemblage et mise en forme</text><rect x="24" y="436" width="438" height="40" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/><text x="40" y="455" font-family="var(--font-code)" font-size="9" font-weight="500" fill="var(--accent)" text-anchor="start" letter-spacing="0.14em">08</text><text x="70" y="460" font-family="var(--font-body)" font-size="13" font-weight="500" fill="var(--text-primary)" text-anchor="start">Soumission</text><g class="kg-point" style="--i:3"><path d="M466,456 H551" stroke="var(--accent)" stroke-width="2" fill="none"/><rect x="553" y="447" width="18" height="18" rx="3" fill="var(--accent)"/><path d="M558,456 l3,3 5.5,-6" stroke="var(--bg)" stroke-width="2" fill="none" stroke-linecap="square"/></g><rect x="24" y="512" width="15" height="15" rx="3" fill="var(--accent)"/><text x="47" y="524" font-family="var(--font-body)" font-size="10.5" font-weight="400" fill="var(--text-secondary)" text-anchor="start">Validation requise — rien ne part sans un humain</text><rect x="354" y="512" width="15" height="15" rx="3" fill="none" stroke="var(--accent)" stroke-width="2"/><text x="377" y="524" font-family="var(--font-body)" font-size="10.5" font-weight="400" fill="var(--text-secondary)" text-anchor="start">Remonte sur exception</text></svg>
+      <figcaption>Exemple sur la réponse aux appels d'offres. Les points de validation tombent sur ce qui engage : les questions inédites, le chiffrage, la soumission.</figcaption>
+    </figure>
+
+    <h2 id="ai-act" style="margin-top:2em">AI Act</h2>
+    <p>Le règlement européen sur l'intelligence artificielle classe les usages par niveau de risque. Les automatisations que nous déployons — traitement de documents, routage de demandes, aide à la rédaction avec validation humaine — relèvent du risque limité, avec une obligation de transparence.</p>
+    <p>Deux cas appellent une attention particulière et nous vous le signalons avant de commencer : lorsque les personnes qui interagissent avec un agent sont des particuliers, elles doivent en être informées ; et toute automatisation touchant à l'évaluation de personnes, en recrutement notamment, relève du haut risque et impose des obligations bien plus lourdes.</p>
+  </div>
+</section>
+</StudioLayout>
