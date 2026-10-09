@@ -29,6 +29,11 @@ const LARGEURS = [{ nom: "large", width: 1280, height: 900 },
 const MODES = ["dark", "light"];
 const somme = (s) => createHash("sha256").update(s).digest("hex").slice(0, 16);
 
+// La page d'administration est une application tierce chargée depuis un CDN :
+// son contenu ne nous appartient pas et change sans nous. La relever
+// produirait un écart à chaque montée de version de Sveltia.
+const HORS_FILET = [/^\/admin\//];
+
 /** Toutes les routes du build, en chemins servis. */
 async function routes(dir = DIST, base = "/") {
   const out = [];
@@ -37,7 +42,7 @@ async function routes(dir = DIST, base = "/") {
     else if (e.name === "index.html") out.push(base);
     else if (e.name.endsWith(".html")) out.push(base + e.name);
   }
-  return out.sort();
+  return out.filter((r) => !HORS_FILET.some((m) => m.test(r))).sort();
 }
 
 function releve() {
