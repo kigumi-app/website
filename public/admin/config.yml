@@ -1,0 +1,76 @@
+# Rédaction — Sveltia CMS
+#
+# Périmètre volontairement restreint à la prose : le blog du studio et les
+# notes du lab. Ni les fiches de cas, ni la copie commerciale.
+#
+# Un CMS fondé sur git ne donne pas d'aperçu fidèle d'une page composée.
+# Laisser modifier une fiche à l'aveugle, c'est accepter qu'une mesure
+# disparaisse ou qu'un titre casse une grille sans que personne ne le voie
+# avant la mise en ligne. Les fiches vivent dans src/data/cas.json, sous revue,
+# et leur schéma est vérifié à la construction.
+
+backend:
+  name: github
+  repo: kigumi-app/site
+  branch: main
+  # Fourni par l'authenticator déployé sur Cloudflare Workers. Sans lui, la
+  # seule autre voie est un jeton personnel collé à la main — à écarter : un
+  # jeton à droits d'écriture qui vit dans un navigateur n'est pas une
+  # procédure qu'on veut enseigner.
+  base_url: https://auth.kigumi.app
+
+media_folder: public/uploads
+public_folder: /uploads
+
+locale: fr
+
+collections:
+  - name: blog
+    label: Blog
+    label_singular: Article
+    folder: src/content/blog
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    preview_path: blog/{{slug}}
+    summary: "{{title}}"
+    sortable_fields: [pubDate, title]
+    fields:
+      - { name: title, label: Titre, widget: string }
+      - { name: description, label: Chapô, widget: text,
+          hint: "Une à deux phrases. Sert aussi de description pour les moteurs." }
+      - { name: pubDate, label: Date, widget: datetime, format: "YYYY-MM-DD",
+          date_format: "DD/MM/YYYY", time_format: false }
+      - { name: updatedDate, label: Mise à jour, widget: datetime, required: false,
+          format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+      - { name: draft, label: Brouillon, widget: boolean, default: true,
+          hint: "Un brouillon ne produit aucune page. Décocher pour publier." }
+      - { name: image, label: Image, widget: image, required: false }
+      - { name: body, label: Texte, widget: markdown }
+
+  - name: essays
+    label: Lab — notes
+    label_singular: Note
+    folder: src/content/essays
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    preview_path: lab/harness/writing/{{slug}}
+    summary: "{{title}}"
+    sortable_fields: [pubDate, title]
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: pubDate, label: Date, widget: datetime, format: "YYYY-MM-DD",
+          date_format: "DD/MM/YYYY", time_format: false }
+      - { name: updatedDate, label: Updated, widget: datetime, required: false,
+          format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+      - name: pillar
+        label: Pillar
+        widget: select
+        options: [intent-gap, founder-journey, category-creation, builder-notes]
+      - { name: draft, label: Draft, widget: boolean, default: true }
+      - { name: ogImage, label: OG image, widget: string, required: false }
+      - { name: body, label: Body, widget: markdown }
