@@ -6,7 +6,7 @@
 
 ---
 
-## 1. Transférer `merlion` vers l'organisation
+## 1. ~~Transférer `merlion` vers l'organisation~~ ✅ fait
 
 **Pourquoi maintenant.** Le dépôt est sous ton compte personnel
 (`Le-Steph/merlion`). C'est l'actif principal de la société : le site
@@ -14,28 +14,23 @@ commercial, le produit et le blog y vivent. Et **neuf commits de portage
 attendent en local** — je ne pousse pas dans ton dépôt personnel sans que tu
 le dises.
 
-1. GitHub → `Le-Steph/merlion` → Settings → en bas, **Transfer ownership**
-2. Destination : organisation `kigumi-app`
-3. Renommer en **`site`** — « merlion » ne dit rien à personne
+Devenu **`kigumi-app/website`**. Dépôt distant repointé, commits de portage
+poussés, et la configuration du CMS nomme désormais le bon dépôt.
 
-Préviens-moi ensuite : je repointe le dépôt distant et je pousse.
-
-> Le renommage conserve les redirections GitHub, rien ne casse.
+> Reste à archiver `kigumi-app/studio-website`, qui portait le site bash.
+> À faire seulement après la bascule : c'est lui qui contient la référence
+> d'avant-portage, sous le tag `reference-avant-astro`.
 
 ---
 
-## 2. Créer l'application OAuth GitHub
+## 2. ~~Créer l'application OAuth GitHub~~ ✅ fait
 
 Elle permet à Julien de se connecter au CMS d'un clic, sans jamais manipuler
 de jeton.
 
-1. GitHub → Settings → Developer settings → **OAuth Apps** → New OAuth App
-2. Remplir :
-   - **Application name** : `Kigumi CMS`
-   - **Homepage URL** : `https://kigumi.app`
-   - **Authorization callback URL** : `https://auth.kigumi.app/callback`
-3. Noter le **Client ID**, puis **Generate a new client secret** et noter le
-   secret — il ne sera plus affiché
+Faite. Le **Client ID** et le **secret** servent au point 3 : ce sont les
+deux variables d'environnement du Worker. Garde-les sous la main, le secret
+n'est plus affichable.
 
 ---
 

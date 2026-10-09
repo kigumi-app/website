@@ -11,7 +11,7 @@
 
 backend:
   name: github
-  repo: kigumi-app/site
+  repo: kigumi-app/website
   branch: main
   # Fourni par l'authenticator déployé sur Cloudflare Workers. Sans lui, la
   # seule autre voie est un jeton personnel collé à la main — à écarter : un
