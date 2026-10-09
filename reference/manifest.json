@@ -53,7 +53,8 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "6f034bbae58d3d00"
+    "empreinteTexte": "6f034bbae58d3d00",
+    "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/404.html": {
     "titre": "Not found - Kigumi",
@@ -77,7 +78,8 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "2403d2ff4d2a9757"
+    "empreinteTexte": "2403d2ff4d2a9757",
+    "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/a-propos/": {
     "titre": "À propos — Kigumi",
@@ -119,7 +121,8 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "5454c6219c63df49"
+    "empreinteTexte": "5454c6219c63df49",
+    "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/blog/": {
     "titre": "Blog — Kigumi",
@@ -154,7 +157,8 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "792aa4d99416cbc1"
+    "empreinteTexte": "792aa4d99416cbc1",
+    "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/cas-usages/": {
     "titre": "Cas d'usages — Kigumi",
@@ -217,7 +221,8 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "f14658a2590db0f9"
+    "empreinteTexte": "f14658a2590db0f9",
+    "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/confiance/": {
     "titre": "Données, sécurité et conformité — Kigumi",
@@ -261,7 +266,8 @@
       "svg": 1
     },
     "deborde": false,
-    "empreinteTexte": "64e256708072b831"
+    "empreinteTexte": "64e256708072b831",
+    "empreinteSvg": "f75e64dd85b0084d"
   },
   "/conseil-ingenierie/": {
     "titre": "Conseil, ingénierie, bureaux d'études — Kigumi",
@@ -303,7 +309,8 @@
       "svg": 3
     },
     "deborde": false,
-    "empreinteTexte": "5cbdcdfda57c1b21"
+    "empreinteTexte": "5cbdcdfda57c1b21",
+    "empreinteSvg": "c8b1d09a9ced2b64"
   },
   "/contact/": {
     "titre": "Prendre rendez-vous — Kigumi",
@@ -341,7 +348,8 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "6a335b8f29b6d437"
+    "empreinteTexte": "6a335b8f29b6d437",
+    "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/direction-commerciale/": {
     "titre": "Direction commerciale et développement — Kigumi",
@@ -386,7 +394,8 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "3f7fe9547329b3ad"
+    "empreinteTexte": "3f7fe9547329b3ad",
+    "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/direction-financiere/": {
     "titre": "Direction administrative et financière — Kigumi",
@@ -432,7 +441,8 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "239bd1a3fe8bbce7"
+    "empreinteTexte": "239bd1a3fe8bbce7",
+    "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/direction-generale/": {
     "titre": "Direction générale — Kigumi",
@@ -476,7 +486,8 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "d077ec90ab1d629c"
+    "empreinteTexte": "d077ec90ab1d629c",
+    "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/direction-operations/": {
     "titre": "Direction des opérations et administration des ventes — Kigumi",
@@ -522,7 +533,8 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "3df8733c81b49cc5"
+    "empreinteTexte": "3df8733c81b49cc5",
+    "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/direction-relation-client/": {
     "titre": "Direction de la relation client — Kigumi",
@@ -567,7 +579,8 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "a7f6d056dfa0f10f"
+    "empreinteTexte": "a7f6d056dfa0f10f",
+    "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/industrie-distribution/": {
     "titre": "Industrie et distribution B2B — Kigumi",
@@ -609,7 +622,8 @@
       "svg": 3
     },
     "deborde": false,
-    "empreinteTexte": "5d105115b9e25350"
+    "empreinteTexte": "5d105115b9e25350",
+    "empreinteSvg": "17a5f428f632d7c3"
   },
   "/lab/": {
     "titre": "Lab — Kigumi",
@@ -653,7 +667,8 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "d3c51dfffb87ef64"
+    "empreinteTexte": "d3c51dfffb87ef64",
+    "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/lab/harness/": {
     "titre": "Kigumi - AI made code cheap. Kigumi makes change safe.",
@@ -680,7 +695,8 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "167e2d6a10cbbc4a"
+    "empreinteTexte": "167e2d6a10cbbc4a",
+    "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/lab/harness/how-it-works/": {
     "titre": "How Kigumi Works - Import. Reason. Evolve. Verify.",
@@ -711,7 +727,8 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "cff3359a478e8c71"
+    "empreinteTexte": "cff3359a478e8c71",
+    "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/lab/harness/writing/": {
     "titre": "Writing - Kigumi",
@@ -735,7 +752,8 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "8433ee9e20823c9b"
+    "empreinteTexte": "8433ee9e20823c9b",
+    "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/mentions-legales/": {
     "titre": "Mentions légales — Kigumi",
@@ -781,7 +799,8 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "5ac250b53c61743b"
+    "empreinteTexte": "5ac250b53c61743b",
+    "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/methode/": {
     "titre": "Notre méthode — Kigumi",
@@ -827,7 +846,8 @@
       "svg": 2
     },
     "deborde": false,
-    "empreinteTexte": "cd69e8c67b35062c"
+    "empreinteTexte": "cd69e8c67b35062c",
+    "empreinteSvg": "339b4927ae4504f3"
   },
   "/qualite-conformite/": {
     "titre": "Qualité et conformité — Kigumi",
@@ -871,7 +891,8 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "c8239e6844e0088c"
+    "empreinteTexte": "c8239e6844e0088c",
+    "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/ressources-humaines/": {
     "titre": "Ressources humaines — Kigumi",
@@ -915,7 +936,8 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "1e4ed2b6a131d52d"
+    "empreinteTexte": "1e4ed2b6a131d52d",
+    "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/service-client/": {
     "titre": "Éditeurs et services récurrents — Kigumi",
@@ -956,7 +978,8 @@
       "svg": 3
     },
     "deborde": false,
-    "empreinteTexte": "2c0456bc5d3674fa"
+    "empreinteTexte": "2c0456bc5d3674fa",
+    "empreinteSvg": "ca4622938d76b28d"
   },
   "/travailler-ensemble/": {
     "titre": "Travailler ensemble — Kigumi",
@@ -996,6 +1019,7 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "8149d91ae3c9f603"
+    "empreinteTexte": "8149d91ae3c9f603",
+    "empreinteSvg": "e3b0c44298fc1c14"
   }
 }

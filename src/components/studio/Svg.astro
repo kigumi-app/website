@@ -1,0 +1,24 @@
+---
+// Insère un SVG engendré par brand/ dans la page, à la construction.
+//
+// En <img> les var(--…) ne résoudraient pas et le CSS ne pourrait rien
+// animer : c'est pour ça que le site bash les injectait par marqueur. Le
+// portage les avait figés dans les pages, ce qui coupait le lien avec les
+// générateurs — un diagramme régénéré n'y serait jamais arrivé.
+const diagrammes = import.meta.glob("../../assets/diagrams/*.svg",
+  { query: "?raw", import: "default", eager: true }) as Record<string, string>;
+const icones = import.meta.glob("../../assets/icons/*.svg",
+  { query: "?raw", import: "default", eager: true }) as Record<string, string>;
+
+interface Props { nom: string; icone?: boolean }
+const { nom, icone = false } = Astro.props;
+const source = icone ? icones : diagrammes;
+const cle = Object.keys(source).find((k) => k.endsWith(`/${nom}.svg`));
+if (!cle) {
+  // Échouer à la construction plutôt que servir un trou : un diagramme absent
+  // se voit ici tout de suite, jamais sur la page en production.
+  throw new Error(`SVG introuvable : ${nom} (${icone ? "icônes" : "diagrammes"}). `
+    + `Lancer brand/bin/sync_website.sh ?`);
+}
+---
+<Fragment set:html={source[cle]} />

@@ -25,7 +25,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url(/studio/texture/grain.png);
+  background-image: url(texture/grain.png);
   background-repeat: repeat;
   opacity: 0.025;
 }

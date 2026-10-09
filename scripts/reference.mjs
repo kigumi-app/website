@@ -58,6 +58,12 @@ function releve() {
       mesures: document.querySelectorAll(".mesure li").length,
       svg: document.querySelectorAll("main svg").length,
     },
+    // Empreinte du balisage des SVG. Le relevé de texte ne les voit pas : deux
+    // variantes d'un même schéma portent souvent le même texte, si bien qu'un
+    // échange entre elles passait inaperçu. C'est arrivé au portage.
+    svg: [...document.querySelectorAll("main svg")]
+      .map((e) => e.outerHTML.length + ":" + (e.querySelector("title")?.textContent ?? ""))
+      .join("|"),
     texte: t,
   };
 }
@@ -106,8 +112,8 @@ for (const route of liste) {
     await p.close();
   }
   await fs.writeFile(path.join(CIBLE, "text", `${slug}.txt`), r.texte + "\n");
-  const { texte, ...reste } = r;
-  manifeste[route] = { ...reste, empreinteTexte: somme(texte) };
+  const { texte, svg, ...reste } = r;
+  manifeste[route] = { ...reste, empreinteTexte: somme(texte), empreinteSvg: somme(svg) };
   process.stdout.write(`  ${route}\n`);
 }
 await fs.writeFile(path.join(CIBLE, "manifest.json"), JSON.stringify(manifeste, null, 2) + "\n");
@@ -123,7 +129,8 @@ if (!VERIFIE) {
     const a = ref[r], z = manifeste[r];
     if (!a) { console.log(`+ ${r} — route nouvelle`); n++; continue; }
     if (!z) { console.log(`- ${r} — route disparue`); n++; continue; }
-    for (const c of ["titre", "description", "canonical", "empreinteTexte", "menuActif"])
+    for (const c of ["titre", "description", "canonical", "empreinteTexte",
+                     "empreinteSvg", "menuActif"])
       if (a[c] !== z[c]) { console.log(`≠ ${r} · ${c}`); n++; }
     for (const c of Object.keys(a.compte))
       if (a.compte[c] !== z.compte[c])
