@@ -1,0 +1,48 @@
+Méthode
+Travailler ensemble
+Cas d’usages
+À propos
+Prendre rendez-vous
+À PROPOS
+Deux associés, pas une agence généraliste qui a ajouté l'IA à son catalogue.
+Un côté opérations et commerce, un côté technique. Vous aurez les deux en face de vous.
+PORTRAIT À VENIR
+Julien
+Opérations et développement commercial.
+J'ai commencé par sept ans de vente de solutions informatiques aux grands comptes, pour des opérateurs et des intégrateurs : appels d'offres, DSI, achats, coordination entre l'avant-vente, les constructeurs et les équipes projet.
+J'ai ensuite passé six ans chez un éditeur de logiciels de mobilité. J'y suis passé de Customer Success Manager à Client Services Director. J'y ai dirigé une équipe de 11 personnes en Customer Success, Support et gestion de projet.
+Mon métier depuis près de quinze ans : faire en sorte qu'une solution technique tienne ses promesses une fois chez le client.
+PORTRAIT À VENIR
+Stéphane
+Technique et produit.
+Près de quinze ans à construire des produits logiciels complexes, utilisés par des millions de personnes — là où une erreur se voit tout de suite.
+J'ai dirigé l'ensemble des équipes de développement d'un éditeur de logiciels de mobilité, R&D et machine learning compris.
+Ce qui m'a amené ici, c'est ce que j'y ai vu se répéter : un système qui tourne n'est pas un système qui fait ce qu'on attendait de lui. On sait dire qu'un logiciel ne plante pas ; on sait rarement dire ce qu'il fait. Je travaille depuis sur la vérification — comment s'assurer qu'un programme, et aujourd'hui un programme écrit par une IA, fait bien ce qu'on lui avait demandé.
+C'est la même exigence que j'applique aux agents qu'on déploie : on ne vérifie pas qu'ils tournent, on mesure ce qu'ils produisent.
+Pourquoi nous deux
+On a travaillé trois ans ensemble chez le même éditeur de logiciels de mobilité. Julien y dirigeait la relation client — CSM, support, projets complexes. Stéphane y dirigeait l'ensemble des équipes de développement, R&D et machine learning compris. L'un recevait les appels quand le produit ne faisait pas ce qu'on en avait dit ; l'autre avait les équipes qui l'avaient écrit.
+On en a tiré la même conclusion, chacun de son côté : ce qui manque rarement, c'est la capacité à construire. Ce qui manque presque toujours, c'est la preuve de ce qui a été construit.
+C'est pour ça qu'on ne vend pas de pilote : on chiffre avant, on déploie ensuite, on mesure ce que ça a produit. Et c'est pour ça qu'on travaille avec des entreprises de votre taille — dans un grand groupe, une automatisation qui ne tient pas se dilue, il y a toujours quelqu'un pour la rattraper à la main. Chez vous, elle se voit tout de suite.
+Les deux personnes qui vous vendent la mission sont les deux qui la font.
+Kigumi est aussi le nom d'une technique japonaise d'assemblage du bois, où les pièces tiennent entre elles sans clou ni vis. C'est à peu près ce qu'on fait de vos outils existants.
+Faire connaissance
+45 minutes pour voir si le sujet existe chez vous. Vous aurez les deux associés en face de vous, pas un commercial.
+Prendre rendez-vous
+CAS D’USAGES
+Tous les cas
+Conseil, ingénierie, bureaux d’études
+Industrie et distribution B2B
+Éditeurs et services récurrents
+KIGUMI
+Notre méthode
+Travailler ensemble
+À propos
+Lab
+CONFIANCE
+Données et sécurité
+AI Act
+Mentions légales
+CONTACT
+Prendre rendez-vous
+contact@kigumi.app
+Studio d’automatisation de processus par agents IA pour PME et ETI.

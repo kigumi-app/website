@@ -1,0 +1,1001 @@
+{
+  "/": {
+    "titre": "Automatiser ce qui vous coûte vraiment — Kigumi",
+    "description": "Kigumi identifie les processus qui pèsent le plus dans votre entreprise, déploie les agents qui les prennent en charge, et mesure le gain réel.",
+    "canonical": "https://kigumi.app/",
+    "h1": [
+      "Automatiser ce quivous coûte vraiment.Et le prouver."
+    ],
+    "h2": [
+      "Trois exemples, parmi beaucoup d’autres",
+      "Trente ans de métier, à deux",
+      "Trois principes, tenus à chaque mission",
+      "45 minutes pour savoir si ça vaut le coup"
+    ],
+    "h3": [
+      "Vous répondez à des appels d’offres",
+      "Vos commandes arrivent en désordre",
+      "Votre service client répond toujours aux mêmes questions",
+      "Un diagnostic chiffré, jamais un prototype",
+      "On ne construit que ce que le processus exige",
+      "On mesure le gain réel, et on vous le montre"
+    ],
+    "menuActif": null,
+    "liens": [
+      "/contact",
+      "/methode",
+      "/conseil-ingenierie",
+      "/industrie-distribution",
+      "/service-client",
+      "/cas-usages",
+      "/a-propos",
+      "/methode",
+      "/contact",
+      "/cas-usages",
+      "/conseil-ingenierie",
+      "/industrie-distribution",
+      "/service-client",
+      "/methode",
+      "/travailler-ensemble",
+      "/a-propos",
+      "/lab/",
+      "/confiance",
+      "/confiance#ai-act",
+      "/mentions-legales",
+      "/contact",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 5,
+      "cartes": 3,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "6f034bbae58d3d00"
+  },
+  "/404.html": {
+    "titre": "Not found - Kigumi",
+    "description": "That page does not exist.",
+    "canonical": "https://kigumi.app/404/",
+    "h1": [
+      "This page doesn't exist."
+    ],
+    "h2": [],
+    "h3": [],
+    "menuActif": null,
+    "liens": [
+      "/lab/harness/writing",
+      "mailto:hello@kigumi.app"
+    ],
+    "compte": {
+      "sections": 0,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "2403d2ff4d2a9757"
+  },
+  "/a-propos/": {
+    "titre": "À propos — Kigumi",
+    "description": "Deux associés, un côté opérations et commerce, un côté technique.",
+    "canonical": "https://kigumi.app/a-propos/",
+    "h1": [
+      "Deux associés, pas une agence généraliste qui a ajouté l'IA à son catalogue."
+    ],
+    "h2": [
+      "Pourquoi nous deux",
+      "Faire connaissance"
+    ],
+    "h3": [
+      "Julien",
+      "Stéphane"
+    ],
+    "menuActif": "À propos",
+    "liens": [
+      "/contact",
+      "/cas-usages",
+      "/conseil-ingenierie",
+      "/industrie-distribution",
+      "/service-client",
+      "/methode",
+      "/travailler-ensemble",
+      "/a-propos",
+      "/lab/",
+      "/confiance",
+      "/confiance#ai-act",
+      "/mentions-legales",
+      "/contact",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 3,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "5454c6219c63df49"
+  },
+  "/blog/": {
+    "titre": "Blog — Kigumi",
+    "description": "Ce qu'on apprend en automatisant des processus chez des PME et des ETI.",
+    "canonical": "https://kigumi.app/blog/",
+    "h1": [
+      "Ce qu’on apprend en chemin."
+    ],
+    "h2": [],
+    "h3": [],
+    "menuActif": null,
+    "liens": [
+      "/cas-usages",
+      "/conseil-ingenierie",
+      "/industrie-distribution",
+      "/service-client",
+      "/methode",
+      "/travailler-ensemble",
+      "/a-propos",
+      "/lab/",
+      "/confiance",
+      "/confiance#ai-act",
+      "/mentions-legales",
+      "/contact",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 2,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "792aa4d99416cbc1"
+  },
+  "/cas-usages/": {
+    "titre": "Cas d'usages — Kigumi",
+    "description": "Les processus où l'automatisation par agents a un sens : appels d'offres, commandes entrantes, service client, facturation, achats, conformité, pilotage.",
+    "canonical": "https://kigumi.app/cas-usages/",
+    "h1": [
+      "Là où l’automatisation tient ses promesses."
+    ],
+    "h2": [
+      "Ce qui vous coûte du temps",
+      "Ce qui pèse sur votre poste",
+      "Votre cas n’est pas dans la liste",
+      "Savoir ce que ça vaut chez vous"
+    ],
+    "h3": [
+      "Vous répondez à des appels d’offres",
+      "Vos commandes arrivent en désordre",
+      "Votre service client répond toujours aux mêmes questions",
+      "Direction générale",
+      "Direction commerciale et développement",
+      "Direction des opérations et administration des ventes",
+      "Direction administrative et financière",
+      "Direction de la relation client",
+      "Qualité et conformité",
+      "Ressources humaines"
+    ],
+    "menuActif": "Cas d’usages",
+    "liens": [
+      "/conseil-ingenierie",
+      "/industrie-distribution",
+      "/service-client",
+      "/direction-generale",
+      "/direction-commerciale",
+      "/direction-operations",
+      "/direction-financiere",
+      "/direction-relation-client",
+      "/qualite-conformite",
+      "/ressources-humaines",
+      "/contact",
+      "/methode",
+      "/cas-usages",
+      "/conseil-ingenierie",
+      "/industrie-distribution",
+      "/service-client",
+      "/methode",
+      "/travailler-ensemble",
+      "/a-propos",
+      "/lab/",
+      "/confiance",
+      "/confiance#ai-act",
+      "/mentions-legales",
+      "/contact",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 5,
+      "cartes": 3,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "f14658a2590db0f9"
+  },
+  "/confiance/": {
+    "titre": "Données, sécurité et conformité — Kigumi",
+    "description": "Où vont vos données, ce qui sort de vos systèmes, et ce que vous gardez si vous arrêtez.",
+    "canonical": "https://kigumi.app/confiance/",
+    "h1": [
+      "Vos données, où elles vont, et ce que vous gardez."
+    ],
+    "h2": [
+      "Hébergement",
+      "Ce qui sort, ce qui ne sort pas",
+      "Combien de temps vos données sont conservées",
+      "Qui a accès, et à quoi",
+      "Ce qui est tracé",
+      "Réversibilité",
+      "L'humain garde la main",
+      "AI Act"
+    ],
+    "h3": [],
+    "menuActif": null,
+    "liens": [
+      "/cas-usages",
+      "/conseil-ingenierie",
+      "/industrie-distribution",
+      "/service-client",
+      "/methode",
+      "/travailler-ensemble",
+      "/a-propos",
+      "/lab/",
+      "/confiance",
+      "/confiance#ai-act",
+      "/mentions-legales",
+      "/contact",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 2,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 1
+    },
+    "deborde": false,
+    "empreinteTexte": "64e256708072b831"
+  },
+  "/conseil-ingenierie/": {
+    "titre": "Conseil, ingénierie, bureaux d'études — Kigumi",
+    "description": "Répondre aux appels d'offres et aux questionnaires clients sans y passer des jours.",
+    "canonical": "https://kigumi.app/conseil-ingenierie/",
+    "h1": [
+      "Vous perdez des appels d'offres faute de temps, pas faute d'arguments."
+    ],
+    "h2": [
+      "La situation",
+      "Ce qu'on met en place",
+      "Ce qu'on mesure",
+      "Ce cas ressemble au vôtre ?"
+    ],
+    "h3": [],
+    "menuActif": "Cas d’usages",
+    "liens": [
+      "/contact",
+      "/cas-usages",
+      "/cas-usages",
+      "/conseil-ingenierie",
+      "/industrie-distribution",
+      "/service-client",
+      "/methode",
+      "/travailler-ensemble",
+      "/a-propos",
+      "/lab/",
+      "/confiance",
+      "/confiance#ai-act",
+      "/mentions-legales",
+      "/contact",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 5,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 3
+    },
+    "deborde": false,
+    "empreinteTexte": "5cbdcdfda57c1b21"
+  },
+  "/contact/": {
+    "titre": "Prendre rendez-vous — Kigumi",
+    "description": "45 minutes pour savoir si ça vaut le coup.",
+    "canonical": "https://kigumi.app/contact/",
+    "h1": [
+      "45 minutes pour savoir si ça vaut le coup."
+    ],
+    "h2": [
+      "Ce qu'on regardera ensemble"
+    ],
+    "h3": [],
+    "menuActif": null,
+    "liens": [
+      "mailto:contact@kigumi.app?subject=Pr%C3%A9-diagnostic%20Kigumi",
+      "/cas-usages",
+      "/conseil-ingenierie",
+      "/industrie-distribution",
+      "/service-client",
+      "/methode",
+      "/travailler-ensemble",
+      "/a-propos",
+      "/lab/",
+      "/confiance",
+      "/confiance#ai-act",
+      "/mentions-legales",
+      "/contact",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 2,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "6a335b8f29b6d437"
+  },
+  "/direction-commerciale/": {
+    "titre": "Direction commerciale et développement — Kigumi",
+    "description": "Les réponses, les conditions, l’historique de chaque compte : tout est quelque part. Vous répondez à des appels d’offres, Votre CRM n’est jamais à jour, Vos devis prennent trois jours.",
+    "canonical": "https://kigumi.app/direction-commerciale/",
+    "h1": [
+      "Votre équipe vend. Elle passe aussi ses soirées à réécrire ce qui existait déjà."
+    ],
+    "h2": [
+      "Ce qui pèse sur votre poste",
+      "Lequel vous coûte le plus ?"
+    ],
+    "h3": [
+      "Vous répondez à des appels d’offres",
+      "Votre CRM n’est jamais à jour",
+      "Vos devis prennent trois jours"
+    ],
+    "menuActif": "Cas d’usages",
+    "liens": [
+      "/conseil-ingenierie",
+      "/contact",
+      "/cas-usages",
+      "/cas-usages",
+      "/conseil-ingenierie",
+      "/industrie-distribution",
+      "/service-client",
+      "/methode",
+      "/travailler-ensemble",
+      "/a-propos",
+      "/lab/",
+      "/confiance",
+      "/confiance#ai-act",
+      "/mentions-legales",
+      "/contact",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 3,
+      "cartes": 0,
+      "fiches": 3,
+      "mesures": 7,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "3f7fe9547329b3ad"
+  },
+  "/direction-financiere/": {
+    "titre": "Direction administrative et financière — Kigumi",
+    "description": "Les règlements, les pièces fournisseurs, les échéances contractuelles, la position de trésorerie. Vos factures partent, les règlements traînent, Vos factures fournisseurs et vos notes de frais se saisissent à la main, Vous reconduisez des contrats sans vous en apercevoir, Vos écarts au budget s’expliquent après coup, Votre position de trésorerie date d’hier.",
+    "canonical": "https://kigumi.app/direction-financiere/",
+    "h1": [
+      "Vos factures partent à l’heure. Le reste suit comme il peut."
+    ],
+    "h2": [
+      "Ce qui pèse sur votre poste",
+      "Lequel vous coûte le plus ?"
+    ],
+    "h3": [
+      "Vos factures partent, les règlements traînent",
+      "Vos factures fournisseurs et vos notes de frais se saisissent à la main",
+      "Vous reconduisez des contrats sans vous en apercevoir",
+      "Vos écarts au budget s’expliquent après coup",
+      "Votre position de trésorerie date d’hier"
+    ],
+    "menuActif": "Cas d’usages",
+    "liens": [
+      "/contact",
+      "/cas-usages",
+      "/cas-usages",
+      "/conseil-ingenierie",
+      "/industrie-distribution",
+      "/service-client",
+      "/methode",
+      "/travailler-ensemble",
+      "/a-propos",
+      "/lab/",
+      "/confiance",
+      "/confiance#ai-act",
+      "/mentions-legales",
+      "/contact",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 3,
+      "cartes": 0,
+      "fiches": 5,
+      "mesures": 13,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "239bd1a3fe8bbce7"
+  },
+  "/direction-generale/": {
+    "titre": "Direction générale — Kigumi",
+    "description": "Les données existent, dans six outils. Votre comité se prépare dans l’urgence, Vos décisions de comité n’ont pas de suite, Vos reportings partent dans un format différent à chaque destinataire.",
+    "canonical": "https://kigumi.app/direction-generale/",
+    "h1": [
+      "Vous passez plus de temps à rassembler les chiffres qu’à décider ce qu’ils imposent."
+    ],
+    "h2": [
+      "Ce qui pèse sur votre poste",
+      "Lequel vous coûte le plus ?"
+    ],
+    "h3": [
+      "Votre comité se prépare dans l’urgence",
+      "Vos décisions de comité n’ont pas de suite",
+      "Vos reportings partent dans un format différent à chaque destinataire"
+    ],
+    "menuActif": "Cas d’usages",
+    "liens": [
+      "/contact",
+      "/cas-usages",
+      "/cas-usages",
+      "/conseil-ingenierie",
+      "/industrie-distribution",
+      "/service-client",
+      "/methode",
+      "/travailler-ensemble",
+      "/a-propos",
+      "/lab/",
+      "/confiance",
+      "/confiance#ai-act",
+      "/mentions-legales",
+      "/contact",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 3,
+      "cartes": 0,
+      "fiches": 3,
+      "mesures": 7,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "d077ec90ab1d629c"
+  },
+  "/direction-operations/": {
+    "titre": "Direction des opérations et administration des ventes — Kigumi",
+    "description": "La traduction entre le langage de vos clients et vos références, les exceptions que vous tolérez, qui traite quoi. Vos commandes arrivent en désordre, Vous apprenez les dérives trop tard, Vous ne savez pas si vos conditions négociées sont appliquées, Vos litiges et vos retours s’instruisent trop lentement.",
+    "canonical": "https://kigumi.app/direction-operations/",
+    "h1": [
+      "Vos opérations tiennent grâce à des gens qui savent des choses que personne n’a écrites."
+    ],
+    "h2": [
+      "Ce qui pèse sur votre poste",
+      "Lequel vous coûte le plus ?"
+    ],
+    "h3": [
+      "Vos commandes arrivent en désordre",
+      "Vous apprenez les dérives trop tard",
+      "Vous ne savez pas si vos conditions négociées sont appliquées",
+      "Vos litiges et vos retours s’instruisent trop lentement"
+    ],
+    "menuActif": "Cas d’usages",
+    "liens": [
+      "/industrie-distribution",
+      "/contact",
+      "/cas-usages",
+      "/cas-usages",
+      "/conseil-ingenierie",
+      "/industrie-distribution",
+      "/service-client",
+      "/methode",
+      "/travailler-ensemble",
+      "/a-propos",
+      "/lab/",
+      "/confiance",
+      "/confiance#ai-act",
+      "/mentions-legales",
+      "/contact",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 3,
+      "cartes": 0,
+      "fiches": 4,
+      "mesures": 8,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "3df8733c81b49cc5"
+  },
+  "/direction-relation-client/": {
+    "titre": "Direction de la relation client — Kigumi",
+    "description": "Les bonnes réponses existent, dans les demandes déjà traitées. Votre service client répond toujours aux mêmes questions, Votre documentation est périmée avant d’avoir servi, Vos clients partent sans prévenir.",
+    "canonical": "https://kigumi.app/direction-relation-client/",
+    "h1": [
+      "Votre équipe répond vite. Elle répond surtout aux mêmes questions."
+    ],
+    "h2": [
+      "Ce qui pèse sur votre poste",
+      "Lequel vous coûte le plus ?"
+    ],
+    "h3": [
+      "Votre service client répond toujours aux mêmes questions",
+      "Votre documentation est périmée avant d’avoir servi",
+      "Vos clients partent sans prévenir"
+    ],
+    "menuActif": "Cas d’usages",
+    "liens": [
+      "/service-client",
+      "/contact",
+      "/cas-usages",
+      "/cas-usages",
+      "/conseil-ingenierie",
+      "/industrie-distribution",
+      "/service-client",
+      "/methode",
+      "/travailler-ensemble",
+      "/a-propos",
+      "/lab/",
+      "/confiance",
+      "/confiance#ai-act",
+      "/mentions-legales",
+      "/contact",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 3,
+      "cartes": 0,
+      "fiches": 3,
+      "mesures": 7,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "a7f6d056dfa0f10f"
+  },
+  "/industrie-distribution/": {
+    "titre": "Industrie et distribution B2B — Kigumi",
+    "description": "Traiter les commandes clients entrantes sans ressaisie, de l'e-mail à l'ERP.",
+    "canonical": "https://kigumi.app/industrie-distribution/",
+    "h1": [
+      "Vos commandes arrivent en PDF. Elles repartent en ressaisie."
+    ],
+    "h2": [
+      "La situation",
+      "Ce qu'on met en place",
+      "Ce qu'on mesure",
+      "Ce cas ressemble au vôtre ?"
+    ],
+    "h3": [],
+    "menuActif": "Cas d’usages",
+    "liens": [
+      "/contact",
+      "/cas-usages",
+      "/cas-usages",
+      "/conseil-ingenierie",
+      "/industrie-distribution",
+      "/service-client",
+      "/methode",
+      "/travailler-ensemble",
+      "/a-propos",
+      "/lab/",
+      "/confiance",
+      "/confiance#ai-act",
+      "/mentions-legales",
+      "/contact",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 5,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 3
+    },
+    "deborde": false,
+    "empreinteTexte": "5d105115b9e25350"
+  },
+  "/lab/": {
+    "titre": "Lab — Kigumi",
+    "description": "Ce qu'on construit en dehors des missions : la vérification de ce que produisent les agents, et pourquoi elle est au centre de notre méthode.",
+    "canonical": "https://kigumi.app/lab/",
+    "h1": [
+      "Ce qu’on construit en dehors des missions."
+    ],
+    "h2": [
+      "Pourquoi ce n’est pas un à-côté",
+      "Ce qu’on y publie",
+      "Ce qui vous intéresse, c’est plutôt vos processus ?"
+    ],
+    "h3": [
+      "Harness"
+    ],
+    "menuActif": null,
+    "liens": [
+      "/lab/harness/",
+      "/contact",
+      "/methode",
+      "/cas-usages",
+      "/conseil-ingenierie",
+      "/industrie-distribution",
+      "/service-client",
+      "/methode",
+      "/travailler-ensemble",
+      "/a-propos",
+      "/lab/",
+      "/confiance",
+      "/confiance#ai-act",
+      "/mentions-legales",
+      "/contact",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 4,
+      "cartes": 1,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "d3c51dfffb87ef64"
+  },
+  "/lab/harness/": {
+    "titre": "Kigumi - AI made code cheap. Kigumi makes change safe.",
+    "description": "AI made code cheap. Kigumi makes change safe. See what your codebase actually does.",
+    "canonical": "https://kigumi.app/lab/harness/",
+    "h1": [
+      "AI made code cheap.   igumi makes change safe."
+    ],
+    "h2": [
+      "AI writes more code every week. Nobody captures the intent behind it.",
+      "Import your repo. See what it does."
+    ],
+    "h3": [],
+    "menuActif": null,
+    "liens": [
+      "/lab/harness/writing",
+      "mailto:hello@kigumi.app"
+    ],
+    "compte": {
+      "sections": 0,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "167e2d6a10cbbc4a"
+  },
+  "/lab/harness/how-it-works/": {
+    "titre": "How Kigumi Works - Import. Reason. Evolve. Verify.",
+    "description": "See how Kigumi maps your codebase into a live behavior graph. Import, reason, evolve, verify.",
+    "canonical": "https://kigumi.app/lab/harness/how-it-works/",
+    "h1": [
+      "Import. Reason. Evolve.Ship with confidence."
+    ],
+    "h2": [
+      "Import your repo. See what it does."
+    ],
+    "h3": [
+      "Point it at your codebase. 847 behaviors. 234 files. 12 minutes.",
+      "Every state, action, condition, and data flow. Visible.",
+      "Describe what you want. Review before it commits.",
+      "14 of 16 behaviors verified. Automatically."
+    ],
+    "menuActif": null,
+    "liens": [
+      "/lab/harness/writing",
+      "mailto:hello@kigumi.app"
+    ],
+    "compte": {
+      "sections": 0,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "cff3359a478e8c71"
+  },
+  "/lab/harness/writing/": {
+    "titre": "Writing - Kigumi",
+    "description": "Essays on the intent gap, behavior infrastructure, and building a category before it has a name.",
+    "canonical": "https://kigumi.app/lab/harness/writing/",
+    "h1": [
+      "Writing"
+    ],
+    "h2": [],
+    "h3": [],
+    "menuActif": null,
+    "liens": [
+      "/lab/harness/writing",
+      "mailto:hello@kigumi.app"
+    ],
+    "compte": {
+      "sections": 0,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "8433ee9e20823c9b"
+  },
+  "/mentions-legales/": {
+    "titre": "Mentions légales — Kigumi",
+    "description": "Mentions légales du site Kigumi.",
+    "canonical": "https://kigumi.app/mentions-legales/",
+    "h1": [
+      "Mentions légales"
+    ],
+    "h2": [
+      "Éditeur du site",
+      "Hébergement du site",
+      "Données personnelles",
+      "Propriété intellectuelle"
+    ],
+    "h3": [],
+    "menuActif": null,
+    "liens": [
+      "mailto:contact@kigumi.app",
+      "https://support.github.com",
+      "tel:+18889935273",
+      "/confiance",
+      "/confiance",
+      "mailto:contact@kigumi.app",
+      "/cas-usages",
+      "/conseil-ingenierie",
+      "/industrie-distribution",
+      "/service-client",
+      "/methode",
+      "/travailler-ensemble",
+      "/a-propos",
+      "/lab/",
+      "/confiance",
+      "/confiance#ai-act",
+      "/mentions-legales",
+      "/contact",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 2,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "5ac250b53c61743b"
+  },
+  "/methode/": {
+    "titre": "Notre méthode — Kigumi",
+    "description": "On ne déploie rien avant d'avoir chiffré ce que ça rapporte.",
+    "canonical": "https://kigumi.app/methode/",
+    "h1": [
+      "On ne déploie rien avant d'avoir chiffré ce que ça rapporte."
+    ],
+    "h2": [
+      "Pourquoi la deuxième mission coûte moins que la première",
+      "Pourquoi le contexte change tout",
+      "Commencer par le diagnostic"
+    ],
+    "h3": [
+      "Diagnostic",
+      "Fondation",
+      "Déploiement",
+      "Pilotage et vérification"
+    ],
+    "menuActif": "Méthode",
+    "liens": [
+      "/confiance#reversibilite",
+      "/contact",
+      "/cas-usages",
+      "/conseil-ingenierie",
+      "/industrie-distribution",
+      "/service-client",
+      "/methode",
+      "/travailler-ensemble",
+      "/a-propos",
+      "/lab/",
+      "/confiance",
+      "/confiance#ai-act",
+      "/mentions-legales",
+      "/contact",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 4,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 2
+    },
+    "deborde": false,
+    "empreinteTexte": "cd69e8c67b35062c"
+  },
+  "/qualite-conformite/": {
+    "titre": "Qualité et conformité — Kigumi",
+    "description": "Les pièces existent — procédures, enregistrements, certificats. Chaque audit vous coûte trois semaines, Vos clients vous envoient leurs questionnaires, La réglementation bouge sans vous.",
+    "canonical": "https://kigumi.app/qualite-conformite/",
+    "h1": [
+      "Vous passez l’audit. Vous y passez surtout trois semaines."
+    ],
+    "h2": [
+      "Ce qui pèse sur votre poste",
+      "Lequel vous coûte le plus ?"
+    ],
+    "h3": [
+      "Chaque audit vous coûte trois semaines",
+      "Vos clients vous envoient leurs questionnaires",
+      "La réglementation bouge sans vous"
+    ],
+    "menuActif": "Cas d’usages",
+    "liens": [
+      "/contact",
+      "/cas-usages",
+      "/cas-usages",
+      "/conseil-ingenierie",
+      "/industrie-distribution",
+      "/service-client",
+      "/methode",
+      "/travailler-ensemble",
+      "/a-propos",
+      "/lab/",
+      "/confiance",
+      "/confiance#ai-act",
+      "/mentions-legales",
+      "/contact",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 3,
+      "cartes": 0,
+      "fiches": 3,
+      "mesures": 7,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "c8239e6844e0088c"
+  },
+  "/ressources-humaines/": {
+    "titre": "Ressources humaines — Kigumi",
+    "description": "Recruter, intégrer, répondre aux mêmes questions. Vous lisez trois cents CV pour trois postes, Chaque arrivée se prépare comme si c’était la première, Votre équipe RH répond aux mêmes questions toute l’année.",
+    "canonical": "https://kigumi.app/ressources-humaines/",
+    "h1": [
+      "Vos RH passent leur temps sur ce qui se répète."
+    ],
+    "h2": [
+      "Ce qui pèse sur votre poste",
+      "Lequel vous coûte le plus ?"
+    ],
+    "h3": [
+      "Vous lisez trois cents CV pour trois postes",
+      "Chaque arrivée se prépare comme si c’était la première",
+      "Votre équipe RH répond aux mêmes questions toute l’année"
+    ],
+    "menuActif": "Cas d’usages",
+    "liens": [
+      "/contact",
+      "/cas-usages",
+      "/cas-usages",
+      "/conseil-ingenierie",
+      "/industrie-distribution",
+      "/service-client",
+      "/methode",
+      "/travailler-ensemble",
+      "/a-propos",
+      "/lab/",
+      "/confiance",
+      "/confiance#ai-act",
+      "/mentions-legales",
+      "/contact",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 3,
+      "cartes": 0,
+      "fiches": 3,
+      "mesures": 9,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "1e4ed2b6a131d52d"
+  },
+  "/service-client/": {
+    "titre": "Éditeurs et services récurrents — Kigumi",
+    "description": "Traiter les demandes entrantes, et surtout faire baisser leur volume à la source.",
+    "canonical": "https://kigumi.app/service-client/",
+    "h1": [
+      "Répondre plus vite ne suffit pas. Il faut que la demande cesse d'arriver."
+    ],
+    "h2": [
+      "Ce qu'on met en place",
+      "Ce qu'on mesure",
+      "Ce cas ressemble au vôtre ?"
+    ],
+    "h3": [],
+    "menuActif": "Cas d’usages",
+    "liens": [
+      "/contact",
+      "/cas-usages",
+      "/cas-usages",
+      "/conseil-ingenierie",
+      "/industrie-distribution",
+      "/service-client",
+      "/methode",
+      "/travailler-ensemble",
+      "/a-propos",
+      "/lab/",
+      "/confiance",
+      "/confiance#ai-act",
+      "/mentions-legales",
+      "/contact",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 5,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 3
+    },
+    "deborde": false,
+    "empreinteTexte": "2c0456bc5d3674fa"
+  },
+  "/travailler-ensemble/": {
+    "titre": "Travailler ensemble — Kigumi",
+    "description": "Quatre temps, trois engagements, et ce que nous ne faisons pas.",
+    "canonical": "https://kigumi.app/travailler-ensemble/",
+    "h1": [
+      "Un processus à la fois, mesuré à chaque étape."
+    ],
+    "h2": [
+      "Ce qu'on s'engage à faire",
+      "Ce qu'on ne fait pas",
+      "Parlons de votre périmètre"
+    ],
+    "h3": [],
+    "menuActif": "Travailler ensemble",
+    "liens": [
+      "/contact",
+      "/cas-usages",
+      "/conseil-ingenierie",
+      "/industrie-distribution",
+      "/service-client",
+      "/methode",
+      "/travailler-ensemble",
+      "/a-propos",
+      "/lab/",
+      "/confiance",
+      "/confiance#ai-act",
+      "/mentions-legales",
+      "/contact",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 3,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "8149d91ae3c9f603"
+  }
+}

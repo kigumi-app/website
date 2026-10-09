@@ -1,0 +1,70 @@
+Méthode
+Travailler ensemble
+Cas d’usages
+À propos
+Prendre rendez-vous
+DIRECTION ADMINISTRATIVE ET FINANCIÈRE
+Vos factures partent à l’heure. Le reste suit comme il peut.
+Les règlements, les pièces fournisseurs, les échéances contractuelles, la position de trésorerie. Chacun demande une attention que votre équipe n’a pas, et chacun se paie en trésorerie.
+Ce qui pèse sur votre poste
+DIRECTION ADMINISTRATIVE ET FINANCIÈRE
+Vos factures partent, les règlements traînent
+Les relances se font quand quelqu’un y pense. Le rapprochement des règlements se fait à la main, et les litiges attendent qu’on les instruise.
+Un agent qui relance selon l’historique de chaque client plutôt qu’au calendrier, rapproche les règlements reçus, et prépare l’instruction des litiges avec les pièces qui s’y rapportent.
+CE QU’ON MESURE
+Le délai moyen de règlement (DSO)
+Le nombre de relances par encaissement
+Le coût des litiges non instruits
+DIRECTION ADMINISTRATIVE ET FINANCIÈRE
+Vos factures fournisseurs et vos notes de frais se saisissent à la main
+Chaque pièce est lue, codifiée, rapprochée d’une commande, puis saisie. Le volume est constant et la valeur ajoutée, nulle.
+Un agent qui lit la pièce, la rapproche de la commande ou du contrat correspondant, et prépare l’écriture — en remontant ce qui ne se rapproche pas.
+CE QU’ON MESURE
+Le coût de traitement par pièce
+Le délai de clôture mensuelle
+DIRECTION ADMINISTRATIVE ET FINANCIÈRE
+Vous reconduisez des contrats sans vous en apercevoir
+Échéances, indexations, tacites reconductions. Les dates sont dans les contrats, les contrats sont dans un dossier, et personne ne les relit.
+Un agent qui relève les échéances et les clauses de révision de vos contrats, et vous alerte dans la fenêtre où vous pouvez encore renégocier.
+CE QU’ON MESURE
+Le nombre de reconductions subies
+L’écart aux conditions qui étaient renégociables
+DIRECTION ADMINISTRATIVE ET FINANCIÈRE
+Vos écarts au budget s’expliquent après coup
+L’écart apparaît à la clôture. Comprendre d’où il vient prend une semaine, et la reprévision arrive quand la décision qu’elle devait éclairer est déjà prise.
+Un agent qui rapproche le réalisé du budget au fil de l’eau, isole les lignes qui expliquent l’écart, et remonte celles qui sortent de vos seuils — avec le détail qui permet de vérifier plutôt que de croire.
+CE QU’ON MESURE
+Le délai d’explication d’un écart
+Le nombre de reprévisions dans l’année
+La part des écarts expliqués avant la clôture
+DIRECTION ADMINISTRATIVE ET FINANCIÈRE
+Votre position de trésorerie date d’hier
+Plusieurs banques, parfois plusieurs devises. La consolidation se fait à la main dans un tableur, et les pics de décaissement se découvrent le jour où ils tombent.
+Un agent qui consolide les positions, rapproche les mouvements des factures et des échéances connues, et vous alerte sur les décaissements à venir qui ne passent pas — assez tôt pour agir.
+CE QU’ON MESURE
+Le délai de consolidation multi-banques
+Le nombre de découverts non anticipés
+L’écart entre la position prévue et la position constatée
+Ces cas sont construits à partir de situations observées. Le pré-diagnostic chiffre lesquels pèsent réellement chez vous, et dans quel ordre.
+Lequel vous coûte le plus ?
+45 minutes pour en parler. Le pré-diagnostic les classe par ce qu’ils vous coûtent — et vous repartez avec ce classement, qu’on travaille ensemble ou non.
+Prendre rendez-vous
+Voir les autres postes
+CAS D’USAGES
+Tous les cas
+Conseil, ingénierie, bureaux d’études
+Industrie et distribution B2B
+Éditeurs et services récurrents
+KIGUMI
+Notre méthode
+Travailler ensemble
+À propos
+Lab
+CONFIANCE
+Données et sécurité
+AI Act
+Mentions légales
+CONTACT
+Prendre rendez-vous
+contact@kigumi.app
+Studio d’automatisation de processus par agents IA pour PME et ETI.

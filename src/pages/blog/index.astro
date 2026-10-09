@@ -1,0 +1,40 @@
+---
+import StudioLayout from "../../layouts/StudioLayout.astro";
+import { getCollection } from "astro:content";
+
+const articles = (await getCollection("blog", ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const date = (d: Date) =>
+  d.toLocaleDateString("fr-FR", { year: "numeric", month: "long", day: "numeric" });
+---
+<StudioLayout
+  titre="Blog"
+  description="Ce qu'on apprend en automatisant des processus chez des PME et des ETI."
+  actif="">
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow">Blog</p>
+    <h1>Ce qu&rsquo;on apprend en chemin.</h1>
+    <p class="lead">Des notes sur l&rsquo;automatisation de processus en PME et ETI&nbsp;: ce qui marche, ce qui ne marche pas, et ce que les chiffres disent une fois qu&rsquo;on les regarde.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    {articles.length === 0 ? (
+      <p class="muted">Rien de publié pour l&rsquo;instant.</p>
+    ) : (
+      <ul class="roles">
+        {articles.map((a) => (
+          <li>
+            <p class="who">{date(a.data.pubDate)}</p>
+            <h3>{a.data.title}</h3>
+            <p>{a.data.description}</p>
+            <p class="liens"><a href={`/blog/${a.id}/`}>Lire &rarr;</a></p>
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+</section>
+</StudioLayout>

@@ -1,0 +1,56 @@
+---
+// La page d'entrée du lab appartient au site du studio : française, mise en
+// page du studio, adressée à ses visiteurs. Ce qu'elle contient — /lab/harness
+// — reste en anglais, pour des directions techniques.
+import StudioLayout from "../../layouts/StudioLayout.astro";
+---
+<StudioLayout
+  titre="Lab"
+  description="Ce qu'on construit en dehors des missions : la vérification de ce que produisent les agents, et pourquoi elle est au centre de notre méthode."
+  actif="">
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow">Lab</p>
+    <h1>Ce qu&rsquo;on construit en dehors des missions.</h1>
+    <p class="lead">Notre méthode repose sur une promesse&nbsp;: on mesure ce que les agents produisent, au lieu de constater qu&rsquo;ils tournent. Encore faut-il savoir le faire. C&rsquo;est ce qu&rsquo;on construit ici.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <h2>Pourquoi ce n&rsquo;est pas un à-côté</h2>
+    <p>Un logiciel qui tourne n&rsquo;est pas un logiciel qui fait ce qu&rsquo;on attendait de lui. On sait dire qu&rsquo;un programme ne plante pas&nbsp;; on sait rarement dire ce qu&rsquo;il fait. Cet écart était déjà difficile quand des humains écrivaient le code. Il devient le problème central maintenant qu&rsquo;une partie est produite par des modèles.</p>
+    <p>C&rsquo;est aussi ce qui sépare une automatisation qui rapporte d&rsquo;une automatisation qui coûte. <strong>Le chantier qu&rsquo;on mène ici n&rsquo;est pas un produit qu&rsquo;on vous vend&nbsp;: c&rsquo;est la raison pour laquelle, chez nos clients, on mesure au lieu de supposer.</strong></p>
+
+    <h2 style="margin-top:2em">Ce qu&rsquo;on y publie</h2>
+    <p>Ce qu&rsquo;on a compris, y compris quand ça nous a coûté. Des notes de travail, pas des articles de blog&nbsp;: on y écrit ce qu&rsquo;on aurait voulu lire avant de s&rsquo;y mettre.</p>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap">
+    <div class="grid">
+      <a class="card" href="/lab/harness/">
+        <p class="who">Vérification</p>
+        <h3>Harness</h3>
+        <p>Savoir ce qu&rsquo;un logiciel fait réellement, et pouvoir le prouver. Le chantier principal, et son journal de bord.</p>
+        <span class="go">Voir le projet &rarr;</span>
+      </a>
+    </div>
+    <div class="prose" style="margin-top:40px">
+      <p class="muted" style="font-size:14px">Les pages du lab sont en anglais&nbsp;: elles s&rsquo;adressent à des équipes techniques, souvent hors de France.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Ce qui vous intéresse, c&rsquo;est plutôt vos processus&nbsp;?</h2>
+    <p>45 minutes pour en parler. On repart avec la liste de vos processus classés par ce qu&rsquo;ils vous coûtent.</p>
+    <div class="btn-row">
+      <a class="btn" href="/contact">Prendre rendez-vous</a>
+      <a class="btn btn-ghost" href="/methode">Voir la méthode</a>
+    </div>
+  </div>
+</section>
+</StudioLayout>

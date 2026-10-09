@@ -1,0 +1,40 @@
+Méthode
+Travailler ensemble
+Cas d’usages
+À propos
+Prendre rendez-vous
+LAB
+Ce qu’on construit en dehors des missions.
+Notre méthode repose sur une promesse : on mesure ce que les agents produisent, au lieu de constater qu’ils tournent. Encore faut-il savoir le faire. C’est ce qu’on construit ici.
+Pourquoi ce n’est pas un à-côté
+Un logiciel qui tourne n’est pas un logiciel qui fait ce qu’on attendait de lui. On sait dire qu’un programme ne plante pas ; on sait rarement dire ce qu’il fait. Cet écart était déjà difficile quand des humains écrivaient le code. Il devient le problème central maintenant qu’une partie est produite par des modèles.
+C’est aussi ce qui sépare une automatisation qui rapporte d’une automatisation qui coûte. Le chantier qu’on mène ici n’est pas un produit qu’on vous vend : c’est la raison pour laquelle, chez nos clients, on mesure au lieu de supposer.
+Ce qu’on y publie
+Ce qu’on a compris, y compris quand ça nous a coûté. Des notes de travail, pas des articles de blog : on y écrit ce qu’on aurait voulu lire avant de s’y mettre.
+VÉRIFICATION
+Harness
+Savoir ce qu’un logiciel fait réellement, et pouvoir le prouver. Le chantier principal, et son journal de bord.
+Voir le projet →
+Les pages du lab sont en anglais : elles s’adressent à des équipes techniques, souvent hors de France.
+Ce qui vous intéresse, c’est plutôt vos processus ?
+45 minutes pour en parler. On repart avec la liste de vos processus classés par ce qu’ils vous coûtent.
+Prendre rendez-vous
+Voir la méthode
+CAS D’USAGES
+Tous les cas
+Conseil, ingénierie, bureaux d’études
+Industrie et distribution B2B
+Éditeurs et services récurrents
+KIGUMI
+Notre méthode
+Travailler ensemble
+À propos
+Lab
+CONFIANCE
+Données et sécurité
+AI Act
+Mentions légales
+CONTACT
+Prendre rendez-vous
+contact@kigumi.app
+Studio d’automatisation de processus par agents IA pour PME et ETI.

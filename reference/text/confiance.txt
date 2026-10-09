@@ -1,0 +1,82 @@
+Méthode
+Travailler ensemble
+Cas d’usages
+À propos
+Prendre rendez-vous
+CONFIANCE
+Vos données, où elles vont, et ce que vous gardez.
+Les questions que votre DSI posera de toute façon. Autant y répondre avant l'appel.
+Hébergement
+En France, chez Scaleway et OVHcloud, deux hébergeurs de droit français. Une base de données isolée par client, aucune mutualisation des données entre nos clients.
+Ce qui sort, ce qui ne sort pas
+Le strict nécessaire au traitement demandé, et rien d'autre. Aucun entraînement de modèle sur vos données.
+Les fournisseurs de modèles auxquels nous faisons appel, et le pays où le traitement a lieu :
+Mistral AI — France
+Anthropic — États-Unis
+OpenAI — États-Unis
+Google — États-Unis
+TypeSafe AI — États-Unis
+Le choix se décide processus par processus, avec vous. Lorsqu’un traitement doit rester en Europe, il reste en Europe.
+Combien de temps vos données sont conservées
+Documents traités par les agents — 30 jours après traitement. De quoi reprendre une erreur, pas davantage.
+Base de connaissance — la durée du contrat. Restituée puis supprimée sous 30 jours si vous arrêtez.
+Journaux techniques — 6 mois, la durée que retient la CNIL pour les journaux de connexion.
+Données envoyées aux fournisseurs de modèles — zéro conservation lorsque l’offre du fournisseur le permet. À défaut, 30 jours pour la seule détection d’abus. Dans tous les cas, aucune utilisation pour l’entraînement.
+Vos coordonnées, si vous nous avez contactés — 3 ans après le dernier échange.
+Qui a accès, et à quoi
+Comptes nominatifs, jamais partagés, avec double authentification sur tout ce qui touche à vos données.
+Moindre privilège : chacun n’accède qu’aux clients dont il s’occupe.
+Aucun accès permanent en production. L’accès s’ouvre à la demande, pour une durée bornée, et il est tracé.
+Revue des accès chaque trimestre. Révocation sous 24 heures au départ d’une personne ou à la fin d’une mission.
+Ce qui est tracé
+Qui a accédé à quoi, quand, et ce qui a été fait. Horodaté, non modifiable.
+Chaque action d’un agent est tracée — la donnée lue, la décision, la sortie produite, et le point de validation humaine lorsqu’il y en a un.
+Journaux conservés 6 mois.
+Consultables par vous, sur demande. Un journal que le client ne peut pas lire ne prouve rien.
+L’AI Act impose cette traçabilité aux systèmes à haut risque. Nous l’appliquons à tous les agents que nous déployons, y compris quand rien ne l’exige : c’est ce qui rend un cas comme le tri de candidatures déployable au lieu de risqué.
+Réversibilité
+Les données extraites et les définitions de processus vous appartiennent, et s'exportent à tout moment. Si vous arrêtez, vous gardez ce qui a été construit.
+L'humain garde la main
+Toute étape irréversible, ou qui porte un engagement commercial, reste validée par une personne de votre équipe. Un agent propose, signale ce dont il n'est pas sûr, et n'engage jamais l'entreprise à votre place.
+AGENT
+HUMAIN
+01
+Réception et classement du dossier
+02
+Extraction des questions
+03
+Recherche des réponses antérieures
+04
+Rédaction du brouillon
+05
+Questions inédites
+06
+Chiffrage et conditions de prix
+07
+Assemblage et mise en forme
+08
+Soumission
+Validation requise — rien ne part sans un humain
+Remonte sur exception
+Exemple sur la réponse aux appels d'offres. Les points de validation tombent sur ce qui engage : les questions inédites, le chiffrage, la soumission.
+AI Act
+Le règlement européen sur l'intelligence artificielle classe les usages par niveau de risque. Les automatisations que nous déployons — traitement de documents, routage de demandes, aide à la rédaction avec validation humaine — relèvent du risque limité, avec une obligation de transparence.
+Deux cas appellent une attention particulière et nous vous le signalons avant de commencer : lorsque les personnes qui interagissent avec un agent sont des particuliers, elles doivent en être informées ; et toute automatisation touchant à l'évaluation de personnes, en recrutement notamment, relève du haut risque et impose des obligations bien plus lourdes.
+CAS D’USAGES
+Tous les cas
+Conseil, ingénierie, bureaux d’études
+Industrie et distribution B2B
+Éditeurs et services récurrents
+KIGUMI
+Notre méthode
+Travailler ensemble
+À propos
+Lab
+CONFIANCE
+Données et sécurité
+AI Act
+Mentions légales
+CONTACT
+Prendre rendez-vous
+contact@kigumi.app
+Studio d’automatisation de processus par agents IA pour PME et ETI.

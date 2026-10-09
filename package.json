@@ -7,7 +7,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "reference": "node scripts/reference.mjs",
+    "verifier": "npm run build && node scripts/reference.mjs --verifier"
   },
   "engines": {
     "node": ">=20.3.0"
@@ -20,6 +22,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
-    "typescript": "^5.8.0"
+    "typescript": "^5.8.0",
+    "playwright": "^1.49.0"
   }
 }

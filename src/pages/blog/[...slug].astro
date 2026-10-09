@@ -1,0 +1,33 @@
+---
+import StudioLayout from "../../layouts/StudioLayout.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  // Les brouillons ne produisent pas de page : même garde-fou que pour les
+  // essais, et c'est ce qui laisse écrire sans publier avant d'être prêt.
+  const articles = await getCollection("blog", ({ data }) => !data.draft);
+  return articles.map((a) => ({ params: { slug: a.id }, props: { a } }));
+}
+const { a } = Astro.props;
+const { Content } = await render(a);
+const date = a.data.pubDate.toLocaleDateString("fr-FR",
+  { year: "numeric", month: "long", day: "numeric" });
+---
+<StudioLayout titre={a.data.title} description={a.data.description} actif="">
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow"><a href="/blog">Blog</a></p>
+    <h1>{a.data.title}</h1>
+    <p class="lead">{a.data.description}</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <p class="muted" style="font-size:14px">
+      <time datetime={a.data.pubDate.toISOString()}>{date}</time>
+    </p>
+    <article style="margin-top:1.4em"><Content /></article>
+  </div>
+</section>
+</StudioLayout>

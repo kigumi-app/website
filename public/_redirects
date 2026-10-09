@@ -1,0 +1,8 @@
+# Le site produit occupait la racine jusqu'à la bascule. Deux URL seulement
+# étaient atteignables ; sans ces règles, les liens existants tombent en 404.
+/index.html            /                                  301
+/how-it-works.html     /lab/harness/how-it-works/         301
+/how-it-works          /lab/harness/how-it-works/         301
+/writing               /lab/harness/writing/              301
+/writing/*             /lab/harness/writing/:splat        301
+/rss.xml               /lab/harness/rss.xml               301

@@ -1,0 +1,57 @@
+igumi
+How it works
+Writing
+Request Access
+FOR TECHNICAL FOUNDERS AND CTOS
+AI made code cheap.
+igumi makes change safe.
+See what your codebase actually does. Every state, action, and decision - visible.
+Request Early Access
+How it works
+rev. 04
+AI writes more code every week. Nobody captures the intent behind it.
+PRDs rot. RFCs die in Notion. The original WHY behind every feature fades to nothing.
+In 12 months, you won't be able to answer "what does our product actually do?" from the code alone.
+Code
+Understanding
+Time with AI tooling
+the intent gap
+scale 1:1
+WHAT YOU GET
+See your system
+Import your repo. Get a map of every behavior - states, actions, conditions, data flows. In minutes.
+Change with confidence
+See what you're affecting before you touch it. Describe changes in English. Review before it commits.
+Intent that survives
+Every behavior captured with its WHY. Not documentation that rots but structure that verifies.
+kigumi — saas-starter
+Import
+Build
+Verify
+State
+Action
+Condition
+Data
+Event
+38 nodes · 47 edges
+Splash Screen
+Login
+Register
+Valid Creds?
+Dashboard
+Forgot Password
+Send Reset Email
+User Session
+Scheme
+PRD
+Decisions
+Coding agents understand your files. Kigumi understands your system.
+Code tools generate output. Kigumi captures intent.
+Documentation describes what should happen. Kigumi is what happens.
+Import your repo. See what it does.
+Code changes. Behavior persists.
+Join the waiting list
+igumi
+© 2026 Kigumi
+Writing
+Contact

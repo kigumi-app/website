@@ -20,3 +20,7 @@ npm-debug.log*
 .agents/
 .junie/
 .pi/
+
+# Référence de non-régression : images dérivées, régénérables
+reference/img/
+reference-courante/
