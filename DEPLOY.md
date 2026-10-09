@@ -12,10 +12,10 @@ git-connected, auto-deploy on push to `main`. Writing a markdown file in
 | Build command | `npm run build` |
 | Build output directory | `dist` |
 | Root directory | *(blank — project is the repo root)* |
-| Environment variable | `NODE_VERSION` = `20` |
+| Environment variable | `NODE_VERSION` = `22` |
 
-Cloudflare's build image does **not** provide Node 25. `NODE_VERSION=20`
-(or `22`) is required or the build fails. `.nvmrc` pins it locally.
+Cloudflare's build image does **not** provide Node 25. `NODE_VERSION=22` is required —
+Astro 6 needs Node ≥ 22.12; the build fails without it. `.nvmrc` pins it locally.
 
 ## One-time setup + DNS cutover (must be done in a browser — Claude Code cannot)
 
@@ -28,7 +28,7 @@ PRE-CUTOVER (safe; live site unaffected)
 [ ] 1. Cloudflare → Workers & Pages → Create → Pages → Connect to Git
 [ ] 2. Authorize GitHub, select repo Le-Steph/merlion, branch main
 [ ] 3. Build settings: preset Astro · cmd `npm run build` · output `dist`
-       · root blank · env NODE_VERSION=20
+       · root blank · env NODE_VERSION=22
 [ ] 4. Save & Deploy. Wait for the first build to go green.
 [ ] 5. Open the *.pages.dev preview URL. Verify:
        /, /how-it-works, /writing, /rss.xml, /sitemap-index.xml,

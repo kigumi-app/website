@@ -69,7 +69,7 @@ Les réglages sont déjà documentés dans `DEPLOY.md`. L'essentiel :
 | Build command | `npm run build` |
 | Build output directory | `dist` |
 | Root directory | *(vide)* |
-| Variable d'environnement | `NODE_VERSION` = `20` |
+| Variable d'environnement | `NODE_VERSION` = `22` |
 
 > **`NODE_VERSION` n'est pas facultatif.** L'image de construction de
 > Cloudflare ne fournit pas Node 25 et le build échoue sans cette variable.
