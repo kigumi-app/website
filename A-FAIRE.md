@@ -34,68 +34,68 @@ n'est plus affichable.
 
 ---
 
-## 3. Déployer l'authentificateur du CMS
+## 3. ~~Déployer l'authentificateur du CMS~~ ✅ fait
 
-**Une correction que je te dois.** Je t'avais annoncé que Sveltia ne demandait
-aucun service d'authentification. C'était faux. Trois voies existent, et une
-seule convient :
+`sveltia-cms-auth` tourne sur **`auth.kigumi.app`** : `/auth` renvoie bien
+vers GitHub, et un domaine inconnu est refusé (`UNSUPPORTED_DOMAIN`).
 
-| Voie | À déployer | Pour Julien |
-|---|---|---|
-| Jeton personnel GitHub | rien | il devrait créer et coller un jeton à droits d'écriture, qui vivrait dans son navigateur — à écarter |
-| **Authentificateur sur Cloudflare Workers** | **un Worker** | il clique « se connecter avec GitHub » |
-| Netlify | sans objet | vous êtes sur Cloudflare |
+Reste une variable : **`ALLOWED_DOMAINS`** doit nommer chaque adresse d'où
+l'on ouvre `/admin/` :
 
-C'est un Worker, sur une infrastructure que vous avez déjà, et c'est un simple
-relais OAuth sans état ni entretien. Le choix de Sveltia tient toujours —
-Decap demande la même chose, Tina exige un backend **et** une base, Keystatic
-casse sur Astro 6 — mais ma formule était trop belle.
-
-1. Déployer `sveltia/sveltia-cms-auth` sur Cloudflare Workers
-   (le dépôt porte les instructions, c'est un `deploy` et deux variables)
-2. Variables d'environnement : `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET`
-3. Lui donner le domaine **`auth.kigumi.app`** — c'est ce que j'ai déjà écrit
-   dans `public/admin/config.yml`
+```
+kigumi.app, kigumi-website.stephane-6a8.workers.dev, *-kigumi-website.stephane-6a8.workers.dev
+```
 
 ---
 
-## 4. Créer le projet Cloudflare Pages
+## 4. ~~Créer le projet Cloudflare~~ ✅ fait
 
-Les réglages sont déjà documentés dans `DEPLOY.md`. L'essentiel :
+C'est un **Worker à actifs statiques** (`kigumi-website`), pas un projet
+Pages. `wrangler.jsonc` à la racine dit quoi servir : `dist/`, avec
+`_redirects` et `404.html`.
 
 | Réglage | Valeur |
 |---|---|
-| Framework preset | Astro |
+| Branche de production | `feat/portage-studio` *(provisoire, voir §5)* |
 | Build command | `npm run build` |
-| Build output directory | `dist` |
-| Root directory | *(vide)* |
-| Variable d'environnement | `NODE_VERSION` = `22` |
+| Deploy command | `npx wrangler deploy` |
+| Autres branches | `npx wrangler versions upload` |
+| Variable de build | `NODE_VERSION` = `22` — Astro 6 exige Node ≥ 22.12 |
 
-> **`NODE_VERSION` n'est pas facultatif.** L'image de construction de
-> Cloudflare ne fournit pas Node 25 et le build échoue sans cette variable.
+- Production : `https://kigumi-website.stephane-6a8.workers.dev`
+- Prévisualisations : `https://<branche>-kigumi-website.stephane-6a8.workers.dev`
 
-Connecte le projet au dépôt, branche `main`. **Ne bascule pas encore le DNS** :
-le déploiement produira une URL de prévisualisation, qui suffit pour tout
-relire avant que quiconque ne voie quoi que ce soit.
+Rien n'est public : tant que `INDEXABLE` vaut `false`
+(`src/lib/indexation.ts`), chaque page porte `noindex` et `robots.txt`
+interdit tout.
 
 ---
 
 ## 5. La bascule DNS — quand tout le reste est validé
 
-À faire d'un seul tenant, un matin calme.
+À faire d'un seul tenant, un matin calme. **L'ordre compte** : `main` ne
+reçoit le portage qu'une fois GitHub Pages débranché. Sinon GitHub Pages
+publierait tout le dépôt Astro, notes internes comprises, sur `kigumi.app`.
 
-1. Cloudflare → DNS de `kigumi.app` : faire pointer l'apex vers Cloudflare
-   Pages au lieu de GitHub Pages
-2. Me prévenir : je vérifie les routes, les deux redirections 301, le sitemap
-   et le flux RSS
-3. Je lève alors `noindex` et `robots.txt`, **le même jour** — les lever avant
-   ferait indexer `studio.kigumi.app` juste avant qu'on le réaffecte
-4. Soumettre le sitemap dans la Search Console (la propriété existe, la clé de
+1. Cloudflare → DNS de `kigumi.app` : supprimer les enregistrements de l'apex
+   qui pointent vers GitHub Pages
+2. Worker `kigumi-website` → **Settings → Domains & Routes** → ajouter le
+   domaine personnalisé **`kigumi.app`**
+3. Me prévenir : je vérifie les routes, les redirections 301, le sitemap et le
+   flux RSS
+4. GitHub → `kigumi-app/website` → **Settings → Pages** : dépublier et retirer
+   le domaine personnalisé
+5. Fusionner `feat/portage-studio` dans `main`, puis remettre la branche de
+   production du Worker sur **`main`**
+6. Je passe `INDEXABLE` à `true`, **le même jour** — plus tôt, on ferait
+   indexer l'adresse workers.dev et `studio.kigumi.app` juste avant qu'on le
+   réaffecte
+7. Soumettre le sitemap dans la Search Console (la propriété existe, la clé de
    vérification est déjà dans la zone)
 
-**Retour arrière :** repointer le DNS vers GitHub Pages. L'ancien site reste
-intact dans l'historique git. Exposition : le temps de propagation, quelques
-minutes derrière Cloudflare.
+**Retour arrière :** retirer le domaine du Worker, recréer les enregistrements
+GitHub Pages. Tant que l'étape 4 n'est pas faite, GitHub Pages sert toujours
+l'ancien site depuis `main`. Exposition : quelques minutes derrière Cloudflare.
 
 ---
 
