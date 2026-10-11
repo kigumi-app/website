@@ -84,7 +84,7 @@ interdit tout.
 reçoit le portage qu'une fois GitHub Pages débranché. Sinon GitHub Pages
 publierait tout le dépôt Astro, notes internes comprises, sur `kigumi.app`.
 
-0. **Avant tout : exporter la liste d'attente Loops.** Le nouveau site n'a plus
+0. ~~**Avant tout : exporter la liste d'attente Loops.**~~ ✅ fait. Le nouveau site n'a plus
    de formulaire ; l'ancien, encore en ligne, continue de remplir la liste
    jusqu'à la bascule. Les inscrits ont demandé un accès à un produit qui n'en
    sera pas un : un mot pour le leur dire, et certains sont des prospects
