@@ -232,15 +232,15 @@ footer.site{padding-block:56px;border-top:1px solid var(--border-subtle)}
 footer.site .cols{display:flex;flex-wrap:wrap;gap:36px 48px;justify-content:space-between}
 footer.site h4{
   font-family:var(--font-code);font-size:11px;font-weight:500;letter-spacing:.16em;
-  text-transform:uppercase;color:var(--text-dim);margin-bottom:12px;
+  text-transform:uppercase;color:var(--text-secondary);margin-bottom:12px;
 }
 footer.site a{display:block;font-size:14px;color:var(--text-secondary);text-decoration:none;padding-block:4px}
 footer.site a:hover{color:var(--text-primary)}
 footer.site .legal{
   margin-top:40px;padding-top:24px;border-top:1px solid var(--border-subtle);
-  font-size:13px;color:var(--text-dim);
+  font-size:13px;color:var(--text-secondary);
 }
-footer.site .legal p{color:var(--text-dim)}
+footer.site .legal p{color:var(--text-secondary)}
 
 @media (max-width:1100px){
   /* Sept éléments de navigation plus la bascule ne tiennent plus sur une ligne :

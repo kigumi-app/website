@@ -30,10 +30,10 @@ const fiche = parId.get("industrie-distribution")!;
       <div>
         <span class="n">01 · Lire</span>
         <h2>On l&rsquo;applique au processus tel qu&rsquo;il tourne.</h2>
-        <p>Pas à la procédure écrite, qui date souvent. Harness lit les messages reçus, les données de l&rsquo;ERP et les fichiers que l&rsquo;équipe tient à côté, et relève ce que le processus fait réellement&nbsp;: ses étapes, ses règles, et les exceptions que quelqu&rsquo;un traite à la main sans que ce soit écrit nulle part.</p>
+        <p>Pas à la procédure écrite, qui date souvent. Harness lit les messages reçus, les données de l&rsquo;ERP et les fichiers que l&rsquo;équipe tient à côté, et relève ce que le processus fait réellement&nbsp;: ses étapes, ses règles, et les exceptions traitées à la main.</p>
       </div>
       <figure class="ecran">
-        <div class="barre">harness — lecture · commandes-clients</div>
+        <div class="barre">harness · lecture · commandes-clients</div>
 <pre><span class="fort">Sources lues</span>
   boîte commandes@   1 240 messages
   ERP                clients, articles
@@ -49,11 +49,11 @@ const fiche = parId.get("industrie-distribution")!;
     <div class="temps">
       <div>
         <span class="n">02 · Comprendre</span>
-        <h2>Chaque étape, chaque règle, chaque exception. Visibles.</h2>
-        <p>Le relevé devient une carte&nbsp;: ce que fait chaque étape, dans quelles conditions, et ce qu&rsquo;elle fait quand une condition n&rsquo;est pas remplie. Chaque comportement est écrit de façon à pouvoir être vérifié, pas seulement lu.</p>
+        <h2>Les étapes, les règles et les exceptions, sur une carte.</h2>
+        <p>Le relevé devient une carte&nbsp;: ce que fait chaque étape, dans quelles conditions, et ce qu&rsquo;elle fait quand une condition n&rsquo;est pas remplie. Chaque comportement est écrit sous une forme vérifiable.</p>
       </div>
       <figure class="ecran">
-        <div class="barre">harness — carte · identifier le client</div>
+        <div class="barre">harness · carte · identifier le client</div>
 <pre><span class="fort">Identifier le client</span>      étape · agent
 
   Étant donné  une commande en PDF
@@ -74,7 +74,7 @@ const fiche = parId.get("industrie-distribution")!;
         <p>Un changement se décrit en une phrase. Harness le traduit en étapes et en règles, montre ce qu&rsquo;il touche, et rien ne part sans validation. L&rsquo;exemple pose aussi une étape humaine <em>requise</em>&nbsp;: c&rsquo;est là que se règle, étape par étape, l&rsquo;autonomie laissée aux agents.</p>
       </div>
       <figure class="ecran">
-        <div class="barre">harness — évolution · seuil de validation</div>
+        <div class="barre">harness · évolution · seuil de validation</div>
 <pre><span class="fort">Demande</span>
   Au-delà de 20 000 €, validation
   du responsable ADV avant la saisie.
@@ -92,10 +92,10 @@ const fiche = parId.get("industrie-distribution")!;
       <div>
         <span class="n">04 · Vérifier</span>
         <h2>17 comportements sur 19 vérifiés. On sait où sont les écarts.</h2>
-        <p>Chaque comportement attendu est confronté à ce que fait le processus. Les deux écarts de l&rsquo;exemple sont typiques&nbsp;: le traitement manuel les absorbait, personne ne les avait jamais écrits, et un agent les aurait reproduits en silence.</p>
+        <p>Chaque comportement attendu est confronté à ce que fait le processus. Les deux écarts de l&rsquo;exemple sont typiques&nbsp;: le traitement manuel les absorbait, personne ne les avait jamais écrits, et un agent les aurait reproduits sans que personne le voie.</p>
       </div>
       <figure class="ecran">
-        <div class="barre">harness — vérification · 17 / 19</div>
+        <div class="barre">harness · vérification · 17 / 19</div>
 <pre>✓ Client identifié (adresse ou n° client)
 ✓ Références rapprochées du catalogue
 ✓ Conditions tarifaires appliquées
@@ -125,8 +125,8 @@ const fiche = parId.get("industrie-distribution")!;
 
 <section class="cta">
   <div class="wrap">
-    <h2>Et sur vos processus&nbsp;?</h2>
-    <p>45 minutes pour en parler. On repart avec la liste de vos processus classés par ce qu&rsquo;ils vous coûtent.</p>
+    <h2>Sur vos processus</h2>
+    <p>45 minutes pour savoir si ça vaut le coup chez vous.</p>
     <div class="btn-row">
       <a class="btn" href={AGENDA} target="_blank" rel="noopener">Prendre rendez-vous</a>
       <a class="btn btn-ghost" href="/methode/">Voir la méthode</a>

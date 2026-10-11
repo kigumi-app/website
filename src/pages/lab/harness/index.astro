@@ -16,7 +16,7 @@ import DerniersArticles from "../../../components/studio/DerniersArticles.astro"
   <div class="wrap prose">
     <p class="eyebrow">Lab · Outil interne</p>
     <h1>Savoir ce que fait un système, et pouvoir le prouver.</h1>
-    <p class="lead">Un système qui tourne n&rsquo;est pas un système qui fait ce qu&rsquo;on attendait. Harness est l&rsquo;outil que nous construisons pour faire la différence&nbsp;: il lit un processus, en dresse la carte, et vérifie que chaque comportement attendu est tenu.</p>
+    <p class="lead">Harness est l&rsquo;outil que nous construisons pour vérifier ce que fait un processus automatisé. Il en dresse la carte à partir de ses exécutions réelles et contrôle que chaque comportement attendu est tenu.</p>
     <LabNav courant="presentation" />
   </div>
 </section>
@@ -24,8 +24,8 @@ import DerniersArticles from "../../../components/studio/DerniersArticles.astro"
 <section>
   <div class="wrap prose">
     <h2>Pourquoi on le construit</h2>
-    <p>Notre méthode promet de mesurer ce que les agents produisent, au lieu de constater qu&rsquo;ils tournent. Cette promesse ne tient que si l&rsquo;on sait dire, à tout moment, ce que fait réellement un processus automatisé&nbsp;: quelles règles il applique, quelles exceptions il remonte, ce qu&rsquo;il fait quand une donnée manque.</p>
-    <p>On sait dire qu&rsquo;un programme ne plante pas. On sait rarement dire ce qu&rsquo;il fait. <strong>Harness comble cet écart, pour nos propres livraisons d&rsquo;abord.</strong></p>
+    <p>Notre méthode promet de mesurer ce que les agents produisent. Cette promesse ne tient que si l&rsquo;on sait dire, à tout moment, ce que fait réellement un processus automatisé&nbsp;: quelles règles il applique, quelles exceptions il remonte, ce qu&rsquo;il fait quand une donnée manque.</p>
+    <p>Les tests classiques disent qu&rsquo;un programme ne plante pas. Harness vérifie ce qu&rsquo;il fait&nbsp;: les règles appliquées, les cas limites, les écarts à la spécification. <strong>Il sert d&rsquo;abord à nos propres livraisons.</strong></p>
   </div>
 </section>
 
@@ -36,7 +36,7 @@ import DerniersArticles from "../../../components/studio/DerniersArticles.astro"
       <div class="card">
         <p class="who">Voir</p>
         <h3>La carte du processus</h3>
-        <p>Chaque étape, chaque règle, chaque exception, et ce qui les relie. Dressée à partir de ce qui tourne, pas de ce que dit la procédure.</p>
+        <p>Les étapes, les règles, les exceptions et leurs dépendances, relevées dans les exécutions réelles du processus.</p>
       </div>
       <div class="card">
         <p class="who">Changer</p>
@@ -57,12 +57,12 @@ import DerniersArticles from "../../../components/studio/DerniersArticles.astro"
   <div class="wrap">
     <div class="prose">
       <h2>Où il intervient dans la méthode</h2>
-      <p>Harness n&rsquo;est pas une étape de plus. Il outille trois des quatre temps de <a href="/methode/">notre méthode</a>.</p>
+      <p>Harness outille trois des quatre temps de <a href="/methode/">notre méthode</a>.</p>
     </div>
     <div class="steps">
       <div class="step"><div class="n">2</div><div>
         <h3><a href="/methode/#fondation">Fondation</a></h3>
-        <p>Cartographier l&rsquo;existant avant d&rsquo;y toucher&nbsp;: ce que fait vraiment le processus, exceptions comprises, et pas ce que dit la procédure.</p>
+        <p>Cartographier l&rsquo;existant avant d&rsquo;y toucher&nbsp;: ce que fait vraiment le processus, exceptions comprises.</p>
       </div></div>
       <div class="step"><div class="n">3</div><div>
         <h3><a href="/methode/#deploiement">Déploiement</a></h3>
@@ -70,12 +70,12 @@ import DerniersArticles from "../../../components/studio/DerniersArticles.astro"
       </div></div>
       <div class="step"><div class="n">4</div><div>
         <h3><a href="/methode/#pilotage">Pilotage et vérification</a></h3>
-        <p>Vérifier en continu que chaque comportement attendu est tenu. C&rsquo;est ce qui rend le rapport trimestriel vérifiable plutôt que déclaratif.</p>
+        <p>Vérifier en continu que chaque comportement attendu est tenu. Le rapport trimestriel s&rsquo;appuie sur ces vérifications.</p>
       </div></div>
     </div>
     <div class="note prose">
       <strong>Statut</strong>
-      <p>Harness n&rsquo;est pas en vente. Nous le construisons pour nos missions, et nous l&rsquo;ouvrons à quelques équipes que nous choisissons.</p>
+      <p>Harness n&rsquo;est pas en vente. Nous le construisons pour nos missions et l&rsquo;ouvrons à quelques équipes que nous choisissons.</p>
     </div>
   </div>
 </section>
@@ -84,8 +84,8 @@ import DerniersArticles from "../../../components/studio/DerniersArticles.astro"
 
 <section class="cta">
   <div class="wrap">
-    <h2>Ce qui vous intéresse, c&rsquo;est le résultat&nbsp;?</h2>
-    <p>Harness sert une méthode. 45 minutes pour voir ce qu&rsquo;elle donnerait sur vos processus.</p>
+    <h2>Ce que la méthode donnerait chez vous</h2>
+    <p>45 minutes pour savoir si ça vaut le coup sur vos processus.</p>
     <div class="btn-row">
       <a class="btn" href={AGENDA} target="_blank" rel="noopener">Prendre rendez-vous</a>
       <a class="btn btn-ghost" href="/methode/">Voir la méthode</a>

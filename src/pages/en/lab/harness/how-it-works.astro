@@ -28,10 +28,10 @@ const fiche = vueCas(parId.get("industrie-distribution")!, "en");
       <div>
         <span class="n">01 · Read</span>
         <h2>We apply it to the process as it actually runs.</h2>
-        <p>Not to the written procedure, which is often out of date. Harness reads the messages received, the ERP data and the files the team keeps on the side, and records what the process really does: its steps, its rules, and the exceptions someone handles by hand without it being written down anywhere.</p>
+        <p>Not to the written procedure, which is often out of date. Harness reads the messages received, the ERP data and the files the team keeps on the side, and records what the process really does: its steps, its rules, and the exceptions handled by hand.</p>
       </div>
       <figure class="ecran">
-        <div class="barre">harness — read · customer-orders</div>
+        <div class="barre">harness · read · customer-orders</div>
 <pre><span class="fort">Sources read</span>
   orders@ inbox      1,240 messages
   ERP                customers, items
@@ -47,11 +47,11 @@ const fiche = vueCas(parId.get("industrie-distribution")!, "en");
     <div class="temps">
       <div>
         <span class="n">02 · Understand</span>
-        <h2>Every step, every rule, every exception. Visible.</h2>
-        <p>What was found becomes a map: what each step does, under which conditions, and what it does when a condition isn&rsquo;t met. Every behaviour is written so it can be verified, not just read.</p>
+        <h2>The steps, rules and exceptions, on one map.</h2>
+        <p>What was found becomes a map: what each step does, under which conditions, and what it does when a condition isn&rsquo;t met. Every behaviour is written in a form that can be verified.</p>
       </div>
       <figure class="ecran">
-        <div class="barre">harness — map · identify the customer</div>
+        <div class="barre">harness · map · identify the customer</div>
 <pre><span class="fort">Identify the customer</span>     step · agent
 
   Given    an order received as PDF
@@ -72,7 +72,7 @@ const fiche = vueCas(parId.get("industrie-distribution")!, "en");
         <p>A change is described in one sentence. Harness turns it into steps and rules, shows what it touches, and nothing goes out without approval. The example also adds a <em>required</em> human step: that&rsquo;s where the autonomy left to agents is set, step by step.</p>
       </div>
       <figure class="ecran">
-        <div class="barre">harness — change · approval threshold</div>
+        <div class="barre">harness · change · approval threshold</div>
 <pre><span class="fort">Request</span>
   Above €20,000, the sales admin
   manager approves before entry.
@@ -90,10 +90,10 @@ const fiche = vueCas(parId.get("industrie-distribution")!, "en");
       <div>
         <span class="n">04 · Verify</span>
         <h2>17 of 19 behaviours verified. We know where the gaps are.</h2>
-        <p>Every expected behaviour is checked against what the process does. The two gaps in the example are typical: manual handling absorbed them, nobody had ever written them down, and an agent would have reproduced them silently.</p>
+        <p>Every expected behaviour is checked against what the process does. The two gaps in the example are typical: manual handling absorbed them, nobody had ever written them down, and an agent would have reproduced them without anyone noticing.</p>
       </div>
       <figure class="ecran">
-        <div class="barre">harness — verify · 17 / 19</div>
+        <div class="barre">harness · verify · 17 / 19</div>
 <pre>✓ Customer identified (address or number)
 ✓ References matched to the catalogue
 ✓ Customer pricing terms applied
@@ -123,8 +123,8 @@ const fiche = vueCas(parId.get("industrie-distribution")!, "en");
 
 <section class="cta">
   <div class="wrap">
-    <h2>And for your processes?</h2>
-    <p>45 minutes to talk them through. You leave with the list of your processes ranked by what they cost you.</p>
+    <h2>On your processes</h2>
+    <p>45 minutes to find out whether it&rsquo;s worth it at your company.</p>
     <div class="btn-row">
       <a class="btn" href={AGENDA} target="_blank" rel="noopener">Book a call</a>
       <a class="btn btn-ghost" href="/en/method/">See the method</a>
