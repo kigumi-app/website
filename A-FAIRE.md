@@ -143,8 +143,6 @@ le pied de page et le sitemap, et `/lab` affiche la section « Ce qu'on en
 « Prendre rendez-vous » et `/contact/` mènent à l'agenda Google
 (`src/lib/contact.ts`, et `public/_redirects` pour l'adresse).
 
-**Les deux portraits.** L'emplacement 4:5 les attend sur la page À propos, au
-cadrage que `brief-photo.md` commande (1600 × 2000). Leur arrivée ne décalera
-rien.
+~~**Les deux portraits.**~~ ✅ en ligne (`public/studio/portraits/`, 960 × 1200).
 
 ---

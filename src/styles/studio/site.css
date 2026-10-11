@@ -284,17 +284,12 @@ footer.site .legal p{color:var(--text-dim)}
 .roles a{font-size:14px;text-decoration:none}
 .roles a:hover{text-decoration:underline}
 
-/* Portraits des fondateurs, en tête de colonne. Le cadrage 4:5 est celui que
-   brief-photo.md commande (1600 × 2000) : la réserve a donc exactement la
-   forme de la photo à venir, et son arrivée ne décalera rien.
-   L'emplacement vide reste discret — sur une page qui vend deux personnes,
-   un grand rectangle barré ferait plus de mal que le manque lui-même. */
+/* Portraits des fondateurs, en tête de colonne, au cadrage 4:5
+   (public/studio/portraits/, 960 × 1200). */
 .portrait{aspect-ratio:4/5;max-width:240px;margin-bottom:20px;overflow:hidden;
           border-radius:var(--radius-xl);background:var(--surface);
           border:1px solid var(--border-subtle);display:grid;place-items:center}
 .portrait img{width:100%;height:100%;object-fit:cover;display:block}
-.portrait span{font-family:var(--font-code);font-size:10px;letter-spacing:.14em;
-               text-transform:uppercase;color:var(--text-secondary)}
 
 /* Variante A — la mesure en exergue.
    Elle est l'argument de la marque et c'était l'élément le plus petit et le
