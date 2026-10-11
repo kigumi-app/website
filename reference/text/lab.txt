@@ -13,11 +13,10 @@ Un logiciel qui tourne n’est pas un logiciel qui fait ce qu’on attendait de 
 C’est aussi ce qui sépare une automatisation qui rapporte d’une automatisation qui coûte. Le chantier qu’on mène ici n’est pas un produit qu’on vous vend : c’est la raison pour laquelle, chez nos clients, on mesure au lieu de supposer.
 Ce qu’on y publie
 Ce qu’on a compris, y compris quand ça nous a coûté. Des notes de travail, pas des articles de blog : on y écrit ce qu’on aurait voulu lire avant de s’y mettre.
-VÉRIFICATION
+OUTIL INTERNE
 Harness
-Savoir ce qu’un logiciel fait réellement, et pouvoir le prouver. Le chantier principal, et son journal de bord.
-Voir le projet →
-Les pages du lab sont en anglais : elles s’adressent à des équipes techniques, souvent hors de France.
+L’outil que nous construisons pour savoir ce que fait réellement un processus automatisé, et pouvoir le prouver. Ouvert à quelques équipes que nous choisissons.
+Voir l’outil →
 Ce qui vous intéresse, c’est plutôt vos processus ?
 45 minutes pour en parler. On repart avec la liste de vos processus classés par ce qu’ils vous coûtent.
 Prendre rendez-vous

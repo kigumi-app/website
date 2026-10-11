@@ -36,6 +36,7 @@ On construit les agents, on les branche à vos outils, on les met en production 
 4
 Pilotage et vérification
 On supervise, on corrige, et chaque trimestre on vous remet un rapport qui compare le gain réel à la projection du diagnostic. Y compris quand l'écart n'est pas en notre faveur.
+La fondation, le déploiement et la vérification s'appuient sur Harness, l'outil que nous construisons pour savoir ce que fait réellement un processus automatisé.
 Pourquoi la deuxième mission coûte moins que la première
 Chaque automatisation est bornée à un processus : on ne construit rien au-delà de ce qu'il exige. La fondation, elle, ne l'est pas. Les clients, les références, les règles et les exceptions qu'il a fallu rendre explicites pour le premier processus servent au deuxième, puis au troisième.
 C'est la seule partie du travail qui ne s'arrête pas avec la mission. Les agents se remplacent, les outils changent — ce que vous avez cessé de garder dans quelques têtes, non. Cette base vous appartient, elle s'exporte à tout moment, et vous la gardez si vous arrêtez.

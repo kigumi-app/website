@@ -681,67 +681,113 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "008eac1e9a03b2c6",
+    "empreinteTexte": "4c73a517006ffabb",
     "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/lab/harness/": {
-    "titre": "Kigumi - AI made code cheap. Kigumi makes change safe.",
-    "description": "AI made code cheap. Kigumi makes change safe. See what your codebase actually does.",
+    "titre": "Harness — Kigumi",
+    "description": "L'outil que nous construisons pour savoir ce que fait un processus automatisé, et pouvoir le prouver.",
     "canonical": "https://kigumi.app/lab/harness/",
     "h1": [
-      "AI made code cheap.   igumi makes change safe."
+      "Savoir ce que fait un système, et pouvoir le prouver."
     ],
     "h2": [
-      "AI writes more code every week. Nobody captures the intent behind it.",
-      "Import your repo. See what it does."
+      "Pourquoi on le construit",
+      "Ce qu’il fait",
+      "Où il intervient dans la méthode",
+      "Ce qui vous intéresse, c’est le résultat ?"
+    ],
+    "h3": [
+      "La carte du processus",
+      "Ce qu’un changement affecte",
+      "Ce qui est tenu, et ce qui ne l’est pas",
+      "Fondation",
+      "Déploiement",
+      "Pilotage et vérification"
+    ],
+    "menuActif": null,
+    "liens": [
+      "/lab/harness/",
+      "/lab/harness/fonctionnement/",
+      "/lab/harness/fonctionnement/",
+      "/methode/",
+      "/methode/#fondation",
+      "/methode/#deploiement",
+      "/methode/#pilotage",
+      "/contact/",
+      "/methode/",
+      "/cas-usages/",
+      "/conseil-ingenierie/",
+      "/industrie-distribution/",
+      "/service-client/",
+      "/methode/",
+      "/travailler-ensemble/",
+      "/a-propos/",
+      "/lab/",
+      "/confiance/",
+      "/confiance/#ai-act",
+      "/mentions-legales/",
+      "/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 5,
+      "cartes": 3,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "6030c32070727081",
+    "empreinteSvg": "e3b0c44298fc1c14"
+  },
+  "/lab/harness/fonctionnement/": {
+    "titre": "Harness · Fonctionnement — Kigumi",
+    "description": "Lire, comprendre, faire évoluer, vérifier : les quatre temps de Harness sur une commande client qui arrive en pièce jointe.",
+    "canonical": "https://kigumi.app/lab/harness/fonctionnement/",
+    "h1": [
+      "Lire, comprendre, faire évoluer, vérifier."
+    ],
+    "h2": [
+      "On l’applique au processus tel qu’il tourne.",
+      "Chaque étape, chaque règle, chaque exception. Visibles.",
+      "On décrit le changement. Harness propose, quelqu’un relit.",
+      "17 comportements sur 19 vérifiés. On sait où sont les écarts.",
+      "Ce qui est vérifié ici, c’est ce qui se mesure ensuite.",
+      "Et sur vos processus ?"
     ],
     "h3": [],
     "menuActif": null,
     "liens": [
-      "/lab/harness/writing/",
-      "mailto:hello@kigumi.app"
+      "/industrie-distribution/",
+      "/lab/harness/",
+      "/lab/harness/fonctionnement/",
+      "/industrie-distribution/",
+      "/contact/",
+      "/methode/",
+      "/cas-usages/",
+      "/conseil-ingenierie/",
+      "/industrie-distribution/",
+      "/service-client/",
+      "/methode/",
+      "/travailler-ensemble/",
+      "/a-propos/",
+      "/lab/",
+      "/confiance/",
+      "/confiance/#ai-act",
+      "/mentions-legales/",
+      "/contact/",
+      "mailto:contact@kigumi.app"
     ],
     "compte": {
-      "sections": 0,
+      "sections": 4,
       "cartes": 0,
       "fiches": 0,
       "mesures": 0,
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "167e2d6a10cbbc4a",
-    "empreinteSvg": "e3b0c44298fc1c14"
-  },
-  "/lab/harness/how-it-works/": {
-    "titre": "How Kigumi Works - Import. Reason. Evolve. Verify.",
-    "description": "See how Kigumi maps your codebase into a live behavior graph. Import, reason, evolve, verify.",
-    "canonical": "https://kigumi.app/lab/harness/how-it-works/",
-    "h1": [
-      "Import. Reason. Evolve.Ship with confidence."
-    ],
-    "h2": [
-      "Import your repo. See what it does."
-    ],
-    "h3": [
-      "Point it at your codebase. 847 behaviors. 234 files. 12 minutes.",
-      "Every state, action, condition, and data flow. Visible.",
-      "Describe what you want. Review before it commits.",
-      "14 of 16 behaviors verified. Automatically."
-    ],
-    "menuActif": null,
-    "liens": [
-      "/lab/harness/writing/",
-      "mailto:hello@kigumi.app"
-    ],
-    "compte": {
-      "sections": 0,
-      "cartes": 0,
-      "fiches": 0,
-      "mesures": 0,
-      "svg": 0
-    },
-    "deborde": false,
-    "empreinteTexte": "cff3359a478e8c71",
+    "empreinteTexte": "514197cb68473302",
     "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/lab/harness/writing/": {
@@ -836,6 +882,7 @@
     ],
     "menuActif": "Méthode",
     "liens": [
+      "/lab/harness/",
       "/confiance/#reversibilite",
       "/contact/",
       "/cas-usages/",
@@ -860,7 +907,7 @@
       "svg": 2
     },
     "deborde": false,
-    "empreinteTexte": "cd69e8c67b35062c",
+    "empreinteTexte": "ff4575fb5bb072c3",
     "empreinteSvg": "339b4927ae4504f3"
   },
   "/qualite-conformite/": {

@@ -1,0 +1,92 @@
+Méthode
+Travailler ensemble
+Cas d’usages
+À propos
+Prendre rendez-vous
+Kigumi
+Lab
+Harness
+Fonctionnement
+HARNESS · FONCTIONNEMENT
+Lire, comprendre, faire évoluer, vérifier.
+Quatre temps, montrés sur un processus que nous automatisons : le traitement d’une commande client qui arrive en pièce jointe. C’est celui de la fiche Industrie et distribution B2B.
+PRÉSENTATION
+FONCTIONNEMENT
+01 · Lire
+On l’applique au processus tel qu’il tourne.
+Pas à la procédure écrite, qui date souvent. Harness lit les messages reçus, les données de l’ERP et les fichiers que l’équipe tient à côté, et relève ce que le processus fait réellement : ses étapes, ses règles, et les exceptions que quelqu’un traite à la main sans que ce soit écrit nulle part.
+harness — lecture · commandes-clients
+Sources lues
+boîte commandes@   1 240 messages
+ERP                clients, articles
+grille de remises  tableur partagé
+Relevé
+62  comportements
+18  règles de gestion
+9  exceptions traitées à la main
+02 · Comprendre
+Chaque étape, chaque règle, chaque exception. Visibles.
+Le relevé devient une carte : ce que fait chaque étape, dans quelles conditions, et ce qu’elle fait quand une condition n’est pas remplie. Chaque comportement est écrit de façon à pouvoir être vérifié, pas seulement lu.
+harness — carte · identifier le client
+Identifier le client      étape · agent
+Étant donné  une commande en PDF
+Quand        expéditeur inconnu
+Alors        chercher le n° client
+dans le document,
+sinon remonter à l'ADV
+Relié à      Rapprocher les références
+Appliquer les conditions
+03 · Faire évoluer
+On décrit le changement. Harness propose, quelqu’un relit.
+Un changement se décrit en une phrase. Harness le traduit en étapes et en règles, montre ce qu’il touche, et rien ne part sans validation. L’exemple pose aussi une étape humaine requise : c’est là que se règle, étape par étape, l’autonomie laissée aux agents.
+harness — évolution · seuil de validation
+Demande
+Au-delà de 20 000 €, validation
+du responsable ADV avant la saisie.
+Proposé
++ Seuil de validation   condition
++ Validation ADV        humaine · requise
+~ Saisie dans l'ERP     après validation
+Accepter  Refuser
+04 · Vérifier
+17 comportements sur 19 vérifiés. On sait où sont les écarts.
+Chaque comportement attendu est confronté à ce que fait le processus. Les deux écarts de l’exemple sont typiques : le traitement manuel les absorbait, personne ne les avait jamais écrits, et un agent les aurait reproduits en silence.
+harness — vérification · 17 / 19
+✓ Client identifié (adresse ou n° client)
+✓ Références rapprochées du catalogue
+✓ Conditions tarifaires appliquées
+✓ Cohérence contrôlée avant la saisie
+✓ Seuil respecté : validation ADV
+✗ Référence hors catalogue :
+aucun chemin de remontée
+✗ Remise exceptionnelle :
+règle absente de la grille
+Exemple illustratif : les volumes, les règles et les écarts sont construits à partir de situations observées dans ce secteur. Pas une mission réalisée.
+Ce qui est vérifié ici, c’est ce qui se mesure ensuite.
+Un processus dont on connaît chaque comportement est un processus dont on peut mesurer le gain. Pour cette commande, la fiche fixe trois mesures :
+Le temps de traitement par commande
+Le taux d’erreur de saisie
+Le coût des avoirs évités
+Lire la fiche complète →
+Et sur vos processus ?
+45 minutes pour en parler. On repart avec la liste de vos processus classés par ce qu’ils vous coûtent.
+Prendre rendez-vous
+Voir la méthode
+CAS D’USAGES
+Tous les cas
+Conseil, ingénierie, bureaux d’études
+Industrie et distribution B2B
+Éditeurs et services récurrents
+KIGUMI
+Notre méthode
+Travailler ensemble
+À propos
+Lab
+CONFIANCE
+Données et sécurité
+AI Act
+Mentions légales
+CONTACT
+Prendre rendez-vous
+contact@kigumi.app
+Studio d’automatisation de processus par agents IA pour PME et ETI.

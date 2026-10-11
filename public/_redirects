@@ -1,8 +1,13 @@
 # Le site produit occupait la racine jusqu'à la bascule. Deux URL seulement
 # étaient atteignables ; sans ces règles, les liens existants tombent en 404.
 /index.html            /                                  301
-/how-it-works.html     /lab/harness/how-it-works/         301
-/how-it-works          /lab/harness/how-it-works/         301
+/how-it-works.html     /lab/harness/fonctionnement/       301
+/how-it-works          /lab/harness/fonctionnement/       301
 /writing               /lab/harness/writing/              301
 /writing/*             /lab/harness/writing/:splat        301
 /rss.xml               /lab/harness/rss.xml               301
+
+# Harness devient un outil du studio : la page produit « how it works » est
+# remplacée par la page Fonctionnement, en français.
+/lab/harness/how-it-works    /lab/harness/fonctionnement/   301
+/lab/harness/how-it-works/   /lab/harness/fonctionnement/   301

@@ -187,6 +187,8 @@ a.card:hover{border-color:var(--accent)}
   display:grid;grid-template-columns:56px 1fr;gap:28px;
   padding-block:28px;border-bottom:1px solid var(--border-subtle);
 }
+/* Ancres visées depuis le lab : l'en-tête collant masquerait le titre. */
+.step[id]{scroll-margin-top:96px}
 .step:first-child{border-top:1px solid var(--border-subtle)}
 .step .n{
   font-family:var(--font-code);font-size:13px;font-weight:500;
@@ -369,3 +371,33 @@ html:not(.no-js) section.vu .kg-point{
    étaient typographiquement identiques, le numéro ou rien pour les distinguer. */
 .eyebrow .ico{display:inline-block;vertical-align:-5px;margin-right:9px;line-height:0}
 .eyebrow .ico svg{width:20px;height:20px;display:block;color:var(--accent)}
+
+/* ── lab : sous-navigation et écrans ──
+   La sous-navigation reprend le registre du fil d'Ariane, juste en dessous du
+   héros. Les écrans montrent l'outil sans en imiter l'interface : du texte à
+   chasse fixe dans un cadre, l'accent réservé à ce qui demande l'attention
+   (un écart, une étape humaine). La palette noyer n'a pas de vert ni de rouge,
+   et n'en aura pas : ce qui passe reste en texte secondaire. */
+.sousnav{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:32px;
+  font-family:var(--font-code);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.sousnav a{color:var(--text-secondary);text-decoration:none;padding-bottom:4px;border-bottom:1px solid transparent}
+.sousnav a:hover{color:var(--text-primary)}
+.sousnav a[aria-current]{color:var(--accent);border-bottom-color:var(--accent)}
+
+.temps{display:grid;gap:36px;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);align-items:start}
+.temps + .temps{margin-top:72px}
+.temps .n{font-family:var(--font-code);font-size:12px;letter-spacing:.2em;color:var(--accent);margin-bottom:12px;display:block}
+@media (max-width:860px){.temps{grid-template-columns:1fr;gap:20px}}
+
+.ecran{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);overflow:hidden}
+.ecran .barre{display:flex;align-items:center;gap:8px;padding:10px 16px;border-bottom:1px solid var(--border-subtle);
+  font-family:var(--font-code);font-size:12px;color:var(--text-secondary)}
+.ecran .barre::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.ecran pre{margin:0;padding:18px 20px;overflow-x:auto;
+  font-family:var(--font-code);font-size:13px;line-height:1.75;color:var(--text-secondary);white-space:pre}
+.ecran .fort{color:var(--text-primary)}
+.ecran .alerte{color:var(--accent)}
+.ecran .choix{display:inline-block;padding:0 8px;border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text-primary)}
+/* Les écrans sont tenus à 42 caractères par ligne : à 390 px, ils tiennent sans
+   défilement horizontal une fois la chasse réduite. */
+@media (max-width:520px){.ecran pre{font-size:11.5px;padding:14px 16px}}
