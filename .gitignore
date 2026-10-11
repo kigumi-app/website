@@ -24,3 +24,6 @@ npm-debug.log*
 # Référence de non-régression : images dérivées, régénérables
 reference/img/
 reference-courante/
+
+# État local de wrangler dev
+.wrangler/
