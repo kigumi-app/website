@@ -1,25 +1,22 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Nav from "../components/Nav.astro";
-import Footer from "../components/Footer.astro";
+// La page d'erreur appartient au site du studio : c'est là qu'arrivent la
+// plupart des adresses mal tapées. Trois sorties, aucune adresse canonique.
+import StudioLayout from "../layouts/StudioLayout.astro";
 ---
-
-<Layout
-  title="Not found - Kigumi"
-  description="That page does not exist."
->
-  <Nav />
-  <section class="cta-section">
-    <div class="container">
-      <div class="dimension-label" style="justify-content: center;">
-        Error 404
-      </div>
-      <h1 class="headline headline--section">This page doesn't exist.</h1>
-      <p class="cta-annotation"><em>The behavior is missing.</em></p>
-      <div style="margin-top: 20px">
-        <a href="/" class="btn btn--primary btn--ember">Back to Kigumi</a>
-      </div>
+<StudioLayout
+  titre="Page introuvable"
+  description="Cette page n’existe pas ou a changé d’adresse."
+  sansCanonique>
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow">Erreur 404</p>
+    <h1>Cette page n&rsquo;existe pas.</h1>
+    <p class="lead">Elle a peut-être changé d&rsquo;adresse. Le reste du site est toujours là.</p>
+    <div class="btn-row">
+      <a class="btn" href="/">Retour à l&rsquo;accueil</a>
+      <a class="btn btn-ghost" href="/cas-usages/">Voir les cas d&rsquo;usages</a>
+      <a class="btn btn-ghost" href="/lab/">Le lab</a>
     </div>
-  </section>
-  <Footer />
-</Layout>
+  </div>
+</section>
+</StudioLayout>

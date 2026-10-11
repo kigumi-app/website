@@ -3,6 +3,8 @@ Travailler ensemble
 Cas d’usages
 À propos
 Prendre rendez-vous
+Kigumi
+Lab
 LAB
 Ce qu’on construit en dehors des missions.
 Notre méthode repose sur une promesse : on mesure ce que les agents produisent, au lieu de constater qu’ils tournent. Encore faut-il savoir le faire. C’est ce qu’on construit ici.

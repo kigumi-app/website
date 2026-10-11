@@ -23,9 +23,9 @@ const courant = GROUPE.has(actif) ? "cas-usages" : actif;
     <a class="lockup" href="/" aria-label="Kigumi"></a>
     <nav>
       {ENTREES.map((e) => (
-        <a href={`/${e.slug}`} class={e.slug === courant ? "on" : undefined}>{e.libelle}</a>
+        <a href={`/${e.slug}/`} class={e.slug === courant ? "on" : undefined}>{e.libelle}</a>
       ))}
-      <a href="/contact" class="btn btn-ghost btn-sm">Prendre rendez-vous</a>
+      <a href="/contact/" class="btn btn-ghost btn-sm">Prendre rendez-vous</a>
       <button type="button" class="modetoggle" id="modetoggle"
               aria-label="Passer en mode clair" aria-pressed="false">
         <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"

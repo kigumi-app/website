@@ -131,6 +131,18 @@ header.site nav a{font-size:14px;color:var(--text-secondary);text-decoration:non
 header.site nav a:hover{color:var(--text-primary)}
 header.site nav a.on{color:var(--accent)}
 
+/* ── fil d'Ariane ──
+   Sous l'en-tête, sur les pages qui ne sont pas au premier niveau du menu :
+   le lab et ses chantiers. Le séparateur vient du style, pas du contenu. */
+nav.fil{border-bottom:1px solid var(--border-subtle)}
+nav.fil ol{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding-block:12px;
+  font-family:var(--font-code);font-size:12px;letter-spacing:.06em}
+nav.fil li{display:flex;gap:8px;color:var(--text-secondary)}
+nav.fil li + li::before{content:"›";color:var(--text-dim)}
+nav.fil a{color:var(--text-secondary);text-decoration:none}
+nav.fil a:hover{color:var(--text-primary)}
+nav.fil [aria-current]{color:var(--accent)}
+
 /* ── boutons ── */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;

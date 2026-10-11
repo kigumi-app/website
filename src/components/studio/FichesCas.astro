@@ -13,7 +13,7 @@ const fiches = ids.map((i: string) => parId.get(i)!);
       <p>{c.accroche}</p>
       <p>{c.mecanisme}</p>
       {c.niveau === 1 && (
-        <p><a href={`/${c.id}`}>Voir la fiche détaillée &rarr;</a></p>
+        <p><a href={`/${c.id}/`}>Voir la fiche détaillée &rarr;</a></p>
       )}
       <div class="mesure">
         <span>Ce qu&rsquo;on mesure</span>

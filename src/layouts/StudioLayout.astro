@@ -18,8 +18,13 @@ interface Props {
   /** Pour allumer la bonne entrée du menu. Les pages de cas et de rôle
    *  passent leur propre identifiant : le menu les rattache au groupe. */
   actif?: string;
+  /** Fil d'Ariane, sans l'accueil : il est ajouté en tête. Le dernier
+   *  élément est la page courante et ne porte pas de lien. */
+  fil?: { libelle: string; href?: string }[];
+  /** La page d'erreur n'a pas d'adresse propre à déclarer. */
+  sansCanonique?: boolean;
 }
-const { titre, description, actif = "" } = Astro.props;
+const { titre, description, actif = "", fil = [], sansCanonique = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -30,7 +35,7 @@ const { titre, description, actif = "" } = Astro.props;
     {!INDEXABLE && <meta name="robots" content="noindex, nofollow" />}
     <title>{titre} &mdash; Kigumi</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    {!sansCanonique && <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />}
     <meta property="og:type" content="website" />
     <meta property="og:title" content={`${titre} — Kigumi`} />
     <meta property="og:description" content={description} />
@@ -45,6 +50,20 @@ const { titre, description, actif = "" } = Astro.props;
   <body>
     <div class="atmo atmo--fixe" aria-hidden="true"></div>
     <Nav actif={actif} />
+    {fil.length > 0 && (
+      <nav class="fil" aria-label="Fil d’Ariane">
+        <ol class="wrap">
+          <li><a href="/">Kigumi</a></li>
+          {fil.map((e, i) => (
+            <li>
+              {e.href && i < fil.length - 1
+                ? <a href={e.href}>{e.libelle}</a>
+                : <span aria-current="page">{e.libelle}</span>}
+            </li>
+          ))}
+        </ol>
+      </nav>
+    )}
     <main>
       <slot />
     </main>
