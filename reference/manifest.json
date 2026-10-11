@@ -140,7 +140,7 @@
   },
   "/blog/": {
     "titre": "Blog — Kigumi",
-    "description": "Ce qu'on apprend en automatisant des processus chez des PME et des ETI.",
+    "description": "Ce qu'on apprend en automatisant des processus chez des PME et des ETI, et ce qu'on construit au lab pour le vérifier.",
     "canonical": "https://kigumi.app/blog/",
     "h1": [
       "Ce qu’on apprend en chemin."
@@ -171,7 +171,7 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "792aa4d99416cbc1",
+    "empreinteTexte": "f93db98fedbc0291",
     "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/cas-usages/": {
@@ -681,7 +681,7 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "4c73a517006ffabb",
+    "empreinteTexte": "493df93363c01003",
     "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/lab/harness/": {
@@ -788,31 +788,6 @@
     },
     "deborde": false,
     "empreinteTexte": "514197cb68473302",
-    "empreinteSvg": "e3b0c44298fc1c14"
-  },
-  "/lab/harness/writing/": {
-    "titre": "Writing - Kigumi",
-    "description": "Essays on the intent gap, behavior infrastructure, and building a category before it has a name.",
-    "canonical": "https://kigumi.app/lab/harness/writing/",
-    "h1": [
-      "Writing"
-    ],
-    "h2": [],
-    "h3": [],
-    "menuActif": null,
-    "liens": [
-      "/lab/harness/writing/",
-      "mailto:hello@kigumi.app"
-    ],
-    "compte": {
-      "sections": 0,
-      "cartes": 0,
-      "fiches": 0,
-      "mesures": 0,
-      "svg": 0
-    },
-    "deborde": false,
-    "empreinteTexte": "8433ee9e20823c9b",
     "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/mentions-legales/": {

@@ -2,7 +2,8 @@
 title: "Building a category before it has a name"
 description: "The hardest part of this company is not the code. It is that there is no existing thing to point at and say: like that."
 pubDate: 2026-04-23
-pillar: founder-journey
+langue: en
+etiquettes: [lab, harness]
 draft: true
 ---
 

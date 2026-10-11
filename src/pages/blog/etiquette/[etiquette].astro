@@ -1,0 +1,36 @@
+---
+// Une page par étiquette portée par au moins un article publié : une
+// étiquette sans article ne produit pas de page.
+import StudioLayout from "../../../layouts/StudioLayout.astro";
+import ListeArticles from "../../../components/studio/ListeArticles.astro";
+import { articlesPublies, etiquettesPubliees, libelle } from "../../../lib/blog";
+
+export async function getStaticPaths() {
+  return (await etiquettesPubliees()).map((etiquette) => ({ params: { etiquette } }));
+}
+const { etiquette } = Astro.params;
+const articles = await articlesPublies(etiquette);
+const etiquettes = await etiquettesPubliees();
+---
+<StudioLayout
+  titre={`Blog · ${libelle(etiquette)}`}
+  description={`Les articles étiquetés ${libelle(etiquette)}.`}
+  actif=""
+  fil={[{ libelle: "Blog", href: "/blog/" }, { libelle: libelle(etiquette) }]}>
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow">Blog · {libelle(etiquette)}</p>
+    <h1>{libelle(etiquette)}</h1>
+    <nav class="sousnav" aria-label="Étiquettes">
+      <a href="/blog/">Tout</a>
+      {etiquettes.map((e) => (
+        <a href={`/blog/etiquette/${e}/`} aria-current={e === etiquette ? "page" : undefined}>{libelle(e)}</a>
+      ))}
+    </nav>
+  </div>
+</section>
+
+<section>
+  <div class="wrap"><ListeArticles articles={articles} /></div>
+</section>
+</StudioLayout>

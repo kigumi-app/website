@@ -1,22 +1,21 @@
 ---
 import StudioLayout from "../../layouts/StudioLayout.astro";
-import { getCollection, render } from "astro:content";
+import { render } from "astro:content";
+import { articlesPublies, dateArticle, libelle } from "../../lib/blog";
 
 export async function getStaticPaths() {
-  // Les brouillons ne produisent pas de page : même garde-fou que pour les
-  // essais, et c'est ce qui laisse écrire sans publier avant d'être prêt.
-  const articles = await getCollection("blog", ({ data }) => !data.draft);
-  return articles.map((a) => ({ params: { slug: a.id }, props: { a } }));
+  return (await articlesPublies()).map((a) => ({ params: { slug: a.id }, props: { a } }));
 }
 const { a } = Astro.props;
 const { Content } = await render(a);
-const date = a.data.pubDate.toLocaleDateString("fr-FR",
-  { year: "numeric", month: "long", day: "numeric" });
+const fil = a.data.etiquettes.includes("lab")
+  ? [{ libelle: "Blog", href: "/blog/" }, { libelle: "Lab", href: "/blog/etiquette/lab/" }, { libelle: a.data.title }]
+  : [{ libelle: "Blog", href: "/blog/" }, { libelle: a.data.title }];
 ---
-<StudioLayout titre={a.data.title} description={a.data.description} actif="">
+<StudioLayout titre={a.data.title} description={a.data.description} actif="" fil={fil} langue={a.data.langue}>
 <section class="hero">
   <div class="wrap prose">
-    <p class="eyebrow"><a href="/blog/">Blog</a></p>
+    <p class="eyebrow">{a.data.etiquettes.length ? a.data.etiquettes.map(libelle).join(" · ") : "Blog"}</p>
     <h1>{a.data.title}</h1>
     <p class="lead">{a.data.description}</p>
   </div>
@@ -25,9 +24,14 @@ const date = a.data.pubDate.toLocaleDateString("fr-FR",
 <section>
   <div class="wrap prose">
     <p class="muted" style="font-size:14px">
-      <time datetime={a.data.pubDate.toISOString()}>{date}</time>
+      <time datetime={a.data.pubDate.toISOString()}>{dateArticle(a)}</time>
     </p>
     <article style="margin-top:1.4em"><Content /></article>
+    {a.data.etiquettes.length > 0 && (
+      <p class="etiquettes" style="margin-top:48px">
+        {a.data.etiquettes.map((e) => <a href={`/blog/etiquette/${e}/`}>{libelle(e)}</a>)}
+      </p>
+    )}
   </div>
 </section>
 </StudioLayout>

@@ -23,12 +23,14 @@ interface Props {
   fil?: { libelle: string; href?: string }[];
   /** La page d'erreur n'a pas d'adresse propre à déclarer. */
   sansCanonique?: boolean;
+  /** Langue du contenu. Un article peut être écrit en anglais. */
+  langue?: "fr" | "en";
 }
-const { titre, description, actif = "", fil = [], sansCanonique = false } = Astro.props;
+const { titre, description, actif = "", fil = [], sansCanonique = false, langue = "fr" } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="fr" data-palette="walnut" data-mode="dark" class="no-js">
+<html lang={langue} data-palette="walnut" data-mode="dark" class="no-js">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -42,6 +44,7 @@ const { titre, description, actif = "", fil = [], sansCanonique = false } = Astr
     <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
     <link rel="icon" href="/studio/favicon/favicon.svg" />
     <link rel="apple-touch-icon" href="/studio/favicon/favicon-180.png" />
+    <link rel="alternate" type="application/rss+xml" title="Kigumi — Blog" href="/blog/rss.xml" />
     {/* Retiré avant le premier rendu : sans ça, les sections qui s'animent à
         l'arrivée apparaîtraient puis disparaîtraient le temps du chargement. */}
     <script is:inline>document.documentElement.classList.remove("no-js")</script>

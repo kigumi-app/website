@@ -77,6 +77,10 @@ interdit tout.
 reçoit le portage qu'une fois GitHub Pages débranché. Sinon GitHub Pages
 publierait tout le dépôt Astro, notes internes comprises, sur `kigumi.app`.
 
+0. **Avant tout : exporter la liste d'attente Loops.** Le nouveau site n'a plus
+   de formulaire ; l'ancien, encore en ligne, continue de remplir la liste
+   jusqu'à la bascule. Les inscrits ont demandé un accès à un produit qui n'en
+   sera pas un : un mot pour le leur dire, et certains sont des prospects
 1. Cloudflare → DNS de `kigumi.app` : supprimer les enregistrements de l'apex
    qui pointent vers GitHub Pages
 2. Worker `kigumi-website` → **Settings → Domains & Routes** → ajouter le
@@ -116,18 +120,16 @@ l'ancien site depuis `main`. Exposition : quelques minutes derrière Cloudflare.
 
 ## 7. Deux choses qui t'attendent, sans urgence
 
-**Les quatre essais du lab.** Écrits depuis juin, jamais publiés, tous en
-`draft: true` — donc invisibles, le garde-fou fonctionne. Tu voulais les
-relire ensemble avant publication.
+**Les quatre essais du lab.** Écrits depuis juin, jamais publiés. Ils sont
+désormais dans le blog (`src/content/blog/`), étiquetés `lab` et `harness`,
+toujours en `draft: true` — donc invisibles. À relire par toi ; deux d'entre eux
+parlent encore comme un fondateur de start-up (voir `REFONTE-LAB.md`, §4.4).
+Décocher « Brouillon » dans le CMS suffit à publier : le blog entre alors dans
+le pied de page et le sitemap, et `/lab` affiche la section « Ce qu'on en
+écrit ».
 
 **Les deux portraits.** L'emplacement 4:5 les attend sur la page À propos, au
 cadrage que `brief-photo.md` commande (1600 × 2000). Leur arrivée ne décalera
 rien.
 
 ---
-
-## Ce que je fais dès que 1 est fait
-
-Je pousse les neuf commits, et je prépare tout ce qui ne dépend plus que de
-moi. Le point 2 ne me bloque pas : la configuration du CMS est écrite, le
-`base_url` est déjà `auth.kigumi.app`, il ne manque que le Worker derrière.

@@ -401,3 +401,21 @@ html:not(.no-js) section.vu .kg-point{
 /* Les écrans sont tenus à 42 caractères par ligne : à 390 px, ils tiennent sans
    défilement horizontal une fois la chasse réduite. */
 @media (max-width:520px){.ecran pre{font-size:11.5px;padding:14px 16px}}
+
+/* ── étiquettes d'article ── */
+.etiquettes{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.etiquettes a{font-family:var(--font-code);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  padding:3px 9px;border:1px solid var(--border);border-radius:var(--radius-full);
+  color:var(--text-secondary);text-decoration:none}
+.etiquettes a:hover{color:var(--accent);border-color:var(--accent)}
+
+/* ── liste d'articles ──
+   Reprend le rythme de .roles (filets, espacement), mais le titre est le lien
+   et garde sa taille de titre : dans .roles, les liens sont des renvois de
+   14 px. La date passe en libellé, comme sur les cartes. */
+.articles .who{font-family:var(--font-code);font-size:12px;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--text-secondary);margin:0 0 10px}
+.articles h3 a{font-size:inherit;color:var(--text-primary)}
+.articles h3 a:hover{color:var(--accent);text-decoration:none}
+.articles .etiquettes a{font-size:11px}
+.articles .etiquettes a:hover{text-decoration:none}

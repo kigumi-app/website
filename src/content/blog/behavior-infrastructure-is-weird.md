@@ -2,7 +2,8 @@
 title: "Behavior infrastructure is weird now. So was observability in 2010."
 description: "Every category that became inevitable looked unnecessary right before it became inevitable. The tell is always the same."
 pubDate: 2026-05-07
-pillar: category-creation
+langue: en
+etiquettes: [lab, harness]
 draft: true
 ---
 

@@ -2,7 +2,8 @@
 title: "The metric AI coding tools optimize is the wrong one"
 description: "Lines shipped per hour went up. The number that matters went down, and nobody is measuring it."
 pubDate: 2026-04-09
-pillar: intent-gap
+langue: en
+etiquettes: [lab, harness]
 draft: true
 ---
 

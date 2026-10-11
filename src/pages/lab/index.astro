@@ -2,6 +2,7 @@
 // La page d'entrée du lab appartient au site du studio, comme tout ce qu'elle
 // contient : les chantiers du lab sont des outils du studio, pas des produits.
 import StudioLayout from "../../layouts/StudioLayout.astro";
+import DerniersArticles from "../../components/studio/DerniersArticles.astro";
 ---
 <StudioLayout
   titre="Lab"
@@ -23,7 +24,7 @@ import StudioLayout from "../../layouts/StudioLayout.astro";
     <p>C&rsquo;est aussi ce qui sépare une automatisation qui rapporte d&rsquo;une automatisation qui coûte. <strong>Le chantier qu&rsquo;on mène ici n&rsquo;est pas un produit qu&rsquo;on vous vend&nbsp;: c&rsquo;est la raison pour laquelle, chez nos clients, on mesure au lieu de supposer.</strong></p>
 
     <h2 style="margin-top:2em">Ce qu&rsquo;on y publie</h2>
-    <p>Ce qu&rsquo;on a compris, y compris quand ça nous a coûté. Des notes de travail, pas des articles de blog&nbsp;: on y écrit ce qu&rsquo;on aurait voulu lire avant de s&rsquo;y mettre.</p>
+    <p>Ce qu&rsquo;on a compris, y compris quand ça nous a coûté. On y écrit ce qu&rsquo;on aurait voulu lire avant de s&rsquo;y mettre. Ces articles paraissent dans le blog, sous l&rsquo;étiquette Lab.</p>
   </div>
 </section>
 
@@ -39,6 +40,8 @@ import StudioLayout from "../../layouts/StudioLayout.astro";
     </div>
   </div>
 </section>
+
+<DerniersArticles etiquette="lab" titre="Ce qu’on en écrit" />
 
 <section class="cta">
   <div class="wrap">

@@ -12,7 +12,7 @@ Pourquoi ce n’est pas un à-côté
 Un logiciel qui tourne n’est pas un logiciel qui fait ce qu’on attendait de lui. On sait dire qu’un programme ne plante pas ; on sait rarement dire ce qu’il fait. Cet écart était déjà difficile quand des humains écrivaient le code. Il devient le problème central maintenant qu’une partie est produite par des modèles.
 C’est aussi ce qui sépare une automatisation qui rapporte d’une automatisation qui coûte. Le chantier qu’on mène ici n’est pas un produit qu’on vous vend : c’est la raison pour laquelle, chez nos clients, on mesure au lieu de supposer.
 Ce qu’on y publie
-Ce qu’on a compris, y compris quand ça nous a coûté. Des notes de travail, pas des articles de blog : on y écrit ce qu’on aurait voulu lire avant de s’y mettre.
+Ce qu’on a compris, y compris quand ça nous a coûté. On y écrit ce qu’on aurait voulu lire avant de s’y mettre. Ces articles paraissent dans le blog, sous l’étiquette Lab.
 OUTIL INTERNE
 Harness
 L’outil que nous construisons pour savoir ce que fait réellement un processus automatisé, et pouvoir le prouver. Ouvert à quelques équipes que nous choisissons.

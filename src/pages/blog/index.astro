@@ -1,40 +1,34 @@
 ---
 import StudioLayout from "../../layouts/StudioLayout.astro";
-import { getCollection } from "astro:content";
+import ListeArticles from "../../components/studio/ListeArticles.astro";
+import { articlesPublies, etiquettesPubliees, libelle } from "../../lib/blog";
 
-const articles = (await getCollection("blog", ({ data }) => !data.draft))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-const date = (d: Date) =>
-  d.toLocaleDateString("fr-FR", { year: "numeric", month: "long", day: "numeric" });
+const articles = await articlesPublies();
+const etiquettes = await etiquettesPubliees();
 ---
 <StudioLayout
   titre="Blog"
-  description="Ce qu'on apprend en automatisant des processus chez des PME et des ETI."
+  description="Ce qu'on apprend en automatisant des processus chez des PME et des ETI, et ce qu'on construit au lab pour le vérifier."
   actif="">
 <section class="hero">
   <div class="wrap prose">
     <p class="eyebrow">Blog</p>
     <h1>Ce qu&rsquo;on apprend en chemin.</h1>
-    <p class="lead">Des notes sur l&rsquo;automatisation de processus en PME et ETI&nbsp;: ce qui marche, ce qui ne marche pas, et ce que les chiffres disent une fois qu&rsquo;on les regarde.</p>
+    <p class="lead">Des notes sur l&rsquo;automatisation de processus en PME et ETI&nbsp;: ce qui marche, ce qui ne marche pas, et ce que les chiffres disent une fois qu&rsquo;on les regarde. Les articles du lab portent l&rsquo;étiquette Lab.</p>
+    {etiquettes.length > 0 && (
+      <nav class="sousnav" aria-label="Étiquettes">
+        <a href="/blog/" aria-current="page">Tout</a>
+        {etiquettes.map((e) => <a href={`/blog/etiquette/${e}/`}>{libelle(e)}</a>)}
+      </nav>
+    )}
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    {articles.length === 0 ? (
-      <p class="muted">Rien de publié pour l&rsquo;instant.</p>
-    ) : (
-      <ul class="roles">
-        {articles.map((a) => (
-          <li>
-            <p class="who">{date(a.data.pubDate)}</p>
-            <h3>{a.data.title}</h3>
-            <p>{a.data.description}</p>
-            <p class="liens"><a href={`/blog/${a.id}/`}>Lire &rarr;</a></p>
-          </li>
-        ))}
-      </ul>
-    )}
+    {articles.length === 0
+      ? <p class="muted">Rien de publié pour l&rsquo;instant.</p>
+      : <ListeArticles articles={articles} />}
   </div>
 </section>
 </StudioLayout>

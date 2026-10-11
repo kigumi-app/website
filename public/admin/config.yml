@@ -46,31 +46,17 @@ collections:
           format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
       - { name: draft, label: Brouillon, widget: boolean, default: true,
           hint: "Un brouillon ne produit aucune page. Décocher pour publier." }
+      - name: langue
+        label: Langue
+        widget: select
+        default: fr
+        options: [{ label: Français, value: fr }, { label: English, value: en }]
+        hint: "La langue dans laquelle l'article est écrit. Aucune traduction n'est exigée pour publier."
+      - name: etiquettes
+        label: Étiquettes
+        widget: list
+        required: false
+        default: []
+        hint: "« lab » pour un article du lab, plus le nom du chantier (« harness »). Minuscules et tirets."
       - { name: image, label: Image, widget: image, required: false }
       - { name: body, label: Texte, widget: markdown }
-
-  - name: essays
-    label: Lab — notes
-    label_singular: Note
-    folder: src/content/essays
-    create: true
-    slug: "{{slug}}"
-    extension: md
-    format: frontmatter
-    preview_path: lab/harness/writing/{{slug}}
-    summary: "{{title}}"
-    sortable_fields: [pubDate, title]
-    fields:
-      - { name: title, label: Title, widget: string }
-      - { name: description, label: Description, widget: text }
-      - { name: pubDate, label: Date, widget: datetime, format: "YYYY-MM-DD",
-          date_format: "DD/MM/YYYY", time_format: false }
-      - { name: updatedDate, label: Updated, widget: datetime, required: false,
-          format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
-      - name: pillar
-        label: Pillar
-        widget: select
-        options: [intent-gap, founder-journey, category-creation, builder-notes]
-      - { name: draft, label: Draft, widget: boolean, default: true }
-      - { name: ogImage, label: OG image, widget: string, required: false }
-      - { name: body, label: Body, widget: markdown }

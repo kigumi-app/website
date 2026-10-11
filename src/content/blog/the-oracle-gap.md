@@ -2,7 +2,8 @@
 title: "The oracle gap"
 description: "AI can rewrite a function in seconds. Deciding whether the rewrite still does the right thing is the unsolved part, and it is older than AI."
 pubDate: 2026-05-16
-pillar: builder-notes
+langue: en
+etiquettes: [lab, harness]
 draft: true
 ---
 

@@ -5,7 +5,7 @@ Cas d’usages
 Prendre rendez-vous
 BLOG
 Ce qu’on apprend en chemin.
-Des notes sur l’automatisation de processus en PME et ETI : ce qui marche, ce qui ne marche pas, et ce que les chiffres disent une fois qu’on les regarde.
+Des notes sur l’automatisation de processus en PME et ETI : ce qui marche, ce qui ne marche pas, et ce que les chiffres disent une fois qu’on les regarde. Les articles du lab portent l’étiquette Lab.
 Rien de publié pour l’instant.
 CAS D’USAGES
 Tous les cas

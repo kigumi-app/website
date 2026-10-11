@@ -4,6 +4,7 @@
 // formulaire, pas de liste d'attente : l'appel à l'action est celui du studio.
 import StudioLayout from "../../../layouts/StudioLayout.astro";
 import LabNav from "../../../components/studio/LabNav.astro";
+import DerniersArticles from "../../../components/studio/DerniersArticles.astro";
 ---
 <StudioLayout
   titre="Harness"
@@ -77,6 +78,8 @@ import LabNav from "../../../components/studio/LabNav.astro";
     </div>
   </div>
 </section>
+
+<DerniersArticles etiquette="harness" titre="Ce qu’on en écrit" />
 
 <section class="cta">
   <div class="wrap">

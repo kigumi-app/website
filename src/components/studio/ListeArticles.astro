@@ -1,0 +1,21 @@
+---
+// Liste d'articles, partagée par le blog, ses pages d'étiquette et le lab.
+import { type Article, dateArticle, libelle } from "../../lib/blog";
+
+interface Props { articles: Article[] }
+const { articles } = Astro.props;
+---
+<ul class="roles articles">
+  {articles.map((a) => (
+    <li lang={a.data.langue}>
+      <p class="who">{dateArticle(a)}{a.data.langue === "en" && " · English"}</p>
+      <h3><a href={`/blog/${a.id}/`}>{a.data.title}</a></h3>
+      <p>{a.data.description}</p>
+      {a.data.etiquettes.length > 0 && (
+        <p class="etiquettes">
+          {a.data.etiquettes.map((e) => <a href={`/blog/etiquette/${e}/`}>{libelle(e)}</a>)}
+        </p>
+      )}
+    </li>
+  ))}
+</ul>

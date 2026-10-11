@@ -88,8 +88,12 @@ const srv = createServer(async (req, res) => {
 await new Promise((r) => srv.listen(PORT, "127.0.0.1", r));
 
 const b = await chromium.launch();
-await fs.mkdir(path.join(CIBLE, "img"), { recursive: true });
-await fs.mkdir(path.join(CIBLE, "text"), { recursive: true });
+// Tout est régénéré à chaque passe : on vide d'abord, sinon le relevé d'une
+// route supprimée survit dans la référence et passe pour une page existante.
+for (const d of ["img", "text"]) {
+  await fs.rm(path.join(CIBLE, d), { recursive: true, force: true });
+  await fs.mkdir(path.join(CIBLE, d), { recursive: true });
+}
 
 const liste = await routes();
 const manifeste = {};

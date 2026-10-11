@@ -2,6 +2,8 @@
 // Sous-navigation d'un chantier du lab. Les articles n'y figurent qu'une fois
 // qu'il en existe un de publié : un onglet vers une page vide promet ce
 // qu'on n'a pas encore tenu.
+import { articlesPublies } from "../../lib/blog";
+
 interface Props {
   courant: "presentation" | "fonctionnement";
 }
@@ -10,6 +12,9 @@ const ENTREES = [
   { id: "presentation", libelle: "Présentation", href: "/lab/harness/" },
   { id: "fonctionnement", libelle: "Fonctionnement", href: "/lab/harness/fonctionnement/" },
 ];
+if ((await articlesPublies("harness")).length > 0) {
+  ENTREES.push({ id: "articles", libelle: "Articles", href: "/blog/etiquette/harness/" });
+}
 ---
 <nav class="sousnav" aria-label="Harness">
   {ENTREES.map((e) => (
