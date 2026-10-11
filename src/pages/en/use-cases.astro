@@ -1,4 +1,5 @@
 ---
+import { AGENDA } from "../../lib/contact";
 import StudioLayout from "../../layouts/StudioLayout.astro";
 import CartesCas from "../../components/studio/CartesCas.astro";
 import IndexRoles from "../../components/studio/IndexRoles.astro";
@@ -48,7 +49,7 @@ import IndexRoles from "../../components/studio/IndexRoles.astro";
     <h2>Find out what it&rsquo;s worth for you</h2>
     <p>45 minutes. You leave with the list of your processes ranked by what they cost you — and which one to tackle first.</p>
     <div class="btn-row">
-      <a class="btn" href="/en/contact/">Book a call</a>
+      <a class="btn" href={AGENDA} target="_blank" rel="noopener">Book a call</a>
       <a class="btn btn-ghost" href="/en/method/">See the method</a>
     </div>
   </div>

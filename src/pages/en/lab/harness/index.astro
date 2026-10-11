@@ -1,4 +1,5 @@
 ---
+import { AGENDA } from "../../../../lib/contact";
 import StudioLayout from "../../../../layouts/StudioLayout.astro";
 import LabNav from "../../../../components/studio/LabNav.astro";
 import DerniersArticles from "../../../../components/studio/DerniersArticles.astro";
@@ -83,7 +84,7 @@ import DerniersArticles from "../../../../components/studio/DerniersArticles.ast
     <h2>What you care about is the result?</h2>
     <p>Harness serves a method. 45 minutes to see what it would do for your processes.</p>
     <div class="btn-row">
-      <a class="btn" href="/en/contact/">Book a call</a>
+      <a class="btn" href={AGENDA} target="_blank" rel="noopener">Book a call</a>
       <a class="btn btn-ghost" href="/en/method/">See the method</a>
     </div>
   </div>

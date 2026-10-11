@@ -1,4 +1,5 @@
 ---
+import { AGENDA } from "../../lib/contact";
 // Les ancres des étapes gardent leur nom français : elles sont les mêmes dans
 // les deux langues, pour que `lien()` puisse traduire une adresse avec ancre.
 import StudioLayout from "../../layouts/StudioLayout.astro";
@@ -62,7 +63,7 @@ import Svg from "../../components/studio/Svg.astro";
   <div class="wrap">
     <h2>Start with the diagnosis</h2>
     <p>45 minutes to check there is something worth doing. The diagnosis that follows is a deliverable you keep, usable without us.</p>
-    <div class="btn-row"><a class="btn" href="/en/contact/">Book a call</a></div>
+    <div class="btn-row"><a class="btn" href={AGENDA} target="_blank" rel="noopener">Book a call</a></div>
   </div>
 </section>
 </StudioLayout>

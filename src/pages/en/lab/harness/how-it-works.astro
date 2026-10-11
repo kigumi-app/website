@@ -1,4 +1,5 @@
 ---
+import { AGENDA } from "../../../../lib/contact";
 // The four stages of Harness on the order-processing case. Screens are held
 // to 42 characters per line, like the French page, so they fit at 390 px.
 import StudioLayout from "../../../../layouts/StudioLayout.astro";
@@ -125,7 +126,7 @@ const fiche = vueCas(parId.get("industrie-distribution")!, "en");
     <h2>And for your processes?</h2>
     <p>45 minutes to talk them through. You leave with the list of your processes ranked by what they cost you.</p>
     <div class="btn-row">
-      <a class="btn" href="/en/contact/">Book a call</a>
+      <a class="btn" href={AGENDA} target="_blank" rel="noopener">Book a call</a>
       <a class="btn btn-ghost" href="/en/method/">See the method</a>
     </div>
   </div>

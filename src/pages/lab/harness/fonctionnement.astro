@@ -1,4 +1,5 @@
 ---
+import { AGENDA } from "../../../lib/contact";
 // Les quatre temps de Harness, montrés sur un processus que le studio
 // automatise : la commande qui arrive en pièce jointe, celle de la fiche
 // industrie-distribution. Le visiteur qui a lu la fiche retrouve le même
@@ -127,7 +128,7 @@ const fiche = parId.get("industrie-distribution")!;
     <h2>Et sur vos processus&nbsp;?</h2>
     <p>45 minutes pour en parler. On repart avec la liste de vos processus classés par ce qu&rsquo;ils vous coûtent.</p>
     <div class="btn-row">
-      <a class="btn" href="/contact/">Prendre rendez-vous</a>
+      <a class="btn" href={AGENDA} target="_blank" rel="noopener">Prendre rendez-vous</a>
       <a class="btn btn-ghost" href="/methode/">Voir la méthode</a>
     </div>
   </div>

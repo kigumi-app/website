@@ -1,4 +1,5 @@
 ---
+import { AGENDA } from "../../lib/contact";
 // La page d'entrée du lab appartient au site du studio, comme tout ce qu'elle
 // contient : les chantiers du lab sont des outils du studio, pas des produits.
 import StudioLayout from "../../layouts/StudioLayout.astro";
@@ -48,7 +49,7 @@ import DerniersArticles from "../../components/studio/DerniersArticles.astro";
     <h2>Ce qui vous intéresse, c&rsquo;est plutôt vos processus&nbsp;?</h2>
     <p>45 minutes pour en parler. On repart avec la liste de vos processus classés par ce qu&rsquo;ils vous coûtent.</p>
     <div class="btn-row">
-      <a class="btn" href="/contact/">Prendre rendez-vous</a>
+      <a class="btn" href={AGENDA} target="_blank" rel="noopener">Prendre rendez-vous</a>
       <a class="btn btn-ghost" href="/methode/">Voir la méthode</a>
     </div>
   </div>

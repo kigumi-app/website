@@ -1,4 +1,5 @@
 ---
+import { AGENDA } from "../../lib/contact";
 import StudioLayout from "../../layouts/StudioLayout.astro";
 ---
 <StudioLayout
@@ -53,7 +54,7 @@ import StudioLayout from "../../layouts/StudioLayout.astro";
   <div class="wrap">
     <h2>Let&rsquo;s get acquainted</h2>
     <p>45 minutes to see whether the subject exists at your company. You will have both partners across the table, not a salesperson.</p>
-    <div class="btn-row"><a class="btn" href="/en/contact/">Book a call</a></div>
+    <div class="btn-row"><a class="btn" href={AGENDA} target="_blank" rel="noopener">Book a call</a></div>
   </div>
 </section>
 </StudioLayout>

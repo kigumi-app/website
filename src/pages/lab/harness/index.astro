@@ -1,4 +1,5 @@
 ---
+import { AGENDA } from "../../../lib/contact";
 // Harness, présenté comme ce qu'il est : un outil du studio, ouvert sur
 // sélection. La page démontre une expertise, elle ne vend rien. Pas de
 // formulaire, pas de liste d'attente : l'appel à l'action est celui du studio.
@@ -86,7 +87,7 @@ import DerniersArticles from "../../../components/studio/DerniersArticles.astro"
     <h2>Ce qui vous intéresse, c&rsquo;est le résultat&nbsp;?</h2>
     <p>Harness sert une méthode. 45 minutes pour voir ce qu&rsquo;elle donnerait sur vos processus.</p>
     <div class="btn-row">
-      <a class="btn" href="/contact/">Prendre rendez-vous</a>
+      <a class="btn" href={AGENDA} target="_blank" rel="noopener">Prendre rendez-vous</a>
       <a class="btn btn-ghost" href="/methode/">Voir la méthode</a>
     </div>
   </div>

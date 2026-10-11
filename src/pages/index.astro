@@ -1,4 +1,5 @@
 ---
+import { AGENDA } from "../lib/contact";
 import StudioLayout from "../layouts/StudioLayout.astro";
 import CartesCas from "../components/studio/CartesCas.astro";
 ---
@@ -13,7 +14,7 @@ import CartesCas from "../components/studio/CartesCas.astro";
     <div class="rule"></div>
     <p class="lead">La plupart des projets IA ne sortent jamais du pilote. Kigumi identifie les processus qui pèsent le plus dans votre entreprise, déploie les agents qui les prennent en charge, et mesure le gain réel. Pour les PME et ETI de 50 à 300 personnes.</p>
     <div class="btn-row">
-      <a class="btn" href="/contact/">Réserver 45 minutes de pré-diagnostic</a>
+      <a class="btn" href={AGENDA} target="_blank" rel="noopener">Réserver 45 minutes de pré-diagnostic</a>
       <a class="btn btn-ghost" href="/methode/">Voir la méthode</a>
     </div>
   </div>
@@ -60,7 +61,7 @@ import CartesCas from "../components/studio/CartesCas.astro";
   <div class="wrap">
     <h2>45 minutes pour savoir si ça vaut le coup</h2>
     <p>On regarde vos processus et on vous dit lequel vous coûte le plus. Vous repartez avec ce classement, qu'on travaille ensemble ou non — et si rien ne mérite d'être automatisé chez vous, on vous le dira.</p>
-    <div class="btn-row"><a class="btn" href="/contact/">Prendre rendez-vous</a></div>
+    <div class="btn-row"><a class="btn" href={AGENDA} target="_blank" rel="noopener">Prendre rendez-vous</a></div>
   </div>
 </section>
 </StudioLayout>

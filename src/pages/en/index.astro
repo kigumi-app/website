@@ -1,4 +1,5 @@
 ---
+import { AGENDA } from "../../lib/contact";
 import StudioLayout from "../../layouts/StudioLayout.astro";
 import CartesCas from "../../components/studio/CartesCas.astro";
 ---
@@ -13,7 +14,7 @@ import CartesCas from "../../components/studio/CartesCas.astro";
     <div class="rule"></div>
     <p class="lead">Most AI projects never get past the pilot. Kigumi identifies the processes that weigh most on your company, deploys the agents that take them over, and measures the real gain. For companies of 50 to 300 people.</p>
     <div class="btn-row">
-      <a class="btn" href="/en/contact/">Book a 45-minute pre-diagnosis</a>
+      <a class="btn" href={AGENDA} target="_blank" rel="noopener">Book a 45-minute pre-diagnosis</a>
       <a class="btn btn-ghost" href="/en/method/">See the method</a>
     </div>
   </div>
@@ -60,7 +61,7 @@ import CartesCas from "../../components/studio/CartesCas.astro";
   <div class="wrap">
     <h2>45 minutes to find out whether it&rsquo;s worth it</h2>
     <p>We look at your processes and tell you which one costs you the most. You leave with that ranking, whether we work together or not — and if nothing at your company is worth automating, we&rsquo;ll tell you.</p>
-    <div class="btn-row"><a class="btn" href="/en/contact/">Book a call</a></div>
+    <div class="btn-row"><a class="btn" href={AGENDA} target="_blank" rel="noopener">Book a call</a></div>
   </div>
 </section>
 </StudioLayout>
