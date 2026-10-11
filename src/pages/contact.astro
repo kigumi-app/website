@@ -1,5 +1,6 @@
 ---
 import StudioLayout from "../layouts/StudioLayout.astro";
+import { AGENDA } from "../lib/contact";
 ---
 <StudioLayout
   titre={'Prendre rendez-vous'}
@@ -11,9 +12,9 @@ import StudioLayout from "../layouts/StudioLayout.astro";
     <h1>45 minutes pour savoir si ça vaut le coup.</h1>
     <p class="lead">Un échange sans engagement. On regarde vos processus, on vous dit franchement s'il y a quelque chose à automatiser chez vous — et si la réponse est non, on vous le dit aussi.</p>
     <div class="btn-row">
-      <a class="btn" href="mailto:contact@kigumi.app?subject=Pr%C3%A9-diagnostic%20Kigumi">Écrire à contact@kigumi.app</a>
+      <a class="btn" href={AGENDA} target="_blank" rel="noopener">Choisir un créneau</a>
+      <a class="btn btn-ghost" href="mailto:contact@kigumi.app?subject=Pr%C3%A9-diagnostic%20Kigumi">Écrire à contact@kigumi.app</a>
     </div>
-    <div class="note"><p><strong>À brancher</strong>Un agenda réservable en ligne à la place du lien e-mail, et une adresse au domaine réellement configurée.</p></div>
   </div>
 </section>
 

@@ -1,5 +1,6 @@
 ---
 import StudioLayout from "../../layouts/StudioLayout.astro";
+import { AGENDA } from "../../lib/contact";
 ---
 <StudioLayout
   titre={'Book a call'}
@@ -11,9 +12,9 @@ import StudioLayout from "../../layouts/StudioLayout.astro";
     <h1>45 minutes to find out whether it&rsquo;s worth it.</h1>
     <p class="lead">A conversation with no commitment. We look at your processes and tell you frankly whether there is something worth automating at your company — and if the answer is no, we tell you that too.</p>
     <div class="btn-row">
-      <a class="btn" href="mailto:contact@kigumi.app?subject=Kigumi%20pre-diagnosis">Write to contact@kigumi.app</a>
+      <a class="btn" href={AGENDA} target="_blank" rel="noopener">Pick a time slot</a>
+      <a class="btn btn-ghost" href="mailto:contact@kigumi.app?subject=Kigumi%20pre-diagnosis">Write to contact@kigumi.app</a>
     </div>
-    <div class="note"><p><strong>To connect</strong>An online booking calendar instead of the email link, and an address on a properly configured domain.</p></div>
   </div>
 </section>
 

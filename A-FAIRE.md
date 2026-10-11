@@ -125,7 +125,7 @@ l'ancien site depuis `main`. Exposition : quelques minutes derrière Cloudflare.
 
 ---
 
-## 7. Deux choses qui t'attendent, sans urgence
+## 7. Ce qui t'attend, sans urgence
 
 **La relecture de l'anglais.** Les 23 pages anglaises sont une première
 version, à relire par toi avant la bascule — en priorité `/en/trust/` et
@@ -140,6 +140,11 @@ parlent encore comme un fondateur de start-up (voir `REFONTE-LAB.md`, §4.4).
 Décocher « Brouillon » dans le CMS suffit à publier : le blog entre alors dans
 le pied de page et le sitemap, et `/lab` affiche la section « Ce qu'on en
 écrit ».
+
+**L'adresse contact@kigumi.app.** Le site la publie partout (contact, pied de
+page, mentions légales) : vérifier qu'elle arrive bien dans une boîte lue. La
+prise de rendez-vous passe par l'agenda Google, dont l'adresse vit dans
+`src/lib/contact.ts`.
 
 **Les deux portraits.** L'emplacement 4:5 les attend sur la page À propos, au
 cadrage que `brief-photo.md` commande (1600 × 2000). Leur arrivée ne décalera
