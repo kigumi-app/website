@@ -43,6 +43,33 @@
     });
   }
 
+  /* ── Menu replié (téléphone) ───────────────────────────────────────
+     Le bouton n'est visible que sous 800 px. Il ouvre et ferme le menu ;
+     Échap le ferme et rend le focus au bouton. Les libellés viennent du
+     bouton, écrits dans la langue de la page. */
+  var burger = document.getElementById('burger');
+  var entete = document.querySelector('header.site');
+  if (burger && entete) {
+    var basculerMenu = function (ouvrir) {
+      entete.classList.toggle('ouvert', ouvrir);
+      burger.setAttribute('aria-expanded', String(ouvrir));
+      burger.setAttribute('aria-label', burger.getAttribute(ouvrir ? 'data-fermer' : 'data-ouvrir'));
+    };
+    burger.addEventListener('click', function () {
+      basculerMenu(!entete.classList.contains('ouvert'));
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && entete.classList.contains('ouvert')) {
+        basculerMenu(false);
+        burger.focus();
+      }
+    });
+    // Revenu en largeur bureau, le menu est de nouveau toujours visible.
+    window.matchMedia('(min-width: 801px)').addEventListener('change', function (m) {
+      if (m.matches) basculerMenu(false);
+    });
+  }
+
   /* ── Arrivée de section ────────────────────────────────────────────
      Déclenchée par le défilement du lecteur — une action au sens du §2.1,
      contrairement au chargement de page. Jouée une seule fois : on cesse

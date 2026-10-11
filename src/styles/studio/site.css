@@ -126,15 +126,31 @@ html:not(.no-js) main > section.vu{
 @media (prefers-reduced-motion:reduce){
   html:not(.no-js) main > section{opacity:1!important;transform:none!important}
 }
-header.site nav{margin-left:auto;display:flex;gap:22px;align-items:center;flex-wrap:wrap}
-header.site nav a{font-size:14px;color:var(--text-secondary);text-decoration:none}
-header.site nav a:hover{color:var(--text-primary)}
-header.site nav a.on{color:var(--accent)}
+header.site nav.menu{margin-left:auto;display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+header.site nav.menu a{font-size:14px;color:var(--text-secondary);text-decoration:none}
+header.site nav.menu a:hover{color:var(--text-primary)}
+header.site nav.menu a.on{color:var(--accent)}
+header.site .outils{display:flex;align-items:center;gap:14px}
 /* Sélecteur de langue : un code de deux lettres, dans le registre technique
    du fil d'Ariane plutôt qu'un drapeau — une langue n'est pas un pays. */
-header.site nav a.langue{font-family:var(--font-code);font-size:12px;letter-spacing:.12em;
+header.site a.langue{font-family:var(--font-code);font-size:12px;color:var(--text-secondary);text-decoration:none;letter-spacing:.12em;
   padding:6px 8px;border:1px solid var(--border-subtle);border-radius:var(--radius-sm)}
-header.site nav a.langue:hover{border-color:var(--border)}
+header.site a.langue:hover{border-color:var(--border);color:var(--text-primary)}
+
+/* Bouton du menu replié : même gabarit que la bascule de mode. Les trois
+   traits deviennent une croix à l'ouverture. Invisible au-dessus de 800 px. */
+.burger{
+  display:none;align-items:center;justify-content:center;flex-direction:column;gap:5px;
+  flex:0 0 auto;width:44px;height:44px;padding:0;cursor:pointer;
+  border:1px solid var(--border);border-radius:var(--radius-full);
+  background:transparent;color:var(--text-secondary);
+}
+.burger:hover{background:var(--surface-hover);color:var(--text-primary)}
+.burger span{display:block;width:18px;height:1.75px;border-radius:1px;background:currentColor;
+  transition:transform var(--duration-micro) var(--ease-out),opacity var(--duration-micro) var(--ease-out)}
+header.site.ouvert .burger span:nth-child(1){transform:translateY(6.75px) rotate(45deg)}
+header.site.ouvert .burger span:nth-child(2){opacity:0}
+header.site.ouvert .burger span:nth-child(3){transform:translateY(-6.75px) rotate(-45deg)}
 
 /* ── fil d'Ariane ──
    Sous l'en-tête, sur les pages qui ne sont pas au premier niveau du menu :
@@ -245,17 +261,24 @@ footer.site .legal p{color:var(--text-secondary)}
 @media (max-width:1100px){
   /* Sept éléments de navigation plus la bascule ne tiennent plus sur une ligne :
      on resserre avant de laisser le bandeau se replier n'importe comment. */
-  header.site nav{gap:14px}
-  header.site nav a{font-size:13px}
+  header.site nav.menu{gap:14px}
+  header.site nav.menu a{font-size:13px}
 }
 @media (max-width:800px){
   section{padding-block:64px}
-  /* Un bandeau collant de ~190 px mange un quart d'un écran de téléphone.
-     Sous 720 px il redevient statique : la navigation reste accessible en
-     remontant, et l'écran est rendu au contenu. */
-  header.site{position:static}
-  header.site nav{margin-left:0;gap:12px}
-  header.site nav a{font-size:13px}
+  /* Menu replié derrière le bouton : le bandeau tient sur une ligne de
+     64 px, il peut donc rester collant. Le menu s'ouvre en pleine largeur
+     sous le bandeau, une entrée par ligne, avec des cibles de 48 px. */
+  header.site .outils{margin-left:auto;gap:10px}
+  .burger{display:inline-flex}
+  header.site nav.menu{display:none;order:3;flex-basis:100%;flex-direction:column;align-items:stretch;
+    gap:0;margin:2px 0 6px;border-top:1px solid var(--border-subtle)}
+  header.site.ouvert nav.menu{display:flex}
+  header.site nav.menu a{font-size:16px;padding:13px 2px;border-bottom:1px solid var(--border-subtle)}
+  header.site nav.menu a.btn{margin-top:14px;padding:0 16px;min-height:48px;border-bottom:1px solid var(--border);justify-content:center}
+  /* Sans JavaScript, le bouton ne ferait rien : le menu reste déplié. */
+  html.no-js .burger{display:none}
+  html.no-js header.site nav.menu{display:flex}
   .step{grid-template-columns:1fr;gap:8px}
   .step .n{padding-top:0}
 }

@@ -52,6 +52,9 @@ export const UI = {
   fr: {
     menu: { methode: "Méthode", "travailler-ensemble": "Travailler ensemble", "cas-usages": "Cas d’usages", "a-propos": "À propos" },
     rdv: "Prendre rendez-vous",
+    menuPrincipal: "Menu principal",
+    menuOuvrir: "Ouvrir le menu",
+    menuFermer: "Fermer le menu",
     versClair: "Passer en mode clair",
     versSombre: "Passer en mode sombre",
     autreLangue: { code: "EN", libelle: "English version" },
@@ -70,6 +73,9 @@ export const UI = {
   en: {
     menu: { methode: "Method", "travailler-ensemble": "Working together", "cas-usages": "Use cases", "a-propos": "About" },
     rdv: "Book a call",
+    menuPrincipal: "Main menu",
+    menuOuvrir: "Open menu",
+    menuFermer: "Close menu",
     versClair: "Switch to light mode",
     versSombre: "Switch to dark mode",
     autreLangue: { code: "FR", libelle: "Version française" },
