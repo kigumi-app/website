@@ -127,11 +127,9 @@ l'ancien site depuis `main`. Exposition : quelques minutes derrière Cloudflare.
 
 ## 7. Ce qui t'attend, sans urgence
 
-**La relecture de l'anglais.** Les 23 pages anglaises sont une première
-version, à relire par toi avant la bascule — en priorité `/en/trust/` et
-`/en/legal-notice/`, qui engagent. Les libellés des diagrammes anglais vivent
-dans `brand/` (`copy/methode.en.json`, `copy/autonomie.en.json`, et la table `T`
-de `bin/explainers.py`) : les corriger là, puis `brand/bin/sync_website.sh`.
+~~**La relecture de l'anglais.**~~ ✅ faite. Les libellés des diagrammes anglais vivent
+dans `brand/` (`copy/methode.en.json`, `copy/autonomie.en.json`, table `T` de
+`bin/explainers.py`) : les corriger là, puis `brand/bin/sync_website.sh`.
 
 **Les quatre essais du lab.** Écrits depuis juin, jamais publiés. Ils sont
 désormais dans le blog (`src/content/blog/`), en anglais (`/en/blog/…`), étiquetés `lab` et `harness`,
@@ -141,10 +139,9 @@ Décocher « Brouillon » dans le CMS suffit à publier : le blog entre alors da
 le pied de page et le sitemap, et `/lab` affiche la section « Ce qu'on en
 écrit ».
 
-**L'adresse contact@kigumi.app.** Le site la publie (contact, pied de page,
-mentions légales) : la créer, en redirection vers Julien et toi. Tous les
-boutons « Prendre rendez-vous » ouvrent l'agenda Google, dont l'adresse vit
-dans `src/lib/contact.ts`.
+~~**L'adresse contact@kigumi.app.**~~ ✅ créée. Plus de page contact : les boutons
+« Prendre rendez-vous » et `/contact/` mènent à l'agenda Google
+(`src/lib/contact.ts`, et `public/_redirects` pour l'adresse).
 
 **Les deux portraits.** L'emplacement 4:5 les attend sur la page À propos, au
 cadrage que `brief-photo.md` commande (1600 × 2000). Leur arrivée ne décalera

@@ -19,3 +19,12 @@
 /lab/harness/writing/        /en/blog/                          301
 /lab/harness/writing/*       /en/blog/:splat                    301
 /lab/harness/rss.xml         /blog/rss.xml                      301
+
+# Plus de page contact : la prise de rendez-vous passe par l'agenda Google
+# (adresse dans src/lib/contact.ts, à reporter ici si elle change). 302, pour
+# que les moteurs ne retiennent pas l'adresse de l'agenda.
+/contact        https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ23_50-ZRYgHD18N6YLZ_SMSq0Sry7lD5AP_2HaJTlKAmJwo9bsZj4Z4UY_2FqqhRKKZXW7Wsic   302
+/contact/       https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ23_50-ZRYgHD18N6YLZ_SMSq0Sry7lD5AP_2HaJTlKAmJwo9bsZj4Z4UY_2FqqhRKKZXW7Wsic   302
+/contact.html   https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ23_50-ZRYgHD18N6YLZ_SMSq0Sry7lD5AP_2HaJTlKAmJwo9bsZj4Z4UY_2FqqhRKKZXW7Wsic   302
+/en/contact     https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ23_50-ZRYgHD18N6YLZ_SMSq0Sry7lD5AP_2HaJTlKAmJwo9bsZj4Z4UY_2FqqhRKKZXW7Wsic   302
+/en/contact/    https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ23_50-ZRYgHD18N6YLZ_SMSq0Sry7lD5AP_2HaJTlKAmJwo9bsZj4Z4UY_2FqqhRKKZXW7Wsic   302
