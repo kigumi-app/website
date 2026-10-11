@@ -1,0 +1,41 @@
+---
+// Un article. Sa page est dans sa langue ; le sélecteur mène à l'index du blog
+// dans l'autre, puisqu'un article n'a pas de traduction obligatoire.
+import StudioLayout from "../../../layouts/StudioLayout.astro";
+import { render } from "astro:content";
+import { type Article, dateArticle, hrefEtiquette, libelle } from "../../../lib/blog";
+import { lien } from "../../../lib/i18n";
+
+interface Props { a: Article }
+const { a } = Astro.props;
+const { Content } = await render(a);
+const langue = a.data.langue;
+const blog = lien("/blog/", langue);
+const fil = a.data.etiquettes.includes("lab")
+  ? [{ libelle: "Blog", href: blog }, { libelle: "Lab", href: hrefEtiquette("lab", langue) }, { libelle: a.data.title }]
+  : [{ libelle: "Blog", href: blog }, { libelle: a.data.title }];
+---
+<StudioLayout titre={a.data.title} description={a.data.description} actif="" fil={fil}
+  replilangue={lien("/blog/", langue === "fr" ? "en" : "fr")}>
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow">{a.data.etiquettes.length ? a.data.etiquettes.map(libelle).join(" · ") : "Blog"}</p>
+    <h1>{a.data.title}</h1>
+    <p class="lead">{a.data.description}</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <p class="muted" style="font-size:14px">
+      <time datetime={a.data.pubDate.toISOString()}>{dateArticle(a)}</time>
+    </p>
+    <article style="margin-top:1.4em"><Content /></article>
+    {a.data.etiquettes.length > 0 && (
+      <p class="etiquettes" style="margin-top:48px">
+        {a.data.etiquettes.map((e) => <a href={hrefEtiquette(e, langue)}>{libelle(e)}</a>)}
+      </p>
+    )}
+  </div>
+</section>
+</StudioLayout>

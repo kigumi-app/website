@@ -1,0 +1,57 @@
+Method
+Working together
+Use cases
+About
+Book a call
+FR
+HUMAN RESOURCES
+Your HR team spends its time on what repeats.
+Recruiting, onboarding, answering the same questions. Three high-volume jobs whose rules are written down somewhere — rarely where you look for them.
+What weighs on your role
+HUMAN RESOURCES
+You read three hundred CVs for three positions
+Screening happens in a rush, by a different person each time, against criteria written down nowhere. Good applications get lost, and candidates wait three weeks for an answer.
+An agent that ranks applications against criteria you have written down and made explicit, prepares an interview grid for each position, and decides nothing: it orders, you decide. CV screening is a high-risk use under the AI Act — the criteria are documented, deviations are logged, and no rejection is automatic.
+WHAT WE MEASURE
+Time to first reply to a candidate
+Share of applications handled within 48 hours
+Applications reread after a first screening
+HUMAN RESOURCES
+Every new hire is prepared as if it were the first
+Equipment, access, documents, first meetings. The list lives in two people’s heads, and something is always missing on day one.
+An agent that starts the onboarding sequence as soon as the contract is signed, tracks what is done and what isn’t, and chases the right people — without anyone having to keep the list.
+WHAT WE MEASURE
+Time before a new hire is up and running
+Missing access or equipment on day one
+HR time spent per onboarding
+HUMAN RESOURCES
+Your HR team answers the same questions all year
+Leave, health insurance, expenses, certificates. The answers are in the company agreement or a procedure, and nobody goes looking for them there.
+An agent that answers from what is written — company agreement, internal rules, procedures — citing its source, and hands anything about an individual situation to a person.
+WHAT WE MEASURE
+Monthly volume of HR requests
+Share handled without human intervention
+Response time on a routine request
+These cases are built from situations we have observed. The pre-diagnosis costs which ones actually weigh on you, and in what order.
+Which one costs you the most?
+45 minutes to talk it through. The pre-diagnosis ranks them by what they cost you — and you leave with that ranking, whether we work together or not.
+Book a call
+See the other roles
+USE CASES
+All use cases
+Consulting, engineering and design offices
+Manufacturing and B2B distribution
+Software publishers and recurring services
+KIGUMI
+Our method
+Working together
+About
+Lab
+TRUST
+Data and security
+AI Act
+Legal notice
+CONTACT
+Book a call
+contact@kigumi.app
+Process automation studio using AI agents, for small and mid-sized companies.

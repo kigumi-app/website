@@ -1,45 +1,10 @@
 ---
-// Les sept pages de rôle, engendrées depuis cas.json. Un rôle ajouté aux
-// données produit sa page sans toucher à ce fichier.
-import StudioLayout from "../layouts/StudioLayout.astro";
-import FichesCas from "../components/studio/FichesCas.astro";
-import { catalogue, parId } from "../lib/cas";
+// Les sept pages de rôle, engendrées depuis cas.json.
+import PageRole from "../components/studio/PageRole.astro";
+import { catalogue } from "../lib/cas";
 
 export function getStaticPaths() {
-  return catalogue.roles.map((r) => ({ params: { role: r.slug }, props: { r } }));
+  return catalogue.roles.map((role) => ({ params: { role: role.slug }, props: { role } }));
 }
-const { r } = Astro.props;
-// La description sert au référencement : elle nomme les processus du poste.
-const description = r.chapo.split(".")[0] + ". "
-  + r.cas.map((i: string) => parId.get(i)!.titre).join(", ") + ".";
 ---
-<StudioLayout titre={r.nom} description={description} actif={r.slug}>
-<section class="hero">
-  <div class="wrap prose">
-    <p class="eyebrow">{r.nom}</p>
-    <h1>{r.h1}</h1>
-    <p class="lead">{r.chapo}</p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2>Ce qui pèse sur votre poste</h2>
-    <FichesCas ids={r.cas} />
-    <div class="prose" style="margin-top:40px">
-      <p class="muted" style="font-size:14px">Ces cas sont construits à partir de situations observées. Le pré-diagnostic chiffre lesquels pèsent réellement chez vous, et dans quel ordre.</p>
-    </div>
-  </div>
-</section>
-
-<section class="cta">
-  <div class="wrap">
-    <h2>Lequel vous coûte le plus&nbsp;?</h2>
-    <p>45 minutes pour en parler. Le pré-diagnostic les classe par ce qu&rsquo;ils vous coûtent — et vous repartez avec ce classement, qu&rsquo;on travaille ensemble ou non.</p>
-    <div class="btn-row">
-      <a class="btn" href="/contact/">Prendre rendez-vous</a>
-      <a class="btn btn-ghost" href="/cas-usages/">Voir les autres postes</a>
-    </div>
-  </div>
-</section>
-</StudioLayout>
+<PageRole role={Astro.props.role} />

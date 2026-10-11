@@ -1,0 +1,22 @@
+---
+// Servie par Cloudflare pour toute adresse introuvable sous /en/ : le 404 le
+// plus proche dans l'arborescence l'emporte.
+import StudioLayout from "../../layouts/StudioLayout.astro";
+---
+<StudioLayout
+  titre="Page not found"
+  description="This page doesn’t exist or has moved."
+  sansCanonique>
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow">Error 404</p>
+    <h1>This page doesn&rsquo;t exist.</h1>
+    <p class="lead">It may have moved. The rest of the site is still here.</p>
+    <div class="btn-row">
+      <a class="btn" href="/en/">Back to home</a>
+      <a class="btn btn-ghost" href="/en/use-cases/">See the use cases</a>
+      <a class="btn btn-ghost" href="/en/lab/">The lab</a>
+    </div>
+  </div>
+</section>
+</StudioLayout>

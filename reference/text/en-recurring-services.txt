@@ -1,0 +1,49 @@
+Method
+Working together
+Use cases
+About
+Book a call
+FR
+SOFTWARE PUBLISHERS, RECURRING SERVICES, B2B DISTRIBUTION
+Answering faster isn’t enough. The request has to stop coming.
+Your team handles the same requests every week. Off-the-shelf tools offer to help you answer them faster. None of them tells you why they keep coming.
+What we put in place
+An agent that qualifies each request, routes it to the right person, and answers the cases already handled.
+And every month, a report that groups requests by reason, costs them in volume and time spent, and identifies what is causing them upstream. Those causes are what we fix next.
+INCOMING REQUESTS
+GROUPED BY CAUSE
+CAUSE A
+CAUSE B
+CAUSE C
+CAUSE FIXED
+VOLUME DROPS
+Requests are grouped by cause. Once a cause is fixed, the requests it produced stop arriving.
+What we measure
+Monthly request volume
+Share of repetitive requests
+Total time spent by the team
+Volume that disappears once the causes are fixed
+It’s the last line we care about. Plenty of tools can improve the others.
+This case is built from situations observed in the industry. The orders of magnitude are assumptions until we measure them at your company.
+Does this case look like yours?
+45 minutes to find out whether this case costs you enough to be worth dealing with. If it doesn’t, we’ll tell you.
+Book a call
+See the other cases
+USE CASES
+All use cases
+Consulting, engineering and design offices
+Manufacturing and B2B distribution
+Software publishers and recurring services
+KIGUMI
+Our method
+Working together
+About
+Lab
+TRUST
+Data and security
+AI Act
+Legal notice
+CONTACT
+Book a call
+contact@kigumi.app
+Process automation studio using AI agents, for small and mid-sized companies.

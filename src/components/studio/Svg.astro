@@ -5,19 +5,25 @@
 // animer : c'est pour ça que le site bash les injectait par marqueur. Le
 // portage les avait figés dans les pages, ce qui coupait le lien avec les
 // générateurs — un diagramme régénéré n'y serait jamais arrivé.
+import { langueDe } from "../../lib/i18n";
+
 const diagrammes = import.meta.glob("../../assets/diagrams/*.svg",
   { query: "?raw", import: "default", eager: true }) as Record<string, string>;
 const icones = import.meta.glob("../../assets/icons/*.svg",
   { query: "?raw", import: "default", eager: true }) as Record<string, string>;
 
+// Les diagrammes portent du texte : chacun existe en nom.svg et nom.en.svg,
+// choisi selon la langue de la page. Les icônes n'ont pas de texte.
+
 interface Props { nom: string; icone?: boolean }
 const { nom, icone = false } = Astro.props;
 const source = icone ? icones : diagrammes;
-const cle = Object.keys(source).find((k) => k.endsWith(`/${nom}.svg`));
+const suffixe = !icone && langueDe(Astro.url.pathname) === "en" ? ".en" : "";
+const cle = Object.keys(source).find((k) => k.endsWith(`/${nom}${suffixe}.svg`));
 if (!cle) {
   // Échouer à la construction plutôt que servir un trou : un diagramme absent
   // se voit ici tout de suite, jamais sur la page en production.
-  throw new Error(`SVG introuvable : ${nom} (${icone ? "icônes" : "diagrammes"}). `
+  throw new Error(`SVG introuvable : ${nom}${suffixe} (${icone ? "icônes" : "diagrammes"}). `
     + `Lancer brand/bin/sync_website.sh ?`);
 }
 ---

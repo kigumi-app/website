@@ -21,6 +21,17 @@ export async function etiquettesPubliees(): Promise<string[]> {
 const LIBELLES: Record<string, string> = { lab: "Lab", harness: "Harness" };
 export const libelle = (e: string) => LIBELLES[e] ?? e;
 
+// Un article vit sous le préfixe de SA langue : /blog/… en français,
+// /en/blog/… en anglais. Les deux index listent tout, chacun dans sa langue
+// d'interface, et signalent les articles écrits dans l'autre.
+export const hrefArticle = (a: Article) =>
+  a.data.langue === "fr" ? `/blog/${a.id}/` : `/en/blog/${a.id}/`;
+
+export const hrefEtiquette = (e: string, langue: "fr" | "en") =>
+  langue === "fr" ? `/blog/etiquette/${e}/` : `/en/blog/tag/${e}/`;
+
+export const NOM_LANGUE = { fr: "Français", en: "English" } as const;
+
 export const dateArticle = (a: Article) =>
   a.data.pubDate.toLocaleDateString(a.data.langue === "en" ? "en-GB" : "fr-FR",
     { year: "numeric", month: "long", day: "numeric" });

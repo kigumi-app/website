@@ -53,7 +53,7 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "6f034bbae58d3d00",
+    "empreinteTexte": "9af037c98723cb52",
     "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/404.html": {
@@ -92,7 +92,7 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "66754a98bb28ece1",
+    "empreinteTexte": "3edfadba5f9024bd",
     "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/a-propos/": {
@@ -135,7 +135,7 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "5454c6219c63df49",
+    "empreinteTexte": "8c14b78a8a04d4b9",
     "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/blog/": {
@@ -171,7 +171,7 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "f93db98fedbc0291",
+    "empreinteTexte": "0740019cb9bebb16",
     "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/cas-usages/": {
@@ -235,7 +235,7 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "f14658a2590db0f9",
+    "empreinteTexte": "bdafbfe2dd479448",
     "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/confiance/": {
@@ -280,7 +280,7 @@
       "svg": 1
     },
     "deborde": false,
-    "empreinteTexte": "64e256708072b831",
+    "empreinteTexte": "200ece9bca84d0e2",
     "empreinteSvg": "f75e64dd85b0084d"
   },
   "/conseil-ingenierie/": {
@@ -323,7 +323,7 @@
       "svg": 3
     },
     "deborde": false,
-    "empreinteTexte": "5cbdcdfda57c1b21",
+    "empreinteTexte": "c864274d6dd16595",
     "empreinteSvg": "c8b1d09a9ced2b64"
   },
   "/contact/": {
@@ -362,7 +362,7 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "6a335b8f29b6d437",
+    "empreinteTexte": "760364255f2bae4f",
     "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/direction-commerciale/": {
@@ -408,7 +408,7 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "3f7fe9547329b3ad",
+    "empreinteTexte": "7af9972f6e8cad2d",
     "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/direction-financiere/": {
@@ -455,7 +455,7 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "239bd1a3fe8bbce7",
+    "empreinteTexte": "c1dba41c9499aa71",
     "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/direction-generale/": {
@@ -500,7 +500,7 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "d077ec90ab1d629c",
+    "empreinteTexte": "6f5c8bb7efd368b4",
     "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/direction-operations/": {
@@ -547,7 +547,7 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "3df8733c81b49cc5",
+    "empreinteTexte": "aac393f6b1b065d1",
     "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/direction-relation-client/": {
@@ -593,7 +593,1067 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "a7f6d056dfa0f10f",
+    "empreinteTexte": "f923e3abc6f2d430",
+    "empreinteSvg": "e3b0c44298fc1c14"
+  },
+  "/en/": {
+    "titre": "Automate what really costs you — Kigumi",
+    "description": "Kigumi identifies the processes that weigh most on your company, deploys the agents that take them over, and measures the real gain.",
+    "canonical": "https://kigumi.app/en/",
+    "h1": [
+      "Automate whatreally costs you.And prove it."
+    ],
+    "h2": [
+      "Three examples, among many others",
+      "Thirty years in the trade, between two people",
+      "Three principles, kept on every mission",
+      "45 minutes to find out whether it’s worth it"
+    ],
+    "h3": [
+      "You respond to calls for tender",
+      "Your orders arrive in every format",
+      "Your customer service keeps answering the same questions",
+      "A costed diagnosis, never a prototype",
+      "We only build what the process requires",
+      "We measure the real gain, and we show it to you"
+    ],
+    "menuActif": null,
+    "liens": [
+      "/en/contact/",
+      "/en/method/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/use-cases/",
+      "/en/about/",
+      "/en/method/",
+      "/en/contact/",
+      "/en/use-cases/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/method/",
+      "/en/working-together/",
+      "/en/about/",
+      "/en/lab/",
+      "/en/trust/",
+      "/en/trust/#ai-act",
+      "/en/legal-notice/",
+      "/en/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 5,
+      "cartes": 3,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "647ee1b0ad6e52b9",
+    "empreinteSvg": "e3b0c44298fc1c14"
+  },
+  "/en/404.html": {
+    "titre": "Page not found — Kigumi",
+    "description": "This page doesn’t exist or has moved.",
+    "canonical": null,
+    "h1": [
+      "This page doesn’t exist."
+    ],
+    "h2": [],
+    "h3": [],
+    "menuActif": null,
+    "liens": [
+      "/en/",
+      "/en/use-cases/",
+      "/en/lab/",
+      "/en/use-cases/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/method/",
+      "/en/working-together/",
+      "/en/about/",
+      "/en/lab/",
+      "/en/trust/",
+      "/en/trust/#ai-act",
+      "/en/legal-notice/",
+      "/en/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 1,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "85467731fbf30ef8",
+    "empreinteSvg": "e3b0c44298fc1c14"
+  },
+  "/en/about/": {
+    "titre": "About — Kigumi",
+    "description": "Two partners, one on operations and sales, one on technology.",
+    "canonical": "https://kigumi.app/en/about/",
+    "h1": [
+      "Two partners, not a generalist agency that added AI to its catalogue."
+    ],
+    "h2": [
+      "Why the two of us",
+      "Let’s get acquainted"
+    ],
+    "h3": [
+      "Julien",
+      "Stéphane"
+    ],
+    "menuActif": "About",
+    "liens": [
+      "/en/contact/",
+      "/en/use-cases/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/method/",
+      "/en/working-together/",
+      "/en/about/",
+      "/en/lab/",
+      "/en/trust/",
+      "/en/trust/#ai-act",
+      "/en/legal-notice/",
+      "/en/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 3,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "f4f94537d5bc9b42",
+    "empreinteSvg": "e3b0c44298fc1c14"
+  },
+  "/en/blog/": {
+    "titre": "Blog — Kigumi",
+    "description": "What we learn automating processes for small and mid-sized companies, and what we build in the lab to verify it.",
+    "canonical": "https://kigumi.app/en/blog/",
+    "h1": [
+      "What we learn along the way."
+    ],
+    "h2": [],
+    "h3": [],
+    "menuActif": null,
+    "liens": [
+      "/en/use-cases/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/method/",
+      "/en/working-together/",
+      "/en/about/",
+      "/en/lab/",
+      "/en/trust/",
+      "/en/trust/#ai-act",
+      "/en/legal-notice/",
+      "/en/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 2,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "ac0888839146d00e",
+    "empreinteSvg": "e3b0c44298fc1c14"
+  },
+  "/en/consulting-engineering/": {
+    "titre": "Consulting, engineering and design offices — Kigumi",
+    "description": "Respond to calls for tender and customer questionnaires without spending days on them.",
+    "canonical": "https://kigumi.app/en/consulting-engineering/",
+    "h1": [
+      "You lose tenders for lack of time, not for lack of arguments."
+    ],
+    "h2": [
+      "The situation",
+      "What we put in place",
+      "What we measure",
+      "Does this case look like yours?"
+    ],
+    "h3": [],
+    "menuActif": "Use cases",
+    "liens": [
+      "/en/contact/",
+      "/en/use-cases/",
+      "/en/use-cases/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/method/",
+      "/en/working-together/",
+      "/en/about/",
+      "/en/lab/",
+      "/en/trust/",
+      "/en/trust/#ai-act",
+      "/en/legal-notice/",
+      "/en/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 5,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 3
+    },
+    "deborde": false,
+    "empreinteTexte": "6ce7b0f1f68848e9",
+    "empreinteSvg": "840163231f37ba57"
+  },
+  "/en/contact/": {
+    "titre": "Book a call — Kigumi",
+    "description": "45 minutes to find out whether it’s worth it.",
+    "canonical": "https://kigumi.app/en/contact/",
+    "h1": [
+      "45 minutes to find out whether it’s worth it."
+    ],
+    "h2": [
+      "What we’ll look at together"
+    ],
+    "h3": [],
+    "menuActif": null,
+    "liens": [
+      "mailto:contact@kigumi.app?subject=Kigumi%20pre-diagnosis",
+      "/en/use-cases/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/method/",
+      "/en/working-together/",
+      "/en/about/",
+      "/en/lab/",
+      "/en/trust/",
+      "/en/trust/#ai-act",
+      "/en/legal-notice/",
+      "/en/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 2,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "fa47f8998dddfc0d",
+    "empreinteSvg": "e3b0c44298fc1c14"
+  },
+  "/en/customer-relations/": {
+    "titre": "Customer relations — Kigumi",
+    "description": "The right answers exist, in requests already handled. Your customer service keeps answering the same questions, Your documentation is out of date before it is ever used, Your customers leave without warning.",
+    "canonical": "https://kigumi.app/en/customer-relations/",
+    "h1": [
+      "Your team answers fast. Mostly it answers the same questions."
+    ],
+    "h2": [
+      "What weighs on your role",
+      "Which one costs you the most?"
+    ],
+    "h3": [
+      "Your customer service keeps answering the same questions",
+      "Your documentation is out of date before it is ever used",
+      "Your customers leave without warning"
+    ],
+    "menuActif": "Use cases",
+    "liens": [
+      "/en/recurring-services/",
+      "/en/contact/",
+      "/en/use-cases/",
+      "/en/use-cases/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/method/",
+      "/en/working-together/",
+      "/en/about/",
+      "/en/lab/",
+      "/en/trust/",
+      "/en/trust/#ai-act",
+      "/en/legal-notice/",
+      "/en/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 3,
+      "cartes": 0,
+      "fiches": 3,
+      "mesures": 7,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "ff12f7447e706b36",
+    "empreinteSvg": "e3b0c44298fc1c14"
+  },
+  "/en/finance/": {
+    "titre": "Finance and administration — Kigumi",
+    "description": "Payments, supplier documents, contract deadlines, the cash position. Your invoices go out, payments lag behind, Your supplier invoices and expense claims are keyed in by hand, Your contracts renew without you noticing, Your budget variances get explained after the fact, Your cash position is a day old.",
+    "canonical": "https://kigumi.app/en/finance/",
+    "h1": [
+      "Your invoices go out on time. The rest follows as best it can."
+    ],
+    "h2": [
+      "What weighs on your role",
+      "Which one costs you the most?"
+    ],
+    "h3": [
+      "Your invoices go out, payments lag behind",
+      "Your supplier invoices and expense claims are keyed in by hand",
+      "Your contracts renew without you noticing",
+      "Your budget variances get explained after the fact",
+      "Your cash position is a day old"
+    ],
+    "menuActif": "Use cases",
+    "liens": [
+      "/en/contact/",
+      "/en/use-cases/",
+      "/en/use-cases/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/method/",
+      "/en/working-together/",
+      "/en/about/",
+      "/en/lab/",
+      "/en/trust/",
+      "/en/trust/#ai-act",
+      "/en/legal-notice/",
+      "/en/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 3,
+      "cartes": 0,
+      "fiches": 5,
+      "mesures": 13,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "849dfbec21d6fe59",
+    "empreinteSvg": "e3b0c44298fc1c14"
+  },
+  "/en/general-management/": {
+    "titre": "General management — Kigumi",
+    "description": "The data exists, in six tools. Your board meetings are prepared in a rush, Your board decisions go nowhere, Your reports go out in a different format for every recipient.",
+    "canonical": "https://kigumi.app/en/general-management/",
+    "h1": [
+      "You spend more time gathering the figures than deciding what they call for."
+    ],
+    "h2": [
+      "What weighs on your role",
+      "Which one costs you the most?"
+    ],
+    "h3": [
+      "Your board meetings are prepared in a rush",
+      "Your board decisions go nowhere",
+      "Your reports go out in a different format for every recipient"
+    ],
+    "menuActif": "Use cases",
+    "liens": [
+      "/en/contact/",
+      "/en/use-cases/",
+      "/en/use-cases/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/method/",
+      "/en/working-together/",
+      "/en/about/",
+      "/en/lab/",
+      "/en/trust/",
+      "/en/trust/#ai-act",
+      "/en/legal-notice/",
+      "/en/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 3,
+      "cartes": 0,
+      "fiches": 3,
+      "mesures": 7,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "53245fa8472308a5",
+    "empreinteSvg": "e3b0c44298fc1c14"
+  },
+  "/en/human-resources/": {
+    "titre": "Human resources — Kigumi",
+    "description": "Recruiting, onboarding, answering the same questions. You read three hundred CVs for three positions, Every new hire is prepared as if it were the first, Your HR team answers the same questions all year.",
+    "canonical": "https://kigumi.app/en/human-resources/",
+    "h1": [
+      "Your HR team spends its time on what repeats."
+    ],
+    "h2": [
+      "What weighs on your role",
+      "Which one costs you the most?"
+    ],
+    "h3": [
+      "You read three hundred CVs for three positions",
+      "Every new hire is prepared as if it were the first",
+      "Your HR team answers the same questions all year"
+    ],
+    "menuActif": "Use cases",
+    "liens": [
+      "/en/contact/",
+      "/en/use-cases/",
+      "/en/use-cases/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/method/",
+      "/en/working-together/",
+      "/en/about/",
+      "/en/lab/",
+      "/en/trust/",
+      "/en/trust/#ai-act",
+      "/en/legal-notice/",
+      "/en/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 3,
+      "cartes": 0,
+      "fiches": 3,
+      "mesures": 9,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "8d6d05a9c49ad3c6",
+    "empreinteSvg": "e3b0c44298fc1c14"
+  },
+  "/en/industry-distribution/": {
+    "titre": "Manufacturing and B2B distribution — Kigumi",
+    "description": "Process incoming customer orders without re-keying, from email to ERP.",
+    "canonical": "https://kigumi.app/en/industry-distribution/",
+    "h1": [
+      "Your orders arrive as PDFs. They leave as re-keying."
+    ],
+    "h2": [
+      "The situation",
+      "What we put in place",
+      "What we measure",
+      "Does this case look like yours?"
+    ],
+    "h3": [],
+    "menuActif": "Use cases",
+    "liens": [
+      "/en/contact/",
+      "/en/use-cases/",
+      "/en/use-cases/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/method/",
+      "/en/working-together/",
+      "/en/about/",
+      "/en/lab/",
+      "/en/trust/",
+      "/en/trust/#ai-act",
+      "/en/legal-notice/",
+      "/en/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 5,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 3
+    },
+    "deborde": false,
+    "empreinteTexte": "47cc073997b880c3",
+    "empreinteSvg": "d0bbf79bc78c9d8d"
+  },
+  "/en/lab/": {
+    "titre": "Lab — Kigumi",
+    "description": "What we build outside our missions: verifying what agents produce, and why it sits at the centre of our method.",
+    "canonical": "https://kigumi.app/en/lab/",
+    "h1": [
+      "What we build outside our missions."
+    ],
+    "h2": [
+      "Why it isn’t a side project",
+      "What we publish",
+      "More interested in your own processes?"
+    ],
+    "h3": [
+      "Harness"
+    ],
+    "menuActif": null,
+    "liens": [
+      "/en/lab/harness/",
+      "/en/contact/",
+      "/en/method/",
+      "/en/use-cases/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/method/",
+      "/en/working-together/",
+      "/en/about/",
+      "/en/lab/",
+      "/en/trust/",
+      "/en/trust/#ai-act",
+      "/en/legal-notice/",
+      "/en/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 4,
+      "cartes": 1,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "1e8f4627efb9b6dd",
+    "empreinteSvg": "e3b0c44298fc1c14"
+  },
+  "/en/lab/harness/": {
+    "titre": "Harness — Kigumi",
+    "description": "The tool we are building to know what an automated process does, and to be able to prove it.",
+    "canonical": "https://kigumi.app/en/lab/harness/",
+    "h1": [
+      "Know what a system does, and be able to prove it."
+    ],
+    "h2": [
+      "Why we are building it",
+      "What it does",
+      "Where it fits in the method",
+      "What you care about is the result?"
+    ],
+    "h3": [
+      "The map of the process",
+      "What a change affects",
+      "What holds, and what doesn’t",
+      "Foundation",
+      "Deployment",
+      "Oversight and verification"
+    ],
+    "menuActif": null,
+    "liens": [
+      "/en/lab/harness/",
+      "/en/lab/harness/how-it-works/",
+      "/en/lab/harness/how-it-works/",
+      "/en/method/",
+      "/en/method/#fondation",
+      "/en/method/#deploiement",
+      "/en/method/#pilotage",
+      "/en/contact/",
+      "/en/method/",
+      "/en/use-cases/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/method/",
+      "/en/working-together/",
+      "/en/about/",
+      "/en/lab/",
+      "/en/trust/",
+      "/en/trust/#ai-act",
+      "/en/legal-notice/",
+      "/en/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 5,
+      "cartes": 3,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "c60e1ac00abe31b5",
+    "empreinteSvg": "e3b0c44298fc1c14"
+  },
+  "/en/lab/harness/how-it-works/": {
+    "titre": "Harness · How it works — Kigumi",
+    "description": "Read, understand, evolve, verify: the four stages of Harness on a customer order received as an attachment.",
+    "canonical": "https://kigumi.app/en/lab/harness/how-it-works/",
+    "h1": [
+      "Read, understand, evolve, verify."
+    ],
+    "h2": [
+      "We apply it to the process as it actually runs.",
+      "Every step, every rule, every exception. Visible.",
+      "We describe the change. Harness proposes, someone reviews.",
+      "17 of 19 behaviours verified. We know where the gaps are.",
+      "What is verified here is what gets measured next.",
+      "And for your processes?"
+    ],
+    "h3": [],
+    "menuActif": null,
+    "liens": [
+      "/en/industry-distribution/",
+      "/en/lab/harness/",
+      "/en/lab/harness/how-it-works/",
+      "/en/industry-distribution/",
+      "/en/contact/",
+      "/en/method/",
+      "/en/use-cases/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/method/",
+      "/en/working-together/",
+      "/en/about/",
+      "/en/lab/",
+      "/en/trust/",
+      "/en/trust/#ai-act",
+      "/en/legal-notice/",
+      "/en/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 4,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "bb8dfb9ad81802c9",
+    "empreinteSvg": "e3b0c44298fc1c14"
+  },
+  "/en/legal-notice/": {
+    "titre": "Legal notice — Kigumi",
+    "description": "Legal notice for the Kigumi website.",
+    "canonical": "https://kigumi.app/en/legal-notice/",
+    "h1": [
+      "Legal notice"
+    ],
+    "h2": [
+      "Publisher",
+      "Hosting",
+      "Personal data",
+      "Intellectual property"
+    ],
+    "h3": [],
+    "menuActif": null,
+    "liens": [
+      "/mentions-legales/",
+      "mailto:contact@kigumi.app",
+      "https://support.github.com",
+      "tel:+18889935273",
+      "/en/trust/",
+      "/en/trust/",
+      "mailto:contact@kigumi.app",
+      "/en/use-cases/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/method/",
+      "/en/working-together/",
+      "/en/about/",
+      "/en/lab/",
+      "/en/trust/",
+      "/en/trust/#ai-act",
+      "/en/legal-notice/",
+      "/en/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 2,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "7c0033157f744d02",
+    "empreinteSvg": "e3b0c44298fc1c14"
+  },
+  "/en/method/": {
+    "titre": "Our method — Kigumi",
+    "description": "We deploy nothing before costing what it brings in.",
+    "canonical": "https://kigumi.app/en/method/",
+    "h1": [
+      "We deploy nothing before costing what it brings in."
+    ],
+    "h2": [
+      "Why the second mission costs less than the first",
+      "Why context changes everything",
+      "Start with the diagnosis"
+    ],
+    "h3": [
+      "Diagnosis",
+      "Foundation",
+      "Deployment",
+      "Oversight and verification"
+    ],
+    "menuActif": "Method",
+    "liens": [
+      "/en/lab/harness/",
+      "/en/trust/#reversibilite",
+      "/en/contact/",
+      "/en/use-cases/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/method/",
+      "/en/working-together/",
+      "/en/about/",
+      "/en/lab/",
+      "/en/trust/",
+      "/en/trust/#ai-act",
+      "/en/legal-notice/",
+      "/en/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 4,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 2
+    },
+    "deborde": false,
+    "empreinteTexte": "85d513a7b892f985",
+    "empreinteSvg": "6a269a9409da4038"
+  },
+  "/en/operations/": {
+    "titre": "Operations and sales administration — Kigumi",
+    "description": "The translation between your customers’ language and your references, the exceptions you tolerate, who handles what. Your orders arrive in every format, You find out about slippage too late, You don’t know whether your negotiated terms are applied, Your disputes and returns take too long to investigate.",
+    "canonical": "https://kigumi.app/en/operations/",
+    "h1": [
+      "Your operations run on people who know things nobody has written down."
+    ],
+    "h2": [
+      "What weighs on your role",
+      "Which one costs you the most?"
+    ],
+    "h3": [
+      "Your orders arrive in every format",
+      "You find out about slippage too late",
+      "You don’t know whether your negotiated terms are applied",
+      "Your disputes and returns take too long to investigate"
+    ],
+    "menuActif": "Use cases",
+    "liens": [
+      "/en/industry-distribution/",
+      "/en/contact/",
+      "/en/use-cases/",
+      "/en/use-cases/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/method/",
+      "/en/working-together/",
+      "/en/about/",
+      "/en/lab/",
+      "/en/trust/",
+      "/en/trust/#ai-act",
+      "/en/legal-notice/",
+      "/en/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 3,
+      "cartes": 0,
+      "fiches": 4,
+      "mesures": 8,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "d60bbf7d43f69beb",
+    "empreinteSvg": "e3b0c44298fc1c14"
+  },
+  "/en/quality-compliance/": {
+    "titre": "Quality and compliance — Kigumi",
+    "description": "The documents exist — procedures, records, certificates. Every audit costs you three weeks, Your customers keep sending you their questionnaires, Regulations change without you.",
+    "canonical": "https://kigumi.app/en/quality-compliance/",
+    "h1": [
+      "You pass the audit. Mostly you spend three weeks on it."
+    ],
+    "h2": [
+      "What weighs on your role",
+      "Which one costs you the most?"
+    ],
+    "h3": [
+      "Every audit costs you three weeks",
+      "Your customers keep sending you their questionnaires",
+      "Regulations change without you"
+    ],
+    "menuActif": "Use cases",
+    "liens": [
+      "/en/contact/",
+      "/en/use-cases/",
+      "/en/use-cases/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/method/",
+      "/en/working-together/",
+      "/en/about/",
+      "/en/lab/",
+      "/en/trust/",
+      "/en/trust/#ai-act",
+      "/en/legal-notice/",
+      "/en/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 3,
+      "cartes": 0,
+      "fiches": 3,
+      "mesures": 7,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "2430b380eb548a97",
+    "empreinteSvg": "e3b0c44298fc1c14"
+  },
+  "/en/recurring-services/": {
+    "titre": "Software publishers and recurring services — Kigumi",
+    "description": "Handle incoming requests, and above all bring their volume down at the source.",
+    "canonical": "https://kigumi.app/en/recurring-services/",
+    "h1": [
+      "Answering faster isn’t enough. The request has to stop coming."
+    ],
+    "h2": [
+      "What we put in place",
+      "What we measure",
+      "Does this case look like yours?"
+    ],
+    "h3": [],
+    "menuActif": "Use cases",
+    "liens": [
+      "/en/contact/",
+      "/en/use-cases/",
+      "/en/use-cases/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/method/",
+      "/en/working-together/",
+      "/en/about/",
+      "/en/lab/",
+      "/en/trust/",
+      "/en/trust/#ai-act",
+      "/en/legal-notice/",
+      "/en/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 5,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 3
+    },
+    "deborde": false,
+    "empreinteTexte": "68661d1f0a27a464",
+    "empreinteSvg": "7a90af61a7adb8ea"
+  },
+  "/en/sales/": {
+    "titre": "Sales and business development — Kigumi",
+    "description": "The answers, the terms, the history of every account: it’s all somewhere. You respond to calls for tender, Your CRM is never up to date, Your quotes take three days.",
+    "canonical": "https://kigumi.app/en/sales/",
+    "h1": [
+      "Your team sells. It also spends its evenings rewriting what already existed."
+    ],
+    "h2": [
+      "What weighs on your role",
+      "Which one costs you the most?"
+    ],
+    "h3": [
+      "You respond to calls for tender",
+      "Your CRM is never up to date",
+      "Your quotes take three days"
+    ],
+    "menuActif": "Use cases",
+    "liens": [
+      "/en/consulting-engineering/",
+      "/en/contact/",
+      "/en/use-cases/",
+      "/en/use-cases/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/method/",
+      "/en/working-together/",
+      "/en/about/",
+      "/en/lab/",
+      "/en/trust/",
+      "/en/trust/#ai-act",
+      "/en/legal-notice/",
+      "/en/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 3,
+      "cartes": 0,
+      "fiches": 3,
+      "mesures": 7,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "52b75bded70e4724",
+    "empreinteSvg": "e3b0c44298fc1c14"
+  },
+  "/en/trust/": {
+    "titre": "Data, security and compliance — Kigumi",
+    "description": "Where your data goes, what leaves your systems, and what you keep if you stop.",
+    "canonical": "https://kigumi.app/en/trust/",
+    "h1": [
+      "Your data, where it goes, and what you keep."
+    ],
+    "h2": [
+      "Hosting",
+      "What leaves, what doesn’t",
+      "How long your data is kept",
+      "Who has access, and to what",
+      "What is logged",
+      "Reversibility",
+      "Humans stay in control",
+      "AI Act"
+    ],
+    "h3": [],
+    "menuActif": null,
+    "liens": [
+      "/en/use-cases/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/method/",
+      "/en/working-together/",
+      "/en/about/",
+      "/en/lab/",
+      "/en/trust/",
+      "/en/trust/#ai-act",
+      "/en/legal-notice/",
+      "/en/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 2,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 1
+    },
+    "deborde": false,
+    "empreinteTexte": "119242a5db0065d0",
+    "empreinteSvg": "c70f6d8d098f7326"
+  },
+  "/en/use-cases/": {
+    "titre": "Use cases — Kigumi",
+    "description": "The processes where automation with agents makes sense: calls for tender, incoming orders, customer service, invoicing, purchasing, compliance, management reporting.",
+    "canonical": "https://kigumi.app/en/use-cases/",
+    "h1": [
+      "Where automation keeps its promises."
+    ],
+    "h2": [
+      "What costs you time",
+      "What weighs on your role",
+      "Your case isn’t on the list",
+      "Find out what it’s worth for you"
+    ],
+    "h3": [
+      "You respond to calls for tender",
+      "Your orders arrive in every format",
+      "Your customer service keeps answering the same questions",
+      "General management",
+      "Sales and business development",
+      "Operations and sales administration",
+      "Finance and administration",
+      "Customer relations",
+      "Quality and compliance",
+      "Human resources"
+    ],
+    "menuActif": "Use cases",
+    "liens": [
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/general-management/",
+      "/en/sales/",
+      "/en/operations/",
+      "/en/finance/",
+      "/en/customer-relations/",
+      "/en/quality-compliance/",
+      "/en/human-resources/",
+      "/en/contact/",
+      "/en/method/",
+      "/en/use-cases/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/method/",
+      "/en/working-together/",
+      "/en/about/",
+      "/en/lab/",
+      "/en/trust/",
+      "/en/trust/#ai-act",
+      "/en/legal-notice/",
+      "/en/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 5,
+      "cartes": 3,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "f441fd2ef98444bb",
+    "empreinteSvg": "e3b0c44298fc1c14"
+  },
+  "/en/working-together/": {
+    "titre": "Working together — Kigumi",
+    "description": "Four stages, three commitments, and what we don’t do.",
+    "canonical": "https://kigumi.app/en/working-together/",
+    "h1": [
+      "One process at a time, measured at every step."
+    ],
+    "h2": [
+      "What we commit to",
+      "What we don’t do",
+      "Let’s talk about your scope"
+    ],
+    "h3": [],
+    "menuActif": "Working together",
+    "liens": [
+      "/en/contact/",
+      "/en/use-cases/",
+      "/en/consulting-engineering/",
+      "/en/industry-distribution/",
+      "/en/recurring-services/",
+      "/en/method/",
+      "/en/working-together/",
+      "/en/about/",
+      "/en/lab/",
+      "/en/trust/",
+      "/en/trust/#ai-act",
+      "/en/legal-notice/",
+      "/en/contact/",
+      "mailto:contact@kigumi.app"
+    ],
+    "compte": {
+      "sections": 3,
+      "cartes": 0,
+      "fiches": 0,
+      "mesures": 0,
+      "svg": 0
+    },
+    "deborde": false,
+    "empreinteTexte": "2d852f85ebdd77b2",
     "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/industrie-distribution/": {
@@ -636,7 +1696,7 @@
       "svg": 3
     },
     "deborde": false,
-    "empreinteTexte": "5d105115b9e25350",
+    "empreinteTexte": "d5fd207f9c31a07d",
     "empreinteSvg": "17a5f428f632d7c3"
   },
   "/lab/": {
@@ -681,7 +1741,7 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "493df93363c01003",
+    "empreinteTexte": "678092481e58fb06",
     "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/lab/harness/": {
@@ -738,7 +1798,7 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "6030c32070727081",
+    "empreinteTexte": "bb4ab10adf5938b7",
     "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/lab/harness/fonctionnement/": {
@@ -787,7 +1847,7 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "514197cb68473302",
+    "empreinteTexte": "4b7f4ada1a787e1d",
     "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/mentions-legales/": {
@@ -834,7 +1894,7 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "5ac250b53c61743b",
+    "empreinteTexte": "70febeddd97122f4",
     "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/methode/": {
@@ -882,7 +1942,7 @@
       "svg": 2
     },
     "deborde": false,
-    "empreinteTexte": "ff4575fb5bb072c3",
+    "empreinteTexte": "aeb6ccd7930587b6",
     "empreinteSvg": "339b4927ae4504f3"
   },
   "/qualite-conformite/": {
@@ -927,7 +1987,7 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "c8239e6844e0088c",
+    "empreinteTexte": "5e8c433f7ebd73c5",
     "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/ressources-humaines/": {
@@ -972,7 +2032,7 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "1e4ed2b6a131d52d",
+    "empreinteTexte": "740cdf29c1157d68",
     "empreinteSvg": "e3b0c44298fc1c14"
   },
   "/service-client/": {
@@ -1014,7 +2074,7 @@
       "svg": 3
     },
     "deborde": false,
-    "empreinteTexte": "2c0456bc5d3674fa",
+    "empreinteTexte": "ae495a7cc24047c0",
     "empreinteSvg": "ca4622938d76b28d"
   },
   "/travailler-ensemble/": {
@@ -1055,7 +2115,7 @@
       "svg": 0
     },
     "deborde": false,
-    "empreinteTexte": "8149d91ae3c9f603",
+    "empreinteTexte": "2dd71a1225a922f3",
     "empreinteSvg": "e3b0c44298fc1c14"
   }
 }

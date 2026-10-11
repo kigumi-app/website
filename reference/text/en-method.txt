@@ -1,0 +1,68 @@
+Method
+Working together
+Use cases
+About
+Book a call
+FR
+OUR METHOD
+We deploy nothing before costing what it brings in.
+Four stages. You can stop after the first one and leave with what it produced.
+01
+Diagnosis
+Mapping and costing
+2–3 weeks
+02
+Foundation
+Context, rules, exceptions
+1–2 weeks
+03
+Deployment
+Agents in production
+2–4 weeks
+04
+Oversight
+Measurement and correction
+ongoing
+re-measures the baseline set at diagnosis
+Oversight re-measures the baseline set at diagnosis. That loop is what makes the gain verifiable rather than declared.
+1
+Diagnosis
+Two to three weeks. We map the candidate processes, estimate the economic gain of each, and rank them. The deliverable is a costed prioritisation report, not a prototype. You can stop there and use it without us.
+2
+Foundation
+We gather what your tools already know — your customers, your references, your rules, your exceptions — and turn it into a base the agents can use. Only for the processes selected. Nothing generic, nothing built just in case.
+3
+Deployment
+We build the agents, connect them to your tools, and put them into production with your teams. Anything outside their trust boundary goes to a human, with the reason for the doubt.
+4
+Oversight and verification
+We monitor, we correct, and every quarter we hand you a report comparing the real gain with the diagnosis projection. Including when the gap isn’t in our favour.
+Foundation, deployment and verification rely on Harness, the tool we are building to know what an automated process really does.
+Why the second mission costs less than the first
+Each automation is bounded to one process: we build nothing beyond what it requires. The foundation is not. The customers, references, rules and exceptions that had to be made explicit for the first process serve the second, then the third.
+It’s the only part of the work that doesn’t end with the mission. Agents get replaced, tools change — what you have stopped keeping in a few people’s heads doesn’t. This base belongs to you, it can be exported at any time, and you keep it if you stop.
+It grows as we automate, never ahead of it. A base built just in case isn’t an asset: it’s a documentation project that ages before it has served.
+Why context changes everything
+A generic agent can write. It doesn’t know what your customers call your products, which exceptions you tolerate, what you never promise, or who handles what at your company. Those rules are written down nowhere: they live in a few people’s heads.
+Our work is first to make them explicit and usable. That’s what separates an agent that holds up in production from a demo that impresses in a meeting.
+Start with the diagnosis
+45 minutes to check there is something worth doing. The diagnosis that follows is a deliverable you keep, usable without us.
+Book a call
+USE CASES
+All use cases
+Consulting, engineering and design offices
+Manufacturing and B2B distribution
+Software publishers and recurring services
+KIGUMI
+Our method
+Working together
+About
+Lab
+TRUST
+Data and security
+AI Act
+Legal notice
+CONTACT
+Book a call
+contact@kigumi.app
+Process automation studio using AI agents, for small and mid-sized companies.

@@ -1,13 +1,16 @@
 ---
-import { niveau1 } from "../../lib/cas";
+import { niveau1, vueCas } from "../../lib/cas";
+import { langueDe, ui } from "../../lib/i18n";
+const langue = langueDe(Astro.url.pathname);
+const t = ui(langue).cas;
 ---
 <div class="grid">
-  {niveau1.map((c) => (
-    <a class="card" href={`/${c.id}/`}>
+  {niveau1.map((c) => vueCas(c, langue)).map((c) => (
+    <a class="card" href={c.href}>
       <p class="who">{c.public}</p>
       <h3>{c.titre}</h3>
       <p>{c.accroche}</p>
-      <span class="go">Voir ce cas &rarr;</span>
+      <span class="go">{t.voir} &rarr;</span>
     </a>
   ))}
 </div>

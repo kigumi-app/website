@@ -1,0 +1,48 @@
+Method
+Working together
+Use cases
+About
+Book a call
+FR
+MANUFACTURING AND B2B DISTRIBUTION
+Your orders arrive as PDFs. They leave as re-keying.
+One order in two arrives by email, as an attachment, sometimes scanned. Someone reads it, translates it, checks it, then keys it in again.
+The situation
+Someone finds the customer, translates their references into your catalogue, checks prices and lead times, then re-keys everything into the ERP. That translation between your customers’ language and your actual references is written down nowhere: it lives in the head of your sales administration team. The day that person is away, everything slows down.
+What we put in place
+An agent that reads the order, identifies the customer and their commercial terms, matches the references, checks consistency — prices, quantities, lead times, credit limits — prepares the entry and sends the acknowledgement.
+Anything it isn’t sure about goes to your sales administration team, with the reason for the doubt. And the mapping that existed only in one person’s head becomes a company asset.
+HUMAN
+AGENT
+ERP
+?
+APPROVAL
+The agent reads the order and matches the references. What it isn’t sure about goes for approval; the rest goes into the ERP.
+What we measure
+Processing time per order
+Data-entry error rate
+Time to acknowledgement
+Cost of credit notes and disputes avoided
+This case is built from situations observed in the industry. The orders of magnitude are assumptions until we measure them at your company.
+Does this case look like yours?
+45 minutes to find out whether this case costs you enough to be worth dealing with. If it doesn’t, we’ll tell you.
+Book a call
+See the other cases
+USE CASES
+All use cases
+Consulting, engineering and design offices
+Manufacturing and B2B distribution
+Software publishers and recurring services
+KIGUMI
+Our method
+Working together
+About
+Lab
+TRUST
+Data and security
+AI Act
+Legal notice
+CONTACT
+Book a call
+contact@kigumi.app
+Process automation studio using AI agents, for small and mid-sized companies.

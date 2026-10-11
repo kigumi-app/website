@@ -1,0 +1,44 @@
+---
+// La version française fait foi : la page anglaise le dit en tête.
+import StudioLayout from "../../layouts/StudioLayout.astro";
+---
+<StudioLayout
+  titre={'Legal notice'}
+  description={'Legal notice for the Kigumi website.'}
+  actif="mentions-legales">
+<section class="hero">
+  <div class="wrap prose">
+    <h1>Legal notice</h1>
+    <p class="lead">This is a translation provided for convenience. <a href="/mentions-legales/" hreflang="fr" lang="fr">The French version</a> is the only one that is legally binding.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <h2>Publisher</h2>
+    <ul class="measures">
+      <li><strong>Company name</strong> &mdash; Kigumi, soci&eacute;t&eacute; par actions simplifi&eacute;e (SAS) with share capital of &euro;1,000</li>
+      <li><strong>Registered office</strong> &mdash; 64 boulevard Jean Jaur&egrave;s, 93400 Saint-Ouen-sur-Seine, France</li>
+      <li><strong>SIREN</strong> &mdash; 103 018 321</li>
+      <li><strong>Trade register</strong> &mdash; 103 018 321 R.C.S. Bobigny</li>
+      <li><strong>EU VAT number</strong> &mdash; FR74103018321</li>
+      <li><strong>Publication director</strong> &mdash; St&eacute;phane Marin</li>
+      <li><strong>Contact</strong> &mdash; <a href="mailto:contact@kigumi.app">contact@kigumi.app</a></li>
+    </ul>
+
+    <h2 style="margin-top:2em">Hosting</h2>
+    <p>This site is hosted by <strong>GitHub, Inc.</strong> and delivered by <strong>Cloudflare, Inc.</strong>, both companies incorporated under US law:</p>
+    <ul class="measures">
+      <li><strong>GitHub, Inc.</strong> &mdash; 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, United States &middot; <a href="https://support.github.com">support.github.com</a></li>
+      <li><strong>Cloudflare, Inc.</strong> &mdash; 101 Townsend Street, San Francisco, CA 94107, United States &middot; <a href="tel:+18889935273">+1 888 993 5273</a></li>
+    </ul>
+    <p style="margin-top:1.4em">The site contains only public pages. <strong>Our customers&rsquo; data is never hosted here</strong>: it is hosted in France, by Scaleway and OVHcloud, as described on the <a href="/en/trust/">Data and security</a> page.</p>
+
+    <h2 style="margin-top:2em">Personal data</h2>
+    <p>How data is processed, the subprocessors we use and the retention periods are described on the <a href="/en/trust/">Data and security</a> page. To exercise your rights of access, rectification or erasure, write to <a href="mailto:contact@kigumi.app">contact@kigumi.app</a>.</p>
+
+    <h2 style="margin-top:2em">Intellectual property</h2>
+    <p>The texts, diagrams and graphic elements of this site are the property of its publisher. The figures shown in examples are illustrative and do not correspond to missions delivered.</p>
+  </div>
+</section>
+</StudioLayout>

@@ -130,6 +130,11 @@ header.site nav{margin-left:auto;display:flex;gap:22px;align-items:center;flex-w
 header.site nav a{font-size:14px;color:var(--text-secondary);text-decoration:none}
 header.site nav a:hover{color:var(--text-primary)}
 header.site nav a.on{color:var(--accent)}
+/* Sélecteur de langue : un code de deux lettres, dans le registre technique
+   du fil d'Ariane plutôt qu'un drapeau — une langue n'est pas un pays. */
+header.site nav a.langue{font-family:var(--font-code);font-size:12px;letter-spacing:.12em;
+  padding:6px 8px;border:1px solid var(--border-subtle);border-radius:var(--radius-sm)}
+header.site nav a.langue:hover{border-color:var(--border)}
 
 /* ── fil d'Ariane ──
    Sous l'en-tête, sur les pages qui ne sont pas au premier niveau du menu :

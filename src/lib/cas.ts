@@ -15,10 +15,9 @@ import brut from "../data/cas.json";
 const typo = (s: string) => s.replace(/'/g, "\u2019");
 const txt = z.string().transform(typo);
 
-const Cas = z.object({
-  id: z.string(),
-  niveau: z.union([z.literal(1), z.literal(2)]),
-  page: z.string().optional(),
+// Le contenu d'un cas, dans une langue. Le français est à la racine de
+// l'objet, l'anglais sous « en » : même forme, mêmes garde-fous.
+const ContenuCas = {
   public: txt,
   titre: txt,
   accroche: txt,
@@ -26,17 +25,28 @@ const Cas = z.object({
   // Sans mesure, une fiche n'est qu'une promesse de plus : elle ne vaut pas
   // d'être publiée. C'est la règle la plus importante du catalogue.
   mesure: z.array(txt).min(1, "un cas doit porter au moins une mesure"),
+};
+
+const Cas = z.object({
+  id: z.string(),
+  niveau: z.union([z.literal(1), z.literal(2)]),
+  page: z.string().optional(),
+  ...ContenuCas,
+  // Le site est bilingue : un cas sans traduction fait échouer la
+  // construction plutôt que de laisser un trou dans la version anglaise.
+  en: z.object({ ...ContenuCas, slug: z.string().optional() }),
 }).refine((c) => c.niveau !== 1 || !!c.page, {
   message: "une fiche de niveau 1 doit déclarer sa page",
+}).refine((c) => c.niveau !== 1 || !!c.en.slug, {
+  message: "une fiche de niveau 1 doit déclarer son adresse anglaise (en.slug)",
 });
 
+const ContenuRole = { nom: txt, texte: txt, slug: z.string(), h1: txt, chapo: txt };
+
 const Role = z.object({
-  nom: txt,
-  texte: txt,
+  ...ContenuRole,
   cas: z.array(z.string()).min(1),
-  slug: z.string(),
-  h1: txt,
-  chapo: txt,
+  en: z.object(ContenuRole),
 });
 
 const Catalogue = z.object({ cas: z.array(Cas), roles: z.array(Role) })
@@ -59,3 +69,20 @@ export const parId = new Map(catalogue.cas.map((c) => [c.id, c]));
 export const niveau1 = catalogue.cas.filter((c) => c.niveau === 1);
 export type Cas = z.infer<typeof Cas>;
 export type Role = z.infer<typeof Role>;
+
+export type Langue = "fr" | "en";
+
+/** Un cas vu dans une langue, avec son adresse quand il a une page. */
+export function vueCas(c: Cas, langue: Langue) {
+  const t = langue === "fr" ? c : c.en;
+  const href = c.niveau !== 1 ? undefined
+    : langue === "fr" ? `/${c.id}/` : `/en/${c.en.slug}/`;
+  return { id: c.id, niveau: c.niveau, public: t.public, titre: t.titre,
+    accroche: t.accroche, mecanisme: t.mecanisme, mesure: t.mesure, href };
+}
+
+/** Un rôle vu dans une langue, avec son adresse. */
+export function vueRole(r: Role, langue: Langue) {
+  const t = langue === "fr" ? r : r.en;
+  return { ...t, cas: r.cas, href: langue === "fr" ? `/${r.slug}/` : `/en/${r.en.slug}/` };
+}

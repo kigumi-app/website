@@ -52,7 +52,9 @@ kigumi.app, kigumi-website.stephane-6a8.workers.dev, *-kigumi-website.stephane-6
 
 C'est un **Worker à actifs statiques** (`kigumi-website`), pas un projet
 Pages. `wrangler.jsonc` à la racine dit quoi servir : `dist/`, avec
-`_redirects` et `404.html`.
+`_redirects` et les deux `404.html` (racine et `en/`). Une seule adresse passe
+par du code, l'accueil (`worker/index.js`) : un navigateur qui préfère
+l'anglais part vers `/en/`, sauf choix déjà fait au sélecteur ou robot.
 
 | Réglage | Valeur |
 |---|---|
@@ -64,6 +66,11 @@ Pages. `wrangler.jsonc` à la racine dit quoi servir : `dist/`, avec
 
 - Production : `https://kigumi-website.stephane-6a8.workers.dev`
 - Prévisualisations : `https://<branche>-kigumi-website.stephane-6a8.workers.dev`
+
+Le site est en **français à la racine et en anglais sous `/en/`**, adresses
+traduites. La table des correspondances est dans `src/data/adresses.json` (et
+`en.slug` dans `cas.json`) ; le sélecteur, les balises hreflang et le sitemap
+la lisent tous.
 
 Rien n'est public : tant que `INDEXABLE` vaut `false`
 (`src/lib/indexation.ts`), chaque page porte `noindex` et `robots.txt`
@@ -120,8 +127,14 @@ l'ancien site depuis `main`. Exposition : quelques minutes derrière Cloudflare.
 
 ## 7. Deux choses qui t'attendent, sans urgence
 
+**La relecture de l'anglais.** Les 23 pages anglaises sont une première
+version, à relire par toi avant la bascule — en priorité `/en/trust/` et
+`/en/legal-notice/`, qui engagent. Les libellés des diagrammes anglais vivent
+dans `brand/` (`copy/methode.en.json`, `copy/autonomie.en.json`, et la table `T`
+de `bin/explainers.py`) : les corriger là, puis `brand/bin/sync_website.sh`.
+
 **Les quatre essais du lab.** Écrits depuis juin, jamais publiés. Ils sont
-désormais dans le blog (`src/content/blog/`), étiquetés `lab` et `harness`,
+désormais dans le blog (`src/content/blog/`), en anglais (`/en/blog/…`), étiquetés `lab` et `harness`,
 toujours en `draft: true` — donc invisibles. À relire par toi ; deux d'entre eux
 parlent encore comme un fondateur de start-up (voir `REFONTE-LAB.md`, §4.4).
 Décocher « Brouillon » dans le CMS suffit à publier : le blog entre alors dans

@@ -1,0 +1,50 @@
+Method
+Working together
+Use cases
+About
+Book a call
+FR
+CONSULTING, ENGINEERING AND DESIGN OFFICES
+You lose tenders for lack of time, not for lack of arguments.
+Every tender ties up three or four people for several days. And some tenders never go out, simply because there wasn’t time.
+The situation
+The answers already exist. They are in your past tenders, your references, your CVs, your certifications, your methodology documents. With every new questionnaire — call for tender, procurement questionnaire, security or CSR questionnaire — everything is rewritten from the start.
+What we put in place
+An agent that reads the tender whatever its format, extracts the questions, and finds what you have already answered in comparable tenders. It proposes a draft for each question, with its source and its confidence level, and flags new questions separately — the ones that deserve your decision.
+You reread, you correct, you approve. The agent never submits anything on your behalf.
+HUMAN
+AGENT
+TENDER RECEIVED
+PAST TENDERS
+?
+DRAFT, WITH ITS SOURCE
+EXPERT DECISION
+Every question gets a draft taken from a past tender, with its source. New questions are set aside for your decision.
+What we measure
+Hours spent per tender, and by whom
+Time to submission
+Tenders handled with the same headcount
+The gain that matters isn’t the time saved: it’s the tender you no longer let slip.
+This case is built from situations observed in the industry. The orders of magnitude are assumptions until we measure them at your company.
+Does this case look like yours?
+45 minutes to find out whether this case costs you enough to be worth dealing with. If it doesn’t, we’ll tell you.
+Book a call
+See the other cases
+USE CASES
+All use cases
+Consulting, engineering and design offices
+Manufacturing and B2B distribution
+Software publishers and recurring services
+KIGUMI
+Our method
+Working together
+About
+Lab
+TRUST
+Data and security
+AI Act
+Legal notice
+CONTACT
+Book a call
+contact@kigumi.app
+Process automation studio using AI agents, for small and mid-sized companies.

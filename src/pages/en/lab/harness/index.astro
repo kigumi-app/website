@@ -1,0 +1,91 @@
+---
+import StudioLayout from "../../../../layouts/StudioLayout.astro";
+import LabNav from "../../../../components/studio/LabNav.astro";
+import DerniersArticles from "../../../../components/studio/DerniersArticles.astro";
+---
+<StudioLayout
+  titre="Harness"
+  description="The tool we are building to know what an automated process does, and to be able to prove it."
+  actif=""
+  fil={[{ libelle: "Lab", href: "/en/lab/" }, { libelle: "Harness" }]}>
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow">Lab · Internal tool</p>
+    <h1>Know what a system does, and be able to prove it.</h1>
+    <p class="lead">A system that runs is not a system that does what was expected. Harness is the tool we are building to tell the difference: it reads a process, maps it, and verifies that every expected behaviour holds.</p>
+    <LabNav courant="presentation" />
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <h2>Why we are building it</h2>
+    <p>Our method promises to measure what agents produce, instead of noting that they run. That promise only holds if we can say, at any moment, what an automated process actually does: which rules it applies, which exceptions it escalates, what it does when a piece of data is missing.</p>
+    <p>We can say that a program doesn&rsquo;t crash. We can rarely say what it does. <strong>Harness closes that gap, for our own deliveries first.</strong></p>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap">
+    <div class="prose"><h2>What it does</h2></div>
+    <div class="grid">
+      <div class="card">
+        <p class="who">See</p>
+        <h3>The map of the process</h3>
+        <p>Every step, every rule, every exception, and what connects them. Drawn from what actually runs, not from what the procedure says.</p>
+      </div>
+      <div class="card">
+        <p class="who">Change</p>
+        <h3>What a change affects</h3>
+        <p>Before changing a rule, you see what it touches. The change is proposed, then reviewed by someone before it goes out.</p>
+      </div>
+      <div class="card">
+        <p class="who">Verify</p>
+        <h3>What holds, and what doesn&rsquo;t</h3>
+        <p>Every expected behaviour is verified. Gaps are named, with where they occur, before they cost anything.</p>
+      </div>
+    </div>
+    <p style="margin-top:32px"><a href="/en/lab/harness/how-it-works/">How it works, screen by screen, on a customer order &rarr;</a></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="prose">
+      <h2>Where it fits in the method</h2>
+      <p>Harness isn&rsquo;t an extra step. It equips three of the four stages of <a href="/en/method/">our method</a>.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">2</div><div>
+        <h3><a href="/en/method/#fondation">Foundation</a></h3>
+        <p>Map what exists before touching it: what the process really does, exceptions included, not what the procedure says.</p>
+      </div></div>
+      <div class="step"><div class="n">3</div><div>
+        <h3><a href="/en/method/#deploiement">Deployment</a></h3>
+        <p>Show what a change affects before it goes into production, and have it reviewed by the person accountable for it.</p>
+      </div></div>
+      <div class="step"><div class="n">4</div><div>
+        <h3><a href="/en/method/#pilotage">Oversight and verification</a></h3>
+        <p>Continuously verify that every expected behaviour holds. That&rsquo;s what makes the quarterly report verifiable rather than declared.</p>
+      </div></div>
+    </div>
+    <div class="note prose">
+      <strong>Status</strong>
+      <p>Harness is not for sale. We are building it for our missions, and we open it to a few teams we choose.</p>
+    </div>
+  </div>
+</section>
+
+<DerniersArticles etiquette="harness" titre="What we write about it" />
+
+<section class="cta">
+  <div class="wrap">
+    <h2>What you care about is the result?</h2>
+    <p>Harness serves a method. 45 minutes to see what it would do for your processes.</p>
+    <div class="btn-row">
+      <a class="btn" href="/en/contact/">Book a call</a>
+      <a class="btn btn-ghost" href="/en/method/">See the method</a>
+    </div>
+  </div>
+</section>
+</StudioLayout>

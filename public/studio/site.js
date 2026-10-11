@@ -25,7 +25,8 @@
     if (!btn) return;
     var clair = mode === 'light';
     btn.setAttribute('aria-pressed', String(clair));
-    btn.setAttribute('aria-label', clair ? 'Passer en mode sombre' : 'Passer en mode clair');
+    // Les libellés viennent du bouton : l'en-tête les écrit dans la langue de la page.
+    btn.setAttribute('aria-label', btn.getAttribute(clair ? 'data-vers-sombre' : 'data-vers-clair'));
   }
 
   try {

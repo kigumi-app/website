@@ -1,0 +1,55 @@
+Method
+Working together
+Use cases
+About
+Book a call
+FR
+GENERAL MANAGEMENT
+You spend more time gathering the figures than deciding what they call for.
+The data exists, in six tools. What’s missing is time between the moment it is gathered and the moment you have to decide.
+What weighs on your role
+GENERAL MANAGEMENT
+Your board meetings are prepared in a rush
+The figures sit in six tools. Someone pulls them together the night before, and nobody has time to look at why they move.
+An agent that gathers the indicators from your tools, flags variances against plan, and produces the board pack — showing where every figure comes from.
+WHAT WE MEASURE
+Time from close to board pack
+Time spent preparing it
+Share of the meeting spent discussing rather than reporting
+GENERAL MANAGEMENT
+Your board decisions go nowhere
+What was decided, who owns it, where it stands. Between two meetings nobody keeps the list up to date — and the next one starts by reconstructing the last.
+An agent that records the decisions taken, assigns each one an owner and a deadline, and reports their status before the next meeting.
+WHAT WE MEASURE
+Share of decisions with no follow-up after 90 days
+Time spent at the start of each meeting reviewing the previous one
+GENERAL MANAGEMENT
+Your reports go out in a different format for every recipient
+Shareholders, bank, board: the same figures, reformatted every time, and corrected after sending when a discrepancy appears.
+An agent that produces every report from the same source, in the format its recipient expects, flagging discrepancies before sending rather than after.
+WHAT WE MEASURE
+Production time
+Versions corrected after sending
+These cases are built from situations we have observed. The pre-diagnosis costs which ones actually weigh on you, and in what order.
+Which one costs you the most?
+45 minutes to talk it through. The pre-diagnosis ranks them by what they cost you — and you leave with that ranking, whether we work together or not.
+Book a call
+See the other roles
+USE CASES
+All use cases
+Consulting, engineering and design offices
+Manufacturing and B2B distribution
+Software publishers and recurring services
+KIGUMI
+Our method
+Working together
+About
+Lab
+TRUST
+Data and security
+AI Act
+Legal notice
+CONTACT
+Book a call
+contact@kigumi.app
+Process automation studio using AI agents, for small and mid-sized companies.

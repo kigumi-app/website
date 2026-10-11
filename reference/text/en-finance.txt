@@ -1,0 +1,71 @@
+Method
+Working together
+Use cases
+About
+Book a call
+FR
+FINANCE AND ADMINISTRATION
+Your invoices go out on time. The rest follows as best it can.
+Payments, supplier documents, contract deadlines, the cash position. Each one needs attention your team doesn’t have, and each one is paid for in cash.
+What weighs on your role
+FINANCE AND ADMINISTRATION
+Your invoices go out, payments lag behind
+Reminders go out when someone thinks of them. Payments are matched by hand, and disputes wait for someone to investigate them.
+An agent that sends reminders based on each customer’s history rather than the calendar, matches incoming payments, and prepares each dispute with the documents that relate to it.
+WHAT WE MEASURE
+Days sales outstanding (DSO)
+Reminders per payment collected
+Cost of disputes left uninvestigated
+FINANCE AND ADMINISTRATION
+Your supplier invoices and expense claims are keyed in by hand
+Every document is read, coded, matched to a purchase order, then entered. The volume is constant and the added value is zero.
+An agent that reads the document, matches it to the corresponding order or contract, and prepares the entry — escalating anything that doesn’t match.
+WHAT WE MEASURE
+Processing cost per document
+Time to month-end close
+FINANCE AND ADMINISTRATION
+Your contracts renew without you noticing
+Expiry dates, indexation, automatic renewals. The dates are in the contracts, the contracts are in a folder, and nobody rereads them.
+An agent that tracks the expiry dates and revision clauses of your contracts, and alerts you within the window where you can still renegotiate.
+WHAT WE MEASURE
+Renewals you didn’t choose
+Gap to the terms that could have been renegotiated
+FINANCE AND ADMINISTRATION
+Your budget variances get explained after the fact
+The variance shows up at close. Understanding where it comes from takes a week, and the reforecast arrives when the decision it was meant to inform has already been made.
+An agent that reconciles actuals against budget as you go, isolates the lines that explain the variance, and escalates those outside your thresholds — with the detail that lets you check rather than take it on trust.
+WHAT WE MEASURE
+Time to explain a variance
+Reforecasts per year
+Share of variances explained before close
+FINANCE AND ADMINISTRATION
+Your cash position is a day old
+Several banks, sometimes several currencies. Consolidation is done by hand in a spreadsheet, and payment peaks are discovered the day they hit.
+An agent that consolidates the positions, matches movements to known invoices and due dates, and alerts you to upcoming payments that won’t clear — early enough to act.
+WHAT WE MEASURE
+Time to consolidate across banks
+Unanticipated overdrafts
+Gap between forecast and actual position
+These cases are built from situations we have observed. The pre-diagnosis costs which ones actually weigh on you, and in what order.
+Which one costs you the most?
+45 minutes to talk it through. The pre-diagnosis ranks them by what they cost you — and you leave with that ranking, whether we work together or not.
+Book a call
+See the other roles
+USE CASES
+All use cases
+Consulting, engineering and design offices
+Manufacturing and B2B distribution
+Software publishers and recurring services
+KIGUMI
+Our method
+Working together
+About
+Lab
+TRUST
+Data and security
+AI Act
+Legal notice
+CONTACT
+Book a call
+contact@kigumi.app
+Process automation studio using AI agents, for small and mid-sized companies.

@@ -1,20 +1,21 @@
-# Le site produit occupait la racine jusqu'à la bascule. Deux URL seulement
-# étaient atteignables ; sans ces règles, les liens existants tombent en 404.
-/index.html            /                                  301
-/how-it-works.html     /lab/harness/fonctionnement/       301
-/how-it-works          /lab/harness/fonctionnement/       301
-/writing               /blog/                             301
-/writing/*             /blog/:splat                       301
-/rss.xml               /blog/rss.xml                      301
+# Le site produit occupait la racine jusqu'à la bascule, en anglais. Ses
+# adresses mènent donc aux pages anglaises ; sans ces règles, les liens
+# existants tombent en 404.
+/index.html                  /                                  301
+/how-it-works.html           /en/lab/harness/how-it-works/      301
+/how-it-works                /en/lab/harness/how-it-works/      301
+/writing                     /en/blog/                          301
+/writing/*                   /en/blog/:splat                    301
+/rss.xml                     /blog/rss.xml                      301
 
-# Harness devient un outil du studio : la page produit « how it works » est
-# remplacée par la page Fonctionnement, en français.
-/lab/harness/how-it-works    /lab/harness/fonctionnement/   301
-/lab/harness/how-it-works/   /lab/harness/fonctionnement/   301
+# Harness devient un outil du studio. La page « how it works » du produit a
+# aujourd'hui son pendant anglais, à une adresse sous /en/.
+/lab/harness/how-it-works    /en/lab/harness/how-it-works/      301
+/lab/harness/how-it-works/   /en/lab/harness/how-it-works/      301
 
-# Les notes du lab rejoignent le blog : une seule rubrique, l'étiquette Lab
-# les distingue. Les adresses d'articles gardent leur nom.
-/lab/harness/writing         /blog/                         301
-/lab/harness/writing/        /blog/                         301
-/lab/harness/writing/*       /blog/:splat                   301
-/lab/harness/rss.xml         /blog/rss.xml                  301
+# Les notes du lab rejoignent le blog. Elles sont écrites en anglais : elles
+# vivent sous /en/blog/, et l'étiquette Lab les distingue.
+/lab/harness/writing         /en/blog/                          301
+/lab/harness/writing/        /en/blog/                          301
+/lab/harness/writing/*       /en/blog/:splat                    301
+/lab/harness/rss.xml         /blog/rss.xml                      301

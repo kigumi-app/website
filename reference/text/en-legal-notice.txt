@@ -1,0 +1,43 @@
+Method
+Working together
+Use cases
+About
+Book a call
+FR
+Legal notice
+This is a translation provided for convenience. The French version is the only one that is legally binding.
+Publisher
+Company name — Kigumi, société par actions simplifiée (SAS) with share capital of €1,000
+Registered office — 64 boulevard Jean Jaurès, 93400 Saint-Ouen-sur-Seine, France
+SIREN — 103 018 321
+Trade register — 103 018 321 R.C.S. Bobigny
+EU VAT number — FR74103018321
+Publication director — Stéphane Marin
+Contact — contact@kigumi.app
+Hosting
+This site is hosted by GitHub, Inc. and delivered by Cloudflare, Inc., both companies incorporated under US law:
+GitHub, Inc. — 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, United States · support.github.com
+Cloudflare, Inc. — 101 Townsend Street, San Francisco, CA 94107, United States · +1 888 993 5273
+The site contains only public pages. Our customers’ data is never hosted here: it is hosted in France, by Scaleway and OVHcloud, as described on the Data and security page.
+Personal data
+How data is processed, the subprocessors we use and the retention periods are described on the Data and security page. To exercise your rights of access, rectification or erasure, write to contact@kigumi.app.
+Intellectual property
+The texts, diagrams and graphic elements of this site are the property of its publisher. The figures shown in examples are illustrative and do not correspond to missions delivered.
+USE CASES
+All use cases
+Consulting, engineering and design offices
+Manufacturing and B2B distribution
+Software publishers and recurring services
+KIGUMI
+Our method
+Working together
+About
+Lab
+TRUST
+Data and security
+AI Act
+Legal notice
+CONTACT
+Book a call
+contact@kigumi.app
+Process automation studio using AI agents, for small and mid-sized companies.

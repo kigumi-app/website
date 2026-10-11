@@ -1,0 +1,62 @@
+---
+import StudioLayout from "../../layouts/StudioLayout.astro";
+import Svg from "../../components/studio/Svg.astro";
+---
+<StudioLayout
+  titre={"Consulting, engineering and design offices"}
+  description={"Respond to calls for tender and customer questionnaires without spending days on them."}
+  actif="conseil-ingenierie">
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow"><span class="ico"><Svg nom="appel-offres" icone /></span>Consulting, engineering and design offices</p>
+    <h1>You lose tenders for lack of time, not for lack of arguments.</h1>
+    <p class="lead">Every tender ties up three or four people for several days. And some tenders never go out, simply because there wasn&rsquo;t time.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <h2>The situation</h2>
+    <p>The answers already exist. They are in your past tenders, your references, your CVs, your certifications, your methodology documents. With every new questionnaire — call for tender, procurement questionnaire, security or CSR questionnaire — everything is rewritten from the start.</p>
+
+    <h2 style="margin-top:2em">What we put in place</h2>
+    <p>An agent that reads the tender whatever its format, extracts the questions, and finds what you have already answered in comparable tenders. It proposes a draft for each question, with its source and its confidence level, and flags new questions separately — the ones that deserve your decision.</p>
+    <p>You reread, you correct, you approve. <strong>The agent never submits anything on your behalf.</strong></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <figure class="diagramme explicatif">
+      <div class="d-large"><Svg nom="explicatif-appel-offres" /></div>
+      <div class="d-etroit"><Svg nom="explicatif-appel-offres-portrait" /></div>
+      <figcaption>Every question gets a draft taken from a past tender, with its source. New questions are set aside for your decision.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <h2>What we measure</h2>
+    <ul class="measures">
+      <li>Hours spent per tender, and by whom</li>
+      <li>Time to submission</li>
+      <li>Tenders handled with the same headcount</li>
+    </ul>
+    <p style="margin-top:26px">The gain that matters isn&rsquo;t the time saved: it&rsquo;s the tender you no longer let slip.</p>
+
+    <p class="muted" style="font-size:14px;margin-top:2em">This case is built from situations observed in the industry. The orders of magnitude are assumptions until we measure them at your company.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Does this case look like yours?</h2>
+    <p>45 minutes to find out whether this case costs you enough to be worth dealing with. If it doesn&rsquo;t, we&rsquo;ll tell you.</p>
+    <div class="btn-row">
+      <a class="btn" href="/en/contact/">Book a call</a>
+      <a class="btn btn-ghost" href="/en/use-cases/">See the other cases</a>
+    </div>
+  </div>
+</section>
+</StudioLayout>

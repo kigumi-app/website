@@ -1,0 +1,62 @@
+Method
+Working together
+Use cases
+About
+Book a call
+FR
+OPERATIONS AND SALES ADMINISTRATION
+Your operations run on people who know things nobody has written down.
+The translation between your customers’ language and your references, the exceptions you tolerate, who handles what. The day those people are away, everything slows down.
+What weighs on your role
+MANUFACTURING AND B2B DISTRIBUTION
+Your orders arrive in every format
+PDFs, emails, spreadsheets. Someone translates, checks, then re-keys everything into the ERP.
+An agent that reads the order, identifies the customer and their terms, matches the product references and checks consistency before entry.
+See the full case →
+WHAT WE MEASURE
+Processing time per order
+Data-entry error rate
+Cost of credit notes avoided
+OPERATIONS
+You find out about slippage too late
+Delays, overruns and stuck files are already in your tools. Nobody looks at them until someone complains.
+An agent that watches the thresholds you have set and alerts the right person — with the likely cause, not just the symptom.
+WHAT WE MEASURE
+Time between a file going off track and someone knowing
+PURCHASING AND SUPPLY
+You don’t know whether your negotiated terms are applied
+Quotes are compared by hand, terms get lost in contracts, and a late delivery is discovered when the customer calls.
+An agent that puts quotes in the same format to compare them, checks every invoice against the terms actually negotiated, and flags delays before they surface on the ground.
+WHAT WE MEASURE
+Gap between negotiated and invoiced terms
+Time to detect a late delivery
+OPERATIONS AND SALES ADMINISTRATION
+Your disputes and returns take too long to investigate
+The documents exist, scattered between the ERP, emails and the carrier. Gathering them takes longer than deciding.
+An agent that pulls together the documents of a dispute — order, delivery note, correspondence, proof of delivery — and prepares the case with anything missing clearly flagged.
+WHAT WE MEASURE
+Time to resolve a dispute
+Cost of credit notes granted for lack of proof
+These cases are built from situations we have observed. The pre-diagnosis costs which ones actually weigh on you, and in what order.
+Which one costs you the most?
+45 minutes to talk it through. The pre-diagnosis ranks them by what they cost you — and you leave with that ranking, whether we work together or not.
+Book a call
+See the other roles
+USE CASES
+All use cases
+Consulting, engineering and design offices
+Manufacturing and B2B distribution
+Software publishers and recurring services
+KIGUMI
+Our method
+Working together
+About
+Lab
+TRUST
+Data and security
+AI Act
+Legal notice
+CONTACT
+Book a call
+contact@kigumi.app
+Process automation studio using AI agents, for small and mid-sized companies.

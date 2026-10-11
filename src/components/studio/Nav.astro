@@ -1,33 +1,45 @@
 ---
 // Le groupe « Cas d'usages » se lit depuis les données plutôt que d'être
 // recopié : une fiche ou un rôle ajouté s'allume tout seul.
-import cas from "../../data/cas.json";
+//
+// Les entrées sont désignées par leur adresse française, qui sert de clé :
+// `lien` en donne l'équivalent anglais. Les pages anglaises passent donc le
+// même identifiant `actif` que leur pendant français.
+import { catalogue } from "../../lib/cas";
+import { lien, ui, type Langue } from "../../lib/i18n";
 
-const ENTREES = [
-  { slug: "methode", libelle: "Méthode" },
-  { slug: "travailler-ensemble", libelle: "Travailler ensemble" },
-  { slug: "cas-usages", libelle: "Cas d’usages" },
-  { slug: "a-propos", libelle: "À propos" },
-];
+interface Props {
+  actif?: string;
+  langue: Langue;
+  /** L'adresse de cette page dans l'autre langue (ou un repli). */
+  autreLangue: string;
+}
+const { actif = "", langue, autreLangue } = Astro.props;
+const t = ui(langue);
+const ENTREES = ["methode", "travailler-ensemble", "cas-usages", "a-propos"] as const;
 const GROUPE = new Set([
-  ...cas.cas.filter((c) => c.niveau === 1).map((c) => c.id),
-  ...cas.roles.map((r) => r.slug),
+  ...catalogue.cas.filter((c) => c.niveau === 1).map((c) => c.id),
+  ...catalogue.roles.map((r) => r.slug),
 ]);
-
-const { actif = "" } = Astro.props;
 const courant = GROUPE.has(actif) ? "cas-usages" : actif;
+const autre = langue === "fr" ? "en" : "fr";
 ---
 
 <header class="site">
   <div class="wrap">
-    <a class="lockup" href="/" aria-label="Kigumi"></a>
+    <a class="lockup" href={lien("/", langue)} aria-label="Kigumi"></a>
     <nav>
       {ENTREES.map((e) => (
-        <a href={`/${e.slug}/`} class={e.slug === courant ? "on" : undefined}>{e.libelle}</a>
+        <a href={lien(`/${e}/`, langue)} class={e === courant ? "on" : undefined}>{t.menu[e]}</a>
       ))}
-      <a href="/contact/" class="btn btn-ghost btn-sm">Prendre rendez-vous</a>
+      <a href={lien("/contact/", langue)} class="btn btn-ghost btn-sm">{t.rdv}</a>
+      {/* Le choix est mémorisé : l'accueil ne redirigera plus selon le
+          navigateur une fois qu'on a choisi soi-même. */}
+      <a class="langue" href={autreLangue} hreflang={autre} lang={autre} data-langue={autre}
+         aria-label={t.autreLangue.libelle}>{t.autreLangue.code}</a>
       <button type="button" class="modetoggle" id="modetoggle"
-              aria-label="Passer en mode clair" aria-pressed="false">
+              aria-label={t.versClair} aria-pressed="false"
+              data-vers-clair={t.versClair} data-vers-sombre={t.versSombre}>
         <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
              stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
@@ -41,3 +53,11 @@ const courant = GROUPE.has(actif) ? "cas-usages" : actif;
     </nav>
   </div>
 </header>
+<script is:inline>
+  document.querySelectorAll("a[data-langue]").forEach(function (a) {
+    a.addEventListener("click", function () {
+      document.cookie = "langue=" + a.getAttribute("data-langue")
+        + "; path=/; max-age=31536000; SameSite=Lax; Secure";
+    });
+  });
+</script>
