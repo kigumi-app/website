@@ -1,6 +1,6 @@
 # Ce qui demande ton intervention
 
-> Mis à jour le 9 octobre 2026. Tout le reste du chantier est fait et vérifié ;
+> Mis à jour le 12 octobre 2026. Le site est en ligne sur `kigumi.app` depuis la bascule. Tout le reste du chantier est fait et vérifié ;
 > ce document ne liste que ce que je ne peux pas faire depuis le terminal.
 > Le plan complet est dans `MIGRATION.md` du dépôt `studio-website`.
 
@@ -58,7 +58,7 @@ l'anglais part vers `/en/`, sauf choix déjà fait au sélecteur ou robot.
 
 | Réglage | Valeur |
 |---|---|
-| Branche de production | `feat/portage-studio` *(provisoire, voir §5)* |
+| Branche de production | `main` |
 | Build command | `npm run build` |
 | Deploy command | `npx wrangler deploy` |
 | Autres branches | `npx wrangler versions upload` |
@@ -72,13 +72,13 @@ traduites. La table des correspondances est dans `src/data/adresses.json` (et
 `en.slug` dans `cas.json`) ; le sélecteur, les balises hreflang et le sitemap
 la lisent tous.
 
-Rien n'est public : tant que `INDEXABLE` vaut `false`
-(`src/lib/indexation.ts`), chaque page porte `noindex` et `robots.txt`
-interdit tout.
+`INDEXABLE` vaut `true` (`src/lib/indexation.ts`) depuis la bascule : plus
+de `noindex`, et `robots.txt` n'interdit que `/admin/`. Le repasser à `false`
+referme tout le site d'un coup.
 
 ---
 
-## 5. La bascule DNS — quand tout le reste est validé
+## 5. ~~La bascule DNS~~ ✅ faite le 11 octobre 2026
 
 À faire d'un seul tenant, un matin calme. **L'ordre compte** : `main` ne
 reçoit le portage qu'une fois GitHub Pages débranché. Sinon GitHub Pages
@@ -94,16 +94,20 @@ publierait tout le dépôt Astro, notes internes comprises, sur `kigumi.app`.
    domaine personnalisé **`kigumi.app`**
 3. ✅ Me prévenir : je vérifie les routes, les redirections 301, le sitemap et le
    flux RSS
-4. ✅ GitHub → `kigumi-app/website` → **Settings → Pages** : dépublier et retirer
-   le domaine personnalisé. Reste à mettre la source sur **None** : « Unpublish »
-   seul laisse la publication depuis `main` configurée
+4. ✅ GitHub → `kigumi-app/website` → **Settings → Pages** : dépublié, domaine
+   retiré, source sur **None** (« Unpublish » seul laissait la publication depuis
+   `main` configurée). L'API répond désormais 404 : Pages est éteint
 5. ✅ Fusionner `feat/portage-studio` dans `main`, puis remettre la branche de
    production du Worker sur **`main`**
-6. ⏳ Je passe `INDEXABLE` à `true` (PR `feat/indexation-bascule`), **le même jour** — plus tôt, on ferait
+6. ✅ `INDEXABLE` à `true` (PR #11), **le même jour** — plus tôt, on ferait
    indexer l'adresse workers.dev et `studio.kigumi.app` juste avant qu'on le
    réaffecte
-7. Soumettre le sitemap dans la Search Console (la propriété existe, la clé de
-   vérification est déjà dans la zone)
+7. ✅ Sitemap soumis dans la Search Console. ⏳ Google affichait « Impossible de
+   lire le sitemap » : il gardait en cache l'ancien `robots.txt` (`Disallow: /`).
+   Le sitemap et le `robots.txt` en ligne sont valides ; à revérifier dans
+   quelques jours, sinon soumettre directement `sitemap-0.xml`
+8. ✅ `www.kigumi.app` → règle de redirection Cloudflare, 301 vers l'apex
+   (chemin et paramètres conservés). « Always Use HTTPS » activé
 
 **Retour arrière :** retirer le domaine du Worker, recréer les enregistrements
 GitHub Pages. Tant que l'étape 4 n'est pas faite, GitHub Pages sert toujours
@@ -116,10 +120,16 @@ l'ancien site depuis `main`. Exposition : quelques minutes derrière Cloudflare.
 - [x] **Mentions légales** (PR `feat/indexation-bascule`) : l'hébergeur devient Cloudflare seul, GitHub doit
       disparaître de la page. C'est le genre de détail qu'on oublie six
       semaines plus tard.
-- [ ] `studio.kigumi.app` devient la console client. Sans risque : le site n'a
-      jamais été indexé.
+- [x] **Carte de partage** (`og:image`) : une par langue,
+      `public/studio/partage/og-{fr,en}.png`, générées par
+      `Studio/website/livrables/og-cartes.py`.
+- [ ] **Mesure d'audience** : Cloudflare Web Analytics, sans cookie. Activé
+      dans Cloudflare, mais l'injection automatique n'atteint pas les pages
+      servies par le Worker : coller le jeton du site dans `src/lib/mesure.ts`.
+- [ ] `studio.kigumi.app` devient la console client. En attendant, une règle
+      Cloudflare le redirige (301) vers `kigumi.app`.
 - [ ] **DMARC de `p=quarantine` à `p=reject`**, après avoir relu les rapports
-      Cloudflare sur deux ou trois semaines.
+      Cloudflare sur deux ou trois semaines : vers le 1er novembre 2026.
 - [ ] `MX` nul sur les sous-domaines qui n'envoient jamais de courrier.
       Aujourd'hui rien n'empêche d'usurper une adresse en
       `@studio.kigumi.app`.

@@ -8,6 +8,7 @@ import "../styles/studio/site.css";
 import Nav from "../components/studio/Nav.astro";
 import Footer from "../components/studio/Footer.astro";
 import { INDEXABLE } from "../lib/indexation";
+import { JETON_ANALYTICS } from "../lib/mesure";
 import { langueDe, equivalent, lien, ui } from "../lib/i18n";
 
 interface Props {
@@ -43,7 +44,7 @@ const [cheminFr, cheminEn] = langue === "fr" ? [chemin, jumeau] : [jumeau, chemi
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     {!INDEXABLE && <meta name="robots" content="noindex, nofollow" />}
-    <title>{titre} &mdash; Kigumi</title>
+    <title>{titre} · Kigumi</title>
     <meta name="description" content={description} />
     {!sansCanonique && <link rel="canonical" href={abs(chemin)} />}
     {jumeau && !sansCanonique && <>
@@ -53,16 +54,26 @@ const [cheminFr, cheminEn] = langue === "fr" ? [chemin, jumeau] : [jumeau, chemi
     </>}
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={langue === "fr" ? "fr_FR" : "en_GB"} />
-    <meta property="og:title" content={`${titre} — Kigumi`} />
+    <meta property="og:site_name" content="Kigumi" />
+    <meta property="og:title" content={`${titre} · Kigumi`} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={abs(chemin)} />
+    {/* Une carte par langue pour tout le site : les pages partagent le même
+        visuel, leur titre et leur description font la différence. */}
+    <meta property="og:image" content={abs(`/studio/partage/og-${langue}.png`)} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={t.carteAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="/studio/favicon/favicon.svg" />
     <link rel="apple-touch-icon" href="/studio/favicon/favicon-180.png" />
-    <link rel="alternate" type="application/rss+xml" title="Kigumi — Blog" href="/blog/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Kigumi · Blog" href="/blog/rss.xml" />
     {/* Retiré avant le premier rendu : sans ça, les sections qui s'animent à
         l'arrivée apparaîtraient puis disparaîtraient le temps du chargement. */}
     <script is:inline>document.documentElement.classList.remove("no-js")</script>
     <script is:inline src="/studio/site.js" defer></script>
+    {JETON_ANALYTICS && <script is:inline defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon={JSON.stringify({ token: JETON_ANALYTICS })}></script>}
   </head>
   <body>
     <div class="atmo atmo--fixe" aria-hidden="true"></div>
