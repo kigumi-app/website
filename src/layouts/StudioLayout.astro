@@ -1,6 +1,7 @@
 ---
 // Mise en page unique du site, dans les deux langues. La langue se lit dans
 // l'adresse (/en/… ou non) : une page n'a pas à la déclarer.
+import "../styles/studio/fonts.css";
 import "../styles/studio/tokens.css";
 import "../styles/studio/atmosphere.css";
 import "../styles/studio/explainers.css";
@@ -65,6 +66,9 @@ const [cheminFr, cheminEn] = langue === "fr" ? [chemin, jumeau] : [jumeau, chemi
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={t.carteAlt} />
     <meta name="twitter:card" content="summary_large_image" />
+    {/* Les deux polices visibles dès le premier écran : titre et texte. */}
+    <link rel="preload" href="/studio/fonts/satoshi-variable.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/studio/fonts/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="icon" href="/studio/favicon/favicon.svg" />
     <link rel="apple-touch-icon" href="/studio/favicon/favicon-180.png" />
     <link rel="alternate" type="application/rss+xml" title="Kigumi · Blog" href="/blog/rss.xml" />

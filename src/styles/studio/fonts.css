@@ -1,0 +1,33 @@
+/* Polices de la marque, servies par le site (aucun appel à un tiers).
+   Variables : un seul fichier par famille couvre toutes les graisses.
+   Satoshi : Fontshare (FFL) · Inter et JetBrains Mono : OFL, sous-ensemble
+   latin (français et anglais compris). Licences dans public/studio/fonts/.
+   Lora (--font-annotation) n'est utilisée nulle part : pas chargée. */
+@font-face {
+  font-family: "Satoshi";
+  src: url("/studio/fonts/satoshi-variable.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/studio/fonts/inter-latin-variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/studio/fonts/inter-latin-variable-italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/studio/fonts/jetbrains-mono-latin-variable.woff2") format("woff2");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
