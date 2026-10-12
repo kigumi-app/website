@@ -61,7 +61,7 @@ l'anglais part vers `/en/`, sauf choix déjà fait au sélecteur ou robot.
 | Branche de production | `main` |
 | Build command | `npm run build` |
 | Deploy command | `npx wrangler deploy` |
-| Autres branches | `npx wrangler versions upload` |
+| Autres branches | `npx wrangler preview` (exige le bloc `previews` de `wrangler.jsonc`) |
 | Variable de build | `NODE_VERSION` = `22` — Astro 6 exige Node ≥ 22.12 |
 
 - Production : `https://kigumi-website.stephane-6a8.workers.dev`
@@ -123,9 +123,9 @@ l'ancien site depuis `main`. Exposition : quelques minutes derrière Cloudflare.
 - [x] **Carte de partage** (`og:image`) : une par langue,
       `public/studio/partage/og-{fr,en}.png`, générées par
       `Studio/website/livrables/og-cartes.py`.
-- [ ] **Mesure d'audience** : Cloudflare Web Analytics, sans cookie. Activé
-      dans Cloudflare, mais l'injection automatique n'atteint pas les pages
-      servies par le Worker : coller le jeton du site dans `src/lib/mesure.ts`.
+- [x] **Mesure d'audience** : Cloudflare Web Analytics, sans cookie. Le script
+      est injecté par Cloudflare à la diffusion : rien à ajouter dans le code,
+      sous peine de compter chaque visite deux fois.
 - [ ] `studio.kigumi.app` devient la console client. En attendant, une règle
       Cloudflare le redirige (301) vers `kigumi.app`.
 - [ ] **DMARC de `p=quarantine` à `p=reject`**, après avoir relu les rapports

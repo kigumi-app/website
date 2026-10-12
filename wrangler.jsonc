@@ -2,7 +2,7 @@
 // la détection de langue sur l'accueil (worker/index.js).
 //
 // Workers Builds lance `npm run build`, puis `npx wrangler deploy` sur la
-// branche de production et `npx wrangler versions upload` sur les autres.
+// branche de production et `npx wrangler preview` sur les autres.
 // `_redirects` et les `404.html` (racine et en/) sont lus depuis dist/.
 {
   "$schema": "node_modules/wrangler/config-schema.json",
@@ -17,5 +17,9 @@
     // sans coût ni latence ajoutés.
     "run_worker_first": ["/"]
   },
-  "preview_urls": true
+  "preview_urls": true,
+  // Exigé par `wrangler preview` (prévisualisations des branches), même vide :
+  // le site n'a aucun réglage propre aux prévisualisations. Sans effet sur
+  // `wrangler deploy` en production.
+  "previews": {}
 }

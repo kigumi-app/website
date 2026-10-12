@@ -9,7 +9,6 @@ import "../styles/studio/site.css";
 import Nav from "../components/studio/Nav.astro";
 import Footer from "../components/studio/Footer.astro";
 import { INDEXABLE } from "../lib/indexation";
-import { JETON_ANALYTICS } from "../lib/mesure";
 import { langueDe, equivalent, lien, ui } from "../lib/i18n";
 
 interface Props {
@@ -76,8 +75,6 @@ const [cheminFr, cheminEn] = langue === "fr" ? [chemin, jumeau] : [jumeau, chemi
         l'arrivée apparaîtraient puis disparaîtraient le temps du chargement. */}
     <script is:inline>document.documentElement.classList.remove("no-js")</script>
     <script is:inline src="/studio/site.js" defer></script>
-    {JETON_ANALYTICS && <script is:inline defer src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon={JSON.stringify({ token: JETON_ANALYTICS })}></script>}
   </head>
   <body>
     <div class="atmo atmo--fixe" aria-hidden="true"></div>
