@@ -88,17 +88,18 @@ publierait tout le dépôt Astro, notes internes comprises, sur `kigumi.app`.
    de formulaire ; l'ancien, encore en ligne, continue de remplir la liste
    jusqu'à la bascule. Les inscrits ont demandé un accès à un produit qui n'en
    sera pas un : un mot pour le leur dire, et certains sont des prospects
-1. Cloudflare → DNS de `kigumi.app` : supprimer les enregistrements de l'apex
+1. ✅ Cloudflare → DNS de `kigumi.app` : supprimer les enregistrements de l'apex
    qui pointent vers GitHub Pages
-2. Worker `kigumi-website` → **Settings → Domains & Routes** → ajouter le
+2. ✅ Worker `kigumi-website` → **Settings → Domains & Routes** → ajouter le
    domaine personnalisé **`kigumi.app`**
-3. Me prévenir : je vérifie les routes, les redirections 301, le sitemap et le
+3. ✅ Me prévenir : je vérifie les routes, les redirections 301, le sitemap et le
    flux RSS
-4. GitHub → `kigumi-app/website` → **Settings → Pages** : dépublier et retirer
-   le domaine personnalisé
-5. Fusionner `feat/portage-studio` dans `main`, puis remettre la branche de
+4. ✅ GitHub → `kigumi-app/website` → **Settings → Pages** : dépublier et retirer
+   le domaine personnalisé. Reste à mettre la source sur **None** : « Unpublish »
+   seul laisse la publication depuis `main` configurée
+5. ✅ Fusionner `feat/portage-studio` dans `main`, puis remettre la branche de
    production du Worker sur **`main`**
-6. Je passe `INDEXABLE` à `true`, **le même jour** — plus tôt, on ferait
+6. ⏳ Je passe `INDEXABLE` à `true` (PR `feat/indexation-bascule`), **le même jour** — plus tôt, on ferait
    indexer l'adresse workers.dev et `studio.kigumi.app` juste avant qu'on le
    réaffecte
 7. Soumettre le sitemap dans la Search Console (la propriété existe, la clé de
@@ -112,7 +113,7 @@ l'ancien site depuis `main`. Exposition : quelques minutes derrière Cloudflare.
 
 ## 6. Après la bascule
 
-- [ ] **Mentions légales** : l'hébergeur devient Cloudflare seul, GitHub doit
+- [x] **Mentions légales** (PR `feat/indexation-bascule`) : l'hébergeur devient Cloudflare seul, GitHub doit
       disparaître de la page. C'est le genre de détail qu'on oublie six
       semaines plus tard.
 - [ ] `studio.kigumi.app` devient la console client. Sans risque : le site n'a
