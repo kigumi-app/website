@@ -11,7 +11,6 @@ npm run dev      # localhost:4321 (drafts visible)
 npm run build    # -> dist/  (drafts hidden)
 npm run preview  # serve the production build (verify draft-hiding)
 npm run check    # astro check — must be 0 errors
-node scripts/build-og.mjs   # regenerate public/og-default.png from the SVG
 ```
 
 ## Layout

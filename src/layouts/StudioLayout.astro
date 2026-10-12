@@ -1,6 +1,7 @@
 ---
 // Mise en page unique du site, dans les deux langues. La langue se lit dans
 // l'adresse (/en/… ou non) : une page n'a pas à la déclarer.
+import "../styles/studio/fonts.css";
 import "../styles/studio/tokens.css";
 import "../styles/studio/atmosphere.css";
 import "../styles/studio/explainers.css";
@@ -43,7 +44,7 @@ const [cheminFr, cheminEn] = langue === "fr" ? [chemin, jumeau] : [jumeau, chemi
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     {!INDEXABLE && <meta name="robots" content="noindex, nofollow" />}
-    <title>{titre} &mdash; Kigumi</title>
+    <title>{titre} · Kigumi</title>
     <meta name="description" content={description} />
     {!sansCanonique && <link rel="canonical" href={abs(chemin)} />}
     {jumeau && !sansCanonique && <>
@@ -53,12 +54,23 @@ const [cheminFr, cheminEn] = langue === "fr" ? [chemin, jumeau] : [jumeau, chemi
     </>}
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={langue === "fr" ? "fr_FR" : "en_GB"} />
-    <meta property="og:title" content={`${titre} — Kigumi`} />
+    <meta property="og:site_name" content="Kigumi" />
+    <meta property="og:title" content={`${titre} · Kigumi`} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={abs(chemin)} />
+    {/* Une carte par langue pour tout le site : les pages partagent le même
+        visuel, leur titre et leur description font la différence. */}
+    <meta property="og:image" content={abs(`/studio/partage/og-${langue}.png`)} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={t.carteAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    {/* Les deux polices visibles dès le premier écran : titre et texte. */}
+    <link rel="preload" href="/studio/fonts/satoshi-variable.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/studio/fonts/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="icon" href="/studio/favicon/favicon.svg" />
     <link rel="apple-touch-icon" href="/studio/favicon/favicon-180.png" />
-    <link rel="alternate" type="application/rss+xml" title="Kigumi — Blog" href="/blog/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Kigumi · Blog" href="/blog/rss.xml" />
     {/* Retiré avant le premier rendu : sans ça, les sections qui s'animent à
         l'arrivée apparaîtraient puis disparaîtraient le temps du chargement. */}
     <script is:inline>document.documentElement.classList.remove("no-js")</script>
