@@ -1,0 +1,90 @@
+/* =============================================================
+   Explicatifs animés — le mouvement.
+   Le SVG ne porte que des classes ; tout le minutage est ici.
+   Voir brief-motion-graphics.md.
+   ============================================================= */
+
+:root{
+  --beat-step: 600ms;   /* une étape de la séquence */
+  --beat-hold: 400ms;   /* le temps de lire entre deux */
+}
+
+.kx{transform-box:fill-box}
+
+/* État de départ : invisible et décalé. Chaque élément dit d'où il vient. */
+.kx .kx-a{opacity:0}
+.kx .kx-gauche{transform:translateX(-90px)}
+.kx .kx-droite{transform:translateX(48px)}
+.kx .kx-bas{transform:translateY(26px)}
+.kx .kx-pop{transform:scale(.86);transform-box:fill-box;transform-origin:center}
+.kx .kx-fade{transform:none}
+
+/* .joue : tout arrive, chacun à son tour via --t. */
+.kx.joue .kx-a{
+  opacity:1;transform:none;
+  transition:opacity var(--beat-step) var(--ease-out),
+             transform var(--beat-step) var(--ease-out);
+  transition-delay:var(--t,0s);
+}
+
+/* Éléments qui, APRÈS être arrivés, se déplacent : c'est le cœur de l'argument.
+   La ligne incertaine monte vers l'humain, les autres partent vers l'ERP. */
+.kx.joue .kx-monte{
+  transform:translateY(var(--monte,-104px));
+  transition:opacity var(--beat-step) var(--ease-out),
+             transform var(--beat-step) var(--ease-in-out);
+  transition-delay:var(--t,0s), 2.6s;
+}
+.kx.joue .kx-part{
+  transform:translateX(200px);
+  transition:opacity var(--beat-step) var(--ease-out),
+             transform var(--beat-step) var(--ease-in-out);
+  transition-delay:var(--t,0s), 3.1s;
+}
+/* La cause traitée s'efface, et le flux qu'elle produisait avec elle. */
+.kx.joue .kx-dissout{
+  opacity:.18;
+  transition:opacity var(--beat-step) var(--ease-out) 3s,
+             transform var(--beat-step) var(--ease-out) var(--t,0s);
+}
+.kx.joue .kx-sort{
+  opacity:0;
+  transition:opacity var(--beat-step) var(--ease-out) 3.4s,
+             transform var(--beat-step) var(--ease-out) var(--t,0s);
+}
+
+/* Déplacement générique. En paysage le doute MONTE, en portrait il DESCEND à
+   gauche : c'est la même idée dans deux compositions, donc une seule classe
+   qui prend sa destination en paramètre plutôt qu'une classe par direction.
+   --td règle QUAND il part : c'est le seul minutage qui porte l'argument. */
+.kx.joue .kx-va{
+  transform:translate(var(--dx,0px),var(--dy,0px));
+  transition:opacity var(--beat-step) var(--ease-out),
+             transform var(--beat-step) var(--ease-in-out);
+  transition-delay:var(--t,0s), var(--td,3s);
+}
+
+/* L'image finale est le livrable : sans animation, tout est là et correct.
+   C'est aussi l'état imprimé, et celui du mouvement réduit. */
+.kx.fixe .kx-a{opacity:1;transform:none;transition:none}
+.kx.fixe .kx-monte{transform:translateY(var(--monte,-104px))}
+.kx.fixe .kx-part{transform:translateX(200px)}
+.kx.fixe .kx-va{transform:translate(var(--dx,0px),var(--dy,0px))}
+.kx.fixe .kx-dissout{opacity:.18}
+.kx.fixe .kx-sort{opacity:0}
+
+@media (prefers-reduced-motion:reduce){
+  .kx .kx-a{opacity:1!important;transform:none!important;transition:none!important}
+  .kx .kx-monte{transform:translateY(var(--monte,-104px))!important}
+  .kx .kx-part{transform:translateX(200px)!important}
+  .kx .kx-va{transform:translate(var(--dx,0px),var(--dy,0px))!important}
+  .kx .kx-dissout{opacity:.18!important}
+  .kx .kx-sort{opacity:0!important}
+}
+@media print{
+  .kx .kx-a{opacity:1!important;transform:none!important;transition:none!important}
+  .kx .kx-monte{transform:translateY(var(--monte,-104px))!important}
+  .kx .kx-part{transform:translateX(200px)!important}
+  .kx .kx-va{transform:translate(var(--dx,0px),var(--dy,0px))!important}
+  .kx .kx-sort{opacity:0!important}
+}

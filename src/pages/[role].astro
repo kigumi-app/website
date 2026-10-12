@@ -1,0 +1,10 @@
+---
+// Les sept pages de rôle, engendrées depuis cas.json.
+import PageRole from "../components/studio/PageRole.astro";
+import { catalogue } from "../lib/cas";
+
+export function getStaticPaths() {
+  return catalogue.roles.map((role) => ({ params: { role: role.slug }, props: { role } }));
+}
+---
+<PageRole role={Astro.props.role} />

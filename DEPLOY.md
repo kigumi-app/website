@@ -1,0 +1,82 @@
+# Deploying kigumi.app
+
+The site is an Astro 5 static build. Hosting target: **Cloudflare Pages**,
+git-connected, auto-deploy on push to `main`. Writing a markdown file in
+`src/content/essays/` and pushing is the entire publish workflow.
+
+## Build settings (Cloudflare Pages dashboard)
+
+| Setting | Value |
+|---|---|
+| Framework preset | Astro |
+| Build command | `npm run build` |
+| Build output directory | `dist` |
+| Root directory | *(blank — project is the repo root)* |
+| Environment variable | `NODE_VERSION` = `22` |
+
+Cloudflare's build image does **not** provide Node 25. `NODE_VERSION=22` is required —
+Astro 6 needs Node ≥ 22.12; the build fails without it. `.nvmrc` pins it locally.
+
+## One-time setup + DNS cutover (must be done in a browser — Claude Code cannot)
+
+Zero-downtime: GitHub Pages keeps serving `kigumi.app` until step 7. The
+legacy `index.html` / `how-it-works.html` / `style.css` / `CNAME` stay in the
+repo until the preview is validated, so the old site never breaks.
+
+```
+PRE-CUTOVER (safe; live site unaffected)
+[ ] 1. Cloudflare → Workers & Pages → Create → Pages → Connect to Git
+[ ] 2. Authorize GitHub, select repo Le-Steph/merlion, branch main
+[ ] 3. Build settings: preset Astro · cmd `npm run build` · output `dist`
+       · root blank · env NODE_VERSION=22
+[ ] 4. Save & Deploy. Wait for the first build to go green.
+[ ] 5. Open the *.pages.dev preview URL. Verify:
+       /, /how-it-works, /writing, /rss.xml, /sitemap-index.xml,
+       the waiting-list form submit (network call to loops.so),
+       favicons, OG card (https://<preview>/og-default.png).
+       Drafts are hidden in the build — /writing is empty until an
+       essay's `draft:` is set to false. That is expected.
+
+DNS CUTOVER (flips the domain — only after preview is good)
+[ ] 6. Pages project → Custom domains → add  kigumi.app  (and  www  if used)
+[ ] 7. DNS:
+       - If kigumi.app DNS is already on Cloudflare: confirm the
+         auto-created record resolves.
+       - If DNS is elsewhere / on GitHub Pages: remove the GitHub Pages
+         A records (185.199.108-111.153) and any apex/www CNAME, then
+         add the record Cloudflare instructs (CNAME → <project>.pages.dev,
+         or move the zone to Cloudflare nameservers).
+[ ] 8. GitHub repo → Settings → Pages → Source = None; remove the custom
+       domain there so GitHub stops serving kigumi.app.
+[ ] 9. Verify https://kigumi.app loads the Astro site with valid TLS
+       (Cloudflare issues the cert automatically).
+[ ] 10. Confirm auto-deploy: push any commit to main → Pages rebuilds.
+
+POST-CUTOVER (in-repo, do as the final commit once 1-10 pass)
+[ ] 11. Delete the legacy files: index.html, how-it-works.html,
+        style.css, CNAME. They are preserved in git history and on
+        the pre-cutover commits as the rollback path.
+```
+
+## Rollback
+
+Until step 7, `kigumi.app` resolves to GitHub Pages serving the original
+static site. If the Cloudflare build or preview is wrong, do **not** flip
+DNS — iterate on the `.pages.dev` URL. If DNS was already flipped and a
+regression appears: re-point DNS to the GitHub Pages A records and
+re-enable GitHub Pages Source. The legacy HTML remains in git history;
+never force-push over it.
+
+## Publishing an essay (the steady-state workflow)
+
+1. Add `src/content/essays/<slug>.md` with frontmatter
+   (`title`, `description`, `pubDate`, `pillar`, `draft`).
+2. While drafting keep `draft: true` — visible in `npm run dev`
+   (localhost:4321), hidden in the production build.
+3. When ready, set `draft: false`, commit, push to `main`.
+4. Cloudflare Pages rebuilds and the post is live, in `/rss.xml`,
+   and in `/sitemap-index.xml`.
+
+Local commands: `npm run dev` · `npm run build` · `npm run preview`
+· `npm run check`. Regenerate the OG card after editing
+`public/og-default.svg`: `node scripts/build-og.mjs`.

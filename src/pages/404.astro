@@ -1,0 +1,22 @@
+---
+// La page d'erreur appartient au site du studio : c'est là qu'arrivent la
+// plupart des adresses mal tapées. Trois sorties, aucune adresse canonique.
+import StudioLayout from "../layouts/StudioLayout.astro";
+---
+<StudioLayout
+  titre="Page introuvable"
+  description="Cette page n’existe pas ou a changé d’adresse."
+  sansCanonique>
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow">Erreur 404</p>
+    <h1>Cette page n&rsquo;existe pas.</h1>
+    <p class="lead">Elle a peut-être changé d&rsquo;adresse. Le reste du site est toujours là.</p>
+    <div class="btn-row">
+      <a class="btn" href="/">Retour à l&rsquo;accueil</a>
+      <a class="btn btn-ghost" href="/cas-usages/">Voir les cas d&rsquo;usages</a>
+      <a class="btn btn-ghost" href="/lab/">Le lab</a>
+    </div>
+  </div>
+</section>
+</StudioLayout>

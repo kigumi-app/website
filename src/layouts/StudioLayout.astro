@@ -1,0 +1,89 @@
+---
+// Mise en page unique du site, dans les deux langues. La langue se lit dans
+// l'adresse (/en/… ou non) : une page n'a pas à la déclarer.
+import "../styles/studio/tokens.css";
+import "../styles/studio/atmosphere.css";
+import "../styles/studio/explainers.css";
+import "../styles/studio/site.css";
+import Nav from "../components/studio/Nav.astro";
+import Footer from "../components/studio/Footer.astro";
+import { INDEXABLE } from "../lib/indexation";
+import { langueDe, equivalent, lien, ui } from "../lib/i18n";
+
+interface Props {
+  titre: string;
+  description: string;
+  /** Pour allumer la bonne entrée du menu. Les pages de cas et de rôle
+   *  passent leur propre identifiant : le menu les rattache au groupe. */
+  actif?: string;
+  /** Fil d'Ariane, sans l'accueil : il est ajouté en tête. Le dernier
+   *  élément est la page courante et ne porte pas de lien. */
+  fil?: { libelle: string; href?: string }[];
+  /** La page d'erreur n'a pas d'adresse propre à déclarer. */
+  sansCanonique?: boolean;
+  /** Où mène le sélecteur de langue quand la page n'a pas d'équivalent
+   *  (un article écrit dans une seule langue) : jamais vers l'accueil. */
+  replilangue?: string;
+}
+const { titre, description, actif = "", fil = [], sansCanonique = false, replilangue } = Astro.props;
+const chemin = Astro.url.pathname;
+const langue = langueDe(chemin);
+const t = ui(langue);
+// Équivalent véritable : il justifie les balises hreflang. Le repli, non — il
+// sert seulement à ne pas laisser le lecteur sans issue.
+const jumeau = equivalent(chemin);
+const autreLangue = jumeau ?? replilangue ?? lien("/", langue === "fr" ? "en" : "fr");
+const abs = (c: string) => new URL(c, Astro.site).href;
+const [cheminFr, cheminEn] = langue === "fr" ? [chemin, jumeau] : [jumeau, chemin];
+---
+
+<!doctype html>
+<html lang={langue} data-palette="walnut" data-mode="dark" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    {!INDEXABLE && <meta name="robots" content="noindex, nofollow" />}
+    <title>{titre} &mdash; Kigumi</title>
+    <meta name="description" content={description} />
+    {!sansCanonique && <link rel="canonical" href={abs(chemin)} />}
+    {jumeau && !sansCanonique && <>
+      <link rel="alternate" hreflang="fr" href={abs(cheminFr!)} />
+      <link rel="alternate" hreflang="en" href={abs(cheminEn!)} />
+      <link rel="alternate" hreflang="x-default" href={abs(cheminFr!)} />
+    </>}
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={langue === "fr" ? "fr_FR" : "en_GB"} />
+    <meta property="og:title" content={`${titre} — Kigumi`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={abs(chemin)} />
+    <link rel="icon" href="/studio/favicon/favicon.svg" />
+    <link rel="apple-touch-icon" href="/studio/favicon/favicon-180.png" />
+    <link rel="alternate" type="application/rss+xml" title="Kigumi — Blog" href="/blog/rss.xml" />
+    {/* Retiré avant le premier rendu : sans ça, les sections qui s'animent à
+        l'arrivée apparaîtraient puis disparaîtraient le temps du chargement. */}
+    <script is:inline>document.documentElement.classList.remove("no-js")</script>
+    <script is:inline src="/studio/site.js" defer></script>
+  </head>
+  <body>
+    <div class="atmo atmo--fixe" aria-hidden="true"></div>
+    <Nav actif={actif} langue={langue} autreLangue={autreLangue} />
+    {fil.length > 0 && (
+      <nav class="fil" aria-label={t.filAriane}>
+        <ol class="wrap">
+          <li><a href={lien("/", langue)}>Kigumi</a></li>
+          {fil.map((e, i) => (
+            <li>
+              {e.href && i < fil.length - 1
+                ? <a href={e.href}>{e.libelle}</a>
+                : <span aria-current="page">{e.libelle}</span>}
+            </li>
+          ))}
+        </ol>
+      </nav>
+    )}
+    <main>
+      <slot />
+    </main>
+    <Footer langue={langue} />
+  </body>
+</html>

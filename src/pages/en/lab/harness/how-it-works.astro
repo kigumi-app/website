@@ -1,0 +1,134 @@
+---
+import { AGENDA } from "../../../../lib/contact";
+// The four stages of Harness on the order-processing case. Screens are held
+// to 42 characters per line, like the French page, so they fit at 390 px.
+import StudioLayout from "../../../../layouts/StudioLayout.astro";
+import LabNav from "../../../../components/studio/LabNav.astro";
+import { parId, vueCas } from "../../../../lib/cas";
+
+const fiche = vueCas(parId.get("industrie-distribution")!, "en");
+---
+<StudioLayout
+  titre="Harness · How it works"
+  description="Read, understand, evolve, verify: the four stages of Harness on a customer order received as an attachment."
+  actif=""
+  fil={[{ libelle: "Lab", href: "/en/lab/" }, { libelle: "Harness", href: "/en/lab/harness/" }, { libelle: "How it works" }]}>
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow">Harness · How it works</p>
+    <h1>Read, understand, evolve, verify.</h1>
+    <p class="lead">Four stages, shown on a process we automate: handling a customer order that arrives as an attachment. It&rsquo;s the one from the <a href={fiche.href}>{fiche.public}</a> case.</p>
+    <LabNav courant="fonctionnement" />
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="temps">
+      <div>
+        <span class="n">01 · Read</span>
+        <h2>We apply it to the process as it actually runs.</h2>
+        <p>Not to the written procedure, which is often out of date. Harness reads the messages received, the ERP data and the files the team keeps on the side, and records what the process really does: its steps, its rules, and the exceptions handled by hand.</p>
+      </div>
+      <figure class="ecran">
+        <div class="barre">harness · read · customer-orders</div>
+<pre><span class="fort">Sources read</span>
+  orders@ inbox      1,240 messages
+  ERP                customers, items
+  discount grid      shared spreadsheet
+
+<span class="fort">Found</span>
+  62  behaviours
+  18  business rules
+   <span class="alerte">9  exceptions handled by hand</span></pre>
+      </figure>
+    </div>
+
+    <div class="temps">
+      <div>
+        <span class="n">02 · Understand</span>
+        <h2>The steps, rules and exceptions, on one map.</h2>
+        <p>What was found becomes a map: what each step does, under which conditions, and what it does when a condition isn&rsquo;t met. Every behaviour is written in a form that can be verified.</p>
+      </div>
+      <figure class="ecran">
+        <div class="barre">harness · map · identify the customer</div>
+<pre><span class="fort">Identify the customer</span>     step · agent
+
+  Given    an order received as PDF
+  When     the sender is unknown
+  Then     look for the customer number
+           in the document,
+           <span class="alerte">else escalate to sales admin</span>
+
+  Linked   Match the references
+           Apply the customer's terms</pre>
+      </figure>
+    </div>
+
+    <div class="temps">
+      <div>
+        <span class="n">03 · Evolve</span>
+        <h2>We describe the change. Harness proposes, someone reviews.</h2>
+        <p>A change is described in one sentence. Harness turns it into steps and rules, shows what it touches, and nothing goes out without approval. The example also adds a <em>required</em> human step: that&rsquo;s where the autonomy left to agents is set, step by step.</p>
+      </div>
+      <figure class="ecran">
+        <div class="barre">harness · change · approval threshold</div>
+<pre><span class="fort">Request</span>
+  Above €20,000, the sales admin
+  manager approves before entry.
+
+<span class="fort">Proposed</span>
+  + Approval threshold    condition
+  <span class="alerte">+ Sales admin approval  human · required</span>
+  ~ ERP entry             after approval
+
+            <span class="choix">Accept</span>  <span class="choix">Reject</span></pre>
+      </figure>
+    </div>
+
+    <div class="temps">
+      <div>
+        <span class="n">04 · Verify</span>
+        <h2>17 of 19 behaviours verified. We know where the gaps are.</h2>
+        <p>Every expected behaviour is checked against what the process does. The two gaps in the example are typical: manual handling absorbed them, nobody had ever written them down, and an agent would have reproduced them without anyone noticing.</p>
+      </div>
+      <figure class="ecran">
+        <div class="barre">harness · verify · 17 / 19</div>
+<pre>✓ Customer identified (address or number)
+✓ References matched to the catalogue
+✓ Customer pricing terms applied
+✓ Consistency checked before entry
+✓ Threshold met: sales admin approval
+<span class="alerte">✗ Reference not in catalogue:
+    no escalation path
+✗ One-off discount:
+    rule missing from the grid</span></pre>
+      </figure>
+    </div>
+
+    <p class="muted" style="margin-top:56px;font-size:14px">Illustrative example: the volumes, rules and gaps are built from situations observed in this industry. Not a mission we have delivered.</p>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap prose">
+    <h2>What is verified here is what gets measured next.</h2>
+    <p>A process whose every behaviour is known is a process whose gain can be measured. For this order, the case sets three measures:</p>
+    <ul class="measures">
+      {fiche.mesure.map((m) => <li>{m}</li>)}
+    </ul>
+    <p style="margin-top:28px"><a href={fiche.href}>Read the full case &rarr;</a></p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>On your processes</h2>
+    <p>45 minutes to find out whether it&rsquo;s worth it at your company.</p>
+    <div class="btn-row">
+      <a class="btn" href={AGENDA} target="_blank" rel="noopener">Book a call</a>
+      <a class="btn btn-ghost" href="/en/method/">See the method</a>
+    </div>
+  </div>
+</section>
+</StudioLayout>

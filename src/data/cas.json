@@ -1,0 +1,699 @@
+{
+  "_": "Source unique des cas d'usages. bin/blocs.py en tire les cartes, les fiches courtes et l'index par rôle. Ne jamais recopier ces textes dans une page : ils ont déjà divergé deux fois ailleurs sur ce projet.",
+  "_niveaux": "1 = fiche complète, avec sa propre page. 2 = entrée courte sur le hub. On ne promeut au niveau 1 que lorsqu'on peut écrire le mécanisme en détail, pas seulement le nommer. La mesure est une liste : un élément par métrique, phrase complète, sans point final.",
+  "cas": [
+    {
+      "id": "conseil-ingenierie",
+      "niveau": 1,
+      "page": "conseil-ingenierie.html",
+      "public": "Conseil, ingénierie, bureaux d'études",
+      "titre": "Vous répondez à des appels d'offres",
+      "accroche": "Les réponses existent déjà, éparpillées dans vos dossiers passés. À chaque questionnaire, tout est réécrit.",
+      "mesure": [
+        "Les heures passées par dossier",
+        "Le délai de remise",
+        "Le nombre de dossiers traités à effectif constant"
+      ],
+      "mecanisme": "Un agent qui lit le dossier, en extrait les questions, et retrouve ce que vous avez déjà répondu dans des dossiers comparables, avec la source de chaque réponse.",
+      "en": {
+        "slug": "consulting-engineering",
+        "public": "Consulting, engineering and design offices",
+        "titre": "You respond to calls for tender",
+        "accroche": "The answers already exist, scattered across your past tenders. Every questionnaire gets rewritten from scratch.",
+        "mesure": [
+          "Hours spent per tender",
+          "Time to submission",
+          "Tenders handled with the same headcount"
+        ],
+        "mecanisme": "An agent that reads the tender, extracts the questions, and finds what you have already answered in comparable tenders, with the source of every answer."
+      }
+    },
+    {
+      "id": "industrie-distribution",
+      "niveau": 1,
+      "page": "industrie-distribution.html",
+      "public": "Industrie et distribution B2B",
+      "titre": "Vos commandes arrivent en désordre",
+      "accroche": "PDF, e-mails, tableurs. Quelqu'un traduit, contrôle, puis ressaisit tout dans l'ERP.",
+      "mesure": [
+        "Le temps de traitement par commande",
+        "Le taux d'erreur de saisie",
+        "Le coût des avoirs évités"
+      ],
+      "mecanisme": "Un agent qui lit la commande, identifie le client et ses conditions, fait correspondre les références et contrôle la cohérence avant la saisie.",
+      "en": {
+        "slug": "industry-distribution",
+        "public": "Manufacturing and B2B distribution",
+        "titre": "Your orders arrive in every format",
+        "accroche": "PDFs, emails, spreadsheets. Someone translates, checks, then re-keys everything into the ERP.",
+        "mesure": [
+          "Processing time per order",
+          "Data-entry error rate",
+          "Cost of credit notes avoided"
+        ],
+        "mecanisme": "An agent that reads the order, identifies the customer and their terms, matches the product references and checks consistency before entry."
+      }
+    },
+    {
+      "id": "service-client",
+      "niveau": 1,
+      "page": "service-client.html",
+      "public": "Éditeurs et services récurrents",
+      "titre": "Votre service client répond toujours aux mêmes questions",
+      "accroche": "Les outils du marché vous font répondre plus vite. Aucun ne vous dit pourquoi elles arrivent.",
+      "mesure": [
+        "Le volume mensuel de demandes",
+        "La part de demandes répétitives",
+        "Le volume qui disparaît une fois les causes corrigées"
+      ],
+      "mecanisme": "Un agent qui qualifie et route les demandes, répond sur les cas déjà traités, et vous remet chaque mois ce qui, en amont, les provoque.",
+      "en": {
+        "slug": "recurring-services",
+        "public": "Software publishers and recurring services",
+        "titre": "Your customer service keeps answering the same questions",
+        "accroche": "Off-the-shelf tools help you answer faster. None of them tells you why the questions keep coming.",
+        "mesure": [
+          "Monthly request volume",
+          "Share of repetitive requests",
+          "Volume that disappears once the causes are fixed"
+        ],
+        "mecanisme": "An agent that qualifies and routes requests, answers the cases already handled, and gives you every month what is causing them upstream."
+      }
+    },
+    {
+      "id": "facturation",
+      "niveau": 2,
+      "public": "Direction administrative et financière",
+      "titre": "Vos factures partent, les règlements traînent",
+      "accroche": "Les relances se font quand quelqu'un y pense. Le rapprochement des règlements se fait à la main, et les litiges attendent qu'on les instruise.",
+      "mecanisme": "Un agent qui relance selon l'historique de chaque client plutôt qu'au calendrier, rapproche les règlements reçus, et prépare l'instruction des litiges avec les pièces qui s'y rapportent.",
+      "mesure": [
+        "Le délai moyen de règlement (DSO)",
+        "Le nombre de relances par encaissement",
+        "Le coût des litiges non instruits"
+      ],
+      "en": {
+        "public": "Finance and administration",
+        "titre": "Your invoices go out, payments lag behind",
+        "accroche": "Reminders go out when someone thinks of them. Payments are matched by hand, and disputes wait for someone to investigate them.",
+        "mecanisme": "An agent that sends reminders based on each customer's history rather than the calendar, matches incoming payments, and prepares each dispute with the documents that relate to it.",
+        "mesure": [
+          "Days sales outstanding (DSO)",
+          "Reminders per payment collected",
+          "Cost of disputes left uninvestigated"
+        ]
+      }
+    },
+    {
+      "id": "achats",
+      "niveau": 2,
+      "public": "Achats et approvisionnements",
+      "titre": "Vous ne savez pas si vos conditions négociées sont appliquées",
+      "accroche": "Les offres se comparent à la main, les conditions se perdent dans les contrats, et un retard de livraison se découvre quand le client appelle.",
+      "mecanisme": "Un agent qui met les offres au même format pour les comparer, contrôle chaque facture contre les conditions réellement négociées, et signale les retards avant qu'ils ne remontent du terrain.",
+      "mesure": [
+        "L'écart entre conditions négociées et conditions facturées",
+        "Le délai de détection d'un retard de livraison"
+      ],
+      "en": {
+        "public": "Purchasing and supply",
+        "titre": "You don't know whether your negotiated terms are applied",
+        "accroche": "Quotes are compared by hand, terms get lost in contracts, and a late delivery is discovered when the customer calls.",
+        "mecanisme": "An agent that puts quotes in the same format to compare them, checks every invoice against the terms actually negotiated, and flags delays before they surface on the ground.",
+        "mesure": [
+          "Gap between negotiated and invoiced terms",
+          "Time to detect a late delivery"
+        ]
+      }
+    },
+    {
+      "id": "qualite",
+      "niveau": 2,
+      "public": "Qualité, conformité, RSE",
+      "titre": "Chaque audit vous coûte trois semaines",
+      "accroche": "Les pièces existent : procédures, enregistrements, certificats. Elles sont éparpillées, et personne ne sait dire si le dossier est complet avant de l'avoir fini.",
+      "mecanisme": "Un agent qui rassemble les pièces exigées par le référentiel, signale celles qui manquent ou qui ont expiré, et prépare le dossier avec la source de chaque élément.",
+      "mesure": [
+        "Le temps de constitution d'un dossier",
+        "Le nombre d'allers-retours avec l'auditeur",
+        "Le nombre de non-conformités formelles"
+      ],
+      "en": {
+        "public": "Quality, compliance, CSR",
+        "titre": "Every audit costs you three weeks",
+        "accroche": "The documents exist: procedures, records, certificates. They are scattered, and nobody can say whether the file is complete before finishing it.",
+        "mecanisme": "An agent that gathers the documents the standard requires, flags those that are missing or expired, and prepares the file with the source of every item.",
+        "mesure": [
+          "Time to assemble an audit file",
+          "Back-and-forths with the auditor",
+          "Formal non-conformities"
+        ]
+      }
+    },
+    {
+      "id": "comite",
+      "niveau": 2,
+      "public": "Direction générale",
+      "titre": "Votre comité se prépare dans l'urgence",
+      "accroche": "Les chiffres sont dans six outils. Quelqu'un les rassemble la veille, et personne n'a le temps de regarder pourquoi ils bougent.",
+      "mecanisme": "Un agent qui rassemble les indicateurs depuis vos outils, relève les écarts par rapport au plan, et produit le dossier en indiquant d'où vient chaque chiffre.",
+      "mesure": [
+        "Le délai entre la clôture et le dossier",
+        "Le temps passé à le préparer",
+        "La part de la réunion consacrée à commenter plutôt qu'à constater"
+      ],
+      "en": {
+        "public": "General management",
+        "titre": "Your board meetings are prepared in a rush",
+        "accroche": "The figures sit in six tools. Someone pulls them together the night before, and nobody has time to look at why they move.",
+        "mecanisme": "An agent that gathers the indicators from your tools, flags variances against plan, and produces the board pack, showing where every figure comes from.",
+        "mesure": [
+          "Time from close to board pack",
+          "Time spent preparing it",
+          "Share of the meeting spent discussing rather than reporting"
+        ]
+      }
+    },
+    {
+      "id": "derive",
+      "niveau": 2,
+      "public": "Direction des opérations",
+      "titre": "Vous apprenez les dérives trop tard",
+      "accroche": "Les retards, les dépassements et les dossiers bloqués sont déjà dans vos outils. Personne ne les regarde avant que quelqu'un se plaigne.",
+      "mecanisme": "Un agent qui surveille les seuils que vous avez définis et alerte la bonne personne en indiquant la cause probable.",
+      "mesure": [
+        "Le délai entre le moment où un dossier dérive et le moment où quelqu'un le sait"
+      ],
+      "en": {
+        "public": "Operations",
+        "titre": "You find out about slippage too late",
+        "accroche": "Delays, overruns and stuck files are already in your tools. Nobody looks at them until someone complains.",
+        "mecanisme": "An agent that watches the thresholds you have set and alerts the right person with the likely cause.",
+        "mesure": [
+          "Time between a file going off track and someone knowing"
+        ]
+      }
+    },
+    {
+      "id": "engagements",
+      "niveau": 2,
+      "public": "Direction générale",
+      "titre": "Vos décisions de comité n'ont pas de suite",
+      "accroche": "Ce qui a été décidé, qui le porte, où ça en est. Entre deux réunions, personne ne tient la liste à jour, et la suivante commence par reconstituer la précédente.",
+      "mecanisme": "Un agent qui relève les décisions prises, les rattache à un responsable et à une échéance, et vous rend leur état avant la réunion suivante.",
+      "mesure": [
+        "La part des décisions sans suite à 90 jours",
+        "Le temps passé en début de comité à faire le point sur le précédent"
+      ],
+      "en": {
+        "public": "General management",
+        "titre": "Your board decisions go nowhere",
+        "accroche": "What was decided, who owns it, where it stands. Between two meetings nobody keeps the list up to date, and the next one starts by reconstructing the last.",
+        "mecanisme": "An agent that records the decisions taken, assigns each one an owner and a deadline, and reports their status before the next meeting.",
+        "mesure": [
+          "Share of decisions with no follow-up after 90 days",
+          "Time spent at the start of each meeting reviewing the previous one"
+        ]
+      }
+    },
+    {
+      "id": "reporting-financier",
+      "niveau": 2,
+      "public": "Direction générale",
+      "titre": "Vos reportings partent dans un format différent à chaque destinataire",
+      "accroche": "Actionnaires, banque, conseil : les mêmes chiffres, remis en forme à chaque fois, et corrigés après envoi quand un écart apparaît.",
+      "mecanisme": "Un agent qui produit chaque reporting depuis la même source, dans le format attendu par son destinataire, en signalant les écarts avant l'envoi.",
+      "mesure": [
+        "Le délai de production",
+        "Le nombre de versions corrigées après envoi"
+      ],
+      "en": {
+        "public": "General management",
+        "titre": "Your reports go out in a different format for every recipient",
+        "accroche": "Shareholders, bank, board: the same figures, reformatted every time, and corrected after sending when a discrepancy appears.",
+        "mecanisme": "An agent that produces every report from the same source, in the format its recipient expects, flagging discrepancies before anything is sent.",
+        "mesure": [
+          "Production time",
+          "Versions corrected after sending"
+        ]
+      }
+    },
+    {
+      "id": "crm",
+      "niveau": 2,
+      "public": "Direction commerciale et développement",
+      "titre": "Votre CRM n'est jamais à jour",
+      "accroche": "Le tenir à jour est le travail que personne ne fait. Résultat : le prévisionnel repose sur ce que chacun se rappelle.",
+      "mecanisme": "Un agent qui renseigne les fiches depuis les échanges réels (e-mails, comptes rendus, devis émis) et signale les opportunités dont plus rien ne bouge.",
+      "mesure": [
+        "La part des opportunités à jour",
+        "L'écart entre le prévisionnel et le réalisé"
+      ],
+      "en": {
+        "public": "Sales and business development",
+        "titre": "Your CRM is never up to date",
+        "accroche": "Keeping it current is the job nobody does. The result: the forecast rests on what everyone remembers.",
+        "mecanisme": "An agent that fills in the records from real exchanges (emails, meeting notes, quotes sent) and flags opportunities where nothing is moving any more.",
+        "mesure": [
+          "Share of opportunities up to date",
+          "Gap between forecast and actual"
+        ]
+      }
+    },
+    {
+      "id": "devis",
+      "niveau": 2,
+      "public": "Direction commerciale et développement",
+      "titre": "Vos devis prennent trois jours",
+      "accroche": "Le besoin est connu, les conditions existent, les prix aussi. Le chiffrage repasse pourtant par une personne qui doit retrouver chaque élément.",
+      "mecanisme": "Un agent qui prépare le devis à partir du besoin exprimé et des conditions en vigueur pour ce client, et remonte à un humain tout ce qui sort du cadre habituel.",
+      "mesure": [
+        "Le délai de remise",
+        "L'écart de marge entre le devis et la facturation"
+      ],
+      "en": {
+        "public": "Sales and business development",
+        "titre": "Your quotes take three days",
+        "accroche": "The need is known, the terms exist, so do the prices. Yet every quote goes back through one person who has to find each element.",
+        "mecanisme": "An agent that prepares the quote from the stated need and the terms in force for that customer, and escalates to a human anything outside the usual frame.",
+        "mesure": [
+          "Time to send a quote",
+          "Margin gap between quote and invoice"
+        ]
+      }
+    },
+    {
+      "id": "litiges",
+      "niveau": 2,
+      "public": "Direction des opérations et administration des ventes",
+      "titre": "Vos litiges et vos retours s'instruisent trop lentement",
+      "accroche": "Les pièces existent, éparpillées entre l'ERP, les e-mails et le transporteur. Les rassembler prend plus de temps que de trancher.",
+      "mecanisme": "Un agent qui réunit les pièces d'un litige (commande, bon de livraison, échanges, preuve de transport) et prépare l'instruction avec ce qui manque clairement signalé.",
+      "mesure": [
+        "Le délai de traitement d'un litige",
+        "Le coût des avoirs accordés faute de preuve"
+      ],
+      "en": {
+        "public": "Operations and sales administration",
+        "titre": "Your disputes and returns take too long to investigate",
+        "accroche": "The documents exist, scattered between the ERP, emails and the carrier. Gathering them takes longer than deciding.",
+        "mecanisme": "An agent that pulls together the documents of a dispute (order, delivery note, correspondence, proof of delivery) and prepares the case with anything missing clearly flagged.",
+        "mesure": [
+          "Time to resolve a dispute",
+          "Cost of credit notes granted for lack of proof"
+        ]
+      }
+    },
+    {
+      "id": "fournisseurs-notes",
+      "niveau": 2,
+      "public": "Direction administrative et financière",
+      "titre": "Vos factures fournisseurs et vos notes de frais se saisissent à la main",
+      "accroche": "Chaque pièce est lue, codifiée, rapprochée d'une commande, puis saisie. Le volume est constant et la valeur ajoutée, nulle.",
+      "mecanisme": "Un agent qui lit la pièce, la rapproche de la commande ou du contrat correspondant, et prépare l'écriture. Ce qui ne se rapproche pas remonte à votre équipe.",
+      "mesure": [
+        "Le coût de traitement par pièce",
+        "Le délai de clôture mensuelle"
+      ],
+      "en": {
+        "public": "Finance and administration",
+        "titre": "Your supplier invoices and expense claims are keyed in by hand",
+        "accroche": "Every document is read, coded, matched to a purchase order, then entered. The volume is constant and the added value is zero.",
+        "mecanisme": "An agent that reads the document, matches it to the corresponding order or contract, and prepares the entry. Anything that doesn't match goes back to your team.",
+        "mesure": [
+          "Processing cost per document",
+          "Time to month-end close"
+        ]
+      }
+    },
+    {
+      "id": "contrats",
+      "niveau": 2,
+      "public": "Direction administrative et financière",
+      "titre": "Vous reconduisez des contrats sans vous en apercevoir",
+      "accroche": "Échéances, indexations, tacites reconductions. Les dates sont dans les contrats, les contrats sont dans un dossier, et personne ne les relit.",
+      "mecanisme": "Un agent qui relève les échéances et les clauses de révision de vos contrats, et vous alerte dans la fenêtre où vous pouvez encore renégocier.",
+      "mesure": [
+        "Le nombre de reconductions subies",
+        "L'écart aux conditions qui étaient renégociables"
+      ],
+      "en": {
+        "public": "Finance and administration",
+        "titre": "Your contracts renew without you noticing",
+        "accroche": "Expiry dates, indexation, automatic renewals. The dates are in the contracts, the contracts are in a folder, and nobody rereads them.",
+        "mecanisme": "An agent that tracks the expiry dates and revision clauses of your contracts, and alerts you within the window where you can still renegotiate.",
+        "mesure": [
+          "Renewals you didn't choose",
+          "Gap to the terms that could have been renegotiated"
+        ]
+      }
+    },
+    {
+      "id": "documentation",
+      "niveau": 2,
+      "public": "Direction de la relation client",
+      "titre": "Votre documentation est périmée avant d'avoir servi",
+      "accroche": "Les bonnes réponses sont dans les tickets déjà traités. La base de connaissance, elle, date de la dernière fois que quelqu'un a eu le temps.",
+      "mecanisme": "Un agent qui repère les réponses récurrentes dans les échanges réels, propose les articles à créer ou à corriger, et signale ceux que plus personne n'utilise.",
+      "mesure": [
+        "La part des demandes résolues sans intervention humaine",
+        "L'âge moyen des articles consultés"
+      ],
+      "en": {
+        "public": "Customer relations",
+        "titre": "Your documentation is out of date before it is ever used",
+        "accroche": "The right answers are in tickets already handled. The knowledge base dates from the last time someone had the time.",
+        "mecanisme": "An agent that spots recurring answers in real exchanges, suggests the articles to create or fix, and flags the ones nobody uses any more.",
+        "mesure": [
+          "Share of requests resolved without human intervention",
+          "Average age of the articles consulted"
+        ]
+      }
+    },
+    {
+      "id": "retention",
+      "niveau": 2,
+      "public": "Direction de la relation client",
+      "titre": "Vos clients partent sans prévenir",
+      "accroche": "Les signaux existent avant la résiliation : tickets répétés, délais qui s'allongent, interlocuteur qui change. Ils sont dans vos outils, personne ne les lit ensemble.",
+      "mecanisme": "Un agent qui rapproche ces signaux et signale les comptes à regarder, avec les éléments qui ont déclenché l'alerte, pour que vous jugiez vous-même.",
+      "mesure": [
+        "Le délai de détection d'un compte à risque",
+        "Le taux de rétention sur les comptes signalés"
+      ],
+      "en": {
+        "public": "Customer relations",
+        "titre": "Your customers leave without warning",
+        "accroche": "The signals are there before cancellation: repeated tickets, lengthening response times, a change of contact. They sit in your tools; nobody reads them together.",
+        "mecanisme": "An agent that brings these signals together and flags the accounts to look at, with what triggered the alert, so you can judge for yourself.",
+        "mesure": [
+          "Time to detect an at-risk account",
+          "Retention rate on flagged accounts"
+        ]
+      }
+    },
+    {
+      "id": "questionnaires",
+      "niveau": 2,
+      "public": "Qualité, conformité, RSE",
+      "titre": "Vos clients vous envoient leurs questionnaires",
+      "accroche": "Sécurité, RSE, achats responsables. Chacun redemande la même chose autrement, et chacun repart d'une page blanche.",
+      "mecanisme": "Un agent qui retrouve ce que vous avez déjà répondu à une question équivalente, propose la réponse avec sa source, et met à part celles qui n'ont pas d'antécédent.",
+      "mesure": [
+        "Le temps passé par questionnaire",
+        "La part des réponses réutilisées plutôt que réécrites"
+      ],
+      "en": {
+        "public": "Quality, compliance, CSR",
+        "titre": "Your customers keep sending you their questionnaires",
+        "accroche": "Security, CSR, responsible purchasing. Each one asks for the same thing in a different way, and each one starts from a blank page.",
+        "mecanisme": "An agent that finds what you have already answered to an equivalent question, proposes the answer with its source, and sets aside those with no precedent.",
+        "mesure": [
+          "Time spent per questionnaire",
+          "Share of answers reused rather than rewritten"
+        ]
+      }
+    },
+    {
+      "id": "veille",
+      "niveau": 2,
+      "public": "Qualité, conformité, RSE",
+      "titre": "La réglementation bouge sans vous",
+      "accroche": "Les textes paraissent, les référentiels évoluent. Savoir lesquels vous concernent demande de les lire, et personne n'a ce temps-là.",
+      "mecanisme": "Un agent qui suit les sources que vous désignez et ne remonte que ce qui touche vos activités, vos certifications ou vos engagements clients.",
+      "mesure": [
+        "Le délai entre la publication d'un texte et sa prise en compte",
+        "Le nombre d'écarts relevés en audit pour cause de texte manqué"
+      ],
+      "en": {
+        "public": "Quality, compliance, CSR",
+        "titre": "Regulations change without you",
+        "accroche": "Texts are published, standards evolve. Knowing which ones concern you means reading them, and nobody has that kind of time.",
+        "mecanisme": "An agent that follows the sources you choose and only reports what affects your activities, your certifications or your customer commitments.",
+        "mesure": [
+          "Time between a text's publication and it being taken into account",
+          "Audit findings caused by a missed text"
+        ]
+      }
+    },
+    {
+      "id": "candidatures",
+      "niveau": 2,
+      "public": "Ressources humaines",
+      "titre": "Vous lisez trois cents CV pour trois postes",
+      "accroche": "La lecture est faite dans l'urgence, par une personne différente à chaque fois, avec des critères implicites. Les bons dossiers se perdent, et les candidats attendent trois semaines une réponse.",
+      "mecanisme": "Un agent qui classe les candidatures sur des critères que vous avez écrits et rendus explicites, prépare une grille d'entretien par poste, et ne décide rien : il ordonne, vous tranchez. Le tri des candidatures est un usage à haut risque au sens de l'AI Act : les critères sont documentés, les écarts journalisés, et aucun refus n'est automatique.",
+      "mesure": [
+        "Le délai de première réponse à un candidat",
+        "La part des candidatures traitées sous 48 heures",
+        "Le nombre de dossiers relus après un premier tri"
+      ],
+      "en": {
+        "public": "Human resources",
+        "titre": "You read three hundred CVs for three positions",
+        "accroche": "Screening happens in a rush, by a different person each time, against unstated criteria. Good applications get lost, and candidates wait three weeks for an answer.",
+        "mecanisme": "An agent that ranks applications against criteria you have written down and made explicit, prepares an interview grid for each position, and decides nothing: it orders, you decide. CV screening is a high-risk use under the AI Act: the criteria are documented, deviations are logged, and no rejection is automatic.",
+        "mesure": [
+          "Time to first reply to a candidate",
+          "Share of applications handled within 48 hours",
+          "Applications reread after a first screening"
+        ]
+      }
+    },
+    {
+      "id": "previsions",
+      "niveau": 2,
+      "public": "Direction administrative et financière",
+      "titre": "Vos écarts au budget s'expliquent après coup",
+      "accroche": "L'écart apparaît à la clôture. Comprendre d'où il vient prend une semaine, et la reprévision arrive quand la décision qu'elle devait éclairer est déjà prise.",
+      "mecanisme": "Un agent qui rapproche le réalisé du budget au fil de l'eau, isole les lignes qui expliquent l'écart, et remonte celles qui sortent de vos seuils, avec le détail qui permet de les vérifier.",
+      "mesure": [
+        "Le délai d'explication d'un écart",
+        "Le nombre de reprévisions dans l'année",
+        "La part des écarts expliqués avant la clôture"
+      ],
+      "en": {
+        "public": "Finance and administration",
+        "titre": "Your budget variances get explained after the fact",
+        "accroche": "The variance shows up at close. Understanding where it comes from takes a week, and the reforecast arrives when the decision it was meant to inform has already been made.",
+        "mecanisme": "An agent that reconciles actuals against budget as you go, isolates the lines that explain the variance, and escalates those outside your thresholds, with the detail you need to check them.",
+        "mesure": [
+          "Time to explain a variance",
+          "Reforecasts per year",
+          "Share of variances explained before close"
+        ]
+      }
+    },
+    {
+      "id": "tresorerie",
+      "niveau": 2,
+      "public": "Direction administrative et financière",
+      "titre": "Votre position de trésorerie date d'hier",
+      "accroche": "Plusieurs banques, parfois plusieurs devises. La consolidation se fait à la main dans un tableur, et les pics de décaissement se découvrent le jour où ils tombent.",
+      "mecanisme": "Un agent qui consolide les positions, rapproche les mouvements des factures et des échéances connues, et vous alerte sur les décaissements à venir qui ne passent pas, assez tôt pour agir.",
+      "mesure": [
+        "Le délai de consolidation multi-banques",
+        "Le nombre de découverts non anticipés",
+        "L'écart entre la position prévue et la position constatée"
+      ],
+      "en": {
+        "public": "Finance and administration",
+        "titre": "Your cash position is a day old",
+        "accroche": "Several banks, sometimes several currencies. Consolidation is done by hand in a spreadsheet, and payment peaks are discovered the day they hit.",
+        "mecanisme": "An agent that consolidates the positions, matches movements to known invoices and due dates, and alerts you to upcoming payments that won't clear, early enough to act.",
+        "mesure": [
+          "Time to consolidate across banks",
+          "Unanticipated overdrafts",
+          "Gap between forecast and actual position"
+        ]
+      }
+    },
+    {
+      "id": "onboarding",
+      "niveau": 2,
+      "public": "Ressources humaines",
+      "titre": "Chaque arrivée se prépare comme si c'était la première",
+      "accroche": "Matériel, accès, documents, premiers rendez-vous. Deux personnes connaissent la liste, et il manque toujours quelque chose le jour J.",
+      "mecanisme": "Un agent qui déclenche le parcours d'intégration dès la signature, suit ce qui est fait et ce qui ne l'est pas, et relance les bons interlocuteurs. Plus personne n'a à tenir la liste.",
+      "mesure": [
+        "Le délai avant qu'un arrivant soit opérationnel",
+        "Le nombre d'accès ou d'équipements manquants au premier jour",
+        "Le temps passé par les RH sur une intégration"
+      ],
+      "en": {
+        "public": "Human resources",
+        "titre": "Every new hire is prepared as if it were the first",
+        "accroche": "Equipment, access, documents, first meetings. Two people know the list, and something is always missing on day one.",
+        "mecanisme": "An agent that starts the onboarding sequence as soon as the contract is signed, tracks what is done and what isn't, and chases the right people. Nobody has to keep the list any more.",
+        "mesure": [
+          "Time before a new hire is up and running",
+          "Missing access or equipment on day one",
+          "HR time spent per onboarding"
+        ]
+      }
+    },
+    {
+      "id": "questions-rh",
+      "niveau": 2,
+      "public": "Ressources humaines",
+      "titre": "Votre équipe RH répond aux mêmes questions toute l'année",
+      "accroche": "Congés, mutuelle, notes de frais, attestations. Les réponses sont dans l'accord d'entreprise ou dans une procédure, et personne ne va les y chercher.",
+      "mecanisme": "Un agent qui répond sur ce qui est écrit (accord d'entreprise, règlement intérieur, procédures) en citant sa source, et qui transmet à une personne tout ce qui touche à une situation individuelle.",
+      "mesure": [
+        "Le volume mensuel de sollicitations RH",
+        "La part traitée sans intervention humaine",
+        "Le délai de réponse sur une demande courante"
+      ],
+      "en": {
+        "public": "Human resources",
+        "titre": "Your HR team answers the same questions all year",
+        "accroche": "Leave, health insurance, expenses, certificates. The answers are in the company agreement or a procedure, and nobody goes looking for them there.",
+        "mecanisme": "An agent that answers from what is written (company agreement, internal rules, procedures), citing its source, and hands anything about an individual situation to a person.",
+        "mesure": [
+          "Monthly volume of HR requests",
+          "Share handled without human intervention",
+          "Response time on a routine request"
+        ]
+      }
+    }
+  ],
+  "roles": [
+    {
+      "nom": "Direction générale",
+      "texte": "Vous passez plus de temps à rassembler les chiffres qu'à décider ce qu'ils imposent.",
+      "cas": [
+        "comite",
+        "engagements",
+        "reporting-financier"
+      ],
+      "slug": "direction-generale",
+      "h1": "Vous passez plus de temps à rassembler les chiffres qu'à décider ce qu'ils imposent.",
+      "chapo": "Les données existent, dans six outils. Ce qui manque, c'est le temps entre le moment où elles sont réunies et celui où il faut trancher.",
+      "en": {
+        "slug": "general-management",
+        "nom": "General management",
+        "texte": "You spend more time gathering the figures than deciding what they call for.",
+        "h1": "You spend more time gathering the figures than deciding what they call for.",
+        "chapo": "The data exists, in six tools. What's missing is time between the moment it is gathered and the moment you have to decide."
+      }
+    },
+    {
+      "nom": "Direction commerciale et développement",
+      "texte": "Vous arbitrez quels dossiers partent, et vous relisez des réponses que quelqu'un a réécrites depuis zéro alors qu'elles existaient déjà.",
+      "cas": [
+        "conseil-ingenierie",
+        "crm",
+        "devis"
+      ],
+      "slug": "direction-commerciale",
+      "h1": "Votre équipe vend. Elle passe aussi ses soirées à réécrire ce qui existait déjà.",
+      "chapo": "Les réponses, les conditions, l'historique de chaque compte : tout est quelque part. Rarement là où on le cherche, et rarement à jour.",
+      "en": {
+        "slug": "sales",
+        "nom": "Sales and business development",
+        "texte": "You decide which tenders go out, and you reread answers someone rewrote from scratch when they already existed.",
+        "h1": "Your team sells. It also spends its evenings rewriting what already existed.",
+        "chapo": "The answers, the terms, the history of every account: it's all somewhere. Rarely where you look for it, and rarely up to date."
+      }
+    },
+    {
+      "nom": "Direction des opérations et administration des ventes",
+      "texte": "Vos commandes arrivent dans six formats, une seule personne sait les traduire vers vos références, et les dérives se découvrent quand le client appelle.",
+      "cas": [
+        "industrie-distribution",
+        "derive",
+        "achats",
+        "litiges"
+      ],
+      "slug": "direction-operations",
+      "h1": "Vos opérations tiennent grâce à des gens qui savent des choses que personne n'a écrites.",
+      "chapo": "La traduction entre le langage de vos clients et vos références, les exceptions que vous tolérez, qui traite quoi. Le jour où ces personnes sont absentes, tout ralentit.",
+      "en": {
+        "slug": "operations",
+        "nom": "Operations and sales administration",
+        "texte": "Your orders arrive in six formats, only one person knows how to map them to your references, and slippage is discovered when the customer calls.",
+        "h1": "Your operations run on people who know things nobody has written down.",
+        "chapo": "The translation between your customers' language and your references, the exceptions you tolerate, who handles what. The day those people are away, everything slows down."
+      }
+    },
+    {
+      "nom": "Direction administrative et financière",
+      "texte": "Les factures partent à l'heure. Les règlements arrivent en retard, et personne ne sait dire pourquoi sans ouvrir trois outils.",
+      "cas": [
+        "facturation",
+        "fournisseurs-notes",
+        "contrats",
+        "previsions",
+        "tresorerie"
+      ],
+      "slug": "direction-financiere",
+      "h1": "Vos factures partent à l'heure. Le reste suit comme il peut.",
+      "chapo": "Les règlements, les pièces fournisseurs, les échéances contractuelles, la position de trésorerie. Chacun demande une attention que votre équipe n'a pas, et chacun se paie en trésorerie.",
+      "en": {
+        "slug": "finance",
+        "nom": "Finance and administration",
+        "texte": "Invoices go out on time. Payments come in late, and nobody can say why without opening three tools.",
+        "h1": "Your invoices go out on time. The rest follows as best it can.",
+        "chapo": "Payments, supplier documents, contract deadlines, the cash position. Each one needs attention your team doesn't have, and each one is paid for in cash."
+      }
+    },
+    {
+      "nom": "Direction de la relation client",
+      "texte": "Votre équipe répond vite. Elle répond surtout aux mêmes questions chaque semaine, et personne ne vous dit pourquoi elles arrivent.",
+      "cas": [
+        "service-client",
+        "documentation",
+        "retention"
+      ],
+      "slug": "direction-relation-client",
+      "h1": "Votre équipe répond vite. Elle répond surtout aux mêmes questions.",
+      "chapo": "Les bonnes réponses existent, dans les demandes déjà traitées. La documentation, elle, date de la dernière fois que quelqu'un a eu le temps.",
+      "en": {
+        "slug": "customer-relations",
+        "nom": "Customer relations",
+        "texte": "Your team answers fast. Mostly it answers the same questions every week, and nobody tells you why they keep coming.",
+        "h1": "Your team answers fast. Mostly it answers the same questions.",
+        "chapo": "The right answers exist, in requests already handled. The documentation dates from the last time someone had the time."
+      }
+    },
+    {
+      "nom": "Qualité et conformité",
+      "texte": "Vous savez que les pièces existent. Vous ne savez pas, avant d'avoir fini, si le dossier est complet.",
+      "cas": [
+        "qualite",
+        "questionnaires",
+        "veille"
+      ],
+      "slug": "qualite-conformite",
+      "h1": "Vous passez l'audit. Vous y passez surtout trois semaines.",
+      "chapo": "Procédures, enregistrements, certificats : les pièces existent. Les rassembler, vérifier qu'elles sont à jour et prouver qu'il n'en manque aucune : c'est là que le temps part.",
+      "en": {
+        "slug": "quality-compliance",
+        "nom": "Quality and compliance",
+        "texte": "You know the documents exist. You don't know, until you've finished, whether the file is complete.",
+        "h1": "You pass the audit. Mostly you spend three weeks on it.",
+        "chapo": "Procedures, records, certificates: the documents exist. Gathering them, checking they're current and proving none is missing: that's where the time goes."
+      }
+    },
+    {
+      "nom": "Ressources humaines",
+      "texte": "Chaque recrutement, chaque arrivée et chaque question refait un parcours dont les règles ne sont connues que de deux personnes.",
+      "cas": [
+        "candidatures",
+        "onboarding",
+        "questions-rh"
+      ],
+      "slug": "ressources-humaines",
+      "h1": "Vos RH passent leur temps sur ce qui se répète.",
+      "chapo": "Recruter, intégrer et répondre aux mêmes questions sont des travaux à fort volume. Leurs règles sont écrites quelque part, rarement là où on les cherche.",
+      "en": {
+        "slug": "human-resources",
+        "nom": "Human resources",
+        "texte": "Every hire, every arrival and every question goes through a process whose rules only two people know.",
+        "h1": "Your HR team spends its time on what repeats.",
+        "chapo": "Recruiting, onboarding and answering the same questions are high-volume jobs. Their rules are written down somewhere, rarely where you look for them."
+      }
+    }
+  ],
+  "_en": "Chaque cas et chaque rôle porte sa version anglaise sous « en ». Le schéma exige les deux langues : un cas ajouté sans traduction fait échouer la construction. Les fiches de niveau 1 et les rôles y déclarent aussi leur adresse anglaise (slug)."
+}

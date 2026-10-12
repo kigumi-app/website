@@ -1,0 +1,56 @@
+Method
+Working together
+Use cases
+About
+Book a call
+FR
+CUSTOMER RELATIONS
+Your team answers fast. Mostly it answers the same questions.
+The right answers exist, in requests already handled. The documentation dates from the last time someone had the time.
+What weighs on your role
+SOFTWARE PUBLISHERS AND RECURRING SERVICES
+Your customer service keeps answering the same questions
+Off-the-shelf tools help you answer faster. None of them tells you why the questions keep coming.
+An agent that qualifies and routes requests, answers the cases already handled, and gives you every month what is causing them upstream.
+See the full case →
+WHAT WE MEASURE
+Monthly request volume
+Share of repetitive requests
+Volume that disappears once the causes are fixed
+CUSTOMER RELATIONS
+Your documentation is out of date before it is ever used
+The right answers are in tickets already handled. The knowledge base dates from the last time someone had the time.
+An agent that spots recurring answers in real exchanges, suggests the articles to create or fix, and flags the ones nobody uses any more.
+WHAT WE MEASURE
+Share of requests resolved without human intervention
+Average age of the articles consulted
+CUSTOMER RELATIONS
+Your customers leave without warning
+The signals are there before cancellation: repeated tickets, lengthening response times, a change of contact. They sit in your tools; nobody reads them together.
+An agent that brings these signals together and flags the accounts to look at — with what triggered the alert, so you can judge for yourself.
+WHAT WE MEASURE
+Time to detect an at-risk account
+Retention rate on flagged accounts
+These cases are built from situations we have observed. The pre-diagnosis costs which ones actually weigh on you, and in what order.
+Which one costs you the most?
+45 minutes to talk it through. The pre-diagnosis ranks them by what they cost you — and you leave with that ranking, whether we work together or not.
+Book a call
+See the other roles
+USE CASES
+All use cases
+Consulting, engineering and design offices
+Manufacturing and B2B distribution
+Software publishers and recurring services
+KIGUMI
+Our method
+Working together
+About
+Lab
+TRUST
+Data and security
+AI Act
+Legal notice
+CONTACT
+Book a call
+contact@kigumi.app
+Process automation studio using AI agents, for small and mid-sized companies.

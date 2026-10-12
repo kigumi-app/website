@@ -1,0 +1,19 @@
+---
+// Le hub ne liste pas les cas, il liste les postes. Chacun dit combien de
+// processus il porte, pour qu'on sache ce qu'il y a derrière avant de cliquer.
+import { catalogue, vueRole } from "../../lib/cas";
+import { langueDe, ui } from "../../lib/i18n";
+const langue = langueDe(Astro.url.pathname);
+const t = ui(langue).cas;
+---
+<ul class="roles">
+  {catalogue.roles.map((r) => vueRole(r, langue)).map((r) => (
+    <li>
+      <h3>{r.nom}</h3>
+      <p>{r.texte}</p>
+      <p class="liens">
+        <a href={r.href}>{t.processus(r.cas.length)} &rarr;</a>
+      </p>
+    </li>
+  ))}
+</ul>

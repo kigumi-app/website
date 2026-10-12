@@ -1,0 +1,66 @@
+---
+import { AGENDA } from "../lib/contact";
+import StudioLayout from "../layouts/StudioLayout.astro";
+---
+<StudioLayout
+  titre={'À propos'}
+  description={'Deux associés, un côté opérations et commerce, un côté technique.'}
+  actif="a-propos">
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow">À propos</p>
+    <h1>Les deux associés qui vous vendent la mission sont ceux qui la font.</h1>
+    <p class="lead">L'un vient des opérations et du commerce, l'autre de la technique.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <div class="portrait">
+          <img src="/studio/portraits/julien.webp" alt="Portrait de Julien" width="960" height="1200" loading="lazy" decoding="async">
+        </div>
+        <h3>Julien</h3>
+        <p class="muted">Opérations et développement commercial.</p>
+        <p>J'ai commencé par sept ans de vente de solutions informatiques aux grands comptes, pour des opérateurs et des intégrateurs : appels d'offres, DSI, achats, coordination entre l'avant-vente, les constructeurs et les équipes projet.</p>
+        <p>J'ai ensuite passé six ans chez un éditeur de logiciels de mobilité. J'y suis passé de Customer Success Manager à Client Services Director. J'y ai dirigé une équipe de 11 personnes en Customer Success, Support et gestion de projet.</p>
+        <p><strong>Mon métier depuis près de quinze ans : faire en sorte qu'une solution technique tienne ses promesses une fois chez le client.</strong></p>
+      </div>
+      <div>
+        <div class="portrait">
+          <img src="/studio/portraits/stephane.webp" alt="Portrait de Stéphane" width="960" height="1200" loading="lazy" decoding="async">
+        </div>
+        <h3>Stéphane</h3>
+        <p class="muted">Technique et produit.</p>
+        <p>Près de quinze ans à construire des produits logiciels complexes, utilisés par des millions de personnes ; dernièrement, j'ai dirigé les équipes de développement d'un éditeur de logiciels de mobilité, R&amp;D et machine learning compris.</p>
+        <p>Je l'ai vu se répéter : un système qui tourne n'est pas un système qui fait ce qu'on attendait de lui. On sait dire qu'un logiciel ne plante pas ; on sait rarement dire ce qu'il fait. Je travaille depuis sur la vérification : comment s'assurer qu'un programme, et aujourd'hui un programme écrit par une IA, fait bien ce qu'on lui avait demandé.</p>
+        <p><strong>J'applique la même exigence aux agents qu'on déploie : on mesure ce qu'ils produisent.</strong></p>
+      </div>
+    </div>
+    <div class="prose" style="margin-top:48px">
+      <h2>Pourquoi nous deux</h2>
+      <p>On a travaillé trois ans ensemble chez cet éditeur, aux deux bouts du même produit : l'un recevait les appels quand il ne faisait pas ce qu'on en avait dit, l'autre avait les équipes qui l'avaient écrit.</p>
+      <p>On en a tiré la même conclusion, chacun de son côté : ce qui manque presque toujours, c'est la preuve de ce qui a été construit.</p>
+      <p>D'où notre façon de travailler : chiffrer avant de déployer, puis mesurer ce que ça a produit. D'où aussi le choix d'entreprises de votre taille. Dans un grand groupe, une automatisation qui ne tient pas se dilue, il y a toujours quelqu'un pour la rattraper à la main. Chez vous, elle se voit tout de suite.</p>
+
+      <h2 style="margin-top:2em">Pourquoi Kigumi</h2>
+      <p>Le kigumi est une technique japonaise d'assemblage du bois : les pièces tiennent entre elles sans clou ni vis, parce que chacune est taillée pour celle qu'elle rejoint. Nous avons pris ce nom pour la façon de travailler qu'il résume.</p>
+      <ul>
+        <li><strong>Du sur-mesure.</strong> On part de vos outils et de vos équipes, et on ne construit que ce que le processus retenu exige.</li>
+        <li><strong>Les fondateurs au travail.</strong> Du diagnostic au pilotage, c'est nous deux qui intervenons.</li>
+        <li><strong>Un savoir-faire qui s'accumule.</strong> Ce qu'on apprend au <a href="/lab/">Lab</a> sur la vérification sert à contrôler ce que produisent vos agents.</li>
+        <li><strong>Un travail jugé sur pièce.</strong> Chaque trimestre, le gain réel est comparé à ce qui avait été projeté.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Faire connaissance</h2>
+    <p>45 minutes pour savoir si ça vaut le coup chez vous, avec les deux associés.</p>
+    <div class="btn-row"><a class="btn" href={AGENDA} target="_blank" rel="noopener">Prendre rendez-vous</a></div>
+  </div>
+</section>
+</StudioLayout>

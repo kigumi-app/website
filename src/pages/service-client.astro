@@ -1,0 +1,61 @@
+---
+import { AGENDA } from "../lib/contact";
+import StudioLayout from "../layouts/StudioLayout.astro";
+import Svg from "../components/studio/Svg.astro";
+---
+<StudioLayout
+  titre={'Éditeurs et services récurrents'}
+  description={'Traiter les demandes entrantes, et surtout faire baisser leur volume à la source.'}
+  actif="service-client">
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow"><span class="ico"><Svg nom="demande-repetee" icone /></span>Éditeurs, services récurrents, distribution B2B</p>
+    <h1>Répondre plus vite ne suffit pas. Il faut que la demande cesse d'arriver.</h1>
+    <p class="lead">Votre équipe traite les mêmes demandes toutes les semaines. Les outils du marché vous proposent d'y répondre plus vite. Aucun ne vous dit pourquoi elles arrivent.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <h2>Ce qu'on met en place</h2>
+    <p>Un agent qui qualifie chaque demande, l'oriente vers la bonne personne, et répond sur les cas déjà traités.</p>
+    <p>Et chaque mois, un rapport qui regroupe les demandes par motif, les chiffre en volume et en temps passé, et désigne ce qui, en amont, les provoque. <strong>Ce sont ces causes qu'on traite ensuite.</strong></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <figure class="diagramme explicatif">
+      <div class="d-large"><Svg nom="explicatif-service" /></div>
+      <div class="d-etroit"><Svg nom="explicatif-service-portrait" /></div>
+      <figcaption>Les demandes sont regroup&eacute;es par cause. Une fois la cause trait&eacute;e, les demandes qu&rsquo;elle produisait cessent d&rsquo;arriver.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <h2>Ce qu'on mesure</h2>
+    <ul class="measures">
+      <li>Le volume mensuel de demandes</li>
+      <li>La part de demandes répétitives</li>
+      <li>Le temps total passé par l'équipe</li>
+      <li>Le volume qui disparaît une fois les causes corrigées</li>
+    </ul>
+    <p style="margin-top:26px">C'est la dernière ligne qui nous intéresse.</p>
+
+    <p class="muted" style="font-size:14px;margin-top:2em">Ce cas est construit à partir de situations observées dans le secteur. Les ordres de grandeur sont des hypothèses jusqu'à ce qu'on les mesure chez vous.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Ce cas ressemble au vôtre&nbsp;?</h2>
+    <p>45 minutes pour savoir si ce cas-là vous coûte assez pour mériter qu'on s'en occupe. S'il ne le mérite pas, on vous le dira.</p>
+    <div class="btn-row">
+      <a class="btn" href={AGENDA} target="_blank" rel="noopener">Prendre rendez-vous</a>
+      <a class="btn btn-ghost" href="/cas-usages/">Voir les autres cas</a>
+    </div>
+  </div>
+</section>
+</StudioLayout>

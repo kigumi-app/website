@@ -1,0 +1,63 @@
+---
+import { AGENDA } from "../lib/contact";
+import StudioLayout from "../layouts/StudioLayout.astro";
+import Svg from "../components/studio/Svg.astro";
+---
+<StudioLayout
+  titre={"Conseil, ingénierie, bureaux d'études"}
+  description={"Répondre aux appels d'offres et aux questionnaires clients sans y passer des jours."}
+  actif="conseil-ingenierie">
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow"><span class="ico"><Svg nom="appel-offres" icone /></span>Conseil, ingénierie, bureaux d'études</p>
+    <h1>Vous perdez des appels d'offres faute de temps, pas faute d'arguments.</h1>
+    <p class="lead">Chaque dossier mobilise trois ou quatre personnes pendant plusieurs jours, et certains ne partent jamais.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <h2>La situation</h2>
+    <p>Les réponses existent déjà. Elles sont dans vos dossiers passés, vos références, vos CV, vos certifications, votre documentation méthodologique. À chaque nouveau questionnaire (appel d'offres, achat, sécurité ou RSE), tout est réécrit depuis le début.</p>
+
+    <h2 style="margin-top:2em">Ce qu'on met en place</h2>
+    <p>Un agent qui lit le dossier quel qu'en soit le format, en extrait les questions, et retrouve ce que vous avez déjà répondu dans des dossiers comparables. Il propose un brouillon pour chaque question, avec sa source et son niveau de confiance, et signale séparément les questions inédites, celles qui méritent votre arbitrage.</p>
+    <p>Vous relisez et validez chaque réponse. <strong>L'agent ne soumet jamais rien à votre place.</strong></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <figure class="diagramme explicatif">
+      <div class="d-large"><Svg nom="explicatif-appel-offres" /></div>
+      <div class="d-etroit"><Svg nom="explicatif-appel-offres-portrait" /></div>
+      <figcaption>Chaque question re&ccedil;oit un brouillon issu d&rsquo;un dossier pass&eacute;, avec sa source. Les questions in&eacute;dites sont mises &agrave; part, pour votre arbitrage.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <h2>Ce qu'on mesure</h2>
+    <ul class="measures">
+      <li>Les heures passées par dossier, et par qui</li>
+      <li>Le délai de remise</li>
+      <li>Le nombre de dossiers traités à effectif constant</li>
+    </ul>
+    <p style="margin-top:26px">Le gain qui compte le plus est le dossier que vous ne laissez plus passer.</p>
+
+    <p class="muted" style="font-size:14px;margin-top:2em">Ce cas est construit à partir de situations observées dans le secteur. Les ordres de grandeur sont des hypothèses jusqu'à ce qu'on les mesure chez vous.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Ce cas ressemble au vôtre&nbsp;?</h2>
+    <p>45 minutes pour savoir si ce cas-là vous coûte assez pour mériter qu'on s'en occupe. S'il ne le mérite pas, on vous le dira.</p>
+    <div class="btn-row">
+      <a class="btn" href={AGENDA} target="_blank" rel="noopener">Prendre rendez-vous</a>
+      <a class="btn btn-ghost" href="/cas-usages/">Voir les autres cas</a>
+    </div>
+  </div>
+</section>
+</StudioLayout>

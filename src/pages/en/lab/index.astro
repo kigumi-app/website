@@ -1,0 +1,55 @@
+---
+import { AGENDA } from "../../../lib/contact";
+import StudioLayout from "../../../layouts/StudioLayout.astro";
+import DerniersArticles from "../../../components/studio/DerniersArticles.astro";
+---
+<StudioLayout
+  titre="Lab"
+  description="What we build outside our missions: verifying what agents produce, and why it sits at the centre of our method."
+  actif=""
+  fil={[{ libelle: "Lab" }]}>
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow">Lab</p>
+    <h1>What we build outside our missions.</h1>
+    <p class="lead">Our method promises to measure what agents produce. You still have to know how to do it: that&rsquo;s what we build here.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <h2>Why the studio needs it</h2>
+    <p>Checking that a program does what it was asked to do was already hard when humans wrote all the code. Now that part of it is produced by models, it has become the central problem.</p>
+    <p>It&rsquo;s also what separates an automation that pays from one that costs. <strong>What we build here is how we measure, at our customers, what agents actually produce.</strong></p>
+
+    <h2 style="margin-top:2em">What we publish</h2>
+    <p>What we learn while building these tools. The articles appear on the blog, under the Lab tag.</p>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap">
+    <div class="grid">
+      <a class="card" href="/en/lab/harness/">
+        <p class="who">Internal tool</p>
+        <h3>Harness</h3>
+        <p>The tool we are building to know what an automated process really does, and to be able to prove it. Open to a few teams we choose.</p>
+        <span class="go">See the tool &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<DerniersArticles etiquette="lab" titre="What we write about it" />
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Talk about your processes</h2>
+    <p>45 minutes to find out whether it&rsquo;s worth it at your company.</p>
+    <div class="btn-row">
+      <a class="btn" href={AGENDA} target="_blank" rel="noopener">Book a call</a>
+      <a class="btn btn-ghost" href="/en/method/">See the method</a>
+    </div>
+  </div>
+</section>
+</StudioLayout>

@@ -28,8 +28,7 @@
     --heartwood: #9a7bb5;
     --blueprint: #7a9bb8;
 
-    --heading:
-      "Satoshi", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    --heading: "Satoshi", system-ui, -apple-system, sans-serif;
     --sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
     --serif: "Lora", Georgia, serif;
     --mono: "JetBrains Mono", monospace;

@@ -1,0 +1,21 @@
+// Déploiement Cloudflare Workers — site statique, et un seul bout de code :
+// la détection de langue sur l'accueil (worker/index.js).
+//
+// Workers Builds lance `npm run build`, puis `npx wrangler deploy` sur la
+// branche de production et `npx wrangler versions upload` sur les autres.
+// `_redirects` et les `404.html` (racine et en/) sont lus depuis dist/.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kigumi-website",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    // Seul l'accueil passe par le code : tout le reste est servi tel quel,
+    // sans coût ni latence ajoutés.
+    "run_worker_first": ["/"]
+  },
+  "preview_urls": true
+}

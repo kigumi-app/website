@@ -1,0 +1,28 @@
+{
+  "current_session": {
+    "date": "",
+    "start_time": "",
+    "end_time": "",
+    "reads": {
+      "total": 1,
+      "duplicates_warned": 0,
+      "large_file_warned": 1
+    },
+    "estimated_tokens": {
+      "reads": 7568,
+      "writes": 0,
+      "commands": 0
+    },
+    "files_read": [
+      "/Users/stephanemarin/Projects/Kigumi/merlion/index.html"
+    ],
+    "bugs_logged": 0
+  },
+  "sessions": [],
+  "lifetime": {
+    "total_sessions": 0,
+    "total_estimated_read_tokens": 7568,
+    "duplicate_reads_prevented": 0,
+    "large_reads_warned": 1
+  }
+}

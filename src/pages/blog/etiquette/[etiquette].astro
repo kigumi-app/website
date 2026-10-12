@@ -1,0 +1,10 @@
+---
+// Une page par étiquette portée par au moins un article publié.
+import Etiquette from "../../../components/studio/blog/Etiquette.astro";
+import { etiquettesPubliees } from "../../../lib/blog";
+
+export async function getStaticPaths() {
+  return (await etiquettesPubliees()).map((etiquette) => ({ params: { etiquette } }));
+}
+---
+<Etiquette etiquette={Astro.params.etiquette} />

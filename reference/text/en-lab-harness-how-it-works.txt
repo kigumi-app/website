@@ -1,0 +1,93 @@
+Method
+Working together
+Use cases
+About
+Book a call
+FR
+Kigumi
+Lab
+Harness
+How it works
+HARNESS · HOW IT WORKS
+Read, understand, evolve, verify.
+Four stages, shown on a process we automate: handling a customer order that arrives as an attachment. It’s the one from the Manufacturing and B2B distribution case.
+OVERVIEW
+HOW IT WORKS
+01 · Read
+We apply it to the process as it actually runs.
+Not to the written procedure, which is often out of date. Harness reads the messages received, the ERP data and the files the team keeps on the side, and records what the process really does: its steps, its rules, and the exceptions someone handles by hand without it being written down anywhere.
+harness — read · customer-orders
+Sources read
+orders@ inbox      1,240 messages
+ERP                customers, items
+discount grid      shared spreadsheet
+Found
+62  behaviours
+18  business rules
+9  exceptions handled by hand
+02 · Understand
+Every step, every rule, every exception. Visible.
+What was found becomes a map: what each step does, under which conditions, and what it does when a condition isn’t met. Every behaviour is written so it can be verified, not just read.
+harness — map · identify the customer
+Identify the customer     step · agent
+Given    an order received as PDF
+When     the sender is unknown
+Then     look for the customer number
+in the document,
+else escalate to sales admin
+Linked   Match the references
+Apply the customer's terms
+03 · Evolve
+We describe the change. Harness proposes, someone reviews.
+A change is described in one sentence. Harness turns it into steps and rules, shows what it touches, and nothing goes out without approval. The example also adds a required human step: that’s where the autonomy left to agents is set, step by step.
+harness — change · approval threshold
+Request
+Above €20,000, the sales admin
+manager approves before entry.
+Proposed
++ Approval threshold    condition
++ Sales admin approval  human · required
+~ ERP entry             after approval
+Accept  Reject
+04 · Verify
+17 of 19 behaviours verified. We know where the gaps are.
+Every expected behaviour is checked against what the process does. The two gaps in the example are typical: manual handling absorbed them, nobody had ever written them down, and an agent would have reproduced them silently.
+harness — verify · 17 / 19
+✓ Customer identified (address or number)
+✓ References matched to the catalogue
+✓ Customer pricing terms applied
+✓ Consistency checked before entry
+✓ Threshold met: sales admin approval
+✗ Reference not in catalogue:
+no escalation path
+✗ One-off discount:
+rule missing from the grid
+Illustrative example: the volumes, rules and gaps are built from situations observed in this industry. Not a mission we have delivered.
+What is verified here is what gets measured next.
+A process whose every behaviour is known is a process whose gain can be measured. For this order, the case sets three measures:
+Processing time per order
+Data-entry error rate
+Cost of credit notes avoided
+Read the full case →
+And for your processes?
+45 minutes to talk them through. You leave with the list of your processes ranked by what they cost you.
+Book a call
+See the method
+USE CASES
+All use cases
+Consulting, engineering and design offices
+Manufacturing and B2B distribution
+Software publishers and recurring services
+KIGUMI
+Our method
+Working together
+About
+Lab
+TRUST
+Data and security
+AI Act
+Legal notice
+CONTACT
+Book a call
+contact@kigumi.app
+Process automation studio using AI agents, for small and mid-sized companies.

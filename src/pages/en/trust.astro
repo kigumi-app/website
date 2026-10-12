@@ -1,0 +1,77 @@
+---
+// Les ancres (#reversibilite, #ai-act) gardent leur nom français : elles sont
+// les mêmes dans les deux langues, et le pied de page y renvoie par `lien()`.
+import StudioLayout from "../../layouts/StudioLayout.astro";
+import Svg from "../../components/studio/Svg.astro";
+---
+<StudioLayout
+  titre={'Data, security and compliance'}
+  description={'Where your data goes, what leaves your systems, and what you keep if you stop.'}
+  actif="confiance">
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow">Trust</p>
+    <h1>Your data, where it goes, and what you keep.</h1>
+    <p class="lead">The questions your IT department will ask anyway. Might as well answer them before the call.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <h2>Hosting</h2>
+    <p>In France, with <strong>Scaleway</strong> and <strong>OVHcloud</strong>, two hosting providers incorporated under French law. One isolated database per customer, no pooling of data between our customers.</p>
+
+    <h2 style="margin-top:2em">What leaves, what doesn&rsquo;t</h2>
+    <p>Only what the requested processing strictly needs, and nothing else. <strong>No model training on your data.</strong></p>
+    <p style="margin-top:1.4em">The model providers we use, and the country where processing takes place:</p>
+    <ul class="measures">
+      <li><strong>Mistral AI</strong>: France</li>
+      <li><strong>Anthropic</strong>: United States</li>
+      <li><strong>OpenAI</strong>: United States</li>
+      <li><strong>Google</strong>: United States</li>
+      <li><strong>TypeSafe AI</strong>: United States</li>
+    </ul>
+    <p style="margin-top:1.4em">The choice is made process by process, with you. When processing has to stay in Europe, it stays in Europe.</p>
+
+    <h2 style="margin-top:2em">How long your data is kept</h2>
+    <ul class="measures">
+      <li><strong>Documents processed by the agents</strong>: 30 days after processing, long enough to correct an error.</li>
+      <li><strong>Knowledge base</strong>: the length of the contract. Returned to you, then deleted within 30 days if you stop.</li>
+      <li><strong>Technical logs</strong>: 6 months, the period the CNIL (the French data protection authority) sets for connection logs.</li>
+      <li><strong>Data sent to model providers</strong>: zero retention where the provider&rsquo;s offering allows it. Otherwise, 30 days for abuse detection only. In every case, no use for training.</li>
+      <li><strong>Your contact details, if you have contacted us</strong>: 3 years after the last exchange.</li>
+    </ul>
+
+    <h2 style="margin-top:2em">Who has access, and to what</h2>
+    <ul class="measures">
+      <li>Named accounts, never shared, with two-factor authentication on anything touching your data.</li>
+      <li>Least privilege: each person only accesses the customers they work with.</li>
+      <li><strong>No standing access to production.</strong> Access is opened on request, for a limited time, and it is logged.</li>
+      <li>Access reviewed every quarter. Revoked within 24 hours when someone leaves or a mission ends.</li>
+    </ul>
+
+    <h2 style="margin-top:2em">What is logged</h2>
+    <ul class="measures">
+      <li>Who accessed what, when, and what was done. Timestamped, tamper-proof.</li>
+      <li><strong>Every action of an agent is logged</strong>: the data read, the decision, the output produced, and the point of human approval where there is one.</li>
+      <li>Logs kept for 6 months.</li>
+      <li><strong>Available to you, on request.</strong> A log the customer can&rsquo;t read proves nothing.</li>
+    </ul>
+    <p style="margin-top:1.4em">The AI Act requires this traceability for high-risk systems. We apply it to every agent we deploy, even when nothing requires it: that&rsquo;s what makes a case like CV screening deployable.</p>
+
+    <h2 id="reversibilite" style="margin-top:2em">Reversibility</h2>
+    <p>The extracted data and the process definitions belong to you, and can be exported at any time. If you stop, you keep what was built.</p>
+
+    <h2 style="margin-top:2em">Humans stay in control</h2>
+    <p>Any irreversible step, or one that carries a commercial commitment, is approved by someone on your team. An agent proposes, flags what it isn&rsquo;t sure about, and never commits the company on your behalf.</p>
+    <figure class="diagramme">
+      <Svg nom="autonomie" />
+      <figcaption>Example on responding to calls for tender. The approval points fall on what commits you: new questions, pricing, submission.</figcaption>
+    </figure>
+
+    <h2 id="ai-act" style="margin-top:2em">AI Act</h2>
+    <p>The European regulation on artificial intelligence classifies uses by level of risk. The automations we deploy (document processing, directing requests, drafting assistance with human approval) fall under limited risk, with a transparency obligation.</p>
+    <p>Two cases call for particular attention, and we point them out before we start: when the people interacting with an agent are consumers, they must be told; and any automation involving the assessment of people, recruitment in particular, is high-risk and carries much heavier obligations.</p>
+  </div>
+</section>
+</StudioLayout>

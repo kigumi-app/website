@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "bugs": [
+    {
+      "id": "bug-001",
+      "timestamp": "2026-05-18T17:03:00Z",
+      "error_message": "[vite:css] [postcss] src/styles/global.css: Unknown word translate",
+      "file": "src/styles/global.css",
+      "root_cause": "Original style.css had invalid CSS declarations `translate(15px, 0px);` (a function call with no property) inside the 768px and 480px `.hero__logo-mark` media blocks. Browsers silently ignore malformed declarations, so the legacy site rendered fine; Astro's PostCSS pipeline hard-errors on them.",
+      "fix": "Removed the two stray `translate(15px, 0px);` lines. Browsers already ignored them, so rendering is byte-identical; the valid `transform: translate(9px, 0.5px);` in the 480px block and the base `.hero__logo-mark` transform are untouched.",
+      "tags": ["css", "postcss", "astro", "migration", "pre-existing"],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-18T17:03:00Z"
+    },
+    {
+      "id": "bug-002",
+      "timestamp": "2026-05-18T17:05:00Z",
+      "error_message": "og:image referenced og-image.svg which never existed in the repo",
+      "file": "index.html (legacy) -> src/components/Seo.astro",
+      "root_cause": "Legacy index.html line 30 set `<meta property=\"og:image\" content=\"og-image.svg\">` but no such file was ever committed; social cards were broken. SVG og:image is also unsupported by most crawlers.",
+      "fix": "Created public/og-default.svg (Workshop-at-Night branded card) and scripts/build-og.mjs to rasterize it to public/og-default.png via sharp. Seo.astro defaults og:image to /og-default.png, resolved against the site URL.",
+      "tags": ["seo", "og-image", "social", "pre-existing"],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-18T17:05:00Z"
+    },
+    {
+      "id": "bug-003",
+      "timestamp": "2026-05-18T17:17:00Z",
+      "error_message": "openwolf designqc auto-detected the wrong dev server (captured Memgraph Lab, not the Kigumi Astro site)",
+      "file": "tooling (openwolf designqc)",
+      "root_cause": "designqc auto-detect picked another running local dev server (Memgraph Lab on a different port) instead of Astro on localhost:4321. It also wipes .wolf/designqc-captures/ on every run, so prior captures are lost; and a single --url run does not reliably crawl to other routes.",
+      "fix": "Always pass `openwolf designqc --url http://localhost:4321[/route]` explicitly. Capture and READ one route group per run before the next run wipes the dir. Do not rely on crawl reaching /writing.",
+      "tags": ["tooling", "designqc", "openwolf", "gotcha"],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-05-18T17:20:00Z"
+    }
+  ]
+}

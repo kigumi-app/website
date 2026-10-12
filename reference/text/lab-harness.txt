@@ -1,0 +1,63 @@
+Méthode
+Travailler ensemble
+Cas d’usages
+À propos
+Prendre rendez-vous
+EN
+Kigumi
+Lab
+Harness
+LAB · OUTIL INTERNE
+Savoir ce que fait un système, et pouvoir le prouver.
+Un système qui tourne n’est pas un système qui fait ce qu’on attendait. Harness est l’outil que nous construisons pour faire la différence : il lit un processus, en dresse la carte, et vérifie que chaque comportement attendu est tenu.
+PRÉSENTATION
+FONCTIONNEMENT
+Pourquoi on le construit
+Notre méthode promet de mesurer ce que les agents produisent, au lieu de constater qu’ils tournent. Cette promesse ne tient que si l’on sait dire, à tout moment, ce que fait réellement un processus automatisé : quelles règles il applique, quelles exceptions il remonte, ce qu’il fait quand une donnée manque.
+On sait dire qu’un programme ne plante pas. On sait rarement dire ce qu’il fait. Harness comble cet écart, pour nos propres livraisons d’abord.
+Ce qu’il fait
+VOIR
+La carte du processus
+Chaque étape, chaque règle, chaque exception, et ce qui les relie. Dressée à partir de ce qui tourne, pas de ce que dit la procédure.
+CHANGER
+Ce qu’un changement affecte
+Avant de modifier une règle, on voit ce qu’elle touche. Le changement est proposé, puis relu par quelqu’un avant de partir.
+VÉRIFIER
+Ce qui est tenu, et ce qui ne l’est pas
+Chaque comportement attendu est vérifié. Les écarts sont nommés, avec l’endroit où ils se produisent, avant qu’ils coûtent.
+Le fonctionnement, écran par écran, sur une commande client →
+Où il intervient dans la méthode
+Harness n’est pas une étape de plus. Il outille trois des quatre temps de notre méthode.
+2
+Fondation
+Cartographier l’existant avant d’y toucher : ce que fait vraiment le processus, exceptions comprises, et pas ce que dit la procédure.
+3
+Déploiement
+Montrer ce qu’un changement affecte avant sa mise en production, et le faire relire par la personne qui en répond.
+4
+Pilotage et vérification
+Vérifier en continu que chaque comportement attendu est tenu. C’est ce qui rend le rapport trimestriel vérifiable plutôt que déclaratif.
+STATUT
+Harness n’est pas en vente. Nous le construisons pour nos missions, et nous l’ouvrons à quelques équipes que nous choisissons.
+Ce qui vous intéresse, c’est le résultat ?
+Harness sert une méthode. 45 minutes pour voir ce qu’elle donnerait sur vos processus.
+Prendre rendez-vous
+Voir la méthode
+CAS D’USAGES
+Tous les cas
+Conseil, ingénierie, bureaux d’études
+Industrie et distribution B2B
+Éditeurs et services récurrents
+KIGUMI
+Notre méthode
+Travailler ensemble
+À propos
+Lab
+CONFIANCE
+Données et sécurité
+AI Act
+Mentions légales
+CONTACT
+Prendre rendez-vous
+contact@kigumi.app
+Studio d’automatisation de processus par agents IA pour PME et ETI.

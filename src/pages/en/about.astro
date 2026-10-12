@@ -1,0 +1,66 @@
+---
+import { AGENDA } from "../../lib/contact";
+import StudioLayout from "../../layouts/StudioLayout.astro";
+---
+<StudioLayout
+  titre={'About'}
+  description={'Two partners, one on operations and sales, one on technology.'}
+  actif="a-propos">
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow">About</p>
+    <h1>The two partners who sell you the mission are the ones who deliver it.</h1>
+    <p class="lead">One comes from operations and sales, the other from technology.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <div class="portrait">
+          <img src="/studio/portraits/julien.webp" alt="Portrait of Julien" width="960" height="1200" loading="lazy" decoding="async">
+        </div>
+        <h3>Julien</h3>
+        <p class="muted">Operations and business development.</p>
+        <p>I started with seven years selling IT solutions to large accounts, for telecom operators and integrators: calls for tender, IT departments, procurement, coordination between pre-sales, manufacturers and project teams.</p>
+        <p>I then spent six years at a mobility software publisher, where I went from Customer Success Manager to Client Services Director, leading a team of 11 across Customer Success, Support and project management.</p>
+        <p><strong>My job for nearly fifteen years: making sure a technical solution keeps its promises once it is at the customer&rsquo;s.</strong></p>
+      </div>
+      <div>
+        <div class="portrait">
+          <img src="/studio/portraits/stephane.webp" alt="Portrait of Stéphane" width="960" height="1200" loading="lazy" decoding="async">
+        </div>
+        <h3>St&eacute;phane</h3>
+        <p class="muted">Technology and product.</p>
+        <p>Nearly fifteen years building complex software products used by millions of people, lately I ran the development teams of a mobility software company, R&amp;D and machine learning included.</p>
+        <p>I saw it happen again and again: a system that runs is not a system that does what was expected of it. We can say that software doesn&rsquo;t crash; we can rarely say what it does. I have been working on verification ever since: how to make sure a program, and today a program written by an AI, does what it was asked to do.</p>
+        <p><strong>I apply the same standard to the agents we deploy: we measure what they produce.</strong></p>
+      </div>
+    </div>
+    <div class="prose" style="margin-top:48px">
+      <h2>Why the two of us</h2>
+      <p>We worked together for three years at that publisher, at the two ends of the same product: one took the calls when it didn&rsquo;t do what it was said to do, the other led the teams that had built it.</p>
+      <p>We each came to the same conclusion: what is almost always missing is proof of what was built.</p>
+      <p>Hence the way we work: cost before deploying, then measure what it produced. Hence also our choice of companies your size. In a large group, an automation that doesn&rsquo;t hold gets diluted, and there is always someone to catch it by hand. At your company, it shows immediately.</p>
+
+      <h2 style="margin-top:2em">Why Kigumi</h2>
+      <p>Kigumi is a Japanese woodworking technique: the pieces hold together without nails or screws, because each one is cut to fit the piece it joins. We took the name for the way of working it sums up.</p>
+      <ul>
+        <li><strong>Made to measure.</strong> We start from your tools and your teams, and build only what the chosen process requires.</li>
+        <li><strong>The founders do the work.</strong> From diagnosis to ongoing oversight, it&rsquo;s the two of us.</li>
+        <li><strong>Know-how that builds up.</strong> What we learn in the <a href="/en/lab/">Lab</a> about verification is what we use to check what your agents produce.</li>
+        <li><strong>Judged on the result.</strong> Every quarter, the actual gain is compared with what was projected.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Let&rsquo;s get acquainted</h2>
+    <p>45 minutes to find out whether it&rsquo;s worth it at your company, with both partners.</p>
+    <div class="btn-row"><a class="btn" href={AGENDA} target="_blank" rel="noopener">Book a call</a></div>
+  </div>
+</section>
+</StudioLayout>

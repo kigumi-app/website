@@ -1,0 +1,39 @@
+---
+// Une page d'étiquette, dans la langue de la page.
+import StudioLayout from "../../../layouts/StudioLayout.astro";
+import ListeArticles from "../ListeArticles.astro";
+import { articlesPublies, etiquettesPubliees, hrefEtiquette, libelle } from "../../../lib/blog";
+import { langueDe, lien, ui } from "../../../lib/i18n";
+
+interface Props { etiquette: string }
+const { etiquette } = Astro.props;
+const langue = langueDe(Astro.url.pathname);
+const t = ui(langue).blog;
+const articles = await articlesPublies(etiquette);
+const etiquettes = await etiquettesPubliees();
+const nom = libelle(etiquette);
+const description = langue === "fr" ? `Les articles étiquetés ${nom}.` : `Articles tagged ${nom}.`;
+---
+<StudioLayout
+  titre={`Blog · ${nom}`}
+  description={description}
+  actif=""
+  replilangue={hrefEtiquette(etiquette, langue === "fr" ? "en" : "fr")}
+  fil={[{ libelle: "Blog", href: lien("/blog/", langue) }, { libelle: nom }]}>
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow">Blog · {nom}</p>
+    <h1>{nom}</h1>
+    <nav class="sousnav" aria-label={t.etiquettes}>
+      <a href={lien("/blog/", langue)}>{t.tout}</a>
+      {etiquettes.map((e) => (
+        <a href={hrefEtiquette(e, langue)} aria-current={e === etiquette ? "page" : undefined}>{libelle(e)}</a>
+      ))}
+    </nav>
+  </div>
+</section>
+
+<section>
+  <div class="wrap"><ListeArticles articles={articles} /></div>
+</section>
+</StudioLayout>

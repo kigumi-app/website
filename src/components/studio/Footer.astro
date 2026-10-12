@@ -1,0 +1,52 @@
+---
+import { AGENDA } from "../../lib/contact";
+// Le pied de page ne porte plus l'identité légale : elle est sur Mentions
+// légales, atteignable depuis la colonne Confiance.
+//
+// Le blog n'y entre qu'au premier article publié. Les trois profils se lisent
+// depuis cas.json, dans la langue de la page.
+import { articlesPublies } from "../../lib/blog";
+import { niveau1, vueCas } from "../../lib/cas";
+import { lien, ui, type Langue } from "../../lib/i18n";
+
+interface Props { langue: Langue }
+const { langue } = Astro.props;
+const t = ui(langue).pied;
+const blog = (await articlesPublies()).length > 0;
+const profils = niveau1.map((c) => vueCas(c, langue));
+const l = (c: string) => lien(c, langue);
+---
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>{t.cas}</h4>
+        <a href={l("/cas-usages/")}>{t.tousLesCas}</a>
+        {profils.map((p) => <a href={p.href}>{p.public}</a>)}
+      </div>
+      <div>
+        <h4>{t.kigumi}</h4>
+        <a href={l("/methode/")}>{t.methode}</a>
+        <a href={l("/travailler-ensemble/")}>{t.travailler}</a>
+        <a href={l("/a-propos/")}>{t.aPropos}</a>
+        {blog && <a href={l("/blog/")}>{t.blog}</a>}
+        <a href={l("/lab/")}>{t.lab}</a>
+      </div>
+      <div>
+        <h4>{t.confiance}</h4>
+        <a href={l("/confiance/")}>{t.donnees}</a>
+        <a href={l("/confiance/#ai-act")}>{t.aiAct}</a>
+        <a href={l("/mentions-legales/")}>{t.mentions}</a>
+      </div>
+      <div>
+        <h4>{t.contact}</h4>
+        <a href={AGENDA} target="_blank" rel="noopener">{ui(langue).rdv}</a>
+        <a href="mailto:contact@kigumi.app">contact@kigumi.app</a>
+      </div>
+    </div>
+    <div class="legal">
+      <span class="lockup" role="img" aria-label="Kigumi" style="margin-bottom:16px"></span>
+      <p>{t.signature}</p>
+    </div>
+  </div>
+</footer>

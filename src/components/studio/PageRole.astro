@@ -1,0 +1,62 @@
+---
+import { AGENDA } from "../../lib/contact";
+// Une page de rôle, engendrée depuis cas.json, dans la langue de la page.
+// Un rôle ajouté aux données produit ses deux pages sans toucher au code.
+import StudioLayout from "../../layouts/StudioLayout.astro";
+import FichesCas from "./FichesCas.astro";
+import { parId, vueCas, vueRole, type Role } from "../../lib/cas";
+import { langueDe, lien, ui } from "../../lib/i18n";
+
+interface Props { role: Role }
+const langue = langueDe(Astro.url.pathname);
+const r = vueRole(Astro.props.role, langue);
+const T = {
+  fr: {
+    pese: "Ce qui pèse sur votre poste",
+    note: "Ces cas sont construits à partir de situations observées. Le pré-diagnostic chiffre lesquels pèsent réellement chez vous, et dans quel ordre.",
+    cta: "45 minutes pour savoir si ça vaut le coup",
+    ctaTexte: "On regarde ensemble ceux de ces processus qui vous concernent, et vous saurez s’il y a matière à un diagnostic. S’il n’y en a pas, on vous le dira.",
+    autres: "Voir les autres postes",
+  },
+  en: {
+    pese: "What weighs on your role",
+    note: "These cases are built from situations we have observed. The pre-diagnosis costs which ones actually weigh on you, and in what order.",
+    cta: "45 minutes to find out whether it’s worth it",
+    ctaTexte: "We go through the processes on this page that apply to you, and you’ll know whether there is enough for a diagnosis. If there isn’t, we’ll tell you.",
+    autres: "See the other roles",
+  },
+}[langue];
+// La description sert au référencement : elle nomme les processus du poste.
+const description = r.chapo.split(".")[0] + ". "
+  + r.cas.map((i) => vueCas(parId.get(i)!, langue).titre).join(", ") + ".";
+---
+<StudioLayout titre={r.nom} description={description} actif={Astro.props.role.slug}>
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow">{r.nom}</p>
+    <h1>{r.h1}</h1>
+    <p class="lead">{r.chapo}</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>{T.pese}</h2>
+    <FichesCas ids={r.cas} />
+    <div class="prose" style="margin-top:40px">
+      <p class="muted" style="font-size:14px">{T.note}</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>{T.cta}</h2>
+    <p>{T.ctaTexte}</p>
+    <div class="btn-row">
+      <a class="btn" href={AGENDA} target="_blank" rel="noopener">{ui(langue).rdv}</a>
+      <a class="btn btn-ghost" href={lien("/cas-usages/", langue)}>{T.autres}</a>
+    </div>
+  </div>
+</section>
+</StudioLayout>

@@ -1,0 +1,63 @@
+---
+import { AGENDA } from "../lib/contact";
+import StudioLayout from "../layouts/StudioLayout.astro";
+import Svg from "../components/studio/Svg.astro";
+---
+<StudioLayout
+  titre={'Industrie et distribution B2B'}
+  description={"Traiter les commandes clients entrantes sans ressaisie, de l'e-mail à l'ERP."}
+  actif="industrie-distribution">
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow"><span class="ico"><Svg nom="commande-piece-jointe" icone /></span>Industrie et distribution B2B</p>
+    <h1>Vos commandes arrivent en PDF. Elles repartent en ressaisie.</h1>
+    <p class="lead">Une commande sur deux arrive par e-mail, en pièce jointe, parfois scannée.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <h2>La situation</h2>
+    <p>Quelqu'un retrouve le client, traduit ses références dans votre catalogue, vérifie les prix et les délais, puis ressaisit tout dans l'ERP. La correspondance entre le langage de vos clients et vos références n'est écrite nulle part&nbsp;: elle vit dans la tête de votre ADV. Le jour où cette personne est absente, tout ralentit.</p>
+
+    <h2 style="margin-top:2em">Ce qu'on met en place</h2>
+    <p>Un agent qui lit la commande, identifie le client et ses conditions commerciales, fait correspondre les références, contrôle la cohérence (prix, quantités, délais, encours), prépare la saisie et envoie l'accusé de réception.</p>
+    <p>Tout ce dont il n'est pas sûr remonte à votre ADV, avec le motif du doute. <strong>Et cette correspondance devient un actif de l'entreprise.</strong></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <figure class="diagramme explicatif">
+      <div class="d-large"><Svg nom="explicatif-commande" /></div>
+      <div class="d-etroit"><Svg nom="explicatif-commande-portrait" /></div>
+      <figcaption>L&rsquo;agent lit la commande et rapproche les r&eacute;f&eacute;rences. Ce dont il n&rsquo;est pas s&ucirc;r part en validation ; le reste entre dans l&rsquo;ERP.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <h2>Ce qu'on mesure</h2>
+    <ul class="measures">
+      <li>Le temps de traitement par commande</li>
+      <li>Le taux d'erreur de saisie</li>
+      <li>Le délai d'accusé de réception</li>
+      <li>Le coût des avoirs et des litiges évités</li>
+    </ul>
+
+    <p class="muted" style="font-size:14px;margin-top:2em">Ce cas est construit à partir de situations observées dans le secteur. Les ordres de grandeur sont des hypothèses jusqu'à ce qu'on les mesure chez vous.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Ce cas ressemble au vôtre&nbsp;?</h2>
+    <p>45 minutes pour savoir si ce cas-là vous coûte assez pour mériter qu'on s'en occupe. S'il ne le mérite pas, on vous le dira.</p>
+    <div class="btn-row">
+      <a class="btn" href={AGENDA} target="_blank" rel="noopener">Prendre rendez-vous</a>
+      <a class="btn btn-ghost" href="/cas-usages/">Voir les autres cas</a>
+    </div>
+  </div>
+</section>
+</StudioLayout>

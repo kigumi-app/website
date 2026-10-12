@@ -1,0 +1,69 @@
+---
+import { AGENDA } from "../../lib/contact";
+// Les ancres des étapes gardent leur nom français : elles sont les mêmes dans
+// les deux langues, pour que `lien()` puisse traduire une adresse avec ancre.
+import StudioLayout from "../../layouts/StudioLayout.astro";
+import Svg from "../../components/studio/Svg.astro";
+---
+<StudioLayout
+  titre={'Our method'}
+  description={"We deploy nothing before costing what it brings in."}
+  actif="methode">
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow">Our method</p>
+    <h1>We deploy nothing before costing what it brings in.</h1>
+    <p class="lead">Four stages. You can stop after the first one and keep what it produced.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <figure class="diagramme">
+      <div class="d-large"><Svg nom="methode-paysage" /></div>
+      <div class="d-etroit"><Svg nom="methode-portrait" /></div>
+      <figcaption>Oversight re-measures the starting point set at diagnosis. That loop is what makes the gain verifiable.</figcaption>
+    </figure>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><div>
+        <h3>Diagnosis</h3>
+        <p>Two to three weeks. We map the candidate processes, estimate the economic gain of each, and rank them. The deliverable is a costed prioritisation report, which you can use without us.</p>
+      </div></div>
+      <div class="step" id="fondation"><div class="n">2</div><div>
+        <h3>Foundation</h3>
+        <p>We gather what your tools already know (your customers, your references, your rules, your exceptions) and turn it into a base the agents can use, only for the processes selected.</p>
+      </div></div>
+      <div class="step" id="deploiement"><div class="n">3</div><div>
+        <h3>Deployment</h3>
+        <p>We build the agents, connect them to your tools, and put them into production with your teams. Anything outside their trust boundary goes to a human, with the reason for the doubt.</p>
+      </div></div>
+      <div class="step" id="pilotage"><div class="n">4</div><div>
+        <h3>Oversight and verification</h3>
+        <p>We monitor and correct. Every quarter, we hand you a report comparing the real gain with the diagnosis projection, including when the gap isn&rsquo;t in our favour.</p>
+      </div></div>
+    </div>
+    <p class="muted" style="margin-top:32px;font-size:15px">Foundation, deployment and verification rely on <a href="/en/lab/harness/">Harness</a>, the tool we are building to know what an automated process really does.</p>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap prose">
+    <h2>Why the second mission costs less than the first</h2>
+    <p>Each automation is bounded to one process: we build nothing beyond what it requires. The foundation is not. The customers, references, rules and exceptions that had to be made explicit for the first process serve the second, then the third.</p>
+    <p>It&rsquo;s the only part of the work that outlasts the mission. Agents get replaced and tools change; what your teams have made explicit stays. <strong>This base belongs to you, it <a href="/en/trust/#reversibilite">can be exported at any time</a>, and you keep it if you stop.</strong></p>
+    <p>It grows as we automate. A base built just in case ages before it has served.</p>
+
+    <h2 style="margin-top:2em">Why context changes everything</h2>
+    <p>A generic agent can write. It doesn&rsquo;t know what your customers call your products, which exceptions you tolerate, what you never promise, or who handles what at your company. Those rules are written down nowhere: they live in a few people&rsquo;s heads.</p>
+    <p>Our work is first to make them explicit and usable. That&rsquo;s what separates an agent that holds up in production from a demo that impresses in a meeting.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Start with the diagnosis</h2>
+    <p>45 minutes to find out whether it&rsquo;s worth it, and whether there is enough for a diagnosis.</p>
+    <div class="btn-row"><a class="btn" href={AGENDA} target="_blank" rel="noopener">Book a call</a></div>
+  </div>
+</section>
+</StudioLayout>

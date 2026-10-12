@@ -1,0 +1,28 @@
+---
+// Les fiches d'une page de rôle. Celles de niveau 1 renvoient vers leur page
+// détaillée ; celles de niveau 2 se lisent entièrement ici.
+import { parId, vueCas } from "../../lib/cas";
+import { langueDe, ui } from "../../lib/i18n";
+interface Props { ids: string[] }
+const { ids } = Astro.props;
+const langue = langueDe(Astro.url.pathname);
+const t = ui(langue).cas;
+const fiches = ids.map((i) => vueCas(parId.get(i)!, langue));
+---
+<ul class="fiches">
+  {fiches.map((c) => (
+    <li id={`cas-${c.id}`}>
+      <p class="who">{c.public}</p>
+      <h3>{c.titre}</h3>
+      <p>{c.accroche}</p>
+      <p>{c.mecanisme}</p>
+      {c.href && (
+        <p><a href={c.href}>{t.fiche} &rarr;</a></p>
+      )}
+      <div class="mesure">
+        <span>{t.mesure}</span>
+        <ul>{c.mesure.map((m) => <li>{m}</li>)}</ul>
+      </div>
+    </li>
+  ))}
+</ul>

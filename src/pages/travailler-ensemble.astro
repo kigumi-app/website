@@ -1,0 +1,44 @@
+---
+import { AGENDA } from "../lib/contact";
+import StudioLayout from "../layouts/StudioLayout.astro";
+---
+<StudioLayout
+  titre={'Travailler ensemble'}
+  description={'Quatre temps, trois engagements, et ce que nous ne faisons pas.'}
+  actif="travailler-ensemble">
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow">Travailler ensemble</p>
+    <h1>Un processus à la fois, mesuré à chaque étape.</h1>
+    <p class="lead">Un diagnostic chiffré, une fondation construite sur mesure, des agents déployés un processus à la fois, un pilotage continu avec vérification du gain.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <h2>Ce qu'on s'engage à faire</h2>
+    <ul class="measures">
+      <li>Commencer par un processus, pas par dix</li>
+      <li>Vous montrer ce que ça a vraiment rapporté, chiffres à l'appui</li>
+      <li>Vous laisser partir avec ce qui a été construit</li>
+    </ul>
+
+    <h2 style="margin-top:2.2em">Ce qu'on ne fait pas</h2>
+    <ul class="measures">
+      <li>Déployer un agent sans diagnostic préalable</li>
+      <li>Facturer l'IA avec une marge cachée</li>
+      <li>Vous rendre dépendants d'une brique que vous ne pourriez pas reprendre</li>
+    </ul>
+
+    <p style="margin-top:2em">Les tarifs sont communiqués à l'issue du premier échange, en fonction du périmètre retenu.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Parlons de votre périmètre</h2>
+    <p>45 minutes suffisent à savoir si un diagnostic a du sens chez vous.</p>
+    <div class="btn-row"><a class="btn" href={AGENDA} target="_blank" rel="noopener">Prendre rendez-vous</a></div>
+  </div>
+</section>
+</StudioLayout>

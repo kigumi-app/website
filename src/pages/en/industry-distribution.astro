@@ -1,0 +1,63 @@
+---
+import { AGENDA } from "../../lib/contact";
+import StudioLayout from "../../layouts/StudioLayout.astro";
+import Svg from "../../components/studio/Svg.astro";
+---
+<StudioLayout
+  titre={'Manufacturing and B2B distribution'}
+  description={"Process incoming customer orders without re-keying, from email to ERP."}
+  actif="industrie-distribution">
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow"><span class="ico"><Svg nom="commande-piece-jointe" icone /></span>Manufacturing and B2B distribution</p>
+    <h1>Your orders arrive as PDFs. They leave as re-keying.</h1>
+    <p class="lead">One order in two arrives by email, as an attachment, sometimes scanned.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <h2>The situation</h2>
+    <p>Someone finds the customer, translates their references into your catalogue, checks prices and lead times, then re-keys everything into the ERP. The mapping between your customers&rsquo; language and your actual references is written down nowhere: it lives in the head of your sales administration team. The day that person is away, everything slows down.</p>
+
+    <h2 style="margin-top:2em">What we put in place</h2>
+    <p>An agent that reads the order, identifies the customer and their commercial terms, matches the references, checks consistency (prices, quantities, lead times, credit limits), prepares the entry and sends the acknowledgement.</p>
+    <p>Anything it isn&rsquo;t sure about goes to your sales administration team, with the reason for the doubt. <strong>And that mapping becomes a company asset.</strong></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <figure class="diagramme explicatif">
+      <div class="d-large"><Svg nom="explicatif-commande" /></div>
+      <div class="d-etroit"><Svg nom="explicatif-commande-portrait" /></div>
+      <figcaption>The agent reads the order and matches the references. What it isn&rsquo;t sure about goes for approval; the rest goes into the ERP.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <h2>What we measure</h2>
+    <ul class="measures">
+      <li>Processing time per order</li>
+      <li>Data-entry error rate</li>
+      <li>Time to acknowledgement</li>
+      <li>Cost of credit notes and disputes avoided</li>
+    </ul>
+
+    <p class="muted" style="font-size:14px;margin-top:2em">This case is built from situations observed in the industry. The orders of magnitude are assumptions until we measure them at your company.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Does this case look like yours?</h2>
+    <p>45 minutes to find out whether this case costs you enough to be worth dealing with. If it doesn&rsquo;t, we&rsquo;ll tell you.</p>
+    <div class="btn-row">
+      <a class="btn" href={AGENDA} target="_blank" rel="noopener">Book a call</a>
+      <a class="btn btn-ghost" href="/en/use-cases/">See the other cases</a>
+    </div>
+  </div>
+</section>
+</StudioLayout>

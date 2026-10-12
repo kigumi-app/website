@@ -1,0 +1,21 @@
+---
+// Les derniers articles d'une étiquette, en section de page. Rien n'est rendu
+// tant qu'aucun n'est publié : une section vide promet ce qu'on n'a pas tenu.
+import ListeArticles from "./ListeArticles.astro";
+import { articlesPublies, hrefEtiquette, libelle } from "../../lib/blog";
+import { langueDe, ui } from "../../lib/i18n";
+
+interface Props { etiquette: string; titre: string }
+const { etiquette, titre } = Astro.props;
+const langue = langueDe(Astro.url.pathname);
+const articles = (await articlesPublies(etiquette)).slice(0, 3);
+---
+{articles.length > 0 && (
+  <section>
+    <div class="wrap">
+      <div class="prose"><h2>{titre}</h2></div>
+      <ListeArticles articles={articles} />
+      <p style="margin-top:28px"><a href={hrefEtiquette(etiquette, langue)}>{ui(langue).blog.tousLesArticles} · {libelle(etiquette)} &rarr;</a></p>
+    </div>
+  </section>
+)}

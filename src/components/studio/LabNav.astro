@@ -1,0 +1,26 @@
+---
+// Sous-navigation d'un chantier du lab. Les articles n'y figurent qu'une fois
+// qu'il en existe un de publié : un onglet vers une page vide promet ce
+// qu'on n'a pas encore tenu.
+import { articlesPublies, hrefEtiquette } from "../../lib/blog";
+import { langueDe, lien, ui } from "../../lib/i18n";
+
+interface Props {
+  courant: "presentation" | "fonctionnement";
+}
+const { courant } = Astro.props;
+const langue = langueDe(Astro.url.pathname);
+const t = ui(langue).lab;
+const ENTREES = [
+  { id: "presentation", libelle: t.presentation, href: lien("/lab/harness/", langue) },
+  { id: "fonctionnement", libelle: t.fonctionnement, href: lien("/lab/harness/fonctionnement/", langue) },
+];
+if ((await articlesPublies("harness")).length > 0) {
+  ENTREES.push({ id: "articles", libelle: t.articles, href: hrefEtiquette("harness", langue) });
+}
+---
+<nav class="sousnav" aria-label="Harness">
+  {ENTREES.map((e) => (
+    <a href={e.href} aria-current={e.id === courant ? "page" : undefined}>{e.libelle}</a>
+  ))}
+</nav>

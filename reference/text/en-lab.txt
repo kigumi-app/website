@@ -1,0 +1,42 @@
+Method
+Working together
+Use cases
+About
+Book a call
+FR
+Kigumi
+Lab
+LAB
+What we build outside our missions.
+Our method rests on one promise: we measure what agents produce, instead of noting that they run. You still have to know how to do it. That’s what we build here.
+Why it isn’t a side project
+Software that runs is not software that does what was expected of it. We can say that a program doesn’t crash; we can rarely say what it does. That gap was already hard when humans wrote the code. It becomes the central problem now that part of it is produced by models.
+It’s also what separates an automation that pays from one that costs. The work we do here isn’t a product we sell you: it’s the reason why, for our customers, we measure instead of assuming.
+What we publish
+What we have understood, including when it cost us. We write what we would have wanted to read before starting. These articles appear on the blog, under the Lab tag.
+INTERNAL TOOL
+Harness
+The tool we are building to know what an automated process really does, and to be able to prove it. Open to a few teams we choose.
+See the tool →
+More interested in your own processes?
+45 minutes to talk them through. You leave with the list of your processes ranked by what they cost you.
+Book a call
+See the method
+USE CASES
+All use cases
+Consulting, engineering and design offices
+Manufacturing and B2B distribution
+Software publishers and recurring services
+KIGUMI
+Our method
+Working together
+About
+Lab
+TRUST
+Data and security
+AI Act
+Legal notice
+CONTACT
+Book a call
+contact@kigumi.app
+Process automation studio using AI agents, for small and mid-sized companies.

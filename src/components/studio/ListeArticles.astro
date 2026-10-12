@@ -1,0 +1,24 @@
+---
+// Liste d'articles, partagée par le blog, ses pages d'étiquette et le lab.
+// Un article écrit dans l'autre langue que la page le dit sur sa ligne.
+import { type Article, dateArticle, hrefArticle, hrefEtiquette, libelle, NOM_LANGUE } from "../../lib/blog";
+import { langueDe } from "../../lib/i18n";
+
+interface Props { articles: Article[] }
+const { articles } = Astro.props;
+const langue = langueDe(Astro.url.pathname);
+---
+<ul class="roles articles">
+  {articles.map((a) => (
+    <li lang={a.data.langue}>
+      <p class="who">{dateArticle(a)}{a.data.langue !== langue && ` · ${NOM_LANGUE[a.data.langue]}`}</p>
+      <h3><a href={hrefArticle(a)}>{a.data.title}</a></h3>
+      <p>{a.data.description}</p>
+      {a.data.etiquettes.length > 0 && (
+        <p class="etiquettes">
+          {a.data.etiquettes.map((e) => <a href={hrefEtiquette(e, langue)}>{libelle(e)}</a>)}
+        </p>
+      )}
+    </li>
+  ))}
+</ul>

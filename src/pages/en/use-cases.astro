@@ -1,0 +1,57 @@
+---
+import { AGENDA } from "../../lib/contact";
+import StudioLayout from "../../layouts/StudioLayout.astro";
+import CartesCas from "../../components/studio/CartesCas.astro";
+import IndexRoles from "../../components/studio/IndexRoles.astro";
+---
+<StudioLayout
+  titre="Use cases"
+  description="The processes where automation with agents makes sense: calls for tender, incoming orders, customer service, invoicing, purchasing, compliance, management reporting."
+  actif="cas-usages">
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow">Use cases</p>
+    <h1>Where automation keeps its promises.</h1>
+    <p class="lead">These processes have one thing in common: repetitive work whose rules only two or three people know. That&rsquo;s where automation pays, and where it can best be measured. Two ways in below: by process, or by the role that carries it.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">By process</p>
+    <h2>What costs you time</h2>
+    <CartesCas />
+    <div class="prose" style="margin-top:48px">
+      <p class="muted" style="font-size:14px">These cases are built from situations observed in these industries. The orders of magnitude are assumptions until we measure them at your company.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">By role</p>
+    <h2>What weighs on your role</h2>
+    <p class="lead">The same cases, arranged by the person who carries the load, so that everyone finds their own job.</p>
+    <IndexRoles />
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap prose">
+    <h2>Your case isn&rsquo;t on the list</h2>
+    <p>These are the ones that come up most often, but the list stays open. The criterion isn&rsquo;t the industry, it&rsquo;s the shape of the work: a high volume of tasks that repeat.</p>
+    <p>If that&rsquo;s your situation, the diagnosis will cost it like the others. <strong>And if it concludes that automation makes no sense for you, it will say so.</strong></p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Find out what it&rsquo;s worth for you</h2>
+    <p>45 minutes to find out whether there is enough for a diagnosis. If nothing at your company is worth automating, we&rsquo;ll tell you.</p>
+    <div class="btn-row">
+      <a class="btn" href={AGENDA} target="_blank" rel="noopener">Book a call</a>
+      <a class="btn btn-ghost" href="/en/method/">See the method</a>
+    </div>
+  </div>
+</section>
+</StudioLayout>

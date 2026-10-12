@@ -1,0 +1,30 @@
+# Le site produit occupait la racine jusqu'à la bascule, en anglais. Ses
+# adresses mènent donc aux pages anglaises ; sans ces règles, les liens
+# existants tombent en 404.
+/index.html                  /                                  301
+/how-it-works.html           /en/lab/harness/how-it-works/      301
+/how-it-works                /en/lab/harness/how-it-works/      301
+/writing                     /en/blog/                          301
+/writing/*                   /en/blog/:splat                    301
+/rss.xml                     /blog/rss.xml                      301
+
+# Harness devient un outil du studio. La page « how it works » du produit a
+# aujourd'hui son pendant anglais, à une adresse sous /en/.
+/lab/harness/how-it-works    /en/lab/harness/how-it-works/      301
+/lab/harness/how-it-works/   /en/lab/harness/how-it-works/      301
+
+# Les notes du lab rejoignent le blog. Elles sont écrites en anglais : elles
+# vivent sous /en/blog/, et l'étiquette Lab les distingue.
+/lab/harness/writing         /en/blog/                          301
+/lab/harness/writing/        /en/blog/                          301
+/lab/harness/writing/*       /en/blog/:splat                    301
+/lab/harness/rss.xml         /blog/rss.xml                      301
+
+# Plus de page contact : la prise de rendez-vous passe par l'agenda Google
+# (adresse dans src/lib/contact.ts, à reporter ici si elle change). 302, pour
+# que les moteurs ne retiennent pas l'adresse de l'agenda.
+/contact        https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ23_50-ZRYgHD18N6YLZ_SMSq0Sry7lD5AP_2HaJTlKAmJwo9bsZj4Z4UY_2FqqhRKKZXW7Wsic   302
+/contact/       https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ23_50-ZRYgHD18N6YLZ_SMSq0Sry7lD5AP_2HaJTlKAmJwo9bsZj4Z4UY_2FqqhRKKZXW7Wsic   302
+/contact.html   https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ23_50-ZRYgHD18N6YLZ_SMSq0Sry7lD5AP_2HaJTlKAmJwo9bsZj4Z4UY_2FqqhRKKZXW7Wsic   302
+/en/contact     https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ23_50-ZRYgHD18N6YLZ_SMSq0Sry7lD5AP_2HaJTlKAmJwo9bsZj4Z4UY_2FqqhRKKZXW7Wsic   302
+/en/contact/    https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ23_50-ZRYgHD18N6YLZ_SMSq0Sry7lD5AP_2HaJTlKAmJwo9bsZj4Z4UY_2FqqhRKKZXW7Wsic   302

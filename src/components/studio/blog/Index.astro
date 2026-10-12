@@ -1,0 +1,50 @@
+---
+// L'index du blog, dans la langue de la page. Il liste tous les articles,
+// quelle que soit leur langue : un article n'est écrit qu'une fois.
+import StudioLayout from "../../../layouts/StudioLayout.astro";
+import ListeArticles from "../ListeArticles.astro";
+import { articlesPublies, etiquettesPubliees, hrefEtiquette, libelle } from "../../../lib/blog";
+import { langueDe, lien, ui } from "../../../lib/i18n";
+
+const langue = langueDe(Astro.url.pathname);
+const T = {
+  fr: {
+    description: "Ce qu'on apprend en automatisant des processus chez des PME et des ETI, et ce qu'on construit au lab pour le vérifier.",
+    h1: "Ce qu’on apprend en chemin.",
+    lead: "Des notes sur l’automatisation de processus en PME et ETI, et sur ce que disent les chiffres une fois qu’on les regarde. Les articles du lab portent l’étiquette Lab.",
+    vide: "Rien de publié pour l’instant.",
+  },
+  en: {
+    description: "What we learn automating processes for small and mid-sized companies, and what we build in the lab to verify it.",
+    h1: "What we learn along the way.",
+    lead: "Notes on process automation in small and mid-sized companies, and on what the numbers say once you look at them. Lab articles carry the Lab tag.",
+    vide: "Nothing published yet.",
+  },
+}[langue];
+const articles = await articlesPublies();
+const etiquettes = await etiquettesPubliees();
+const t = ui(langue).blog;
+---
+<StudioLayout titre="Blog" description={T.description} actif="">
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow">Blog</p>
+    <h1>{T.h1}</h1>
+    <p class="lead">{T.lead}</p>
+    {etiquettes.length > 0 && (
+      <nav class="sousnav" aria-label={t.etiquettes}>
+        <a href={lien("/blog/", langue)} aria-current="page">{t.tout}</a>
+        {etiquettes.map((e) => <a href={hrefEtiquette(e, langue)}>{libelle(e)}</a>)}
+      </nav>
+    )}
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    {articles.length === 0
+      ? <p class="muted">{T.vide}</p>
+      : <ListeArticles articles={articles} />}
+  </div>
+</section>
+</StudioLayout>

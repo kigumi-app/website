@@ -1,0 +1,95 @@
+---
+import { AGENDA } from "../../../lib/contact";
+// Harness, présenté comme ce qu'il est : un outil du studio, ouvert sur
+// sélection. La page démontre une expertise, elle ne vend rien. Pas de
+// formulaire, pas de liste d'attente : l'appel à l'action est celui du studio.
+import StudioLayout from "../../../layouts/StudioLayout.astro";
+import LabNav from "../../../components/studio/LabNav.astro";
+import DerniersArticles from "../../../components/studio/DerniersArticles.astro";
+---
+<StudioLayout
+  titre="Harness"
+  description="L'outil que nous construisons pour savoir ce que fait un processus automatisé, et pouvoir le prouver."
+  actif=""
+  fil={[{ libelle: "Lab", href: "/lab/" }, { libelle: "Harness" }]}>
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow">Lab · Outil interne</p>
+    <h1>Savoir ce que fait un système, et pouvoir le prouver.</h1>
+    <p class="lead">Harness est l&rsquo;outil que nous construisons pour vérifier ce que fait un processus automatisé. Il en dresse la carte à partir de ses exécutions réelles et contrôle que chaque comportement attendu est tenu.</p>
+    <LabNav courant="presentation" />
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <h2>Pourquoi on le construit</h2>
+    <p>Notre méthode promet de mesurer ce que les agents produisent. Cette promesse ne tient que si l&rsquo;on sait dire, à tout moment, ce que fait réellement un processus automatisé&nbsp;: quelles règles il applique, quelles exceptions il remonte, ce qu&rsquo;il fait quand une donnée manque.</p>
+    <p>Les tests classiques disent qu&rsquo;un programme ne plante pas. Harness vérifie ce qu&rsquo;il fait&nbsp;: les règles appliquées, les cas limites, les écarts à la spécification. <strong>Il sert d&rsquo;abord à nos propres livraisons.</strong></p>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap">
+    <div class="prose"><h2>Ce qu&rsquo;il fait</h2></div>
+    <div class="grid">
+      <div class="card">
+        <p class="who">Voir</p>
+        <h3>La carte du processus</h3>
+        <p>Les étapes, les règles, les exceptions et leurs dépendances, relevées dans les exécutions réelles du processus.</p>
+      </div>
+      <div class="card">
+        <p class="who">Changer</p>
+        <h3>Ce qu&rsquo;un changement affecte</h3>
+        <p>Avant de modifier une règle, on voit ce qu&rsquo;elle touche. Le changement est proposé, puis relu par quelqu&rsquo;un avant de partir.</p>
+      </div>
+      <div class="card">
+        <p class="who">Vérifier</p>
+        <h3>Ce qui est tenu, et ce qui ne l&rsquo;est pas</h3>
+        <p>Chaque comportement attendu est vérifié. Les écarts sont nommés, avec l&rsquo;endroit où ils se produisent, avant qu&rsquo;ils coûtent.</p>
+      </div>
+    </div>
+    <p style="margin-top:32px"><a href="/lab/harness/fonctionnement/">Le fonctionnement, écran par écran, sur une commande client &rarr;</a></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="prose">
+      <h2>Où il intervient dans la méthode</h2>
+      <p>Harness outille trois des quatre temps de <a href="/methode/">notre méthode</a>.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">2</div><div>
+        <h3><a href="/methode/#fondation">Fondation</a></h3>
+        <p>Cartographier l&rsquo;existant avant d&rsquo;y toucher&nbsp;: ce que fait vraiment le processus, exceptions comprises.</p>
+      </div></div>
+      <div class="step"><div class="n">3</div><div>
+        <h3><a href="/methode/#deploiement">Déploiement</a></h3>
+        <p>Montrer ce qu&rsquo;un changement affecte avant sa mise en production, et le faire relire par la personne qui en répond.</p>
+      </div></div>
+      <div class="step"><div class="n">4</div><div>
+        <h3><a href="/methode/#pilotage">Pilotage et vérification</a></h3>
+        <p>Vérifier en continu que chaque comportement attendu est tenu. Le rapport trimestriel s&rsquo;appuie sur ces vérifications.</p>
+      </div></div>
+    </div>
+    <div class="note prose">
+      <strong>Statut</strong>
+      <p>Harness n&rsquo;est pas en vente. Nous le construisons pour nos missions et l&rsquo;ouvrons à quelques équipes que nous choisissons.</p>
+    </div>
+  </div>
+</section>
+
+<DerniersArticles etiquette="harness" titre="Ce qu’on en écrit" />
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Ce que la méthode donnerait chez vous</h2>
+    <p>45 minutes pour savoir si ça vaut le coup sur vos processus.</p>
+    <div class="btn-row">
+      <a class="btn" href={AGENDA} target="_blank" rel="noopener">Prendre rendez-vous</a>
+      <a class="btn btn-ghost" href="/methode/">Voir la méthode</a>
+    </div>
+  </div>
+</section>
+</StudioLayout>

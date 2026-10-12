@@ -1,0 +1,57 @@
+---
+import { AGENDA } from "../../lib/contact";
+// La page d'entrée du lab appartient au site du studio, comme tout ce qu'elle
+// contient : les chantiers du lab sont des outils du studio, pas des produits.
+import StudioLayout from "../../layouts/StudioLayout.astro";
+import DerniersArticles from "../../components/studio/DerniersArticles.astro";
+---
+<StudioLayout
+  titre="Lab"
+  description="Ce qu'on construit en dehors des missions : la vérification de ce que produisent les agents, et pourquoi elle est au centre de notre méthode."
+  actif=""
+  fil={[{ libelle: "Lab" }]}>
+<section class="hero">
+  <div class="wrap prose">
+    <p class="eyebrow">Lab</p>
+    <h1>Ce qu&rsquo;on construit en dehors des missions.</h1>
+    <p class="lead">Notre méthode promet de mesurer ce que les agents produisent. Encore faut-il savoir le faire&nbsp;: c&rsquo;est ce qu&rsquo;on construit ici.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <h2>Pourquoi le studio en a besoin</h2>
+    <p>Vérifier qu&rsquo;un programme fait ce qu&rsquo;on lui a demandé était déjà difficile quand des humains écrivaient tout le code. Maintenant qu&rsquo;une partie est produite par des modèles, c&rsquo;est devenu le problème central.</p>
+    <p>C&rsquo;est aussi ce qui sépare une automatisation qui rapporte d&rsquo;une automatisation qui coûte. <strong>Ce qu&rsquo;on construit ici sert à mesurer, chez nos clients, ce que les agents produisent réellement.</strong></p>
+
+    <h2 style="margin-top:2em">Ce qu&rsquo;on y publie</h2>
+    <p>Ce qu&rsquo;on apprend en construisant ces outils. Les articles paraissent dans le blog, sous l&rsquo;étiquette Lab.</p>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap">
+    <div class="grid">
+      <a class="card" href="/lab/harness/">
+        <p class="who">Outil interne</p>
+        <h3>Harness</h3>
+        <p>L&rsquo;outil que nous construisons pour savoir ce que fait réellement un processus automatisé, et pouvoir le prouver. Ouvert à quelques équipes que nous choisissons.</p>
+        <span class="go">Voir l&rsquo;outil &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<DerniersArticles etiquette="lab" titre="Ce qu’on en écrit" />
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Parler de vos processus</h2>
+    <p>45 minutes pour savoir si ça vaut le coup chez vous.</p>
+    <div class="btn-row">
+      <a class="btn" href={AGENDA} target="_blank" rel="noopener">Prendre rendez-vous</a>
+      <a class="btn btn-ghost" href="/methode/">Voir la méthode</a>
+    </div>
+  </div>
+</section>
+</StudioLayout>

@@ -1,0 +1,63 @@
+Method
+Working together
+Use cases
+About
+Book a call
+FR
+Kigumi
+Lab
+Harness
+LAB · INTERNAL TOOL
+Know what a system does, and be able to prove it.
+A system that runs is not a system that does what was expected. Harness is the tool we are building to tell the difference: it reads a process, maps it, and verifies that every expected behaviour holds.
+OVERVIEW
+HOW IT WORKS
+Why we are building it
+Our method promises to measure what agents produce, instead of noting that they run. That promise only holds if we can say, at any moment, what an automated process actually does: which rules it applies, which exceptions it escalates, what it does when a piece of data is missing.
+We can say that a program doesn’t crash. We can rarely say what it does. Harness closes that gap, for our own deliveries first.
+What it does
+SEE
+The map of the process
+Every step, every rule, every exception, and what connects them. Drawn from what actually runs, not from what the procedure says.
+CHANGE
+What a change affects
+Before changing a rule, you see what it touches. The change is proposed, then reviewed by someone before it goes out.
+VERIFY
+What holds, and what doesn’t
+Every expected behaviour is verified. Gaps are named, with where they occur, before they cost anything.
+How it works, screen by screen, on a customer order →
+Where it fits in the method
+Harness isn’t an extra step. It equips three of the four stages of our method.
+2
+Foundation
+Map what exists before touching it: what the process really does, exceptions included, not what the procedure says.
+3
+Deployment
+Show what a change affects before it goes into production, and have it reviewed by the person accountable for it.
+4
+Oversight and verification
+Continuously verify that every expected behaviour holds. That’s what makes the quarterly report verifiable rather than declared.
+STATUS
+Harness is not for sale. We are building it for our missions, and we open it to a few teams we choose.
+What you care about is the result?
+Harness serves a method. 45 minutes to see what it would do for your processes.
+Book a call
+See the method
+USE CASES
+All use cases
+Consulting, engineering and design offices
+Manufacturing and B2B distribution
+Software publishers and recurring services
+KIGUMI
+Our method
+Working together
+About
+Lab
+TRUST
+Data and security
+AI Act
+Legal notice
+CONTACT
+Book a call
+contact@kigumi.app
+Process automation studio using AI agents, for small and mid-sized companies.

@@ -1,0 +1,11 @@
+---
+// Les articles écrits en français. Ceux écrits en anglais vivent sous /en/blog/.
+import Article from "../../components/studio/blog/Article.astro";
+import { articlesPublies } from "../../lib/blog";
+
+export async function getStaticPaths() {
+  return (await articlesPublies()).filter((a) => a.data.langue === "fr")
+    .map((a) => ({ params: { slug: a.id }, props: { a } }));
+}
+---
+<Article a={Astro.props.a} />

@@ -1,0 +1,83 @@
+Method
+Working together
+Use cases
+About
+Book a call
+FR
+TRUST
+Your data, where it goes, and what you keep.
+The questions your IT department will ask anyway. Might as well answer them before the call.
+Hosting
+In France, with Scaleway and OVHcloud, two hosting providers incorporated under French law. One isolated database per customer, no pooling of data between our customers.
+What leaves, what doesn’t
+Only what the requested processing strictly needs, and nothing else. No model training on your data.
+The model providers we use, and the country where processing takes place:
+Mistral AI — France
+Anthropic — United States
+OpenAI — United States
+Google — United States
+TypeSafe AI — United States
+The choice is made process by process, with you. When processing has to stay in Europe, it stays in Europe.
+How long your data is kept
+Documents processed by the agents — 30 days after processing. Enough to correct an error, no more.
+Knowledge base — the length of the contract. Returned to you, then deleted within 30 days if you stop.
+Technical logs — 6 months, the period the CNIL (the French data protection authority) sets for connection logs.
+Data sent to model providers — zero retention where the provider’s offering allows it. Otherwise, 30 days for abuse detection only. In every case, no use for training.
+Your contact details, if you have contacted us — 3 years after the last exchange.
+Who has access, and to what
+Named accounts, never shared, with two-factor authentication on anything touching your data.
+Least privilege: each person only accesses the customers they work with.
+No standing access to production. Access is opened on request, for a limited time, and it is logged.
+Access reviewed every quarter. Revoked within 24 hours when someone leaves or a mission ends.
+What is logged
+Who accessed what, when, and what was done. Timestamped, tamper-proof.
+Every action of an agent is logged — the data read, the decision, the output produced, and the point of human approval where there is one.
+Logs kept for 6 months.
+Available to you, on request. A log the customer can’t read proves nothing.
+The AI Act requires this traceability for high-risk systems. We apply it to every agent we deploy, even when nothing requires it: that’s what makes a case like CV screening deployable instead of risky.
+Reversibility
+The extracted data and the process definitions belong to you, and can be exported at any time. If you stop, you keep what was built.
+Humans stay in control
+Any irreversible step, or one that carries a commercial commitment, is approved by someone on your team. An agent proposes, flags what it isn’t sure about, and never commits the company on your behalf.
+AGENT
+HUMAN
+01
+Receiving and filing the tender
+02
+Extracting the questions
+03
+Finding previous answers
+04
+Drafting the response
+05
+New questions
+06
+Pricing and commercial terms
+07
+Assembly and formatting
+08
+Submission
+Approval required — nothing leaves without a human
+Escalates on exception
+Example on responding to calls for tender. The approval points fall on what commits you: new questions, pricing, submission.
+AI Act
+The European regulation on artificial intelligence classifies uses by level of risk. The automations we deploy — document processing, request routing, drafting assistance with human approval — fall under limited risk, with a transparency obligation.
+Two cases call for particular attention, and we point them out before we start: when the people interacting with an agent are consumers, they must be told; and any automation involving the assessment of people, recruitment in particular, is high-risk and carries much heavier obligations.
+USE CASES
+All use cases
+Consulting, engineering and design offices
+Manufacturing and B2B distribution
+Software publishers and recurring services
+KIGUMI
+Our method
+Working together
+About
+Lab
+TRUST
+Data and security
+AI Act
+Legal notice
+CONTACT
+Book a call
+contact@kigumi.app
+Process automation studio using AI agents, for small and mid-sized companies.
