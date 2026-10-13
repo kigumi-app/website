@@ -40,7 +40,7 @@ n'est plus affichable.
 vers GitHub, et un domaine inconnu est refusé (`UNSUPPORTED_DOMAIN`).
 
 Reste une variable : **`ALLOWED_DOMAINS`** doit nommer chaque adresse d'où
-l'on ouvre `/admin/` :
+l'on ouvre `/cms-dashboard/` :
 
 ```
 kigumi.app, kigumi-website.stephane-6a8.workers.dev, *-kigumi-website.stephane-6a8.workers.dev
@@ -73,7 +73,7 @@ traduites. La table des correspondances est dans `src/data/adresses.json` (et
 la lisent tous.
 
 `INDEXABLE` vaut `true` (`src/lib/indexation.ts`) depuis la bascule : plus
-de `noindex`, et `robots.txt` n'interdit que `/admin/`. Le repasser à `false`
+de `noindex`, et `robots.txt` n'interdit que `/cms-dashboard/`. Le repasser à `false`
 referme tout le site d'un coup.
 
 ---

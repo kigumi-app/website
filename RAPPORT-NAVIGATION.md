@@ -62,7 +62,7 @@ blog que personne ne peut trouver, et un positionnement qui se contredit entre
 | `/lab/harness/how-it-works/` | 4 | menu du produit |
 | `/lab/harness/writing/` | 4 | menu et pied du produit |
 | `/blog/` | **0** | — |
-| `/admin/` | 0 | volontaire |
+| `/cms-dashboard/` | 0 | volontaire |
 
 Aucun lien interne cassé. Un seul lien externe (`support.github.com`, mentions
 légales).
@@ -176,7 +176,7 @@ Déjà prévu au §6 d'`A-FAIRE.md`. Le site tourne désormais sur un Worker :
   même pied, le menu allume la bonne entrée, les pages générées depuis
   `cas.json` se rattachent au bon groupe.
 - Les 5 redirections 301 de l'ancien site produit fonctionnent.
-- Aucun lien cassé, aucune page produite hors du sitemap (hors `/admin/` et la
+- Aucun lien cassé, aucune page produite hors du sitemap (hors `/cms-dashboard/` et la
   404, à raison).
 - `/lab` est bien écrit, en français, dans la mise en page du studio, et prévient
   que la suite est en anglais.
