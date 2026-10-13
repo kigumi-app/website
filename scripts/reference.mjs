@@ -32,7 +32,7 @@ const somme = (s) => createHash("sha256").update(s).digest("hex").slice(0, 16);
 // La page d'administration est une application tierce chargée depuis un CDN :
 // son contenu ne nous appartient pas et change sans nous. La relever
 // produirait un écart à chaque montée de version de Sveltia.
-const HORS_FILET = [/^\/admin\//];
+const HORS_FILET = [/^\/cms-dashboard\//];
 
 /** Toutes les routes du build, en chemins servis. */
 async function routes(dir = DIST, base = "/") {
