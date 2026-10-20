@@ -8,7 +8,13 @@
       "file": "src/styles/global.css",
       "root_cause": "Original style.css had invalid CSS declarations `translate(15px, 0px);` (a function call with no property) inside the 768px and 480px `.hero__logo-mark` media blocks. Browsers silently ignore malformed declarations, so the legacy site rendered fine; Astro's PostCSS pipeline hard-errors on them.",
       "fix": "Removed the two stray `translate(15px, 0px);` lines. Browsers already ignored them, so rendering is byte-identical; the valid `transform: translate(9px, 0.5px);` in the 480px block and the base `.hero__logo-mark` transform are untouched.",
-      "tags": ["css", "postcss", "astro", "migration", "pre-existing"],
+      "tags": [
+        "css",
+        "postcss",
+        "astro",
+        "migration",
+        "pre-existing"
+      ],
       "related_bugs": [],
       "occurrences": 1,
       "last_seen": "2026-05-18T17:03:00Z"
@@ -20,7 +26,12 @@
       "file": "index.html (legacy) -> src/components/Seo.astro",
       "root_cause": "Legacy index.html line 30 set `<meta property=\"og:image\" content=\"og-image.svg\">` but no such file was ever committed; social cards were broken. SVG og:image is also unsupported by most crawlers.",
       "fix": "Created public/og-default.svg (Workshop-at-Night branded card) and scripts/build-og.mjs to rasterize it to public/og-default.png via sharp. Seo.astro defaults og:image to /og-default.png, resolved against the site URL.",
-      "tags": ["seo", "og-image", "social", "pre-existing"],
+      "tags": [
+        "seo",
+        "og-image",
+        "social",
+        "pre-existing"
+      ],
       "related_bugs": [],
       "occurrences": 1,
       "last_seen": "2026-05-18T17:05:00Z"
@@ -32,10 +43,75 @@
       "file": "tooling (openwolf designqc)",
       "root_cause": "designqc auto-detect picked another running local dev server (Memgraph Lab on a different port) instead of Astro on localhost:4321. It also wipes .wolf/designqc-captures/ on every run, so prior captures are lost; and a single --url run does not reliably crawl to other routes.",
       "fix": "Always pass `openwolf designqc --url http://localhost:4321[/route]` explicitly. Capture and READ one route group per run before the next run wipes the dir. Do not rely on crawl reaching /writing.",
-      "tags": ["tooling", "designqc", "openwolf", "gotcha"],
+      "tags": [
+        "tooling",
+        "designqc",
+        "openwolf",
+        "gotcha"
+      ],
       "related_bugs": [],
       "occurrences": 1,
       "last_seen": "2026-05-18T17:20:00Z"
+    },
+    {
+      "id": "bug-004",
+      "timestamp": "2026-10-20",
+      "error_message": "Cannot find namespace 'z'; implicit any parameters; LabNav label type mismatch",
+      "file": "astro.config.mjs; src/lib/cas.ts; src/components/studio/LabNav.astro and dependent consumers",
+      "root_cause": "Existing type-check failures on unchanged base 8e12ec8, reproduced in a separate source snapshot: 11 errors, 31 hints.",
+      "fix": "Unresolved; website copy builds successfully. No unrelated type fixes included.",
+      "tags": [
+        "verification",
+        "website-feedback"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-10-20"
+    },
+    {
+      "id": "bug-005",
+      "timestamp": "2026-10-20",
+      "error_message": "ENOENT: rename .astro/content-assets.mjs.tmp -> .astro/content-assets.mjs",
+      "file": "local verification commands",
+      "root_cause": "Running Astro check and build concurrently wrote the same generated content cache.",
+      "fix": "Run checks sequentially; production build then passed.",
+      "tags": [
+        "verification",
+        "website-feedback"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-10-20"
+    },
+    {
+      "id": "bug-006",
+      "timestamp": "2026-10-20",
+      "error_message": "EPERM: unlink node_modules/.vite/deps/astro-IQQQXCO3.js",
+      "file": "isolated checkout dependency setup",
+      "root_cause": "The dependency symlink pointed into another checkout outside the writable workspace.",
+      "fix": "Use a separate local copy of installed dependencies; no package changes.",
+      "tags": [
+        "verification",
+        "website-feedback"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-10-20"
+    },
+    {
+      "id": "bug-007",
+      "timestamp": "2026-10-20",
+      "error_message": "listen EPERM: operation not permitted 127.0.0.1:8789",
+      "file": "scripts/reference.mjs execution environment",
+      "root_cause": "Sandbox blocked local server binding needed by the existing browser verification.",
+      "fix": "Reran the same local verification with approved escalation; browser checks completed.",
+      "tags": [
+        "verification",
+        "website-feedback"
+      ],
+      "related_bugs": [],
+      "occurrences": 1,
+      "last_seen": "2026-10-20"
     }
   ]
 }

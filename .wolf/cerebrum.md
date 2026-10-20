@@ -20,6 +20,9 @@
 
 ## Key Learnings
 
+- [2026-10-20] The current bilingual Studio website is in this Astro repository, `kigumi-app/website`. `Studio/website/build.sh` is the older implementation. Check `src/pages/` before applying website feedback. Shared voice and calibration remain in the company repository.
+- [2026-10-20] Run `npm run check` and `npm run build` sequentially: both write `.astro/` and concurrent runs can race on `content-assets.mjs.tmp`. An isolated checkout also needs its own dependency cache; a symlink to another checkout can cause Vite permission failures.
+
 <!-- Project-specific conventions discovered during development. -->
 
 - [2026-05-18] Site is **Astro 5 static** (was hand-written HTML/CSS). Build:
