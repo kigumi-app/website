@@ -5,14 +5,14 @@ import CartesCas from "../components/studio/CartesCas.astro";
 ---
 <StudioLayout
   titre='Automatiser ce qui vous coûte vraiment'
-  description='Kigumi identifie les processus qui pèsent le plus dans votre entreprise, déploie les agents qui les prennent en charge, et mesure le gain réel.'
+  description='Kigumi identifie les processus qui pèsent le plus dans votre entreprise, déploie les agents IA qui les prennent en charge, et mesure le gain réel.'
   actif="">
 <section class="hero">
   <div class="wrap">
     <span class="eyebrow">Automatisation de processus &middot; PME &amp; ETI</span>
     <h1>Automatiser ce qui<br>vous coûte vraiment.<br><span class="accent">Et le prouver.</span></h1>
     <div class="rule"></div>
-    <p class="lead">La plupart des projets IA ne sortent jamais du pilote. Kigumi identifie les processus qui pèsent le plus dans votre entreprise, déploie les agents qui les prennent en charge, et mesure le gain réel. Pour les PME et ETI de 50 à 300 personnes.</p>
+    <p class="lead">Kigumi identifie les processus qui pèsent le plus dans votre entreprise, déploie les agents IA qui les prennent en charge, et mesure le gain réel. Pour les PME et ETI de 50 à 300 personnes.</p>
     <div class="btn-row">
       <a class="btn" href={AGENDA} target="_blank" rel="noopener">Réserver 45 minutes de pré-diagnostic</a>
       <a class="btn btn-ghost" href="/methode/">Voir la méthode</a>
@@ -24,7 +24,7 @@ import CartesCas from "../components/studio/CartesCas.astro";
   <div class="wrap">
     <p class="eyebrow">Ce qu&rsquo;on prend en charge</p>
     <h2>Trois exemples, parmi beaucoup d&rsquo;autres</h2>
-    <p class="lead">Des processus qu&rsquo;on a déjà étudiés en détail. Ils ont en commun la forme du travail&nbsp;: un volume élevé de tâches répétitives, qui reposent sur des règles connues de quelques personnes seulement.</p>
+    <p class="lead">Nous avons étudié en détail de nombreux processus. Ils ont en commun un volume élevé de tâches répétitives qui suivent des règles connues. Les automatiser peut libérer du temps pour traiter les demandes complexes, accompagner vos clients ou répondre à davantage d&rsquo;appels d&rsquo;offres.</p>
     <div style="margin-top:34px"><CartesCas /></div>
     <p class="muted" style="margin-top:24px;font-size:14px">Exemples illustratifs, construits à partir de situations observées dans ces secteurs. Pas de missions réalisées à ce jour.</p>
     <p style="margin-top:14px"><a href="/cas-usages/">Voir tous les cas, par processus et par poste &rarr;</a></p>
@@ -36,9 +36,9 @@ import CartesCas from "../components/studio/CartesCas.astro";
    <div class="prose">
     <p class="eyebrow">Qui fait le travail</p>
     <h2>Près de trente ans de métier, à deux</h2>
-    <p>Julien a dirigé la relation client d&rsquo;un éditeur de logiciels&nbsp;: support, projets complexes, une équipe de onze personnes. Stéphane y dirigeait les équipes de développement, R&amp;D et machine learning compris, sur des produits utilisés par des millions de personnes.</p>
-    <p>Nous y avons passé trois ans ensemble, aux deux bouts du même produit&nbsp;: l&rsquo;un recevait les appels quand il ne faisait pas ce qu&rsquo;on en avait dit, l&rsquo;autre avait les équipes qui l&rsquo;avaient écrit.</p>
-    <p><strong>Les deux personnes qui vous vendent la mission sont les deux qui la font</strong>, sans sous-traitance.</p>
+    <p>Julien accompagne des clients depuis près de quinze ans, de la vente de solutions informatiques aux grands comptes au pilotage d&rsquo;une équipe de onze personnes en relation client, support et gestion de projet.</p>
+    <p>Stéphane construit des produits logiciels depuis près de quinze ans, utilisés par des millions de personnes. Il a dirigé des équipes de développement, de R&amp;D et de machine learning.</p>
+    <p>Nous réunissons l&rsquo;accompagnement des équipes et la réalisation technique pour automatiser vos processus. <strong>Les deux associés qui vous vendent la mission sont ceux qui la réalisent</strong>, sans sous-traitance.</p>
     <p style="margin-top:1.4em"><a href="/a-propos/">Qui nous sommes &rarr;</a></p>
    </div>
   </div>
@@ -47,11 +47,12 @@ import CartesCas from "../components/studio/CartesCas.astro";
 <section>
   <div class="wrap">
     <p class="eyebrow">Comment on travaille</p>
-    <h2>Trois principes, tenus à chaque mission</h2>
-    <div class="grid" style="margin-top:34px">
-      <div><h3>Un diagnostic chiffré, jamais un prototype</h3><p class="muted">On commence par estimer ce que chaque processus vous coûte, et on les classe. Vous pouvez vous arrêter là et utiliser le rapport sans nous.</p></div>
-      <div><h3>On ne construit que ce que le processus exige</h3><p class="muted">Rien de générique, rien construit au cas où. La base de connaissance grandit avec les processus qu'on automatise.</p></div>
-      <div><h3>On mesure le gain réel, et on vous le montre</h3><p class="muted">Chaque trimestre, un rapport compare ce qui a été gagné à ce qui avait été projeté. Y compris quand l'écart n'est pas en notre faveur.</p></div>
+    <h2>Une méthode en quatre étapes</h2>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><div><h3>Diagnostic</h3><p class="muted">Avec vos équipes, on identifie vos processus et on comprend leur fonctionnement. On estime leurs coûts et les gains possibles, puis on sélectionne ceux qui méritent d&rsquo;être automatisés. Vous gardez le rapport, même si vous vous arrêtez là.</p></div></div>
+      <div class="step"><div class="n">2</div><div><h3>Fondation</h3><p class="muted">On rassemble les informations et les règles dont les agents auront besoin, uniquement pour les processus retenus.</p></div></div>
+      <div class="step"><div class="n">3</div><div><h3>Déploiement</h3><p class="muted">On construit les agents IA, on les relie à vos outils et on les met en service avec vos équipes. Les étapes qui engagent votre entreprise restent validées par un humain.</p></div></div>
+      <div class="step"><div class="n">4</div><div><h3>Pilotage et vérification</h3><p class="muted">On supervise les agents et on corrige les dysfonctionnements. Chaque trimestre, un rapport compare le gain réel à la projection du diagnostic, y compris quand l&rsquo;écart n&rsquo;est pas en notre faveur.</p></div></div>
     </div>
     <div class="btn-row"><a class="btn btn-ghost" href="/methode/">La méthode en détail</a></div>
   </div>

@@ -37,3 +37,7 @@ validation, the final commit deletes legacy index.html/how-it-works.html/
 style.css/CNAME; (4) flip essays `draft:false` after review; (5) separate
 `/decide`-gated pass on the CTO-vs-non-technical-builder ICP copy (flagged,
 not acted on — out of migration scope).
+
+## 2026-10-20 Website feedback implementation
+
+Applied the document feedback to the French and English home, About, Method and Working together pages on `codex/website-document-feedback`, based on `origin/main` at `8e12ec8`. Existing four-stage method retained; process discovery and post-deployment support clarified. Adaptations to changed processes remain subject to scope agreement. No publication performed. Production build passes. Browser checks cover 32 page/viewport/mode combinations with no link, image, runtime or overflow errors. Fresh builds of the base and update differ only on the eight intended HTML pages. Type checking reproduces the same 11 errors on untouched base; the repository reference is older than current main and reports historical differences. Shared voice feedback is recorded only in the company calibration log.
